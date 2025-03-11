@@ -1,0 +1,31 @@
+git config --global user.name itsquelc
+git config --global user.email raquelnunescirino@gmail.com
+
+dotnet new sln --name  VestBooks
+dotnet new mvc -o VestBooks
+dotnet sln add VestBooks\VestBooks.csproj
+
+cd VestBooks
+entrar no nuget -
+https://www.nuget.org/packages?q=entityframeworkcore
+pegar codigos -
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design 
+Microsoft.EntityFrameworkCore.Tools 
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+pesquisar MySql
+MySql.EntityFrameworkCore
+
+codigos:
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
+dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+
+cjproj
+<Nullable>disable</Nullable>
+
+models/errorviewmodel
+tirar o ?
