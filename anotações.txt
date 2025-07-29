@@ -18,11 +18,11 @@ pesquisar MySql
 MySql.EntityFrameworkCore
 
 codigos:
-dotnet add package Microsoft.EntityFrameworkCore --version 9.0.1
-dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.1
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.1
-dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.1
-dotnet add package MySql.EntityFrameworkCore --version 9.0.0
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.7
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.7
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.7
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.7
+dotnet add package MySql.EntityFrameworkCore --version 9.0.6
 
 cjproj
 <Nullable>disable</Nullable>
