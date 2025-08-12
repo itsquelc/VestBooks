@@ -1,13 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VestBooks.Models;
- [Table("autor")]
+[Table("autor")]
 
-    public class Autor
-    {
-          [Key]
-          
-    }
+public class Autor
+{
+    [Key]
+    public int Id { get; set; }
+    [Required(ErrorMessage = "Por favor, informe o nome do Autor")]
+    [StringLength(60, ErrorMessage = "O Nome deve possuir no máximo 60 caracteres")]
+    public string Nome { get; set; }
+
+
+    [StringLength(300)]
+    public string Foto { get; set; }
+}
