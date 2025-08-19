@@ -2,157 +2,89 @@ using VestBooks.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace  VestBooks.Data;
+namespace VestBooks.Data;
 
 public class AppDbSeed
 {
     public AppDbSeed(ModelBuilder builder)
     {
-        List<Categoria> categorias = new() {
-            new Categoria { Id = 1, Nome = "Smartphones" },
-            new Categoria { Id = 2, Nome = "Notebooks" },
-            new Categoria { Id = 3, Nome = "Smartwatches" },
-            new Categoria { Id = 4, Nome = "Fones de Ouvido" },
-            new Categoria { Id = 5, Nome = "Monitores" },
-            new Categoria { Id = 6, Nome = "Teclados e Mouses" },
-            new Categoria { Id = 7, Nome = "Consoles" },
-            new Categoria { Id = 8, Nome = "Action Figures" },
-            new Categoria { Id = 9, Nome = "Drones" },
-            new Categoria { Id = 10, Nome = "Câmeras Digitais" }
-        };
-        builder.Entity<Categoria>().HasData(categorias);
-
-        List<Produto> produtos = new List<Produto>
+        List<Faculdade> faculdades = new()
         {
-            // Smartphones
-            new Livro { Id = 1, CategoriaId = 1, Nome = "iPhone 14 Pro", Descricao = "Apple A16 Bionic, 128GB", ValorCusto = 4500.00m, ValorVenda = 6999.00m, QtdeEstoque = 10, Destaque = true },
-            new Produto { Id = 2, CategoriaId = 1, Nome = "Samsung Galaxy S23", Descricao = "Snapdragon 8 Gen 2, 256GB", ValorCusto = 4000.00m, ValorVenda = 6499.00m, QtdeEstoque = 15, Destaque = true },
-            new Produto { Id = 3, CategoriaId = 1, Nome = "Xiaomi 13 Pro", Descricao = "Snapdragon 8 Gen 2, 512GB", ValorCusto = 3500.00m, ValorVenda = 5299.00m, QtdeEstoque = 20 },
-            new Produto { Id = 4, CategoriaId = 1, Nome = "Motorola Edge 30 Ultra", Descricao = "Snapdragon 8 Gen 1, 256GB", ValorCusto = 3200.00m, ValorVenda = 4799.00m, QtdeEstoque = 12 },
-            new Produto { Id = 5, CategoriaId = 1, Nome = "Asus ROG Phone 6", Descricao = "Gaming Phone, 512GB", ValorCusto = 4200.00m, ValorVenda = 6999.00m, QtdeEstoque = 8 },
-
-            // Notebooks
-            new Livro { Id = 6, CategoriaId = 2, Nome = "MacBook Pro M2", Descricao = "Apple M2, 16GB RAM, 512GB SSD", ValorCusto = 8000.00m, ValorVenda = 11999.00m, QtdeEstoque = 5, Destaque = true },
-            new Produto { Id = 7, CategoriaId = 2, Nome = "Dell XPS 15", Descricao = "Intel i7, 16GB RAM, 1TB SSD", ValorCusto = 7000.00m, ValorVenda = 9999.00m, QtdeEstoque = 7 },
-            new Produto { Id = 8, CategoriaId = 2, Nome = "Asus ROG Strix G15", Descricao = "Ryzen 9, RTX 3070, 16GB RAM", ValorCusto = 7500.00m, ValorVenda = 10999.00m, QtdeEstoque = 6 },
-            new Produto { Id = 9, CategoriaId = 2, Nome = "Lenovo ThinkPad X1", Descricao = "Intel i5, 8GB RAM, 512GB SSD", ValorCusto = 5000.00m, ValorVenda = 7999.00m, QtdeEstoque = 10 },
-            new Produto { Id = 10, CategoriaId = 2, Nome = "HP Spectre x360", Descricao = "Intel i7, 16GB RAM, 1TB SSD", ValorCusto = 7200.00m, ValorVenda = 10499.00m, QtdeEstoque = 8 },
-
-            // Smartwatches
-            new Produto { Id = 11, CategoriaId = 3, Nome = "Apple Watch Series 8", Descricao = "GPS + Cellular, 45mm", ValorCusto = 2500.00m, ValorVenda = 3999.00m, QtdeEstoque = 10, Destaque = true },
-            new Produto { Id = 12, CategoriaId = 3, Nome = "Samsung Galaxy Watch 5", Descricao = "LTE, 44mm", ValorCusto = 1500.00m, ValorVenda = 2499.00m, QtdeEstoque = 15 },
-            new Produto { Id = 13, CategoriaId = 3, Nome = "Garmin Fenix 7", Descricao = "MultiSport GPS Watch", ValorCusto = 3500.00m, ValorVenda = 4999.00m, QtdeEstoque = 5 },
-            new Produto { Id = 14, CategoriaId = 3, Nome = "Xiaomi Mi Watch", Descricao = "Bluetooth, 46mm", ValorCusto = 800.00m, ValorVenda = 1499.00m, QtdeEstoque = 20 },
-            new Produto { Id = 15, CategoriaId = 3, Nome = "Fitbit Sense 2", Descricao = "Monitoramento de saúde", ValorCusto = 1200.00m, ValorVenda = 2099.00m, QtdeEstoque = 12 },
-
-            // Fones de Ouvido
-            new Produto { Id = 16, CategoriaId = 4, Nome = "AirPods Pro", Descricao = "Cancelamento de Ruído Ativo", ValorCusto = 900.00m, ValorVenda = 1499.00m, QtdeEstoque = 12, Destaque = true },
-            new Produto { Id = 17, CategoriaId = 4, Nome = "Sony WH-1000XM5", Descricao = "Over-ear, Noise Cancelling", ValorCusto = 1400.00m, ValorVenda = 2199.00m, QtdeEstoque = 10 },
-            new Produto { Id = 18, CategoriaId = 4, Nome = "JBL Live 660NC", Descricao = "Fone Bluetooth, Graves Potentes", ValorCusto = 600.00m, ValorVenda = 999.00m, QtdeEstoque = 20 },
-            new Produto { Id = 19, CategoriaId = 4, Nome = "Beats Studio Buds", Descricao = "Fones In-Ear, Bluetooth", ValorCusto = 800.00m, ValorVenda = 1299.00m, QtdeEstoque = 15 },
-            new Produto { Id = 20, CategoriaId = 4, Nome = "Razer Kraken X", Descricao = "Headset Gamer, Surround 7.1", ValorCusto = 400.00m, ValorVenda = 699.00m, QtdeEstoque = 25 },
-
-            // Monitores
-            new Produto { Id = 21, CategoriaId = 5, Nome = "LG Ultragear 27\"", Descricao = "IPS, 144Hz, 1ms", ValorCusto = 1200.00m, ValorVenda = 1899.00m, QtdeEstoque = 8, Destaque = true },
-            new Produto { Id = 22, CategoriaId = 5, Nome = "Samsung Odyssey G5", Descricao = "Curvo, 165Hz, 2K", ValorCusto = 1400.00m, ValorVenda = 2399.00m, QtdeEstoque = 10 },
-            new Produto { Id = 23, CategoriaId = 5, Nome = "AOC Hero 24\"", Descricao = "IPS, 144Hz, FreeSync", ValorCusto = 900.00m, ValorVenda = 1499.00m, QtdeEstoque = 15 },
-            new Produto { Id = 24, CategoriaId = 5, Nome = "Dell P2723QE", Descricao = "4K UHD, 60Hz, USB-C", ValorCusto = 2000.00m, ValorVenda = 3299.00m, QtdeEstoque = 5 },
-            new Produto { Id = 25, CategoriaId = 5, Nome = "BenQ Zowie XL2546", Descricao = "240Hz, 1ms, eSports", ValorCusto = 2500.00m, ValorVenda = 3999.00m, QtdeEstoque = 6 },
-
-            // Teclados e Mouses
-            new Produto { Id = 26, CategoriaId = 6, Nome = "Logitech G Pro X", Descricao = "Teclado Mecânico, RGB", ValorCusto = 700.00m, ValorVenda = 1099.00m, QtdeEstoque = 20, Destaque = true },
-            new Produto { Id = 27, CategoriaId = 6, Nome = "Razer Huntsman Mini", Descricao = "Teclado Óptico, 60%", ValorCusto = 800.00m, ValorVenda = 1299.00m, QtdeEstoque = 12 },
-            new Produto { Id = 28, CategoriaId = 6, Nome = "HyperX Alloy FPS", Descricao = "Teclado Mecânico, Red Switch", ValorCusto = 600.00m, ValorVenda = 999.00m, QtdeEstoque = 18 },
-            new Produto { Id = 29, CategoriaId = 6, Nome = "Logitech G502 Hero", Descricao = "Mouse Gamer, 16K DPI", ValorCusto = 300.00m, ValorVenda = 599.00m, QtdeEstoque = 25 },
-            new Produto { Id = 30, CategoriaId = 6, Nome = "Razer DeathAdder V2", Descricao = "Mouse Ergonômico, 20K DPI", ValorCusto = 400.00m, ValorVenda = 699.00m, QtdeEstoque = 20 },
-
-            // Consoles
-            new Produto { Id = 31, CategoriaId = 7, Nome = "PlayStation 5", Descricao = "Edição Standard, SSD 825GB", ValorCusto = 3500.00m, ValorVenda = 4999.00m, QtdeEstoque = 8, Destaque = true },
-            new Produto { Id = 32, CategoriaId = 7, Nome = "Xbox Series X", Descricao = "1TB SSD, 4K Gaming", ValorCusto = 3500.00m, ValorVenda = 4899.00m, QtdeEstoque = 10 },
-            new Produto { Id = 33, CategoriaId = 7, Nome = "Nintendo Switch OLED", Descricao = "Tela OLED, 64GB", ValorCusto = 1800.00m, ValorVenda = 2699.00m, QtdeEstoque = 12 },
-            new Produto { Id = 34, CategoriaId = 7, Nome = "PlayStation 4 Slim", Descricao = "500GB HDD, Controle DualShock", ValorCusto = 1500.00m, ValorVenda = 2299.00m, QtdeEstoque = 15 },
-            new Produto { Id = 35, CategoriaId = 7, Nome = "Xbox Series S", Descricao = "512GB SSD, Digital", ValorCusto = 2000.00m, ValorVenda = 2899.00m, QtdeEstoque = 18 },
-
-            // Action Figures
-            new Produto { Id = 36, CategoriaId = 8, Nome = "Batman (DC Collectibles)", Descricao = "Figura colecionável 1/6", ValorCusto = 500.00m, ValorVenda = 899.00m, QtdeEstoque = 15, Destaque = true },
-            new Produto { Id = 37, CategoriaId = 8, Nome = "Homem de Ferro (Hot Toys)", Descricao = "Escala 1/6", ValorCusto = 1200.00m, ValorVenda = 1999.00m, QtdeEstoque = 8 },
-            new Produto { Id = 38, CategoriaId = 8, Nome = "Goku (Dragon Ball Z)", Descricao = "SH Figuarts", ValorCusto = 300.00m, ValorVenda = 599.00m, QtdeEstoque = 25 },
-            new Produto { Id = 39, CategoriaId = 8, Nome = "Naruto Uzumaki", Descricao = "Banpresto Figure", ValorCusto = 250.00m, ValorVenda = 449.00m, QtdeEstoque = 20 },
-            new Produto { Id = 40, CategoriaId = 8, Nome = "Darth Vader (Star Wars)", Descricao = "Figura Hasbro Black Series", ValorCusto = 450.00m, ValorVenda = 799.00m, QtdeEstoque = 10 },
-       
-            // Drones
-            new Produto { Id = 41, CategoriaId = 9, Nome = "DJI Mini 3 Pro", Descricao = "4K, Compacto, Smart Features", ValorCusto = 2500.00m, ValorVenda = 3999.00m, QtdeEstoque = 6, Destaque = true },
-            new Produto { Id = 42, CategoriaId = 9, Nome = "DJI Mavic Air 2", Descricao = "48MP, 4K 60fps", ValorCusto = 3000.00m, ValorVenda = 4999.00m, QtdeEstoque = 7 },
-            new Produto { Id = 43, CategoriaId = 9, Nome = "Parrot Anafi", Descricao = "Câmera HDR 4K, Compacto", ValorCusto = 2000.00m, ValorVenda = 3299.00m, QtdeEstoque = 10 },
-            new Produto { Id = 44, CategoriaId = 9, Nome = "Ryze Tello", Descricao = "Drone Educacional, 720p", ValorCusto = 400.00m, ValorVenda = 799.00m, QtdeEstoque = 20 },
-            new Produto { Id = 45, CategoriaId = 9, Nome = "Autel Evo Lite+", Descricao = "Câmera 6K, Bateria 40min", ValorCusto = 3500.00m, ValorVenda = 5499.00m, QtdeEstoque = 5 },
-
-            // Câmeras Digitais
-            new Produto { Id = 46, CategoriaId = 10, Nome = "Canon EOS R5", Descricao = "Mirrorless, 8K Video", ValorCusto = 12000.00m, ValorVenda = 15999.00m, QtdeEstoque = 4, Destaque = true },
-            new Produto { Id = 47, CategoriaId = 10, Nome = "Sony A7 IV", Descricao = "Mirrorless Full-Frame, 33MP", ValorCusto = 9000.00m, ValorVenda = 12999.00m, QtdeEstoque = 6 },
-            new Produto { Id = 48, CategoriaId = 10, Nome = "Nikon Z6 II", Descricao = "Mirrorless, 24MP, 4K", ValorCusto = 8000.00m, ValorVenda = 11499.00m, QtdeEstoque = 5 },
-            new Produto { Id = 49, CategoriaId = 10, Nome = "GoPro Hero 11", Descricao = "Câmera de Ação, 5.3K", ValorCusto = 2000.00m, ValorVenda = 3199.00m, QtdeEstoque = 15 },
-            new Produto { Id = 50, CategoriaId = 10, Nome = "Fujifilm X-T4", Descricao = "APS-C, 26MP, 4K", ValorCusto = 7500.00m, ValorVenda = 10999.00m, QtdeEstoque = 7 }
+            new Faculdade { Id = 1, Nome = "ENEM" },
+            new Faculdade { Id = 2, Nome = "UNICAMP" },
+            new Faculdade { Id = 3, Nome = "FUVEST" },
         };
-        builder.Entity<Produto>().HasData(produtos);
+    
+        builder.Entity<Faculdade>().HasData(faculdades);
 
-        List<ProdutoFoto> produtoFotos = new List<ProdutoFoto>
+        List<Autor> autores = new()
         {
-            // Produto 1
-            new ProdutoFoto { Id = 1, ProdutoId = 1, ArquivoFoto = "/img/produtos/1/1.png" },
-            new ProdutoFoto { Id = 2, ProdutoId = 1, ArquivoFoto = "/img/produtos/1/2.png" },
-            new ProdutoFoto { Id = 3, ProdutoId = 1, ArquivoFoto = "/img/produtos/1/3.png" },
-
-            // Produto 2
-            new ProdutoFoto { Id = 4, ProdutoId = 2, ArquivoFoto = "/img/produtos/2/1.png" },
-            new ProdutoFoto { Id = 5, ProdutoId = 2, ArquivoFoto = "/img/produtos/2/2.png" },
-            new ProdutoFoto { Id = 6, ProdutoId = 2, ArquivoFoto = "/img/produtos/2/3.png" },
-
-            // Produto 6
-            new ProdutoFoto { Id = 7, ProdutoId = 6, ArquivoFoto = "/img/produtos/6/1.png" },
-            new ProdutoFoto { Id = 8, ProdutoId = 6, ArquivoFoto = "/img/produtos/6/2.png" },
-            new ProdutoFoto { Id = 9, ProdutoId = 6, ArquivoFoto = "/img/produtos/6/3.png" },
-
-            // Produto 11
-            new ProdutoFoto { Id = 10, ProdutoId = 11, ArquivoFoto = "/img/produtos/11/1.png" },
-            new ProdutoFoto { Id = 11, ProdutoId = 11, ArquivoFoto = "/img/produtos/11/2.png" },
-            new ProdutoFoto { Id = 12, ProdutoId = 11, ArquivoFoto = "/img/produtos/11/3.png" },
-
-            // Produto 16
-            new ProdutoFoto { Id = 13, ProdutoId = 16, ArquivoFoto = "/img/produtos/16/1.png" },
-            new ProdutoFoto { Id = 14, ProdutoId = 16, ArquivoFoto = "/img/produtos/16/2.png" },
-            new ProdutoFoto { Id = 15, ProdutoId = 16, ArquivoFoto = "/img/produtos/16/3.png" },
-
-            // Produto 21
-            new ProdutoFoto { Id = 16, ProdutoId = 21, ArquivoFoto = "/img/produtos/21/1.png" },
-            new ProdutoFoto { Id = 17, ProdutoId = 21, ArquivoFoto = "/img/produtos/21/2.png" },
-            new ProdutoFoto { Id = 18, ProdutoId = 21, ArquivoFoto = "/img/produtos/21/3.png" },
-
-            // Produto 26
-            new ProdutoFoto { Id = 19, ProdutoId = 26, ArquivoFoto = "/img/produtos/26/1.png" },
-            new ProdutoFoto { Id = 20, ProdutoId = 26, ArquivoFoto = "/img/produtos/26/2.png" },
-
-            // Produto 31
-            new ProdutoFoto { Id = 21, ProdutoId = 31, ArquivoFoto = "/img/produtos/31/1.png" },
-            new ProdutoFoto { Id = 22, ProdutoId = 31, ArquivoFoto = "/img/produtos/31/2.png" },
-            new ProdutoFoto { Id = 23, ProdutoId = 31, ArquivoFoto = "/img/produtos/31/3.png" },
-
-            // Produto 36
-            new ProdutoFoto { Id = 24, ProdutoId = 36, ArquivoFoto = "/img/produtos/36/1.png" },
-            new ProdutoFoto { Id = 25, ProdutoId = 36, ArquivoFoto = "/img/produtos/36/2.png" },
-            new ProdutoFoto { Id = 26, ProdutoId = 36, ArquivoFoto = "/img/produtos/36/3.png" },
-
-            // Produto 41
-            new ProdutoFoto { Id = 27, ProdutoId = 41, ArquivoFoto = "/img/produtos/41/1.png" },
-            new ProdutoFoto { Id = 28, ProdutoId = 41, ArquivoFoto = "/img/produtos/41/2.png" },
-            new ProdutoFoto { Id = 29, ProdutoId = 41, ArquivoFoto = "/img/produtos/41/3.png" },
-
-            // Produto 46
-            new ProdutoFoto { Id = 30, ProdutoId = 46, ArquivoFoto = "/img/produtos/46/1.png" },
-            new ProdutoFoto { Id = 31, ProdutoId = 46, ArquivoFoto = "/img/produtos/46/2.png" },
-            new ProdutoFoto { Id = 32, ProdutoId = 46, ArquivoFoto = "/img/produtos/46/3.png" },
+            new Autor { Id = 1, Nome = "Jorge Amado" },
+            new Autor { Id = 2, Nome = "Machado de Assis" },
+            new Autor { Id = 3, Nome = "Manuel Bandeira" },
+            new Autor { Id = 4, Nome = "João Guimarães Rosa" },
+            new Autor { Id = 5, Nome = "José de Alencar" },
+            new Autor { Id = 6, Nome = "Luís de Camões" },
+            new Autor { Id = 7, Nome = "Carolina Maria de Jesus" },
+            new Autor { Id = 8, Nome = "Carlos drummond de Andrade" },
+            new Autor { Id = 9, Nome = "Darcy Ribeiro" },
+            new Autor { Id = 10, Nome = "Graciliano Ramos" },
+            new Autor { Id = 11, Nome = "Aluísio Azevedo" },
+            new Autor { Id = 12, Nome = "José Paulo Paes" },
+            new Autor { Id = 13, Nome = "Conceição Evaristo" },
+            new Autor { Id = 14, Nome = "" },
+            new Autor { Id = 15, Nome = "" },
+            new Autor { Id = 16, Nome = "" },
+            new Autor { Id = 17, Nome = "" },
+            new Autor { Id = 18, Nome = "" },
         };
-        builder.Entity<ProdutoFoto>().HasData(produtoFotos);
+    
+        builder.Entity<Faculdade>().HasData(faculdades);
+
+
+        List<Livro> livros = new List<Livro>
+
+             {
+            // ENEM
+    new Livro { Id = 1, FaculdadeId = 1, Nome = "Dona flor e seus dois maridos", Descricao = "A narrativa explora a paixão de Dona Flor por seus dois maridos, mostrando como ela lida com as diferenças entre eles e como busca a felicidade em meio a um triângulo amoroso.", Publicacao = "1966", AutorId = 1, Avaliacao = "4", Destaque = true },
+    new Livro { Id = 2, FaculdadeId = 1, Nome = "Dom Casmurro", Descricao = "é um romance de Machado de Assis que conta a história de Bento Santiago, um homem que, já velho, decide escrever um livro para narrar sua versão dos acontecimentos de sua juventude.", Publicacao = "1899", AutorId = 2, Avaliacao = "4,8", Destaque = true },
+    new Livro { Id = 3, FaculdadeId = 1, Nome = "Capitães da Areia", Descricao = "A história se passa em Salvador, Bahia, e retrata a vida de um grupo de meninos de rua que vivem em um trapiche abandonado, enfrentam a miséria, a violência e sobrevivem roubando e praticando pequenos crimes, mas também demonstram um forte senso de união e solidariedade.", Publicacao = "1937", AutorId = 1, Avaliacao = 4,8, Destaque = true },
+    new Livro { Id = 4, FaculdadeId = 1, Nome = "Estrela da vida inteira", Descricao = "é um livro de poemas que reúne todos os livros de poesia do autor, desde o seu primeiro, A Cinza das Horas, até os poemas que escreveu ao longo de sua vida.", Publicacao = "1965", AutorId = 3, Avaliacao = "4,7", Destaque = true },
+    new Livro { Id = 5, FaculdadeId = 1, Nome = "Grande Sertão: Veredas", Descricao = "conta a história de amor entre Riobaldo e Diadorim (ou Reinaldo). O ex-jagunço Riobaldo relata, para um interlocutor não nomeado na obra, fatos de sua juventude em meio a um bando de jagunços.", Publicacao = "1956 ", AutorId = 4, Avaliacao = "4,9", Destaque = true },
+    new Livro { Id = 6, FaculdadeId = 1, Nome = "Gabriela Cravo e Canela", Descricao = "A obra narra o caso de amor entre o árabe Nacib e a sertaneja Gabriela, como pano de fundo o período áureo do cacau na região de Ilhéus, descrevendo as alterações profundas da vida social da Bahia da década de 1920.", Publicacao = "1958", AutorId = 1, Avaliacao = "4,8", Destaque = true },
+    new Livro { Id = 7, FaculdadeId = 1, Nome = "Iracema", Descricao = "O romance conta o amor de um branco, Martim Soares Moreno, pela índia Iracema, a virgem dos lábios de mel. A relação do casal serviria de alegoria para a formação da nação brasileira. A índia Iracema representaria a natureza virgem e a inocência enquanto o colonizador Martim representa a cultura (europeia).", Publicacao = "1865", AutorId = 5, Avaliacao = "4,6", Destaque = true },
+    new Livro { Id = 8, FaculdadeId = 1, Nome = "Memórias Póstumas de Brás Cubas", Descricao = "Brás Cubas decide narrar sua própria vida após a morte. A narrativa começa com sua agonia e enterro, e retrocede para sua infância, juventude e vida adulta. O livro é uma crítica à sociedade da época, com seus costumes, valores e hipocrisias.", Publicacao = "1880", AutorId = 2, Avaliacao = "4,8", Destaque = true },
+    new Livro { Id = 9, FaculdadeId = 1, Nome = "Sonetos", Descricao = "Os sonetos de Camões abordam uma variedade de temas, com destaque para o amor, a paixão, a saudade, a melancolia, a fé e a reflexão sobre a vida e a morte. Sua poesia é um retrato da alma humana, com suas alegrias, tristezas, esperanças e desilusões.", Publicacao = "1595", AutorId = 6, Avaliacao= "4,7", Destaque = true },
+    new Livro { Id = 10, FaculdadeId = 1, Nome = "Quarto de Despejo", Descricao = "O livro é um diário em que Carolina Maria de Jesus narra seu cotidiano, descrevendo as dificuldades que enfrenta como mãe solteira de três filhos, trabalhando como catadora de papel e enfrentando a falta de recursos para suprir as necessidades básicas da família.", Publicacao = "1960", AutorId = 7, Avaliacao = "4,9", Destaque = true },
+    new Livro { Id = 11, FaculdadeId = 1, Nome = "Poesia Completa", Descricao = "O momento em que o país vivia a Era Vargas é a mais cobrada no ENEM. Isso acontece porque ela reflete o engajamento social e político do poeta, características que costumam ser muito bem aproveitadas", Publicacao = "", AutorId = 8, Avaliacao = "3,8", Destaque = true },
+    new Livro { Id = 12, FaculdadeId = 1, Nome = "O povo brasileiro", Descricao = "A obra busca responder à pergunta: quem são os brasileiros? mergulhando na história do Brasil, analisando as matrizes culturais, os mecanismos de formação étnica e cultural, os conflitos e as contradições.", Publicacao = "1995", AutorId = 9, Avaliacao = "4,9", Destaque = true },
+    new Livro { Id = 13, FaculdadeId = 1, Nome = "Vidas Secas", Descricao = "A história acompanha a saga de Fabiano, Sinhá Vitória e seus dois filhos, além da cachorra Baleia, em busca de melhores condições de vida. A família enfrenta a seca, a fome, a violência e a injustiça social, sendo constantemente humilhada e explorada pelos proprietários de terra.", Publicacao = "1938", AutorId = 10, Avaliacao = "4,8", Destaque = true },
+    new Livro { Id = 14, FaculdadeId = 1, Nome = "O Cortiço", Descricao = "O Cortiço é um romance naturalista que retrata a vida de pessoas pobres que viviam em cortiços no Rio de Janeiro no final do século XIX. O livro denuncia a exploração e as péssimas condições de vida dos moradores.", Publicacao = "1890", AutorId = 11, Avaliacao= "4,7", Destaque = true },
+
+            // UNICAMP
+    new Livro { Id = 15, FaculdadeId = 2, Nome = "Prosas seguidas de odes mínimas", Descricao = "é um livro composto por: Prosas: Vinte textos em prosa poética que abordam temas diversos marcados pela concisão, pela ironia e pelo humor, e Odes Mínimas: Treze poemas curtos, concisos e minimalistas, que exploram os temas das prosas,com uma linguagem depurada e essencial. Os poemas são marcados pela reflexão, pela ironia e pela brevidade.", Publicacao = "1992", AutorId = 12, Avaliacao = "4,8", Destaque = true },
+    new Livro { Id = 16, FaculdadeId = 2, Nome = "Olhos d’água", Descricao = "Olhos d'água é um livro de contos da escritora Conceição Evaristo que aborda a vida de pessoas negras e afro-brasileiras.A metáfora dos olhos d'água simboliza a união estabelecida entre passado, presente e futuro", Publicacao = "2014", AutorId = 13, Avaliacao = "4,8", Destaque = true },
+    new Livro { Id = 17, FaculdadeId = 2, Nome = "A vida não é útil", Descricao = "é um livro que questiona o sistema capitalista, o consumismo e a destruição ambiental. Composto por cinco textos: Não se come dinheiro, Sonhos para adiar o fim do mundo, A máquina de fazer coisas, O amanhã não está à venda, A vida não é útil.", Publicacao = "2020", AutorId = "Ailton Krenak", Avaliacao= "4,8", Destaque = true },
+    new Livro { Id = 18, FaculdadeId = 2, Nome = "Casa Velha", Descricao = "Casa Velha é um romance de Machado de Assis que aborda temas como o poder das normas sociais, a ascensão social e as relações de poder entre as classes sociais", Publicacao = "1886", AutorId = "Machado de Assis", Avaliacao = "4,6", Destaque = true },
+    new Livro { Id = 19, FaculdadeId = 2, Nome = "Vida e morte de M.J Gonzaga de Sá", Descricao = "Vida e morte de M.J Gonzaga de Sá é um livro que conta a história de um jornalista negro que vive no Rio de Janeiro no início do século XX, o qual aborda temas como: Desigualdade social, Racismo, Corrupção política, Abandono das populações periféricas, Burocratização do Estado.", Publicacao = "1919", AutorId = "Lima Barreto", Avaliacao = "4,5", Destaque = true },
+    new Livro { Id = 20, FaculdadeId = 2, Nome = "No Seu Pescoço", Descricao = "No seu pescoço é um livro que aborda temas  sobre injustiça social, desigualdade de gênero, sonho, nostalgia, racismo e preconceito contra imigrantes de forma combativa, sem ser abusiva", Publicacao = "2017", AutorId = "Chimamanda Ngozi Adichie", Avaliacao = "4,2", Destaque = true },
+    new Livro { Id = 21, FaculdadeId = 2, Nome = "Morangos mofados", Descricao = "Morangos Mofados é um livro de contos que retratam a angústia, a solidão, a repressão e a busca por liberdade de jovens na década de 1970, durante a ditadura militar no Brasil.", Publicacao = "1982", AutorId = "Caio Fernando Abreu", Avaliacao = "4,6", Destaque = true },
+    new Livro { Id = 22, FaculdadeId = 2, Nome = "Canções Escolhidas", Descricao = "As canções escolhidas de Cartola são Alvorada, As rosas não falam, Cordas de aço, Disfarça e chora, O inverno do meu tempo, O mundo é um moinho, Que é feito de você?, Sala de recepção, Silêncio de um cipreste e Sim", Publicacao = "", AutorId = "Cartola", Avaliacao = null, Destaque = true },
+    new Livro { Id = 23, FaculdadeId = 2, Nome = "Alice no país das maravilhas", Descricao = "é uma história sobre uma menina que sonha que cai numa toca de coelho e acaba num mundo mágico. Lá, ela vive aventuras e se depara com o absurdo, o impossível e questiona tudo o que aprendeu até ali", Publicacao = "1865 ", AutorId = "Lewis Carroll", Avaliacao = "4,8", Destaque = true },
+
+            // FUVEST
+    new Livro { Id = 24, FaculdadeId = 3, Nome = "A visão das plantas", Descricao = "A obra conta a história de Celestino, homem cujo passado de brutalidade e violência assombrosas é substituído, no crepúsculo da vida, por um amor delicado e cuidadoso pelas plantas de seu jardim.", Publicacao = "2019", AutorId = "Djamilia Pereira de Almdeida", Avaliacao = "3,5", Destaque = true },
+    new Livro { Id = 25, FaculdadeId = 3, Nome = "As meninas", Descricao = "O livro acompanha a jornada de três jovens mulheres universitárias no início da década de 70. Lorena, Ana Clara e Lia são de mundos distantes, vivendo impasses, cada qual com seu próprio drama durante o período turbulento da ditadura.", Publicacao = "1973", AutorId = "Lygia Fagundes Telles", Avaliacao = "4,2", Destaque = true },
+    new Livro { Id = 26, FaculdadeId = 3, Nome = "Balada de amor ao vento", Descricao = "A obra conta a história de amor entre Sarnau e Mwando, na qual faz uma crítica à poligamia e às tradições machistas e patriarcais que afetam a vida das mulheres.", Publicacao = "1990", AutorId = "Paulina Chiziane", Avaliacao = "4", Destaque = true },
+    new Livro { Id = 27, FaculdadeId = 3, Nome = "Caminho de pedras", Descricao = "Na Fortaleza dos anos 1930, durante a Era Vargas, Roberto tem a missão de recrutar operários para uma nova célula de esquerda. Uma das pessoas que se interessam é Noemi: mãe de Guri e casada com um homem que não ama mais, ela está em busca de algo que a faça se sentir viva.", Publicacao = "1937", AutorId = "Rachel de queiroz", Avaliacao = "3,5", Destaque = true },
+    new Livro { Id = 28, FaculdadeId = 3, Nome = "Canção para ninar menino grande", Descricao = "A obra questiona o patriarcado e as construções sociais da masculinidade, é um retrato de um homem através dos relacionamentos que ele coleciona com várias mulheres negras.", Publicacao = "2018", AutorId = "Conceição Evaristo", Avaliacao = "4,2", Destaque = true },
+    new Livro { Id = 29, FaculdadeId = 3, Nome = "Memórias de Martha", Descricao = "A obra narra a história de uma jovem chamada Marta, que viveu no Rio de Janeiro no final do século XIX, é uma autobiografia ficcional que retrata as dificuldades enfrentadas por Marta e sua mãe, viúva.", Publicacao = "1899", AutorId = "Julia Lopes de Almeida", Avaliacao = "3,5", Destaque = true },
+    new Livro { Id = 30, FaculdadeId = 3, Nome = "Nebulosas", Descricao = "Seus poemas revelam uma voz lírica única, que aborda temas íntimos, femininos e ligados à natureza, ao mesmo tempo em que expressam uma preocupação social evidente, especialmente em relação à abolição da escravatura, uma questão presente na sociedade brasileira do século XIX.", Publicacao = "2024", AutorId = "Narcisa Amália", Avaliacao = "3", Destaque = true },
+    new Livro { Id = 31, FaculdadeId = 3, Nome = "O cristo cigano", Descricao = "O livro é composto por uma série de poemas que contam a história de uma lenda sobre o assassinato de um cigano e a construção de uma imagem de Cristo.", Publicacao = "1961", AutorId = "Sophia de Mello Breyner Andresen", Avaliacao = "3,7", Destaque = true },
+    new Livro { Id = 32, FaculdadeId = 3, Nome = "Opúsculo Humanitário", Descricao = "A obra traça a evolução das condições femininas e mostram a experiência da autora tanto em leitura, quanto em vivências em suas viagens.", Publicacao = "1853", AutorId = "Nísia Floresta", Avaliacao = "3,6", Destaque = true},
+    };
+        
+        builder.Entity<LivroFoto>().HasData(livroFotos);
 
 
                             #region Populate Roles - Perfis de Usuário
@@ -173,7 +105,7 @@ public class AppDbSeed
                                 Name = "Cliente",
                                 NormalizedName = "CLIENTE"
                                 },
-                                                    }; 
+                                                    };
                                 builder.Entity<IdentityRole>().HasData(roles);
                                 #endregion
 
@@ -193,15 +125,15 @@ public class AppDbSeed
                                     }
                                 };
                                 foreach (var user in usuarios)
-                                {
-                                    PasswordHasher<IdentityUser> pass = new();
-                                    user.PasswordHash = pass.HashPassword(user, "123456");
-                                }
-                                builder.Entity<Usuario>().HasData(usuarios);
-                                #endregion
+        {
+            PasswordHasher<IdentityUser> pass = new();
+            user.PasswordHash = pass.HashPassword(user, "123456");
+        }
+        builder.Entity<Usuario>().HasData(usuarios);
+        #endregion
 
-                                #region Populate UserRole - Usuário com Perfil
-                                List<IdentityUserRole<string>> userRoles = new()
+        #region Populate UserRole - Usuário com Perfil
+        List<IdentityUserRole<string>> userRoles = new()
                                 {
                                     new IdentityUserRole<string>() {
                                         UserId = usuarios[0].Id,
@@ -216,7 +148,7 @@ public class AppDbSeed
                                         RoleId = roles[2].Id
                                     }
                                 };
-                                builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
-                                #endregion
-                            }
+        builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
+        #endregion
+    }
 }
