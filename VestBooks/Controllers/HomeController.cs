@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using VestBooks.Data;
 using VestBooks.Models;
 
 namespace VestBooks.Controllers;
@@ -7,15 +9,21 @@ namespace VestBooks.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _db;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger , AppDbContext db)
     {
         _logger = logger;
+        _db = db;
     }
 
     public IActionResult Index()
     {
-        return View();
+       List<Livro> livros = _db.Livros
+            .Where(p => p.Destaque)
+            .Include(p => p.Foto)
+            .ToList();
+        return View(livros);
     }
 
     public IActionResult Privacy()

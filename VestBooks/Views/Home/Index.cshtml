@@ -1,8 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<QuelloStore.Models.livro>
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Header -->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Vestbooks</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Resumo dos livros utilizados pelas faculdades do estado de São Paulo</p>
+        </div>
+    </div>
+</header>
+
+<!-- Section -->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            @foreach (var livro in Model)
+            {
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Book image -->
+                        <img class="card-img-top" src="@(livro.Fotos.Count <= 0 ? 
+                            "https://dummyimage.com/450x300/dee2e6/6c757d.jpg" :
+                            livro.Fotos[0].ArquivoFoto)" alt="@livro.Nome" />
+                        
+                        <!-- Book details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">@livro.Nome</h5>
+                                <p class="text-muted small">@livro.Autor</p> 
+                            </div>
+                        </div>
+
+                        <!-- Link para resumo -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-primary mt-auto" asp-action="livro" asp-route-id="@livro.Id">
+                                    Ver Resumo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
