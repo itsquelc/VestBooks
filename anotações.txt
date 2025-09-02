@@ -5,6 +5,8 @@ dotnet new sln --name  VestBooks
 dotnet new mvc -o VestBooks
 dotnet sln add VestBooks\VestBooks.csproj
 
+dotnet watch run
+
 cd VestBooks
 entrar no nuget -
 https://www.nuget.org/packages?q=entityframeworkcore
