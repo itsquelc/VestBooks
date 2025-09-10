@@ -33,4 +33,11 @@ namespace VestBooks.Controllers;
             };
             return View(login);
         }
+
+        [HttpGet]
+        public IActionResult Registro()
+        {
+            RegistroVM register = new();
+            return View(register);
+        }
     }
