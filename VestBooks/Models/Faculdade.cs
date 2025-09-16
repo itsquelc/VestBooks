@@ -5,7 +5,7 @@ namespace VestBooks.Models;
 public class Faculdade
 {
     [Key]
-    public int Id { get; set; }
+    public int FaculdadeId { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe o nome da faculdade")]
     [StringLength(100, ErrorMessage = "O nome da faculdade deve possuir no máximo 100 caracteres")]

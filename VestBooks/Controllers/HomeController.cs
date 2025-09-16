@@ -21,7 +21,6 @@ public class HomeController : Controller
     {
        List<Livro> livros = _db.Livros
             .Where(p => p.Destaque)
-            .Include(p => p.Foto)
             .ToList();
         return View(livros);
     }

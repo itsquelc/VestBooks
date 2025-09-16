@@ -7,7 +7,7 @@ namespace VestBooks.Models;
 public class Autor
 {
     [Key]
-    public int Id { get; set; }
+    public int AutorId { get; set; }
     [Required(ErrorMessage = "Por favor, informe o nome do Autor")]
     [StringLength(60, ErrorMessage = "O Nome deve possuir no máximo 60 caracteres")]
     public string Nome { get; set; }

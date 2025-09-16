@@ -35,5 +35,3 @@ tirar o ?
 
 -> autor dando erro, criar classe?
 -> data de publicação dando erro, tirar aspas? 
-
-raquel - pag 37

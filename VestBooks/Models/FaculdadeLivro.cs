@@ -7,7 +7,7 @@ namespace VestBooks.Models;
 public class FaculdadeLivro
 {
     [Key]
-    public int Id { get; set; }
+    public int FaculdadeLivroId { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe a Faculdade")]
     public int FaculdadeId { get; set; }

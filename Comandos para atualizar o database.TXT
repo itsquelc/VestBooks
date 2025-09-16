@@ -1,0 +1,5 @@
+----------------- 1º -----------------
+dotnet ef migrations add SeedFaculdades
+----------------- 2° -----------------
+dotnet ef database update
+--------------------------------------
