@@ -1,96 +1,93 @@
 @model VestBooks.ViewModels.RegistroVM
 @{
-    ViewData["Title"] = "Registro";
-    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+    Layout = null;
 }
+<!-- <!DOCTYPE html> -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
 
-<div class="container">
-    <div class="row justify-content-center my-3">
-        <h1 class="display-5 text-center">VestBooks</h1>
-        <div class="col-lg-8">
-            <div class="card shadow-lg border-0 rounded-lg">
-                <div class="card-header">
-                    <h3 class="text-center font-weight-light my-4">Cadastro</h3>
+    <div class="azul-circle"></div>
+
+    <img src="~/img/LIVROsemfundo.png" alt="Livro" class="livro-img" />
+
+    <div class="cadastro-wrapper container">
+        <div class="row w-100 justify-content-center">
+            <div class="col-lg-6">
+                <a class="navbar-brand py-2 d-block text-center" href="#">
+                    <img src="~/img/logo horizontal.png" alt="Logo" width="350">
+                </a>
+                <div class="card shadow-lg border-0 rounded-lg">
+                    <div class="card-header">
+                        <h3 class="text-center font-weight-light my-4">Cadastre-se</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="Registro">
+                            <input type="hidden" name="UrlRetorno" value="" />
+                            <div class="form-floating mb-3">
+                                <input
+                                    type="email"
+                                    class="form-control border border-primary border-2"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Digite seu email"
+                                />
+                                <label for="email">Nome de usuario</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input
+                                    type="password"
+                                    class="form-control border border-primary border-2"
+                                    id="senha"
+                                    name="senha"
+                                    placeholder="Digite sua senha"
+                                />
+                                <label for="senha">Senha</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input
+                                    type="name"
+                                    class="form-control border border-primary border-2"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="Digite seu nome completo"
+                                />
+                                <label for="email">Nome</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input
+                                    type="email"
+                                    class="form-control border border-primary border-2"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Digite seu email"
+                                />
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="lembrar" name="lembrar" />
+                                <label class="form-check-label" for="lembrar">Lembrar-me</label>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center mt-4 mb-0">
+                               <input type="submit" class="btn btn-primary w-100" value="Cadastre-se" /> 
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center py-3">
+                        <div class="small">Tem uma conta? <a asp-controller="Account" asp-action="Login">Faça login</a></div>
+                    </div>
                 </div>
-<div class="card-body">
-    <form asp-action="Registro" method="post" enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" hidden></div>
-    <div class="row">
-        <div class="col-sm-12 col-md-7">
-            <div class="form-floating mb-3">
-                <input class="form-control" asp-for="Nome"/>
-                <label asp-for="Nome"></label>
-                <span asp-validation-for="Nome" class="text-danger text-sm"></span>
-            </div>
-             <div class="form-floating mb-3">
-                <input class="form-control" asp-for="Email"/>
-                <label asp-for="Email"></label>
-                <span asp-validation-for="Email" class="text-danger text-sm"></span>
-            </div>
-             <div class="form-floating mb-3">
-                <input class="form-control" asp-for="DataNascimento"/>
-                <label asp-for="DataNascimento"></label>
-                <span asp-validation-for="DataNascimento" class="text-danger text-sm"></span>
-            </div>
-             <div class="form-floating mb-3">
-                <input class="form-control" asp-for="Senha"/>
-                <label asp-for="Senha"></label>
-                <span asp-validation-for="Senha" class="text-danger text-sm"></span>
-            </div>
-             <div class="form-floating mb-3">
-                <input class="form-control" asp-for="ConfirmacaoSenha"/>
-                <label asp-for="ConfirmacaoSenha"></label>
-                <span asp-validation-for="ConfirmacaoSenha" class="text-danger text-sm"></span>
             </div>
         </div>
-        <div class="col-sm-12 col-md-5 cursor-pointer">
-            <img src="~/img/usuarios/no-photo.png" id="PreviewImage" alt="Foto de Avatar"
-                class="w-100 rounded-3" onclick="changeImage()" />
-        <div hidden>
-            <input type="file" asp-for="Foto" accept=".jpg,.jpeg,.png,.gif,.jfif" />
-         </div>
     </div>
- </div>
 
-    <div class="d-flex flex-column align-items-center justify-content-center mt-4 mb-0">
-        <input type="submit" class="btn btn-primary w-100 mb-3" value="Criar Conta">
-    </div>
-        </form>
-    </div>
-                <div class="card-footer text-center py-3">
-                    <div class="small">Já possui uma conta? <a asp-action="Login">Faça Login</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial.cshtml"></partial>
-    <script type="text/javascript">
-        let mensagemErro = '';
-        $(".validation-summary-errors ul li").each(function () {
-            mensagemErro += $(this).text() + '<br />';
-        });
-        if (mensagemErro != '')
-            swal.fire(
-                'Acesso Negado',
-                mensagemErro,
-                'error'
-            );
-
-            function changeImage() {
-                document.querySelector('input[type="file"]').click();
-            }
-
-                window.addEventListener('load', function () {
-                    document.querySelector('input[type="file"]').addEventListener('change', function () {
-                        if (this.files && this.files[0]) {
-                        var img = document.getElementById('PreviewImage');
-                        img.src = URL.createObjectURL(this.files[0]);
-
-                    }
-                 });
-            });
-    </script>
-}
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
