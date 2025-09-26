@@ -1,27 +1,34 @@
+using System.Net.Mail;
+using System.Security.Claims;
 using VestBooks.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using VestBooks.ViewModels;
+using VestBooks.Data;
+using VestBooks.Helpers;
 
 namespace VestBooks.Controllers;
-
     public class AccountController : Controller
     {
         private readonly ILogger<AccountController> _logger;
         private readonly SignInManager<Usuario> _signInManager;
         private readonly UserManager<Usuario> _userManager;
         private readonly IWebHostEnvironment _host;
+        private readonly AppDbContext _db;
 
         public AccountController(
             ILogger<AccountController> logger,
             SignInManager<Usuario> signInManager,
             UserManager<Usuario> userManager,
-            IWebHostEnvironment host)
+            IWebHostEnvironment host,
+            AppDbContext db
+            )
         {
             _logger = logger;
             _signInManager = signInManager;
             _userManager = userManager;
             _host = host;
+            _db = db;
         }
 
         [HttpGet]
@@ -125,12 +132,6 @@ namespace VestBooks.Controllers;
                     usuario.Foto = @"\img\usuarios\" + nomeArquivo;
                     await _db.SaveChangesAsync();
                 }
-
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(usuario);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                var url = $"localhost:5062/Account/ConfirmarEmail?id={usuario.Id}&code={code}";
-                await _emailSender.SendEmailAsync(new([usuario.Email], "GStore - Criação de Conta",
-                    GetConfirmEmailHtml(HtmlEncoder.Default.Encode(url)), null));
 
                 TempData["Success"] = "Conta Criada com Sucesso!";
                 return RedirectToAction(nameof(Login));

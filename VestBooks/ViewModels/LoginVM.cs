@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-
 namespace VestBooks.ViewModels;
+
 public class LoginVM
 {
 [Display(Name = "Email ou Nome de Usuário", Prompt = "Informe seu Email ou Nome de Usuário")]
