@@ -43,8 +43,8 @@
       </div>
       <div class="offcanvas-body">
         <div class="d-flex justify-content-between gap-2 mb-4">
-          <a href="~/entrar.html" class="btn btn-primary w-100">Entrar</a>
-          <a href="~/cadastro.html" class="btn btn-primary w-100">Cadastrar</a>
+          <a asp-controller="Account" asp-action="Login" class="btn btn-primary w-100">Login</a>
+          <a asp-controller="Account" asp-action="Registro" class="btn btn-primary w-100">Cadastrar</a>
         </div>
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item fs-4">
@@ -215,7 +215,7 @@
 
                 <div id="feedback" class="mt-3 fw-bold text-center"></div>
                 <div class="text-center mt-4">
-                  <a href="~/perguntas.html" class="btn btn-primary">Clique aqui para mais perguntas</a>
+                  <a href="~/Perguntas.cshtml" class="btn btn-primary">Clique aqui para mais perguntas</a>
                 </div>
               </div>
             </div>
