@@ -29,6 +29,27 @@ public class HomeController : Controller
     {
         return View();
     }
+    
+        public IActionResult Enem()
+    {
+        return View();
+    }
+
+        public IActionResult Livros()
+    {
+        return View();
+    }
+
+        public IActionResult Perguntas()
+    {
+        return View();
+    }
+
+        public IActionResult Usp()
+    {
+        return View();
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
