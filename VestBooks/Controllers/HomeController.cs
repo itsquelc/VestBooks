@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using VestBooks.Data;
 using VestBooks.Models;
+using VestBooks.ViewModels;
 
 namespace VestBooks.Controllers;
 
@@ -19,10 +20,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-       List<Livro> livros = _db.Livros
-            .Where(p => p.Destaque)
-            .ToList();
-        return View(livros);
+        HomeVM home = new () {
+            Livros = _db.Livros
+                .Where(p => p.Destaque)
+                .ToList(),
+            Faculdades = _db.Faculdades.ToList()
+        };
+        return View(home);
     }
 
     public IActionResult Privacy()

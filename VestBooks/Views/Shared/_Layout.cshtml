@@ -1,50 +1,107 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html lang="pt-br">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - VestBooks</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/VestBooks.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestbook - @ViewData["Title"]</title>
+    <link rel="shortcut icon" href="~/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    @await RenderSectionAsync("Styles", required: false)
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <header class="container-fluid bg-dark">
+        <nav class="navbar navbar-dark bg-transparent fixed-top fundo py-0" aria-label="Navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VestBooks</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+                <a class="navbar-brand" href="#">
+                    <img src="~/img/logo.png" alt="Logo" width="85">
+                </a>
+                <div class="fs-2 d-flex align-items-center">
+                    <a href="#" class="text-white">
+                        <i class="bi bi-person-fill"></i>
+                    </a>
+                    <span class="me-3"></span>
                 </div>
             </div>
         </nav>
+        <div class="offcanvas offcanvas-start text-bg-white" tabindex="-1" id="offcanvasNavbarDark"
+            aria-labelledby="offcanvasNavbarDarkLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">VestBooks</h5>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="d-flex justify-content-between gap-2 mb-4">
+                    <a href="~/Account/Login.cshtml" class="btn btn-primary w-100">Entrar</a>
+                    <a href="~/Account/Registro.html" class="btn btn-primary w-100">Cadastrar</a>
+                </div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item fs-4">
+                        <a class="nav-link active" aria-current="page" href="#">Vestibulares:</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ENEM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">UNICAMP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">UNESP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FUVEST</a>
+                    </li>
+                    <li class="nav-item fs-4">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index" asp-fragment="sobre">Sobre Nós</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - VestBooks - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer text-center">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Logo -->
+            <div class="logo mb-3 mb-md-0">
+                <img src="~/img/logo.png" alt="Vestbook Logo">
+            </div>
+
+            <!-- Acesso Rápido -->
+            <div class="mb-3 mb-md-0">
+                <h6 class="fw-bold">Entre em contato</h6>
+                <a href="#" class="icon">
+                    <img src="~/img/instagram.png">
+                </a>
+                <a href="#" class="icon">
+                    <img src="~/img/contato.png">
+                </a>
+            </div>
+
+            <!-- Links Importantes -->
+            <div>
+                <h6 class="fw-bold">Links importantes</h6>
+                <div><a href="#">política de cookies</a></div>
+                <div><a href="#">política de privacidade</a></div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

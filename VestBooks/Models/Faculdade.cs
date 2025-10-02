@@ -15,4 +15,7 @@ public class Faculdade
     [StringLength(1000, ErrorMessage = "A descrição deve possuir no máximo 1000 caracteres")]
     public string Descricao { get; set; }
 
+    [StringLength(300)]
+    public string Foto { get; set; }
+
 }
