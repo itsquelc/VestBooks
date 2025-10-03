@@ -10,10 +10,10 @@ public class AppDbSeed
     {
         List<Faculdade> faculdades = new()
         {
-            new Faculdade { FaculdadeId = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png" },
-            new Faculdade { FaculdadeId = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png" },
-            new Faculdade { FaculdadeId = 3, Nome = "USP", Foto = "/img/faculdades/USP.png" },
-            new Faculdade { FaculdadeId = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png" },
+            new Faculdade { Id = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png" },
+            new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png" },
+            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png" },
+            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png" },
         };
         builder.Entity<Faculdade>().HasData(faculdades);
 

@@ -29,6 +29,15 @@ public class HomeController : Controller
         return View(home);
     }
 
+    public IActionResult Vestibular(int id) {
+        var vestibular = _db.Faculdades
+            .Where(v => v.Id == id)
+            .Include(v => v.Livros)
+            .ThenInclude(vl => vl.Livro)
+            .SingleOrDefault();
+        return View(vestibular);
+    }
+
     public IActionResult Privacy()
     {
         return View();

@@ -5,7 +5,7 @@ namespace VestBooks.Models;
 public class Faculdade
 {
     [Key]
-    public int FaculdadeId { get; set; }
+    public int Id { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe o nome da faculdade")]
     [StringLength(100, ErrorMessage = "O nome da faculdade deve possuir no máximo 100 caracteres")]
@@ -17,5 +17,7 @@ public class Faculdade
 
     [StringLength(300)]
     public string Foto { get; set; }
+
+    public virtual List<FaculdadeLivro> Livros { get; set; }
 
 }

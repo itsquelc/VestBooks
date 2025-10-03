@@ -1,4 +1,8 @@
-﻿<html lang="pt-br">
+﻿@inject VestBooks.Data.AppDbContext _context
+@{
+    var vestibulares = _context.Faculdades.ToList();
+}
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -35,7 +39,9 @@
         <div class="offcanvas offcanvas-start text-bg-white" tabindex="-1" id="offcanvasNavbarDark"
             aria-labelledby="offcanvasNavbarDarkLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">VestBooks</h5>
+                <div class="offcanvas-title w-100 text-center" id="offcanvasNavbarDarkLabel">
+                    <img src="~/img/logo horizontal.png" width="200">
+                </div>
                 <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
@@ -46,23 +52,20 @@
                 </div>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item fs-4">
-                        <a class="nav-link active" aria-current="page" href="#">Vestibulares:</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ENEM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">UNICAMP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">UNESP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FUVEST</a>
-                    </li>
-                    <li class="nav-item fs-4">
                         <a class="nav-link" asp-controller="Home" asp-action="Index" asp-fragment="sobre">Sobre Nós</a>
                     </li>
+                    <li class="nav-item fs-4">
+                        <span class="nav-link">Vestibulares:</span>
+                    </li>
+                    @foreach (var vestibular in vestibulares) {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Vestibular" asp-route-id="@vestibular.Id">
+                                <img src="@vestibular.Foto" width="50" class="ms-5 me-2">
+                                <strong>@vestibular.Nome.ToUpper()</strong>
+                            </a>
+                        </li>
+                    }
+                    
                 </ul>
             </div>
         </div>
