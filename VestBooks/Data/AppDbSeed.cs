@@ -10,9 +10,31 @@ public class AppDbSeed
     {
         List<Faculdade> faculdades = new()
         {
-            new Faculdade { Id = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png" },
-            new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png" },
-            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png" },
+            new Faculdade { Id = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png", Descricao = 
+            @"Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras
+            literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de
+            leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar
+            algumas leituras obrigatórias.
+            <br><br>
+            Como o Enem exige dos candidatos uma série de conhecimentos literários (tudo o que aprenderam no Ensino
+            Médio), espera-se do candidato que ele conheça as principais obras de cada escola literária.
+            <br><br>
+            A prova de Linguagens, Códigos e suas Tecnologias do Enem , por exemplo, pede que você conheça a
+            importância do autor/obra para a sociedade e para a cultura em geral.
+            Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio
+            depois." },
+            new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png", Descricao = 
+            @"O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas
+              universidades do país, está marcado para 20 de outubro. Além de todas as
+              disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de
+              leitura obrigatória.
+              <br><br>
+              O objetivo da Comvest (Comissão Permanente para os Vestibulares da Unicamp)
+              ao fazer esta lista, é estimular a leitura e o olhar atento dos estudantes para as
+              questões do mundo contemporâneo, então livros como “A vida não é útil“ de
+              Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão
+              ao lado de “Casa Velha“ de Machado de Assis, por exemplo." },
+            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png", Descricao = "" },
             new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png" },
         };
         builder.Entity<Faculdade>().HasData(faculdades);
@@ -20,34 +42,34 @@ public class AppDbSeed
 
         List<Autor> autores = new()
         {
-            new Autor { AutorId = 1, Nome = "Jorge Amado" },
-            new Autor { AutorId = 2, Nome = "Machado de Assis" },
-            new Autor { AutorId = 3, Nome = "Manuel Bandeira" },
-            new Autor { AutorId = 4, Nome = "João Guimarães Rosa" },
-            new Autor { AutorId = 5, Nome = "José de Alencar" },
-            new Autor { AutorId = 6, Nome = "Luís de Camões" },
-            new Autor { AutorId = 7, Nome = "Carolina Maria de Jesus" },
-            new Autor { AutorId = 8, Nome = "Carlos drummond de Andrade" },
-            new Autor { AutorId = 9, Nome = "Darcy Ribeiro" },
-            new Autor { AutorId = 10, Nome = "Graciliano Ramos" },
-            new Autor { AutorId = 11, Nome = "Aluísio Azevedo" },
-            new Autor { AutorId = 12, Nome = "José Paulo Paes" },
-            new Autor { AutorId = 13, Nome = "Conceição Evaristo" },
-            new Autor { AutorId = 14, Nome = "Ailton Krenak" },
-            new Autor { AutorId = 15, Nome = "Lima Barreto" },
-            new Autor { AutorId = 16, Nome = "Chimamanda Ngozi Adichie" },
-            new Autor { AutorId = 17, Nome = "Caio Fernando Abreu" },
-            new Autor { AutorId = 18, Nome = "Cartola" },
-            new Autor { AutorId = 19, Nome = "Lewis Carroll" },
-            new Autor { AutorId = 20, Nome = "Djamilia Pereira de Almdeida" },
-            new Autor { AutorId = 21, Nome = "Lygia Fagundes Telles" },
-            new Autor { AutorId = 22, Nome = "Paulina Chiziane" },
-            new Autor { AutorId = 23, Nome = "Rachel de Queiroz" },
-            new Autor { AutorId = 24, Nome = "Conceição Evaristo" },
-            new Autor { AutorId = 25, Nome = "Julia Lopes de Almeida" },
-            new Autor { AutorId = 26, Nome = "Narcisa Amália" },
-            new Autor { AutorId = 27, Nome = "Sophia de Mello Breyner Andresen" },
-            new Autor { AutorId = 28, Nome = "Nísia Floresta" },
+            new Autor { AutorId = 1, Nome = "Jorge Amado", Foto = "/img/autores/Jorge Amado.png"  },
+            new Autor { AutorId = 2, Nome = "Machado de Assis", Foto = "/img/autores/Machado de Assis.png"},
+            new Autor { AutorId = 3, Nome = "Manuel Bandeira", Foto = "/img/autores/Manuel Bandeira.png" },
+            new Autor { AutorId = 4, Nome = "João Guimarães Rosa", Foto = "/img/autores/Joaõ Guimarães Rosa.png" },
+            new Autor { AutorId = 5, Nome = "José de Alencar", Foto = "/img/autores/José de Alencar.png" },
+            new Autor { AutorId = 6, Nome = "Luís de Camões", Foto = "/img/autores/Luís Camões.png" },
+            new Autor { AutorId = 7, Nome = "Carolina Maria de Jesus", Foto = "/img/autores/Carolina Maria de Jesus.png" },
+            new Autor { AutorId = 8, Nome = "Carlos drummond de Andrade", Foto = "/img/autores/Carlos drummond de Andrade.png"  },
+            new Autor { AutorId = 9, Nome = "Darcy Ribeiro", Foto = "/img/autores/Darcy Ribeiro.png"  },
+            new Autor { AutorId = 10, Nome = "Graciliano Ramos",Foto = "/img/autores/Graciliano Ramos.png"  },
+            new Autor { AutorId = 11, Nome = "Aluísio Azevedo", Foto = "/img/autores/Aluísio Azevedo.png"  },
+            new Autor { AutorId = 12, Nome = "José Paulo Paes",Foto = "/img/autores/José Paulo Paes.png"  },
+            new Autor { AutorId = 13, Nome = "Conceição Evaristo",Foto = "/img/autores/Conceição Evaristo.png"  },
+            new Autor { AutorId = 14, Nome = "Ailton Krenak",Foto = "/img/autores/Ailton Krenak.png"  },
+            new Autor { AutorId = 15, Nome = "Lima Barreto",Foto = "/img/autores/Lima Barreto.png"  },
+            new Autor { AutorId = 16, Nome = "Chimamanda Ngozi Adichie",Foto = "/img/autores/Chimamanda Ngozi Adichie.png"  },
+            new Autor { AutorId = 17, Nome = "Caio Fernando Abreu", Foto = "/img/autores/Caio Fernando Abreu.png"  },
+            new Autor { AutorId = 18, Nome = "Cartola", Foto = "/img/autores/Cartola.png"  },
+            new Autor { AutorId = 19, Nome = "Lewis Carroll", Foto = "/img/autoresLewis Carroll.png"  },
+            new Autor { AutorId = 20, Nome = "Djamilia Pereira de Almdeida", Foto = "/img/autores/Djamilia Pereira de Almdeida.png" },
+            new Autor { AutorId = 21, Nome = "Lygia Fagundes Telles", Foto = "Lygia Fagundes Telles.png" },
+            new Autor { AutorId = 22, Nome = "Paulina Chiziane", Foto = "/img/autores/Paulina Chiziane.png" },
+            new Autor { AutorId = 23, Nome = "Rachel de Queiroz", Foto = "/img/autores/Rachel de Queiroz.png" },
+            new Autor { AutorId = 24, Nome = "Conceição Evaristo", Foto = "/img/autores/Conceição Evaristo.png" },
+            new Autor { AutorId = 25, Nome = "Julia Lopes de Almeida", Foto = "/img/autores/Julia Lopes de Almeida.png" },
+            new Autor { AutorId = 26, Nome = "Narcisa Amália", Foto = "/img/autores/Narcisa Amália.png" },
+            new Autor { AutorId = 27, Nome = "Sophia de Mello Breyner Andresen", Foto = "/img/autores/Sophia de Mello Breyner Andresen.png" },
+            new Autor { AutorId = 28, Nome = "Nísia Floresta", Foto = "/img/autores/Nísia Floresta.png" },
 
 
         };
@@ -95,8 +117,49 @@ public class AppDbSeed
     new Livro { LivroId = 31, FaculdadeId = 3, Nome = "O cristo cigano", Descricao = "O livro é composto por uma série de poemas que contam a história de uma lenda sobre o assassinato de um cigano e a construção de uma imagem de Cristo.", Publicacao = "1961", AutorId = 27, Avaliacao = "3,7", Destaque = true, Foto = "/img/livros/O cristo cigano.png" },
     new Livro { LivroId = 32, FaculdadeId = 3, Nome = "Opúsculo Humanitário", Descricao = "A obra traça a evolução das condições femininas e mostram a experiência da autora tanto em leitura, quanto em vivências em suas viagens.", Publicacao = "1853", AutorId = 28, Avaliacao = "3,6", Destaque = true, Foto = "/img/livros/Opúsculo Humanitário.png"},
     };
-        
     builder.Entity<Livro>().HasData(livros);
+
+
+    
+    List<FaculdadeLivro> faculdadeLivros = new()
+    {
+        new() {FaculdadeLivroId =  1, FaculdadeId =  1, LivroId =  1},
+        new() {FaculdadeLivroId =  2, FaculdadeId =  1, LivroId =  2},
+        new() {FaculdadeLivroId =  3, FaculdadeId =  1, LivroId =  3},
+        new() {FaculdadeLivroId =  4, FaculdadeId =  1, LivroId =  4},
+        new() {FaculdadeLivroId =  5, FaculdadeId =  1, LivroId =  5},
+        new() {FaculdadeLivroId =  6, FaculdadeId =  1, LivroId =  6},
+        new() {FaculdadeLivroId =  7, FaculdadeId =  1, LivroId =  7},
+        new() {FaculdadeLivroId =  8, FaculdadeId =  1, LivroId =  8},
+        new() {FaculdadeLivroId =  9, FaculdadeId =  1, LivroId =  9},
+        new() {FaculdadeLivroId =  10, FaculdadeId =  1, LivroId =  10},
+        new() {FaculdadeLivroId =  11, FaculdadeId =  1, LivroId =  11},
+        new() {FaculdadeLivroId =  12, FaculdadeId =  1, LivroId =  12},
+        new() {FaculdadeLivroId =  13, FaculdadeId =  1, LivroId =  13},
+        new() {FaculdadeLivroId =  14, FaculdadeId =  1, LivroId =  14},
+        new() {FaculdadeLivroId =  15, FaculdadeId =  2, LivroId =  15},
+        new() {FaculdadeLivroId =  16, FaculdadeId =  2, LivroId =  16},
+        new() {FaculdadeLivroId =  17, FaculdadeId =  2, LivroId =  17},
+        new() {FaculdadeLivroId =  18, FaculdadeId =  2, LivroId =  18},
+        new() {FaculdadeLivroId =  19, FaculdadeId =  2, LivroId =  19},
+        new() {FaculdadeLivroId =  20, FaculdadeId =  2, LivroId =  20},
+        new() {FaculdadeLivroId =  21, FaculdadeId =  2, LivroId =  21},
+        new() {FaculdadeLivroId =  22, FaculdadeId =  2, LivroId =  22},
+        new() {FaculdadeLivroId =  23, FaculdadeId =  2, LivroId =  23},
+        new() {FaculdadeLivroId =  24, FaculdadeId =  3, LivroId =  24},
+        new() {FaculdadeLivroId =  25, FaculdadeId =  3, LivroId =  25},
+        new() {FaculdadeLivroId =  26, FaculdadeId =  3, LivroId =  26},
+        new() {FaculdadeLivroId =  27, FaculdadeId =  3, LivroId =  27},
+        new() {FaculdadeLivroId =  28, FaculdadeId =  3, LivroId =  28},
+        new() {FaculdadeLivroId =  29, FaculdadeId =  3, LivroId =  29},
+        new() {FaculdadeLivroId =  30, FaculdadeId =  3, LivroId =  30},
+        new() {FaculdadeLivroId =  31, FaculdadeId =  3, LivroId =  31},
+        new() {FaculdadeLivroId =  32, FaculdadeId =  3, LivroId =  32},
+
+    };
+    builder.Entity<FaculdadeLivro>().HasData(faculdadeLivros);
+
+    
 
 
     #region Populate Roles - Perfis de Usuário

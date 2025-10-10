@@ -35,3 +35,7 @@ tirar o ?
 
 -> autor dando erro, criar classe?
 -> data de publicação dando erro, tirar aspas? 
+
+
+vestibuar
+<a asp-action="Perguntas" asp-controller="Home" class="btn btn-primary">Clique aqui para mais perguntas</a>

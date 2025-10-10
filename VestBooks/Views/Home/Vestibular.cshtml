@@ -1,29 +1,19 @@
+@model Faculdade
 @{
-  ViewData["Title"] = "Enem";
+  ViewData["Title"] = Model.Nome;
 }
 
 <section class="bg-white mt-100">
   <div class="container-fluid px-0">
     <div class="bg-primary py-4">
       <div class="container text-center">
-        <img src="~/img/faculdades/ENEM.png" alt="Logo" class="img-fluid" style="max-height: 60px; ">
+        <img src="@Model.Foto" alt="Logo" class="img-fluid" style="max-height: 60px; ">
       </div>
     </div>
     <div class="container mt-5 text-center">
       <div class="row featurette">
         <div class="col-mt-12">
-          <p class="lead">Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras
-            literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de
-            leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar
-            algumas leituras obrigatórias.
-
-            Como o Enem exige dos candidatos uma série de conhecimentos literários (tudo o que aprenderam no Ensino
-            Médio), espera-se do candidato que ele conheça as principais obras de cada escola literária.
-
-            A prova de Linguagens, Códigos e suas Tecnologias do Enem , por exemplo, pede que você conheça a
-            importância do autor/ obra para a sociedade e para a cultura em geral.
-            Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio
-            depois.
+          <p class="lead">@Html.Raw(Model.Descricao)
           </p>
         </div>
       </div>
@@ -37,12 +27,9 @@
       <div class="row">
         <div class="col">
           <div id="livros" class="livro mt-3 p-2">
-            <a href='#'><img src="~/img/livros/Capitães de Areia – Jorge Amado.png" alt=""></a>
-            <a href='#'><img src="~/img/livros/Dona Flor e seus dois maridos..png" alt=""></a>
-            <a href='#'><img src="~/img/livros/Estrela da Vida Inteira.png" alt=""></a>
-            <a href='#'><img src="~/img/livros/Gabriela, cravo e canela..png" alt=""></a>
-            <a href='#'><img src="~/img/livros/Grande Sertão Veredas.png" alt=""></a>
-            <a href='#'><img src="~/img/livros/Iracema.png" alt=""></a>
+            @foreach (var livro in Model.Livros) {
+              <a href='#'><img src="@livro.Livro.Foto" alt="@livro.Livro.Nome"></a>
+            }
           </div>
         </div>
       </div>
