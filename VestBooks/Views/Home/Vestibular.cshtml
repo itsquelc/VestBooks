@@ -35,15 +35,21 @@
       </div>
     </div>
     <div class="text-center bg-info text-white py-2 my-4" style="font-weight: bold;">
-      Principais Autores
+    Autores
+</div>
+<div class="row">
+    <div id="autor" class="autor mt-3 p-2 ">
+        @foreach (var livro in Model.Livros)
+        {
+            <div class="text-center d-inline-block m-2">
+                <a href="#">
+                    <img src="@livro.Livro.Autor.Foto" alt="@livro.Livro.Autor.Nome" style="width:220px; height:300px; object-fit:cover;" />
+                </a>
+                <div class="mt-1 fw-bold text-center">@livro.Livro.Autor.Nome</div>
+            </div>
+        }
     </div>
-    <div class="row">
-      <div id="autor" class="autor mt-3 p-2">
-        <a href='#'><img src="~/img/autores/jorge amado.png " alt=""></a>
-        <a href='#'><img src="~/img/autores/jose de alencar.png" alt=""></a>
-        <a href='#'><img src="~/img/autores/machado de assis.png" alt=""></a>
-        <a href='#'><img src="~/img/autores/Manuel Bandeira.png" alt=""></a>
-      </div>
+</div>
 
       <div class="text-center bg-info text-white py-2 my-5" style="font-weight: bold;">
         Vídeo Aula
@@ -132,7 +138,7 @@
 
             <div id="feedback" class="mt-3 fw-bold text-center"></div>
             <div class="text-center mt-4">
-              <a href="~/Perguntas.cshtml" class="btn btn-primary">Clique aqui para mais perguntas</a>
+              <a asp-action= "Perguntas" asp-controller ="Home" class="btn btn-primary">Clique aqui para mais perguntas</a>
             </div>
           </div>
         </div>

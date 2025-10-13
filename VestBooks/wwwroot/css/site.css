@@ -129,7 +129,6 @@ a {
     height: 300px;
     object-fit: cover;
     padding: 20px;
-    margin-right: 50px;
     box-sizing: border-box;
     transition: transform 450ms;
     display: block;
@@ -144,6 +143,7 @@ a {
     overflow-y: hidden;
     overflow-x: scroll;
     justify-content: center;
+    gap: 60px;
 }
 
 

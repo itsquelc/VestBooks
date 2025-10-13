@@ -34,6 +34,7 @@ public class HomeController : Controller
             .Where(v => v.Id == id)
             .Include(v => v.Livros)
             .ThenInclude(vl => vl.Livro)
+            .ThenInclude(l => l.Autor)
             .SingleOrDefault();
         return View(vestibular);
     }
