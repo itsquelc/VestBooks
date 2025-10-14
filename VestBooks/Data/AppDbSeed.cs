@@ -1,6 +1,7 @@
 using VestBooks.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using AspNetCoreGeneratedDocument;
 
 namespace VestBooks.Data;
 
@@ -10,7 +11,7 @@ public class AppDbSeed
     {
         List<Faculdade> faculdades = new()
         {
-            new Faculdade { Id = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png", Descricao = 
+            new Faculdade { Id = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png", Descricao =
             @"Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras
             literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de
             leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar
@@ -23,7 +24,12 @@ public class AppDbSeed
             importância do autor/obra para a sociedade e para a cultura em geral.
             Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio
             depois." },
-            new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png", Descricao = 
+
+
+
+
+
+            new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png", Descricao =
             @"O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas
               universidades do país, está marcado para 20 de outubro. Além de todas as
               disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de
@@ -33,7 +39,7 @@ public class AppDbSeed
               ao fazer esta lista, é estimular a leitura e o olhar atento dos estudantes para as
               questões do mundo contemporâneo, então livros como “A vida não é útil“ de
               Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão
-              ao lado de “Casa Velha“ de Machado de Assis, por exemplo." },
+              ao lado de “Casa Velha“ de Machado de Assis, por exemplo."},
             new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png", Descricao = "" },
             new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png" },
         };
@@ -117,11 +123,11 @@ public class AppDbSeed
     new Livro { LivroId = 31, FaculdadeId = 3, Nome = "O cristo cigano", Descricao = "O livro é composto por uma série de poemas que contam a história de uma lenda sobre o assassinato de um cigano e a construção de uma imagem de Cristo.", Publicacao = "1961", AutorId = 27, Avaliacao = "3,7", Destaque = true, Foto = "/img/livros/O cristo cigano.png" },
     new Livro { LivroId = 32, FaculdadeId = 3, Nome = "Opúsculo Humanitário", Descricao = "A obra traça a evolução das condições femininas e mostram a experiência da autora tanto em leitura, quanto em vivências em suas viagens.", Publicacao = "1853", AutorId = 28, Avaliacao = "3,6", Destaque = true, Foto = "/img/livros/Opúsculo Humanitário.png"},
     };
-    builder.Entity<Livro>().HasData(livros);
+        builder.Entity<Livro>().HasData(livros);
 
 
-    
-    List<FaculdadeLivro> faculdadeLivros = new()
+
+        List<FaculdadeLivro> faculdadeLivros = new()
     {
         new() {FaculdadeLivroId =  1, FaculdadeId =  1, LivroId =  1},
         new() {FaculdadeLivroId =  2, FaculdadeId =  1, LivroId =  2},
@@ -157,12 +163,63 @@ public class AppDbSeed
         new() {FaculdadeLivroId =  32, FaculdadeId =  3, LivroId =  32},
 
     };
-    builder.Entity<FaculdadeLivro>().HasData(faculdadeLivros);
-
-    
+        builder.Entity<FaculdadeLivro>().HasData(faculdadeLivros);
 
 
-    #region Populate Roles - Perfis de Usuário
+        List<Pergunta> perguntas = new(){
+        new Pergunta { PerguntaId = 1, FaculdadeId = 1, Enunciado =
+            @"Quem é pobre, porque se sujou, é um prisioneiro; vaga nas gerais, que nem os rios distantes de
+              sua ligação. O cabaré tem o apito do trem, o sofá manchado. Dona Flor é toda cheia de vestidos, de
+              coentro, de cheiros.”
+              <br>
+              (Amado, J. Dona Flor e seus dois maridos. São Paulo: Companhia das Letras, 1992.)
+              <br><br>
+              No trecho citado, o autor representa uma situação desencantada da mulher brasileira dos anos
+              1940, tratando com humor a sensualidade e os conflitos sociais que envolvem essa época."},
+        new Pergunta { PerguntaId = 2, FaculdadeId = 1, Enunciado =
+            @"(Livro: Dona Flor e Seus Dois Maridos)
+            <br>
+            Sobre a personagem Dona Flor, é correto afirmar que:"},
+        new Pergunta { PerguntaId = 3, FaculdadeId = 1, Enunciado =
+         @"(Dom Casmurro)
+         <br>
+         (ESPCEx/2019)
+         Retórica dos namorados, dá-me uma comparação exata e poética para dizer o que foram aqueles olhos de Capitu.
+         Não me acode imagem capaz de dizer, sem quebra da dignidade do estilo, o que eles foram e me fizeram. 
+         Olhos de ressaca? Vá, de ressaca. É o que me dá idéia daquela feição nova. Traziam não sei que fluido misterioso 
+         e enérgico, uma força que arrastava para dentro, como a vaga que se retira da praia, nos dias de ressaca.
+         Para não ser arrastado, agarrei-me às outras partes vizinhas, às orelhas, aos braços, aos cabelos espalhados pelos ombros; 
+         mas tão depressa buscava as pupilas, a onda que saía delas vinha crescendo, cava e escura, ameaçando envolver-me, 
+         puxar-me e tragar-me.
+         <br>
+        (ASSIS. Machado de. Dom Casmurro. São Paulo: Ática,1999. p.55 (fragmento))
+        <br><br>
+        Com Dom Casmurro, obra publicada em 1899, depois de Memórias Póstumas de Brás Cubas (1881) e de Quincas Borba (1891),
+        Machado de Assis deixa marcas indeléveis de que a Literatura Brasileira vivia um novo período literário, bem diferente
+        do Romantismo. Nessas obras, nota-se uma forma diferente de sentir e de ver a realidade, menos idealizada, mais verdadeira
+        e crítica: uma perspectiva realista. O trecho apresentado acima representa essa perspectiva porque o narrador:"
+        },
+    };
+
+
+        List<PerguntaAlternativa> perguntasAlternativas = new(){
+        new PerguntaAlternativa { PerguntaAlternativaId = 1, PerguntaId = 1, Descricao = "Relata a vida feliz e harmoniosa de mulheres da década de 1940, demonstrando que não havia disposição em superar essa é poca.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 2, PerguntaId = 1, Descricao = "Mostra um posicionamento progressista e feminista do autor diante da condição da mulher no século XXI.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 3, PerguntaId = 1, Descricao = "Denuncia a falta de comprometimento e a desvalorização das mulheres, que eram excluídas dos espaços sociais e políticos.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 4, PerguntaId = 1, Descricao = "Mantém o distanciamento narrativo coerente com sua posição social, de espectador da forma.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 5, PerguntaId = 2, Descricao = "É uma mulher submissa e resignada, que aceita seu destino de ter dois maridos sem questionamentos. ", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 6, PerguntaId = 2, Descricao = "É uma professora de culinária que busca independência financeira e emocional após a morte do primeiro marido. ", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 7, PerguntaId = 2, Descricao = "É uma mulher sensual e provocadora, que usa sua beleza para manipular os homens ao seu redor.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 8, PerguntaId = 2, Descricao = "É uma personagem que representa a mulher moderna, que desafia os padrões sociais e busca a liberdade sexual.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 9, PerguntaId = 3, Descricao = "Exagera nas imagens poéticas traduzidas por “fluido misterioso”, “praia”, “cabelos espalhados pelos ombros” em uma realização imagética da mulher que o tragava como fazem as ondas de um mar em ressaca.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 10, PerguntaId = 3, Descricao = "Deixa-se levar pelas ondas que saíam das pupilas de Capitu em um fluido, misterioso e enérgico, que o arrasta depressa como uma vaga que se retira da praia em dias de ressaca, não adiantando agarrar-se nem aos braços nem aos cabelos da moça.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 11, PerguntaId = 3, Descricao = "Retira-se da praia como as vagas em dias de ressaca por não ser capaz de dizer a Capitu o que está sentindo ao olhá-la nos olhos sem quebrar a dignidade mínima daquele momento em que duas pessoas apaixonam-se.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 12, PerguntaId = 3, Descricao = "Solicita à “retórica dos namorados” uma comparação que seja, ao mesmo tempo, exata e poética capaz de descrever os olhos de Capitu, revelando a dificuldade de apresentar uma verdade que não estrague a idealização romântica.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 13, PerguntaId = 3, Descricao = "Ridiculariza a retórica dos românticos ao afirmar que os olhos de Capitu pareciam com uma ressaca do mar e, por isso, não seria capaz de descrevê-los de maneira poética, traduzindo, assim, o realismo literário de sua época.", Correta = false},
+    };
+
+
+        #region Populate Roles - Perfis de Usuário
         List<IdentityRole> roles = new()
         {
             new IdentityRole() {
@@ -183,12 +240,12 @@ public class AppDbSeed
         };
 
         builder.Entity<IdentityRole>().HasData(roles);
-    #endregion
+        #endregion
 
 
 
         #region Populate Usuário
-         var usuario = new Usuario()
+        var usuario = new Usuario()
         {
             Id = "1",
             Email = "gallojunior@gmail.com",
