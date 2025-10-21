@@ -27,8 +27,6 @@ public class AppDbSeed
 
 
 
-
-
             new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png", Descricao =
             @"O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas
               universidades do país, está marcado para 20 de outubro. Além de todas as

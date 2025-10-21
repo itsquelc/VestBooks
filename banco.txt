@@ -1,0 +1,37 @@
+ new Pergunta { PerguntaId = 3, FaculdadeId = 1, Enunciado =
+         @Morro da Babilônia
+         <br>
+         À noite, do morro    <br>
+        descem vozes que criam o terror    <br>
+        (terror urbano, cinquenta por cento de cinema,     <br>
+        e o resto que veio de Luanda ou se perdeu na língua     <br>
+        Geral).
+
+        Quando houve revolução, os soldados     <br>
+        espalharam no morro,    <br>
+        O quartel pegou fogo, eles não voltaram.    <br>
+        Alguns, chumbados, morreram.    <br>
+        O morro ficou mais encantado.    <br>
+
+        Mas as vozes do morro    <br>
+        não são propriamente lúgubres.    <br>
+        Há mesmo um cavaquinho bem afinado     <br>
+        que domina os ruídos de pedra e da folhagem    <br>
+        e desce até nós modesto e recreativo,    <br>
+        como uma gentileza no morro    <br>
+
+         <br>
+        (Carlos Drummond de Andrade Sentimento do mundo. São Paulo: Companhia das Letras, 2012, p. 19.)
+        <br><br>
+      No poema “Morro da Babilônia”, de Carlos Drummond de Andrade,
+      },
+
+
+         List<PerguntaAlternativa> perguntasAlternativas = new(){
+        new PerguntaAlternativa { PerguntaAlternativaId = 1, PerguntaId = 1, Descricao = "A menção à cidade do Rio de Janeiro é feita de modo indireto, metonimicamente, pela referência ao Morro da Babilônia.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 2, PerguntaId = 1, Descricao = "O sentimento do mundo é representado pela percepção particular sobre a cidade do Rio de Janeiro, aludida pela metáfora do Morro da Babilônia", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 3, PerguntaId = 1, Descricao = "O tratamento dado ao Morro da Babilônia assemelha-se ao que é dado a uma pessoa, o que caracteriza a figura de estilo denominada paronomásia.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 4, PerguntaId = 1, Descricao = "A referência ao Morro da Babilônia produz, no percurso figurativo do poema, um oximoro: a relação entre terror e gentileza no espaço urbano.", Correta = false},
+
+
+        
