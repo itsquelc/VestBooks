@@ -263,25 +263,65 @@ public class AppDbSeed
          do século XIX. Indique a alternativa em que todas as características mencionadas 
          podem ser adequadamente atribuídas ao romance em questão."
       },
-      new Pergunta { PerguntaId = 6, FaculdadeId = 3, Enunciado =
-         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
-         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
-         do século XIX. Indique a alternativa em que todas as características mencionadas 
-         podem ser adequadamente atribuídas ao romance em questão."
+      new Pergunta { PerguntaId = 7, FaculdadeId = 3, Enunciado =
+       @"Nun´Álvares Pereira
+         <br>
+       Que auréola te cerca?
+        É a espada que, volteando, 
+        Faz que o ar alto perca
+        Seu azul negro e brando.
+
+        Mas que espada é que, erguida, 
+        Faz esse halo no céu?
+        É Excalibur, a ungida, 
+        Que o Rei Artur te deu.
+
+        ´Sperança consumada,
+        S. Portugal em ser,
+        Ergue a luz da tua espada 
+        Para a estrada se ver!
+         <br>
+        Fernando Pessoa. In: “A Coroa”, Parte I, Mensagem.
+        <br><br>
+        A primeira parte de Mensagem, organizada como um correlativo poético do Brasão das Armas de Portugal, perfila uma série de figuras míticas e históricas que teriam sido responsáveis pela formação nacional portuguesa. A seleção de Nun´Álvares Pereira para ocupar o lugar da Coroa"
       },
 
-      new Pergunta { PerguntaId = 6, FaculdadeId = 3, Enunciado =
-         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
-         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
-         do século XIX. Indique a alternativa em que todas as características mencionadas 
-         podem ser adequadamente atribuídas ao romance em questão."
+      new Pergunta { PerguntaId = 8, FaculdadeId = 3, Enunciado =
+         @"Sobre a obra Dom Casmurro, é correto afirmar:"
       },
 
-      new Pergunta { PerguntaId = 6, FaculdadeId = 3, Enunciado =
-         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
-         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
-         do século XIX. Indique a alternativa em que todas as características mencionadas 
-         podem ser adequadamente atribuídas ao romance em questão."
+      new Pergunta { PerguntaId = 9, FaculdadeId = 3, Enunciado =
+         @"Na obra A Hora da Estrela, a metanarrativa presente na voz do narrador é utilizada para:"
+      },
+
+      new Pergunta { PerguntaId = 10, FaculdadeId = 3, Enunciado =
+         @"A linguagem concisa e econômica em Vidas Secas serve principalmente para:"
+      },
+
+       new Pergunta { PerguntaId = 11, FaculdadeId = 4, Enunciado =
+         @"Futurismo.
+         <br>
+        O Manifesto Futurista, de autoria do poeta italiano Filippo Tommaso Marinetti (1876-1944), foi publicado em Paris em 1909. Nesse manifesto, Marinetti declara a raiz italiana da nova estética: “queremos libertar esse país (a Itália) de sua fétida gangrena de professores, arqueólogos, cicerones e antiquários”. Falando da Itália para o mundo, o Futurismo coloca-se contra o “passadismo” burguês e o tradicionalismo cultural. A exaltação da máquina e da “beleza da velocidade”, associada ao elogio da técnica e da ciência, torna-se emblemática da nova atitude estética e política.
+         <br>
+        (https://enciclopedia.itaucultural.org.br. Adaptado.)
+        <br><br>
+       Verifica-se a influência dessa vanguarda artística nos seguintes versos do poeta português Fernando Pessoa:"
+      },
+
+       new Pergunta { PerguntaId = 12, FaculdadeId = 4, Enunciado =
+         @"O romance Galvez, Imperador do Acre"
+      },
+
+       new Pergunta { PerguntaId = 13, FaculdadeId = 4, Enunciado =
+         @"No romance A moreninha, o personagem Augusto é um jovem"
+      },
+
+       new Pergunta { PerguntaId = 14, FaculdadeId = 4, Enunciado =
+         @"De fato, este romance constitui um dos poucos romances cômicos do romantismo nacional, afastando-se dos traços idealizantes que caracterizam boa parte das obras “sérias” dos autores de então. O modo pelo qual este romance pinta a sociedade, representado-a a partir de um ângulo abertamente cômico e satírico, também era relativamente novo nas letras brasileiras do século XIX.
+         <br>
+        (Mamede Mustafa Jarouche. “Galhofa sem melancolia”, 2003. Adaptado.)
+        <br><br>
+         O comentário refere-se ao romance"
       },
     };
 
@@ -309,34 +349,46 @@ public class AppDbSeed
         new PerguntaAlternativa { PerguntaAlternativaId = 20, PerguntaId = 5, Descricao = "na referência à “fresta” como forma de o compositor se pronunciar.", Correta = true},
         new PerguntaAlternativa { PerguntaAlternativaId = 21, PerguntaId = 5, Descricao = "na incoerência da rima entre “festa” e “imodesta” para prestigiar o compositor.", Correta = false},
         new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = "Rejeição dos valores românticos, narrativa linear e fluente de um defunto autor, visão pessimista em relação aos problemas sociais.", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = "Distanciamento do determinismo científico, cultivo do humor e digressões sobre banalidades, visão reformadora das mazelas sociais.", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = "Abandono das idealizações românticas, uso de técnicas pouco usuais de narrativa, sugestão implícita de contradições sociais.", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = " Crítica do realismo literário, narração iniciada com a morte do narrador-personagem, tematização de conflitos sociais.", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
-        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
-        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
-
+        new PerguntaAlternativa { PerguntaAlternativaId = 23, PerguntaId = 6, Descricao = "Distanciamento do determinismo científico, cultivo do humor e digressões sobre banalidades, visão reformadora das mazelas sociais.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 24, PerguntaId = 6, Descricao = "Abandono das idealizações românticas, uso de técnicas pouco usuais de narrativa, sugestão implícita de contradições sociais.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 25, PerguntaId = 6, Descricao = "Crítica do realismo literário, narração iniciada com a morte do narrador-personagem, tematização de conflitos sociais.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 26, PerguntaId = 7, Descricao = "sugere, pela imagem do halo de luz, que a verdadeira nobreza é de espírito.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 27, PerguntaId = 7, Descricao = "destaca, através da referência ao mito arturiano, o seu sangue bretão", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 28, PerguntaId = 7, Descricao = "distingue, por meio do substantivo “´sperança”, um regente digno de seu posto.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 29, PerguntaId = 7, Descricao = "enaltece, pela repetição da palavra espada, a guerra como estrada para o futuro", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 30, PerguntaId = 8, Descricao = "Bentinho é um narrador onisciente que revela com clareza todos os eventos da trama, sem deixar dúvidas sobre as ações dos personagens.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 31, PerguntaId = 8, Descricao = "A dúvida sobre a fidelidade de Capitu é um elemento central da narrativa, deixando em aberto a interpretação do leitor.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 32, PerguntaId = 8, Descricao = "A obra é um romance de aventura, com ênfase em episódios de ação e suspense.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 33, PerguntaId = 8, Descricao = "O enredo é linear e cronológico, sem o uso de flashbacks ou digressões.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 34, PerguntaId = 9, Descricao = "Criar uma distância total entre o narrador e a história, sem envolver o leitor.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 35, PerguntaId = 9, Descricao = "Apresentar um narrador onisciente que tudo sabe sobre os personagens.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 36, PerguntaId = 9, Descricao = "Evitar reflexões sobre a condição social da protagonista, focando apenas em sua vida pessoal.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 37, PerguntaId = 9, Descricao = "Construir uma história linear e objetiva, sem interferências do narrador.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 38, PerguntaId = 9, Descricao = "Desconstruir a narrativa tradicional e estabelecer um diálogo direto com o leitor, questionando o papel do escritor e da personagem.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 39, PerguntaId = 10, Descricao = "Embelezar poeticamente a descrição do sertão e da natureza.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 40, PerguntaId = 10, Descricao = "Facilitar a leitura e tornar a obra mais acessível para crianças.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 41, PerguntaId = 10, Descricao = "Apresentar uma linguagem rebuscada e sofisticada, típica do modernismo europeu.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 42, PerguntaId = 10, Descricao = "Reforçar a dureza da vida dos retirantes, refletindo a escassez e a dificuldade do ambiente.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 43, PerguntaId = 10, Descricao = "Esconder as emoções dos personagens por meio de longas descrições.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 44, PerguntaId = 11, Descricao = "Mas, ah outra vez a raiva mecânica constante! Outra vez a obsessão movimentada dos ônibus. E outra vez a fúria de estar indo ao mesmo tempo [dentro de todos os comboios De todas as partes do mundo, De estar dizendo adeus de bordo de todos os navios, Que a estas horas estão levantando ferro ou [afastando-se das docas.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 45, PerguntaId = 11, Descricao = "O sonho é ver as formas invisíveis Da distância imprecisa, e, com sensíveis Movimentos da esprança e da vontade, Buscar na linha fria do horizonte A árvore, a praia, a flor, a ave, a fonte — Os beijos merecidos da Verdade.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 46, PerguntaId = 11, Descricao = "O teu silêncio é uma nau com todas as velas pandas... Brandas, as brisas brincam nas flâmulas, teu sorriso... E o teu sorriso no teu silêncio é as escadas e as andas Com que me finjo mais alto e ao pé de qualquer paraíso...", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 47, PerguntaId = 11, Descricao = "Não me compreendo nem no que, compreendendo, faço. Não atinjo o fim ao que faço pensando num fim. É diferente do que é o prazer ou a dor que abraço. Passo, mas comigo não passa um eu que há em mim.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 48, PerguntaId = 12, Descricao = "idealiza o passado da conquista do espaço amazônico.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 49, PerguntaId = 12, Descricao = "desmistifica as aventuras e os aventureiros da Amazônia.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 50, PerguntaId = 12, Descricao = "faz uma reconstituição objetiva do passado histórico da Amazônia.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 51, PerguntaId = 12, Descricao = "retrata os aventureiros amazônicos como homens especiais, desinteressados da vida mundana.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 52, PerguntaId = 12, Descricao = "constrói um mito fundador para o povo amazônico, apoiado na miscigenação de brancos e índios.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 53, PerguntaId = 13, Descricao = "instável, com relações afetivas curtas e inconstantes, que por fim se transforma ao encontrar o amor verdadeiro.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 54, PerguntaId = 13, Descricao = "prático, crítico ao romantismo, que ironiza o modo como as pessoas são vulneráveis às paixões.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 55, PerguntaId = 13, Descricao = "romântico, que não se relaciona com nenhuma mulher por fidelidade a uma promessa que havia feito na infância.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 56, PerguntaId = 13, Descricao = "melancólico, que prefere imaginar um amor perfeito, semelhante aos dos livros, o que o paralisa diante das relações afetivas reais e presentes.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 57, PerguntaId = 13, Descricao = "interesseiro, que submetia suas relações afetivas ao cálculo sobre as vantagens sociais que elas lhe trariam.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 58, PerguntaId = 14, Descricao = "O cortiço, de Aluísio Azevedo.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 59, PerguntaId = 14, Descricao = "Memórias póstumas de Brás Cubas, de Machado de Assis.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 60, PerguntaId = 14, Descricao = "Memórias de um sargento de milícias, de Manuel Antônio de Almeida.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 61, PerguntaId = 14, Descricao = "Iracema, de José de Alencar.", Correta = false},       
+        new PerguntaAlternativa { PerguntaAlternativaId = 62, PerguntaId = 14, Descricao = "Macunaíma, de Mário de Andrade.", Correta = false},
     };
 
 
