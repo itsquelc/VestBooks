@@ -120,6 +120,7 @@ public class AppDbSeed
     new Livro { LivroId = 30, FaculdadeId = 3, Nome = "Nebulosas", Descricao = "Seus poemas revelam uma voz lírica única, que aborda temas íntimos, femininos e ligados à natureza, ao mesmo tempo em que expressam uma preocupação social evidente, especialmente em relação à abolição da escravatura, uma questão presente na sociedade brasileira do século XIX.", Publicacao = "2024", AutorId = 26, Avaliacao = "3", Destaque = true, Foto = "/img/livros/Nebulosas.png" },
     new Livro { LivroId = 31, FaculdadeId = 3, Nome = "O cristo cigano", Descricao = "O livro é composto por uma série de poemas que contam a história de uma lenda sobre o assassinato de um cigano e a construção de uma imagem de Cristo.", Publicacao = "1961", AutorId = 27, Avaliacao = "3,7", Destaque = true, Foto = "/img/livros/O cristo cigano.png" },
     new Livro { LivroId = 32, FaculdadeId = 3, Nome = "Opúsculo Humanitário", Descricao = "A obra traça a evolução das condições femininas e mostram a experiência da autora tanto em leitura, quanto em vivências em suas viagens.", Publicacao = "1853", AutorId = 28, Avaliacao = "3,6", Destaque = true, Foto = "/img/livros/Opúsculo Humanitário.png"},
+  
     };
         builder.Entity<Livro>().HasData(livros);
 
@@ -174,10 +175,12 @@ public class AppDbSeed
               <br><br>
               No trecho citado, o autor representa uma situação desencantada da mulher brasileira dos anos
               1940, tratando com humor a sensualidade e os conflitos sociais que envolvem essa época."},
+        
         new Pergunta { PerguntaId = 2, FaculdadeId = 1, Enunciado =
             @"(Livro: Dona Flor e Seus Dois Maridos)
             <br>
             Sobre a personagem Dona Flor, é correto afirmar que:"},
+
         new Pergunta { PerguntaId = 3, FaculdadeId = 1, Enunciado =
          @"(Dom Casmurro)
          <br>
@@ -197,6 +200,89 @@ public class AppDbSeed
         do Romantismo. Nessas obras, nota-se uma forma diferente de sentir e de ver a realidade, menos idealizada, mais verdadeira
         e crítica: uma perspectiva realista. O trecho apresentado acima representa essa perspectiva porque o narrador:"
         },
+
+         new Pergunta { PerguntaId = 4, FaculdadeId = 2, Enunciado =
+         @"Morro da Babilônia
+         <br>
+         À noite, do morro    <br>
+        descem vozes que criam o terror    <br>
+        (terror urbano, cinquenta por cento de cinema,     <br>
+        e o resto que veio de Luanda ou se perdeu na língua     <br>
+        Geral).
+
+        Quando houve revolução, os soldados     <br>
+        espalharam no morro,    <br>
+        O quartel pegou fogo, eles não voltaram.    <br>
+        Alguns, chumbados, morreram.    <br>
+        O morro ficou mais encantado.    <br>
+
+        Mas as vozes do morro    <br>
+        não são propriamente lúgubres.    <br>
+        Há mesmo um cavaquinho bem afinado     <br>
+        que domina os ruídos de pedra e da folhagem    <br>
+        e desce até nós modesto e recreativo,    <br>
+        como uma gentileza no morro    <br>
+
+         <br>
+        (Carlos Drummond de Andrade Sentimento do mundo. São Paulo: Companhia das Letras, 2012, p. 19.)
+        <br><br>
+        No poema “Morro da Babilônia”, de Carlos Drummond de Andrade,"
+      },
+
+       new Pergunta { PerguntaId = 5, FaculdadeId = 2, Enunciado =
+         @"Para driblar a censura imposta pela ditadura militar, compositores 
+         de música popular brasileira (MPB) valiam-se do que Gilberto Vasconcelos 
+         chamou de “linguagem da fresta”, expressão inspirada na canção “Festa imodesta”, de Caetano Veloso.
+         <br>
+       (...)
+        Numa festa imodesta como esta
+        Vamos homenagear
+        Todo aquele que nos empresta sua testa
+        Construindo coisas pra se cantar
+        Tudo aquilo que o malandro pronuncia
+        E que o otário silencia
+        Toda festa que se dá ou não se dá
+        Passa pela fresta da cesta e resta a vida.
+        Acima do coração que sofre com razão
+        A razão que volta do coração
+        E acima da razão a rima
+
+        E acima da rima a nota da canção
+        Bemol natural sustenida no ar
+        Viva aquele que se presta a esta ocupação
+        Salve o compositor popular
+         <br>
+       (Gilberto de Vasconcelos, Música popular: de olho na fresta. Rio de Janeiro: Graal, 1977.)
+        <br><br>
+        É correto afirmar que, na canção, essa “linguagem dafresta” transparece"
+      },
+
+        new Pergunta { PerguntaId = 6, FaculdadeId = 2, Enunciado =
+         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
+         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
+         do século XIX. Indique a alternativa em que todas as características mencionadas 
+         podem ser adequadamente atribuídas ao romance em questão."
+      },
+      new Pergunta { PerguntaId = 6, FaculdadeId = 3, Enunciado =
+         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
+         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
+         do século XIX. Indique a alternativa em que todas as características mencionadas 
+         podem ser adequadamente atribuídas ao romance em questão."
+      },
+
+      new Pergunta { PerguntaId = 6, FaculdadeId = 3, Enunciado =
+         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
+         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
+         do século XIX. Indique a alternativa em que todas as características mencionadas 
+         podem ser adequadamente atribuídas ao romance em questão."
+      },
+
+      new Pergunta { PerguntaId = 6, FaculdadeId = 3, Enunciado =
+         @"O romance Memórias póstumas de Brás Cubas é considerado um divisor de 
+         águas tanto na obra de Machado de Assis quanto na literatura brasileira 
+         do século XIX. Indique a alternativa em que todas as características mencionadas 
+         podem ser adequadamente atribuídas ao romance em questão."
+      },
     };
 
 
@@ -214,6 +300,43 @@ public class AppDbSeed
         new PerguntaAlternativa { PerguntaAlternativaId = 11, PerguntaId = 3, Descricao = "Retira-se da praia como as vagas em dias de ressaca por não ser capaz de dizer a Capitu o que está sentindo ao olhá-la nos olhos sem quebrar a dignidade mínima daquele momento em que duas pessoas apaixonam-se.", Correta = false},
         new PerguntaAlternativa { PerguntaAlternativaId = 12, PerguntaId = 3, Descricao = "Solicita à “retórica dos namorados” uma comparação que seja, ao mesmo tempo, exata e poética capaz de descrever os olhos de Capitu, revelando a dificuldade de apresentar uma verdade que não estrague a idealização romântica.", Correta = true},
         new PerguntaAlternativa { PerguntaAlternativaId = 13, PerguntaId = 3, Descricao = "Ridiculariza a retórica dos românticos ao afirmar que os olhos de Capitu pareciam com uma ressaca do mar e, por isso, não seria capaz de descrevê-los de maneira poética, traduzindo, assim, o realismo literário de sua época.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "A menção à cidade do Rio de Janeiro é feita de modo indireto, metonimicamente, pela referência ao Morro da Babilônia.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "O sentimento do mundo é representado pela percepção particular sobre a cidade do Rio de Janeiro, aludida pela metáfora do Morro da Babilônia", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "O tratamento dado ao Morro da Babilônia assemelha-se ao que é dado a uma pessoa, o que caracteriza a figura de estilo denominada paronomásia.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "A referência ao Morro da Babilônia produz, no percurso figurativo do poema, um oximoro: a relação entre terror e gentileza no espaço urbano.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 18, PerguntaId = 5, Descricao = "na contradição entre “festa” e “fresta”, que funciona como crítica ao malandro.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 19, PerguntaId = 5, Descricao = "na repetição de palavras com pronúncia semelhante para louvar a MPB.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 20, PerguntaId = 5, Descricao = "na referência à “fresta” como forma de o compositor se pronunciar.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 21, PerguntaId = 5, Descricao = "na incoerência da rima entre “festa” e “imodesta” para prestigiar o compositor.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = "Rejeição dos valores românticos, narrativa linear e fluente de um defunto autor, visão pessimista em relação aos problemas sociais.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = "Distanciamento do determinismo científico, cultivo do humor e digressões sobre banalidades, visão reformadora das mazelas sociais.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = "Abandono das idealizações românticas, uso de técnicas pouco usuais de narrativa, sugestão implícita de contradições sociais.", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 22, PerguntaId = 6, Descricao = " Crítica do realismo literário, narração iniciada com a morte do narrador-personagem, tematização de conflitos sociais.", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 14, PerguntaId = 4, Descricao = "", Correta = true},
+        new PerguntaAlternativa { PerguntaAlternativaId = 15, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 16, PerguntaId = 4, Descricao = "", Correta = false},
+        new PerguntaAlternativa { PerguntaAlternativaId = 17, PerguntaId = 4, Descricao = "", Correta = false},
+
     };
 
 
