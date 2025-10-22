@@ -11,8 +11,8 @@ using VestBooks.Data;
 namespace VestBooks.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250916132351_SeedFaculdades")]
-    partial class SeedFaculdades
+    [Migration("20251022151834_AddPerguntasEFix")]
+    partial class AddPerguntasEFix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -262,148 +262,176 @@ namespace VestBooks.Migrations
                         new
                         {
                             AutorId = 1,
+                            Foto = "/img/autores/Jorge Amado.png",
                             Nome = "Jorge Amado"
                         },
                         new
                         {
                             AutorId = 2,
+                            Foto = "/img/autores/Machado de Assis.png",
                             Nome = "Machado de Assis"
                         },
                         new
                         {
                             AutorId = 3,
+                            Foto = "/img/autores/Manuel Bandeira.png",
                             Nome = "Manuel Bandeira"
                         },
                         new
                         {
                             AutorId = 4,
+                            Foto = "/img/autores/João Guimarães Rosa.png",
                             Nome = "João Guimarães Rosa"
                         },
                         new
                         {
                             AutorId = 5,
+                            Foto = "/img/autores/José de Alencar.png",
                             Nome = "José de Alencar"
                         },
                         new
                         {
                             AutorId = 6,
-                            Nome = "Luís de Camões"
+                            Foto = "/img/autores/Luis de Camões.png",
+                            Nome = "Luis de Camões"
                         },
                         new
                         {
                             AutorId = 7,
+                            Foto = "/img/autores/Carolina Maria de Jesus.png",
                             Nome = "Carolina Maria de Jesus"
                         },
                         new
                         {
                             AutorId = 8,
+                            Foto = "/img/autores/Carlos drummond de Andrade.png",
                             Nome = "Carlos drummond de Andrade"
                         },
                         new
                         {
                             AutorId = 9,
+                            Foto = "/img/autores/Darcy Ribeiro.png",
                             Nome = "Darcy Ribeiro"
                         },
                         new
                         {
                             AutorId = 10,
+                            Foto = "/img/autores/Graciliano Ramos.png",
                             Nome = "Graciliano Ramos"
                         },
                         new
                         {
                             AutorId = 11,
+                            Foto = "/img/autores/Aluísio Azevedo.png",
                             Nome = "Aluísio Azevedo"
                         },
                         new
                         {
                             AutorId = 12,
+                            Foto = "/img/autores/José Paulo Paes.png",
                             Nome = "José Paulo Paes"
                         },
                         new
                         {
                             AutorId = 13,
+                            Foto = "/img/autores/Conceição Evaristo.png",
                             Nome = "Conceição Evaristo"
                         },
                         new
                         {
                             AutorId = 14,
+                            Foto = "/img/autores/Ailton Krenak.png",
                             Nome = "Ailton Krenak"
                         },
                         new
                         {
                             AutorId = 15,
+                            Foto = "/img/autores/Lima Barreto.png",
                             Nome = "Lima Barreto"
                         },
                         new
                         {
                             AutorId = 16,
+                            Foto = "/img/autores/Chimamanda Ngozi Adichie.png",
                             Nome = "Chimamanda Ngozi Adichie"
                         },
                         new
                         {
                             AutorId = 17,
+                            Foto = "/img/autores/Caio Fernando Abreu.png",
                             Nome = "Caio Fernando Abreu"
                         },
                         new
                         {
                             AutorId = 18,
+                            Foto = "/img/autores/Cartola.png",
                             Nome = "Cartola"
                         },
                         new
                         {
                             AutorId = 19,
+                            Foto = "/img/autores/Lewis Carroll.png",
                             Nome = "Lewis Carroll"
                         },
                         new
                         {
                             AutorId = 20,
+                            Foto = "/img/autores/Djamilia Pereira de Almdeida.png",
                             Nome = "Djamilia Pereira de Almdeida"
                         },
                         new
                         {
                             AutorId = 21,
+                            Foto = "Lygia Fagundes Telles.png",
                             Nome = "Lygia Fagundes Telles"
                         },
                         new
                         {
                             AutorId = 22,
+                            Foto = "/img/autores/Paulina Chiziane.png",
                             Nome = "Paulina Chiziane"
                         },
                         new
                         {
                             AutorId = 23,
+                            Foto = "/img/autores/Rachel de Queiroz.png",
                             Nome = "Rachel de Queiroz"
                         },
                         new
                         {
                             AutorId = 24,
+                            Foto = "/img/autores/Conceição Evaristo.png",
                             Nome = "Conceição Evaristo"
                         },
                         new
                         {
                             AutorId = 25,
+                            Foto = "/img/autores/Julia Lopes de Almeida.png",
                             Nome = "Julia Lopes de Almeida"
                         },
                         new
                         {
                             AutorId = 26,
+                            Foto = "/img/autores/Narcisa Amália.png",
                             Nome = "Narcisa Amália"
                         },
                         new
                         {
                             AutorId = 27,
+                            Foto = "/img/autores/Sophia de Mello Breyner Andresen.png",
                             Nome = "Sophia de Mello Breyner Andresen"
                         },
                         new
                         {
                             AutorId = 28,
+                            Foto = "/img/autores/Nísia Floresta.png",
                             Nome = "Nísia Floresta"
                         });
                 });
 
             modelBuilder.Entity("VestBooks.Models.Faculdade", b =>
                 {
-                    b.Property<int>("FaculdadeId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -411,30 +439,261 @@ namespace VestBooks.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("varchar(1000)");
 
+                    b.Property<string>("Foto")
+                        .HasMaxLength(300)
+                        .HasColumnType("varchar(300)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.HasKey("FaculdadeId");
+                    b.HasKey("Id");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("faculdade");
 
                     b.HasData(
                         new
                         {
-                            FaculdadeId = 1,
+                            Id = 1,
+                            Descricao = "Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras\r\n            literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de\r\n            leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar\r\n            algumas leituras obrigatórias.\r\n            <br><br>\r\n            Como o Enem exige dos candidatos uma série de conhecimentos literários (tudo o que aprenderam no Ensino\r\n            Médio), espera-se do candidato que ele conheça as principais obras de cada escola literária.\r\n            <br><br>\r\n            A prova de Linguagens, Códigos e suas Tecnologias do Enem , por exemplo, pede que você conheça a\r\n            importância do autor/obra para a sociedade e para a cultura em geral.\r\n            Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio\r\n            depois.",
+                            Foto = "/img/faculdades/ENEM.png",
                             Nome = "ENEM"
                         },
                         new
                         {
-                            FaculdadeId = 2,
+                            Id = 2,
+                            Descricao = "O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas\r\n              universidades do país, está marcado para 20 de outubro. Além de todas as\r\n              disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de\r\n              leitura obrigatória.\r\n              <br><br>\r\n              O objetivo da Comvest (Comissão Permanente para os Vestibulares da Unicamp)\r\n              ao fazer esta lista, é estimular a leitura e o olhar atento dos estudantes para as\r\n              questões do mundo contemporâneo, então livros como “A vida não é útil“ de\r\n              Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão\r\n              ao lado de “Casa Velha“ de Machado de Assis, por exemplo.",
+                            Foto = "/img/faculdades/UNICAMP.png",
                             Nome = "UNICAMP"
                         },
                         new
                         {
+                            Id = 3,
+                            Descricao = "",
+                            Foto = "/img/faculdades/USP.png",
+                            Nome = "USP"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Foto = "/img/faculdades/UNESP.png",
+                            Nome = "UNESP"
+                        });
+                });
+
+            modelBuilder.Entity("VestBooks.Models.FaculdadeLivro", b =>
+                {
+                    b.Property<int>("FaculdadeLivroId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("FaculdadeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LivroId")
+                        .HasColumnType("int");
+
+                    b.HasKey("FaculdadeLivroId");
+
+                    b.HasIndex("FaculdadeId");
+
+                    b.HasIndex("LivroId");
+
+                    b.ToTable("faculdadeLivro");
+
+                    b.HasData(
+                        new
+                        {
+                            FaculdadeLivroId = 1,
+                            FaculdadeId = 1,
+                            LivroId = 1
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 2,
+                            FaculdadeId = 1,
+                            LivroId = 2
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 3,
+                            FaculdadeId = 1,
+                            LivroId = 3
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 4,
+                            FaculdadeId = 1,
+                            LivroId = 4
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 5,
+                            FaculdadeId = 1,
+                            LivroId = 5
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 6,
+                            FaculdadeId = 1,
+                            LivroId = 6
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 7,
+                            FaculdadeId = 1,
+                            LivroId = 7
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 8,
+                            FaculdadeId = 1,
+                            LivroId = 8
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 9,
+                            FaculdadeId = 1,
+                            LivroId = 9
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 10,
+                            FaculdadeId = 1,
+                            LivroId = 10
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 11,
+                            FaculdadeId = 1,
+                            LivroId = 11
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 12,
+                            FaculdadeId = 1,
+                            LivroId = 12
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 13,
+                            FaculdadeId = 1,
+                            LivroId = 13
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 14,
+                            FaculdadeId = 1,
+                            LivroId = 14
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 15,
+                            FaculdadeId = 2,
+                            LivroId = 15
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 16,
+                            FaculdadeId = 2,
+                            LivroId = 16
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 17,
+                            FaculdadeId = 2,
+                            LivroId = 17
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 18,
+                            FaculdadeId = 2,
+                            LivroId = 18
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 19,
+                            FaculdadeId = 2,
+                            LivroId = 19
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 20,
+                            FaculdadeId = 2,
+                            LivroId = 20
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 21,
+                            FaculdadeId = 2,
+                            LivroId = 21
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 22,
+                            FaculdadeId = 2,
+                            LivroId = 22
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 23,
+                            FaculdadeId = 2,
+                            LivroId = 23
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 24,
                             FaculdadeId = 3,
-                            Nome = "FUVEST"
+                            LivroId = 24
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 25,
+                            FaculdadeId = 3,
+                            LivroId = 25
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 26,
+                            FaculdadeId = 3,
+                            LivroId = 26
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 27,
+                            FaculdadeId = 3,
+                            LivroId = 27
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 28,
+                            FaculdadeId = 3,
+                            LivroId = 28
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 29,
+                            FaculdadeId = 3,
+                            LivroId = 29
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 30,
+                            FaculdadeId = 3,
+                            LivroId = 30
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 31,
+                            FaculdadeId = 3,
+                            LivroId = 31
+                        },
+                        new
+                        {
+                            FaculdadeLivroId = 32,
+                            FaculdadeId = 3,
+                            LivroId = 32
                         });
                 });
 
@@ -868,6 +1127,51 @@ namespace VestBooks.Migrations
                         });
                 });
 
+            modelBuilder.Entity("VestBooks.Models.Pergunta", b =>
+                {
+                    b.Property<int>("PerguntaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Enunciado")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("FaculdadeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PerguntaId");
+
+                    b.HasIndex("FaculdadeId");
+
+                    b.ToTable("pergunta");
+                });
+
+            modelBuilder.Entity("VestBooks.Models.PerguntaAlternativa", b =>
+                {
+                    b.Property<int>("PerguntaAlternativaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Correta")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("PerguntaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PerguntaAlternativaId");
+
+                    b.HasIndex("PerguntaId");
+
+                    b.ToTable("perguntaAlternativa");
+                });
+
             modelBuilder.Entity("VestBooks.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
@@ -947,7 +1251,7 @@ namespace VestBooks.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e19a59b6-c470-4bd7-ae67-25a1a09b78da",
+                            ConcurrencyStamp = "3cfd5842-3994-4f71-9011-87e209137291",
                             DataNascimento = new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "gallojunior@gmail.com",
                             EmailConfirmed = true,
@@ -956,9 +1260,9 @@ namespace VestBooks.Migrations
                             Nome = "José Antonio Gallo Junior",
                             NormalizedEmail = "GALLOJUNIOR@GMAIL.COM",
                             NormalizedUserName = "GALLOJUNIOR",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGUolcLTwPJpa5fnfVNMXAKu0aEWlQJ9uFRNcrTB4y6h2dhi5Sx7Glm88ZlDQGIFhg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPgzQAy7+Z3yfD1UOj0NPOqufbimIL2+Q6zCrZVDXnmzfF1hsKZV15AMFXhJMwL9+Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3ed336cf-69d8-448b-8e3e-22ab9797bae2",
+                            SecurityStamp = "5c2cb333-355f-41a1-9fa0-e325cefa9011",
                             TwoFactorEnabled = false,
                             UserName = "GalloJunior"
                         });
@@ -1015,6 +1319,25 @@ namespace VestBooks.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("VestBooks.Models.FaculdadeLivro", b =>
+                {
+                    b.HasOne("VestBooks.Models.Faculdade", "Faculdade")
+                        .WithMany("Livros")
+                        .HasForeignKey("FaculdadeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("VestBooks.Models.Livro", "Livro")
+                        .WithMany()
+                        .HasForeignKey("LivroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Faculdade");
+
+                    b.Navigation("Livro");
+                });
+
             modelBuilder.Entity("VestBooks.Models.Livro", b =>
                 {
                     b.HasOne("VestBooks.Models.Autor", "Autor")
@@ -1032,6 +1355,40 @@ namespace VestBooks.Migrations
                     b.Navigation("Autor");
 
                     b.Navigation("Faculdade");
+                });
+
+            modelBuilder.Entity("VestBooks.Models.Pergunta", b =>
+                {
+                    b.HasOne("VestBooks.Models.Faculdade", "Faculdade")
+                        .WithMany("Perguntas")
+                        .HasForeignKey("FaculdadeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Faculdade");
+                });
+
+            modelBuilder.Entity("VestBooks.Models.PerguntaAlternativa", b =>
+                {
+                    b.HasOne("VestBooks.Models.Pergunta", "Pergunta")
+                        .WithMany("PerguntaAlternativas")
+                        .HasForeignKey("PerguntaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pergunta");
+                });
+
+            modelBuilder.Entity("VestBooks.Models.Faculdade", b =>
+                {
+                    b.Navigation("Livros");
+
+                    b.Navigation("Perguntas");
+                });
+
+            modelBuilder.Entity("VestBooks.Models.Pergunta", b =>
+                {
+                    b.Navigation("PerguntaAlternativas");
                 });
 #pragma warning restore 612, 618
         }

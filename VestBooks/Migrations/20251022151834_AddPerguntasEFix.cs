@@ -9,7 +9,7 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace VestBooks.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedFaculdades : Migration
+    public partial class AddPerguntasEFix : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -62,17 +62,18 @@ namespace VestBooks.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Categorias",
+                name: "faculdade",
                 columns: table => new
                 {
-                    FaculdadeId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
-                    Descricao = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: true)
+                    Descricao = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: true),
+                    Foto = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categorias", x => x.FaculdadeId);
+                    table.PrimaryKey("PK_faculdade", x => x.Id);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -200,16 +201,37 @@ namespace VestBooks.Migrations
                 {
                     table.PrimaryKey("PK_livro", x => x.LivroId);
                     table.ForeignKey(
-                        name: "FK_livro_Categorias_FaculdadeId",
-                        column: x => x.FaculdadeId,
-                        principalTable: "Categorias",
-                        principalColumn: "FaculdadeId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_livro_autor_AutorId",
                         column: x => x.AutorId,
                         principalTable: "autor",
                         principalColumn: "AutorId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_livro_faculdade_FaculdadeId",
+                        column: x => x.FaculdadeId,
+                        principalTable: "faculdade",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "pergunta",
+                columns: table => new
+                {
+                    PerguntaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Enunciado = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    FaculdadeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_pergunta", x => x.PerguntaId);
+                    table.ForeignKey(
+                        name: "FK_pergunta_faculdade_FaculdadeId",
+                        column: x => x.FaculdadeId,
+                        principalTable: "faculdade",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
@@ -261,54 +283,104 @@ namespace VestBooks.Migrations
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "faculdadeLivro",
+                columns: table => new
+                {
+                    FaculdadeLivroId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    FaculdadeId = table.Column<int>(type: "int", nullable: false),
+                    LivroId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_faculdadeLivro", x => x.FaculdadeLivroId);
+                    table.ForeignKey(
+                        name: "FK_faculdadeLivro_faculdade_FaculdadeId",
+                        column: x => x.FaculdadeId,
+                        principalTable: "faculdade",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_faculdadeLivro_livro_LivroId",
+                        column: x => x.LivroId,
+                        principalTable: "livro",
+                        principalColumn: "LivroId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "perguntaAlternativa",
+                columns: table => new
+                {
+                    PerguntaAlternativaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Descricao = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    PerguntaId = table.Column<int>(type: "int", nullable: false),
+                    Correta = table.Column<bool>(type: "tinyint(1)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_perguntaAlternativa", x => x.PerguntaAlternativaId);
+                    table.ForeignKey(
+                        name: "FK_perguntaAlternativa_pergunta_PerguntaId",
+                        column: x => x.PerguntaId,
+                        principalTable: "pergunta",
+                        principalColumn: "PerguntaId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "DataNascimento", "Email", "EmailConfirmed", "Foto", "LockoutEnabled", "LockoutEnd", "Nome", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "1", 0, "e19a59b6-c470-4bd7-ae67-25a1a09b78da", new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "gallojunior@gmail.com", true, "/img/usuarios/ddf093a6-6cb5-4ff7-9a64-83da34aee005.png", true, null, "José Antonio Gallo Junior", "GALLOJUNIOR@GMAIL.COM", "GALLOJUNIOR", "AQAAAAIAAYagAAAAEGUolcLTwPJpa5fnfVNMXAKu0aEWlQJ9uFRNcrTB4y6h2dhi5Sx7Glm88ZlDQGIFhg==", null, false, "3ed336cf-69d8-448b-8e3e-22ab9797bae2", false, "GalloJunior" });
-
-            migrationBuilder.InsertData(
-                table: "Categorias",
-                columns: new[] { "FaculdadeId", "Descricao", "Nome" },
-                values: new object[,]
-                {
-                    { 1, null, "ENEM" },
-                    { 2, null, "UNICAMP" },
-                    { 3, null, "FUVEST" }
-                });
+                values: new object[] { "1", 0, "3cfd5842-3994-4f71-9011-87e209137291", new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "gallojunior@gmail.com", true, "/img/usuarios/ddf093a6-6cb5-4ff7-9a64-83da34aee005.png", true, null, "José Antonio Gallo Junior", "GALLOJUNIOR@GMAIL.COM", "GALLOJUNIOR", "AQAAAAIAAYagAAAAEPgzQAy7+Z3yfD1UOj0NPOqufbimIL2+Q6zCrZVDXnmzfF1hsKZV15AMFXhJMwL9+Q==", null, false, "5c2cb333-355f-41a1-9fa0-e325cefa9011", false, "GalloJunior" });
 
             migrationBuilder.InsertData(
                 table: "autor",
                 columns: new[] { "AutorId", "Foto", "Nome" },
                 values: new object[,]
                 {
-                    { 1, null, "Jorge Amado" },
-                    { 2, null, "Machado de Assis" },
-                    { 3, null, "Manuel Bandeira" },
-                    { 4, null, "João Guimarães Rosa" },
-                    { 5, null, "José de Alencar" },
-                    { 6, null, "Luís de Camões" },
-                    { 7, null, "Carolina Maria de Jesus" },
-                    { 8, null, "Carlos drummond de Andrade" },
-                    { 9, null, "Darcy Ribeiro" },
-                    { 10, null, "Graciliano Ramos" },
-                    { 11, null, "Aluísio Azevedo" },
-                    { 12, null, "José Paulo Paes" },
-                    { 13, null, "Conceição Evaristo" },
-                    { 14, null, "Ailton Krenak" },
-                    { 15, null, "Lima Barreto" },
-                    { 16, null, "Chimamanda Ngozi Adichie" },
-                    { 17, null, "Caio Fernando Abreu" },
-                    { 18, null, "Cartola" },
-                    { 19, null, "Lewis Carroll" },
-                    { 20, null, "Djamilia Pereira de Almdeida" },
-                    { 21, null, "Lygia Fagundes Telles" },
-                    { 22, null, "Paulina Chiziane" },
-                    { 23, null, "Rachel de Queiroz" },
-                    { 24, null, "Conceição Evaristo" },
-                    { 25, null, "Julia Lopes de Almeida" },
-                    { 26, null, "Narcisa Amália" },
-                    { 27, null, "Sophia de Mello Breyner Andresen" },
-                    { 28, null, "Nísia Floresta" }
+                    { 1, "/img/autores/Jorge Amado.png", "Jorge Amado" },
+                    { 2, "/img/autores/Machado de Assis.png", "Machado de Assis" },
+                    { 3, "/img/autores/Manuel Bandeira.png", "Manuel Bandeira" },
+                    { 4, "/img/autores/João Guimarães Rosa.png", "João Guimarães Rosa" },
+                    { 5, "/img/autores/José de Alencar.png", "José de Alencar" },
+                    { 6, "/img/autores/Luis de Camões.png", "Luis de Camões" },
+                    { 7, "/img/autores/Carolina Maria de Jesus.png", "Carolina Maria de Jesus" },
+                    { 8, "/img/autores/Carlos drummond de Andrade.png", "Carlos drummond de Andrade" },
+                    { 9, "/img/autores/Darcy Ribeiro.png", "Darcy Ribeiro" },
+                    { 10, "/img/autores/Graciliano Ramos.png", "Graciliano Ramos" },
+                    { 11, "/img/autores/Aluísio Azevedo.png", "Aluísio Azevedo" },
+                    { 12, "/img/autores/José Paulo Paes.png", "José Paulo Paes" },
+                    { 13, "/img/autores/Conceição Evaristo.png", "Conceição Evaristo" },
+                    { 14, "/img/autores/Ailton Krenak.png", "Ailton Krenak" },
+                    { 15, "/img/autores/Lima Barreto.png", "Lima Barreto" },
+                    { 16, "/img/autores/Chimamanda Ngozi Adichie.png", "Chimamanda Ngozi Adichie" },
+                    { 17, "/img/autores/Caio Fernando Abreu.png", "Caio Fernando Abreu" },
+                    { 18, "/img/autores/Cartola.png", "Cartola" },
+                    { 19, "/img/autores/Lewis Carroll.png", "Lewis Carroll" },
+                    { 20, "/img/autores/Djamilia Pereira de Almdeida.png", "Djamilia Pereira de Almdeida" },
+                    { 21, "Lygia Fagundes Telles.png", "Lygia Fagundes Telles" },
+                    { 22, "/img/autores/Paulina Chiziane.png", "Paulina Chiziane" },
+                    { 23, "/img/autores/Rachel de Queiroz.png", "Rachel de Queiroz" },
+                    { 24, "/img/autores/Conceição Evaristo.png", "Conceição Evaristo" },
+                    { 25, "/img/autores/Julia Lopes de Almeida.png", "Julia Lopes de Almeida" },
+                    { 26, "/img/autores/Narcisa Amália.png", "Narcisa Amália" },
+                    { 27, "/img/autores/Sophia de Mello Breyner Andresen.png", "Sophia de Mello Breyner Andresen" },
+                    { 28, "/img/autores/Nísia Floresta.png", "Nísia Floresta" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "faculdade",
+                columns: new[] { "Id", "Descricao", "Foto", "Nome" },
+                values: new object[,]
+                {
+                    { 1, "Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras\r\n            literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de\r\n            leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar\r\n            algumas leituras obrigatórias.\r\n            <br><br>\r\n            Como o Enem exige dos candidatos uma série de conhecimentos literários (tudo o que aprenderam no Ensino\r\n            Médio), espera-se do candidato que ele conheça as principais obras de cada escola literária.\r\n            <br><br>\r\n            A prova de Linguagens, Códigos e suas Tecnologias do Enem , por exemplo, pede que você conheça a\r\n            importância do autor/obra para a sociedade e para a cultura em geral.\r\n            Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio\r\n            depois.", "/img/faculdades/ENEM.png", "ENEM" },
+                    { 2, "O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas\r\n              universidades do país, está marcado para 20 de outubro. Além de todas as\r\n              disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de\r\n              leitura obrigatória.\r\n              <br><br>\r\n              O objetivo da Comvest (Comissão Permanente para os Vestibulares da Unicamp)\r\n              ao fazer esta lista, é estimular a leitura e o olhar atento dos estudantes para as\r\n              questões do mundo contemporâneo, então livros como “A vida não é útil“ de\r\n              Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão\r\n              ao lado de “Casa Velha“ de Machado de Assis, por exemplo.", "/img/faculdades/UNICAMP.png", "UNICAMP" },
+                    { 3, "", "/img/faculdades/USP.png", "USP" },
+                    { 4, null, "/img/faculdades/UNESP.png", "UNESP" }
                 });
 
             migrationBuilder.InsertData(
@@ -370,6 +442,45 @@ namespace VestBooks.Migrations
                     { "3", "1" }
                 });
 
+            migrationBuilder.InsertData(
+                table: "faculdadeLivro",
+                columns: new[] { "FaculdadeLivroId", "FaculdadeId", "LivroId" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 1, 2 },
+                    { 3, 1, 3 },
+                    { 4, 1, 4 },
+                    { 5, 1, 5 },
+                    { 6, 1, 6 },
+                    { 7, 1, 7 },
+                    { 8, 1, 8 },
+                    { 9, 1, 9 },
+                    { 10, 1, 10 },
+                    { 11, 1, 11 },
+                    { 12, 1, 12 },
+                    { 13, 1, 13 },
+                    { 14, 1, 14 },
+                    { 15, 2, 15 },
+                    { 16, 2, 16 },
+                    { 17, 2, 17 },
+                    { 18, 2, 18 },
+                    { 19, 2, 19 },
+                    { 20, 2, 20 },
+                    { 21, 2, 21 },
+                    { 22, 2, 22 },
+                    { 23, 2, 23 },
+                    { 24, 3, 24 },
+                    { 25, 3, 25 },
+                    { 26, 3, 26 },
+                    { 27, 3, 27 },
+                    { 28, 3, 28 },
+                    { 29, 3, 29 },
+                    { 30, 3, 30 },
+                    { 31, 3, 31 },
+                    { 32, 3, 32 }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "EmailIndex",
                 table: "AspNetUsers",
@@ -380,6 +491,16 @@ namespace VestBooks.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_faculdadeLivro_FaculdadeId",
+                table: "faculdadeLivro",
+                column: "FaculdadeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_faculdadeLivro_LivroId",
+                table: "faculdadeLivro",
+                column: "LivroId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_livro_AutorId",
@@ -403,6 +524,16 @@ namespace VestBooks.Migrations
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_pergunta_FaculdadeId",
+                table: "pergunta",
+                column: "FaculdadeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_perguntaAlternativa_PerguntaId",
+                table: "perguntaAlternativa",
+                column: "PerguntaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_usuario_login_UserId",
                 table: "usuario_login",
                 column: "UserId");
@@ -422,10 +553,13 @@ namespace VestBooks.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "livro");
+                name: "faculdadeLivro");
 
             migrationBuilder.DropTable(
                 name: "perfil_regra");
+
+            migrationBuilder.DropTable(
+                name: "perguntaAlternativa");
 
             migrationBuilder.DropTable(
                 name: "usuario");
@@ -443,16 +577,22 @@ namespace VestBooks.Migrations
                 name: "usuario_token");
 
             migrationBuilder.DropTable(
-                name: "Categorias");
+                name: "livro");
 
             migrationBuilder.DropTable(
-                name: "autor");
+                name: "pergunta");
 
             migrationBuilder.DropTable(
                 name: "perfil");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "autor");
+
+            migrationBuilder.DropTable(
+                name: "faculdade");
         }
     }
 }

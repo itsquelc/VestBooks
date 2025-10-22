@@ -6,22 +6,26 @@ using VestBooks.Models;
 
 namespace VestBooks.Data;
 
-    public class AppDbContext  : IdentityDbContext<Usuario>
-     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
+public class AppDbContext : IdentityDbContext<Usuario>
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+    }
 
-        public DbSet<Faculdade> Faculdades { get; set; }
-        public DbSet<Livro> Livros { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Faculdade> Faculdades { get; set; }
+    public DbSet<Pergunta> Perguntas { get; set; }
+    public DbSet<PerguntaAlternativa> PerguntaAlternativas { get; set; }
+    public DbSet<FaculdadeLivro> FaculdadeLivros { get; set; }
+    public DbSet<Autor> Autores { get; set; }
+    public DbSet<Livro> Livros { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-    
-        AppDbSeed seed = new (builder);
-        
+
+        AppDbSeed seed = new(builder);
+
         #region  Renomear Tabelas do Identity
         builder.Entity<IdentityUser>().ToTable("usuario");
         builder.Entity<IdentityUserRole<string>>().ToTable("usuario_perfil");

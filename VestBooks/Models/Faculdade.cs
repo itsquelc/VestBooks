@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VestBooks.Models;
 
+[Table("faculdade")]
 public class Faculdade
 {
     [Key]
@@ -19,5 +21,7 @@ public class Faculdade
     public string Foto { get; set; }
 
     public virtual List<FaculdadeLivro> Livros { get; set; }
+
+    public virtual List<Pergunta> Perguntas { get; set; }
 
 }

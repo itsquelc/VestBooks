@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VestBooks.Models;
 
+[Table("faculdadeLivro")]
 public class FaculdadeLivro
 {
     [Key]
