@@ -12,7 +12,7 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly AppDbContext _db;
 
-    public HomeController(ILogger<HomeController> logger , AppDbContext db)
+    public HomeController(ILogger<HomeController> logger, AppDbContext db)
     {
         _logger = logger;
         _db = db;
@@ -20,7 +20,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        HomeVM home = new () {
+        HomeVM home = new()
+        {
             Livros = _db.Livros
                 .Where(p => p.Destaque)
                 .ToList(),
@@ -29,7 +30,8 @@ public class HomeController : Controller
         return View(home);
     }
 
-    public IActionResult Vestibular(int id) {
+    public IActionResult Vestibular(int id)
+    {
         var vestibular = _db.Faculdades
             .Where(v => v.Id == id)
             .Include(v => v.Livros)
@@ -43,23 +45,23 @@ public class HomeController : Controller
     {
         return View();
     }
-    
-        public IActionResult Enem()
+
+    public IActionResult Enem()
     {
         return View();
     }
 
-        public IActionResult Livros()
+    public IActionResult Livros()
     {
         return View();
     }
 
-        public IActionResult Perguntas()
+    public IActionResult Perguntas()
     {
         return View();
     }
 
-        public IActionResult Usp()
+    public IActionResult Usp()
     {
         return View();
     }

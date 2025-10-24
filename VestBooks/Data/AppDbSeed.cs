@@ -390,6 +390,7 @@ public class AppDbSeed
         new PerguntaAlternativa { PerguntaAlternativaId = 61, PerguntaId = 14, Descricao = "Iracema, de José de Alencar.", Correta = false},       
         new PerguntaAlternativa { PerguntaAlternativaId = 62, PerguntaId = 14, Descricao = "Macunaíma, de Mário de Andrade.", Correta = false},
     };
+    builder.Entity<Pergunta>().HasData(perguntas);
 
 
         #region Populate Roles - Perfis de Usuário
