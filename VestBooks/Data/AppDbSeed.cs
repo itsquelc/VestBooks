@@ -322,9 +322,9 @@ public class AppDbSeed
          O comentário refere-se ao romance"
       },
     };
+    builder.Entity<Pergunta>().HasData(perguntas);
 
-
-        List<PerguntaAlternativa> perguntasAlternativas = new(){
+    List<PerguntaAlternativa> perguntasAlternativas = new(){
         new PerguntaAlternativa { PerguntaAlternativaId = 1, PerguntaId = 1, Descricao = "Relata a vida feliz e harmoniosa de mulheres da década de 1940, demonstrando que não havia disposição em superar essa é poca.", Correta = false},
         new PerguntaAlternativa { PerguntaAlternativaId = 2, PerguntaId = 1, Descricao = "Mostra um posicionamento progressista e feminista do autor diante da condição da mulher no século XXI.", Correta = false},
         new PerguntaAlternativa { PerguntaAlternativaId = 3, PerguntaId = 1, Descricao = "Denuncia a falta de comprometimento e a desvalorização das mulheres, que eram excluídas dos espaços sociais e políticos.", Correta = false},
@@ -388,7 +388,7 @@ public class AppDbSeed
         new PerguntaAlternativa { PerguntaAlternativaId = 61, PerguntaId = 14, Descricao = "Iracema, de José de Alencar.", Correta = false},       
         new PerguntaAlternativa { PerguntaAlternativaId = 62, PerguntaId = 14, Descricao = "Macunaíma, de Mário de Andrade.", Correta = false},
     };
-    builder.Entity<Pergunta>().HasData(perguntas);
+    builder.Entity<PerguntaAlternativa>().HasData(perguntasAlternativas);
 
 
         #region Populate Roles - Perfis de Usuário
