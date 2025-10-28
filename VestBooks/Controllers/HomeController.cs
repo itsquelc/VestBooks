@@ -37,6 +37,7 @@ public class HomeController : Controller
             .Include(v => v.Livros)
             .ThenInclude(vl => vl.Livro)
             .ThenInclude(l => l.Autor)
+            .Include(v => v.Perguntas)
             .SingleOrDefault();
         return View(vestibular);
     }

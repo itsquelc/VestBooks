@@ -14,7 +14,7 @@ public class Pergunta
     public int PerguntaId { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe o enunciado")]
-    [StringLength(100, ErrorMessage = "O nome da faculdade deve possuir no máximo 100 caracteres")]
+    [StringLength(5000, ErrorMessage = "O nome da faculdade deve possuir no máximo 5000 caracteres")]
     public string Enunciado { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe a Faculdade")]

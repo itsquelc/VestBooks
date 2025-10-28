@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Org.BouncyCastle.Asn1;
 
 namespace VestBooks.Models;
 
@@ -10,35 +9,35 @@ public class Livro
   [Key]
   public int LivroId { get; set; }
 
-//faculdade
+  //faculdade
   [Required(ErrorMessage = "Por favor, informe a Faculdade")]
   public int FaculdadeId { get; set; }
   [ForeignKey(nameof(FaculdadeId))]
   public Faculdade Faculdade { get; set; }
 
-//autor 
+  //autor 
   [Required(ErrorMessage = "Por favor, informe o Autor")]
   public int AutorId { get; set; }
   [ForeignKey(nameof(AutorId))]
   public Autor Autor { get; set; }
 
-// nome do livro
+  // nome do livro
   [Required(ErrorMessage = "Por favor, informe o Nome ")]
   [StringLength(60, ErrorMessage = "O Nome deve possuir no máximo 60 caracteres")]
   public string Nome { get; set; }
 
-//descrição
+  //descrição
   [Display(Name = "Descrição", Prompt = "Descrição")]
   [StringLength(5000, ErrorMessage = "A Descrição deve possuir no máximo 5000 caracteres")]
   public string Descricao { get; set; }
 
-//publicação
-[Display(Name = "Publicação", Prompt = "Publicação")]
+  //publicação
+  [Display(Name = "Publicação", Prompt = "Publicação")]
   [StringLength(4, ErrorMessage = "A data da publicação deve possuir no máximo 4 caracteres")]
   public string Publicacao { get; set; }
 
-//Avaliação
-[Display(Name = "Avaliação", Prompt = "Avaliação")]
+  //Avaliação
+  [Display(Name = "Avaliação", Prompt = "Avaliação")]
   [StringLength(3, ErrorMessage = "A nota da Avaliação deve possuir no máximo 3 caracteres")]
   public string Avaliacao { get; set; }
 
@@ -46,4 +45,8 @@ public class Livro
 
   [StringLength(300)]
   public string Foto { get; set; }
+
+  [StringLength(300)]
+  [Display(Name = "Vídeo")]
+  public string Video { get; set; }
 }

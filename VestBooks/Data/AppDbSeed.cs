@@ -1,7 +1,6 @@
 using VestBooks.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using AspNetCoreGeneratedDocument;
 
 namespace VestBooks.Data;
 
@@ -84,7 +83,7 @@ public class AppDbSeed
 
              {
             // ENEM
-    new Livro { LivroId = 1, FaculdadeId = 1, Nome = "Dona flor e seus dois maridos", Descricao = "A narrativa explora a paixão de Dona Flor por seus dois maridos, mostrando como ela lida com as diferenças entre eles e como busca a felicidade em meio a um triângulo amoroso.", Publicacao = "1966", AutorId = 1, Avaliacao = "4", Destaque = true, Foto = "/img/livros/Dona Flor e seus dois maridos.png"  },
+    new Livro { LivroId = 1, FaculdadeId = 1, Nome = "Dona flor e seus dois maridos", Descricao = "A narrativa explora a paixão de Dona Flor por seus dois maridos, mostrando como ela lida com as diferenças entre eles e como busca a felicidade em meio a um triângulo amoroso.", Publicacao = "1966", AutorId = 1, Avaliacao = "4", Destaque = true, Foto = "/img/livros/Dona Flor e seus dois maridos.png", Video = "oxpXwPhc6Lo" },
     new Livro { LivroId = 2, FaculdadeId = 1, Nome = "Dom Casmurro", Descricao = "é um romance de Machado de Assis que conta a história de Bento Santiago, um homem que, já velho, decide escrever um livro para narrar sua versão dos acontecimentos de sua juventude.", Publicacao = "1899", AutorId = 2, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Dom Casmurro.png" },
     new Livro { LivroId = 3, FaculdadeId = 1, Nome = "Capitães da Areia", Descricao = "A história se passa em Salvador, Bahia, e retrata a vida de um grupo de meninos de rua que vivem em um trapiche abandonado, enfrentam a miséria, a violência e sobrevivem roubando e praticando pequenos crimes, mas também demonstram um forte senso de união e solidariedade.", Publicacao = "1937", AutorId = 1, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Capitães De Areia .png" },
     new Livro { LivroId = 4, FaculdadeId = 1, Nome = "Estrela da vida inteira", Descricao = "é um livro de poemas que reúne todos os livros de poesia do autor, desde o seu primeiro, A Cinza das Horas, até os poemas que escreveu ao longo de sua vida.", Publicacao = "1965", AutorId = 3, Avaliacao = "4,7", Destaque = true, Foto = "/img/livros/Estrelas Da Vida Inteira.png" },
