@@ -2,8 +2,9 @@
 @{
   ViewData["Title"] = Model.Nome;
   string[] letras = ["A", "B", "C", "D", "E", "F"];
-  Random random = new Random(); 
+  Random random = new Random();
   int pergunta = random.Next(Model.Perguntas.Count);
+  int alternativas = Model.Perguntas[pergunta].PerguntaAlternativas.Count();
 }
 
 <section class="bg-white mt-100">
@@ -66,47 +67,20 @@
           <!-- Vídeo principal -->
           <div class="col-md-9 mb-3">
             <div class="ratio ratio-16x9">
-              <iframe id="mainVideo" src="https://www.youtube.com/embed/oxpXwPhc6Lo" allowfullscreen></iframe>
+              <iframe id="mainVideo" src="https://www.youtube.com/embed/@Model.Livros[0].Livro.Video"
+                allowfullscreen></iframe>
             </div>
           </div>
 
           <!-- Lista de vídeos com scroll -->
           <div style="width: 200px;" class="d-flex align-items-center">
             <div class="video-list w-100">
-              <div class="video-thumbnail" onclick="changeVideo('rnpUJvVpngY')">
-                <img src="https://img.youtube.com/vi/rnpUJvVpngY/0.jpg" alt="Vídeo 1">
-              </div>
-              <div class="video-thumbnail" onclick="changeVideo('M8h-WXKyLFc')">
-                <img src="https://img.youtube.com/vi/M8h-WXKyLFc/0.jpg" alt="Vídeo 2">
-              </div>
-              <div class="video-thumbnail" onclick="changeVideo('mKR1Vkqxyjo')">
-                <img src="https://img.youtube.com/vi/mKR1Vkqxyjo/0.jpg" alt="Vídeo 3">
-              </div>
-              <div class="video-thumbnail" onclick="changeVideo('Rfgy_g79ww4')">
-                <img src="https://img.youtube.com/vi/Rfgy_g79ww4/0.jpg" alt="Vídeo 4">
-              </div>
-              <div class="video-thumbnail" onclick="changeVideo('V1s1a77PnOg')">
-                <img src="https://img.youtube.com/vi/V1s1a77PnOg/0.jpg" alt="Vídeo 5">
-                <div class="video-thumbnail" onclick="changeVideo('GyXglxNR5Ss')">
-                  <img src="https://img.youtube.com/vi/GyXglxNR5Ss/0.jpg" alt="Vídeo 6">
+              @foreach (var livro in Model.Livros)
+              {
+                <div class="video-thumbnail" onclick="changeVideo('@livro.Livro.Video')">
+                  <img src="https://img.youtube.com/vi/@livro.Livro.Video/0.jpg" alt="Vídeo do livro @livro.Livro.Nome">
                 </div>
-                <div class="video-thumbnail" onclick="changeVideo('Yac_R3PlFeE')">
-                  <img src="https://img.youtube.com/vi/Yac_R3PlFeE/0.jpg" alt="Vídeo 7">
-                </div>
-                <div class="video-thumbnail" onclick="changeVideo('Cv-7AH2wTQQ')">
-                  <img src="https://img.youtube.com/vi/Cv-7AH2wTQQ/0.jpg" alt="Vídeo 8">
-                </div>
-                <div class="video-thumbnail" onclick="changeVideo('CWagtQP7hqw')">
-                  <img src="https://img.youtube.com/vi/CWagtQP7hqw/0.jpg" alt="Vídeo 9">
-                </div>
-                <div class="video-thumbnail" onclick="changeVideo('465n-yZqt6I')">
-                  <img src="https://img.youtube.com/vi/465n-yZqt6I/0.jpg" alt="Vídeo 10">
-                </div>
-                <div class="video-thumbnail" onclick="changeVideo('v6rjjpbeNBk')">
-                  <img src="https://img.youtube.com/vi/v6rjjpbeNBk/0.jpg" alt="Vídeo 11">
-                </div>
-
-              </div>
+              }
             </div>
           </div>
         </div>
@@ -118,7 +92,7 @@
           <p>@Html.Raw(Model.Perguntas[pergunta].Enunciado)</p>
 
           <div id="quiz-options" class="mt-4">
-            @for (int i = 0; i <= 3; i++)
+            @for (int i = 0; i < alternativas; i++)
             {
               <div class="quiz-option border rounded p-2 mb-2" onclick="checkAnswer(this, '@letras[i]')">
                 @letras[i]) @Model.Perguntas[pergunta].PerguntaAlternativas[i].Descricao
@@ -128,7 +102,7 @@
 
           <div id="feedback" class="mt-3 fw-bold text-center"></div>
           <div class="text-center mt-4">
-            <a asp-action="Perguntas" asp-controller="Home" class="btn btn-primary">Clique aqui para mais perguntas</a>
+            <a asp-action="Perguntas" asp-controller="Home" asp-route-id="@Model.Id" class="btn btn-primary">Clique aqui para mais perguntas</a>
           </div>
         </div>
       </div>

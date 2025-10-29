@@ -48,26 +48,23 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Enem()
-    {
-        return View();
-    }
-
     public IActionResult Livros()
     {
         return View();
     }
 
-    public IActionResult Perguntas()
+    public IActionResult Perguntas(int id)
     {
-        return View();
+        var vestibular = _db.Faculdades
+            .Where(v => v.Id == id)
+            .Include(v => v.Livros)
+            .ThenInclude(vl => vl.Livro)
+            .ThenInclude(l => l.Autor)
+            .Include(v => v.Perguntas)
+            .ThenInclude(p => p.PerguntaAlternativas)
+            .SingleOrDefault();
+        return View(vestibular);
     }
-
-    public IActionResult Usp()
-    {
-        return View();
-    }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
