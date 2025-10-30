@@ -30,7 +30,7 @@ cjproj
 <Nullable>disable</Nullable>
 
 models/errorviewmodel
-tirar o ?
+tirar o ? ?
 
 
 -> autor dando erro, criar classe?
