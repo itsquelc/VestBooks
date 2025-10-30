@@ -41,6 +41,11 @@ public class Livro
   [StringLength(3, ErrorMessage = "A nota da Avaliação deve possuir no máximo 3 caracteres")]
   public string Avaliacao { get; set; }
 
+  //resumo
+  [Display(Name = "Resumo", Prompt = "Resumo")]
+  [StringLength(50000, ErrorMessage = "O Resumo deve possuir no máximo 50000 caracteres")]
+  public string Resumo { get; set; }
+
   public bool Destaque { get; set; }
 
   [StringLength(300)]
