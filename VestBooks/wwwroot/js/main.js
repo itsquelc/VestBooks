@@ -109,4 +109,3 @@ function changeVideo(videoId) {
   iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 }
 
-
