@@ -84,7 +84,19 @@ public class AppDbSeed
              {
 
             // ENEM
-    new Livro { LivroId = 1, FaculdadeId = 1, Nome = "Dona flor e seus dois maridos", Descricao = "A narrativa explora a paixão de Dona Flor por seus dois maridos, mostrando como ela lida com as diferenças entre eles e como busca a felicidade em meio a um triângulo amoroso.", Publicacao = "1966", AutorId = 1, Avaliacao = "4", Destaque = true, Foto = "/img/livros/Dona Flor e seus dois maridos.png", Video = "oxpXwPhc6Lo", Resumo =
+    new Livro {
+      LivroId = 1,
+      FaculdadeId = 1,
+      Nome = "Dona flor e seus dois maridos",
+      Descricao = "A narrativa explora a paixão de Dona Flor por seus dois maridos, mostrando como ela lida com as diferenças entre eles e como busca a felicidade em meio a um triângulo amoroso.",
+      Publicacao = "1966",
+      AutorId = 1,
+      Avaliacao = "4",
+      NumeroPaginas= 480,
+      Destaque = true,
+      Foto = "/img/livros/Dona Flor e seus dois maridos.png",
+      Video = "oxpXwPhc6Lo",
+      Resumo =
      @"Durante um domingo de Carnaval vestido de baiana, Vadinho tropeça e cai enquanto dançava e acaba morrendo e seu funeral é bem concorrido, nele regressam as lembranças que estavam presentes, sobre o morto, os amigos de festa,
       as possíveis amantes, os colegas e especialmente a esposa Flor. Flor lembra de seu marido infiel, de muita lábia, esperto, apostador e malicioso e ainda assim completamente adorável, na definição de um amigo no funeral, 
       Vadinho sempre foi ¨ porreta ¨. Dona Rozilda inconsolável com a morte de Vadinho, volta para a cidade e a situação fica pior, ela é o típico modelo de sogra, não gostava do genro,é bem chata, controladora. Começa a plantar
@@ -101,7 +113,19 @@ public class AppDbSeed
       Vadinho consegue o milagre de expulsar sua sogra quando ela aparece de mala para morar com eles, ele começa a desaparecer e Flor percebe que era por culpa do feitiço que foi encomendado. Há um confronto entre diversos orixás contra Exu que
       defende Vadinho, porém quando Exu começa a perder, o amor e a inteligência de Vadinho vencem a batalha.Com isso Dona Flor e seus dois maridos andam felizes nas ruas de Salvador." },
 
-    new Livro { LivroId = 2, FaculdadeId = 1, Nome = "Dom Casmurro", Descricao = "é um romance de Machado de Assis que conta a história de Bento Santiago, um homem que, já velho, decide escrever um livro para narrar sua versão dos acontecimentos de sua juventude.", Publicacao = "1899", AutorId = 2, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Dom Casmurro.png", Video = "rnpUJvVpngY", Resumo = 
+    new Livro { 
+      LivroId = 2, 
+      FaculdadeId = 1, 
+      Nome = "Dom Casmurro", 
+      Descricao = "é um romance de Machado de Assis que conta a história de Bento Santiago, um homem que, já velho, decide escrever um livro para narrar sua versão dos acontecimentos de sua juventude.", 
+      Publicacao = "1899", 
+      AutorId = 2, 
+      Avaliacao = "4,8", 
+      NumeroPaginas= 250, 
+      Destaque = true, 
+      Foto = "/img/livros/Dom Casmurro.png",
+      Video = "rnpUJvVpngY", 
+      Resumo = 
     @"No início da obra, o narrador Bentinho explica como escolheu o título para o seu livro. Assim, ele conta que conheceu um poeta em uma viagem de trem. O jovem recitou alguns versos, mas Bentinho, já velho, fechou os olhos algumas vezes. O poeta, então, achou que ele estava cochilando e, ofendido, lhe chamou de Dom Casmurro.
     Em seguida, o narrador inicia a narrativa de suas memórias, que começa quando ele tem 15 anos. Nessa época, Capitu, uma jovem de 14 anos, é sua vizinha. Os adolescentes têm uma forte amizade, o que incomoda o agregado da família, o amante de superlativos José Dias.
     Desconfiado da relação entre os jovens, ele sugere à D. Glória, mãe de Bentinho, que já é hora de enviar o rapaz para o seminário. Isso porque, quando o menino nasceu, sua mãe fez uma promessa de que ele seria padre. Dessa forma, se apresenta um obstáculo ao amor do jovem casal, o que, enganosamente, faz parecer que o livro é um romance romântico.
@@ -114,7 +138,19 @@ public class AppDbSeed
     O ciumento Bentinho logo começa a perceber que seu filho Ezequiel se parece bastante com o falecido Escobar. Então, adquire a certeza de que o menino não é seu filho, mas do defunto. E seu desespero é tão grande que, em uma ocasião, ele está prestes a se matar com um café envenenado, quando o filho entra em seu gabinete:
     No entanto, o narrador acaba desistindo do suicídio e do assassinato. Por fim, decide falar abertamente com a esposa. Diante das acusações, ela nega. Entretanto, não há mais como salvar aquele casamento. Assim, Bentinho resolve mandar Capitu e Ezequiel para a Europa, de forma a manter as aparências." },
 
-    new Livro { LivroId = 3, FaculdadeId = 1, Nome = "Capitães da Areia", Descricao = "A história se passa em Salvador, Bahia, e retrata a vida de um grupo de meninos de rua que vivem em um trapiche abandonado, enfrentam a miséria, a violência e sobrevivem roubando e praticando pequenos crimes, mas também demonstram um forte senso de união e solidariedade.", Publicacao = "1937", AutorId = 1, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Capitães De Areia .png", Video = "M8h-WXKyLFc", Resumo = 
+    new Livro { 
+      LivroId = 3, 
+      FaculdadeId = 1, 
+      Nome = "Capitães da Areia", 
+      Descricao = "A história se passa em Salvador, Bahia, e retrata a vida de um grupo de meninos de rua que vivem em um trapiche abandonado, enfrentam a miséria, a violência e sobrevivem roubando e praticando pequenos crimes, mas também demonstram um forte senso de união e solidariedade.", 
+      Publicacao = "1937", 
+      AutorId = 1, 
+      Avaliacao = "4,8", 
+      NumeroPaginas= 300, 
+      Destaque = true, 
+      Foto = "/img/livros/Capitães De Areia .png", 
+      Video = "M8h-WXKyLFc", 
+      Resumo = 
     @"Os menores que envolvem a trama vivem na capital baiana, Salvador. Conhecidos como capitães, o grupo reúne cerca de quarenta menores (entre 9 e 16 anos) que vivem num trapiche (velho armazém) abandonado no cais do porto.
     Grande parte da história acontece no mercado, uma das importantes aglomerações comerciais. Ali, os meninos de rua pediam dinheiro para comer ou roubavam os que passavam.
     Além disso, eles costumavam caminhar pelo corredor da Vitória, área nobre da cidade de Salvador. Pedro Bala é o líder do grupo, um garoto loiro que possui uma cicatriz no rosto por lutar com o ex-líder: O caboclo Raimundo.
@@ -124,7 +160,19 @@ public class AppDbSeed
     Dora e Pedro foram pegos quando roubavam uma mansão e foram enviados para o reformatório. Dora fica doente e acaba morrendo.
     Num dos momentos da trama, a cidade de Salvador foi assolada pela varíola. Um dos membros do grupo não sobreviveu: Almiro. Por fim, alguns são capturados, outros mortos. Na última parte do livro, o autor apresenta o destino de cada um deles."  },
 
-    new Livro { LivroId = 4, FaculdadeId = 1, Nome = "Estrela da vida inteira", Descricao = "é um livro de poemas que reúne todos os livros de poesia do autor, desde o seu primeiro, A Cinza das Horas, até os poemas que escreveu ao longo de sua vida.", Publicacao = "1965", AutorId = 3, Avaliacao = "4,7", Destaque = true, Foto = "/img/livros/Estrelas Da Vida Inteira.png", Video = "mKR1Vkqxyjo", Resumo = 
+    new Livro { 
+      LivroId = 4, 
+      FaculdadeId = 1, 
+      Nome = "Estrela da vida inteira", 
+      Descricao = "é um livro de poemas que reúne todos os livros de poesia do autor, desde o seu primeiro, A Cinza das Horas, até os poemas que escreveu ao longo de sua vida.", 
+      Publicacao = "1965", 
+      AutorId = 3, 
+      Avaliacao = "4,7", 
+      NumeroPaginas= 600, 
+      Destaque = true, 
+      Foto = "/img/livros/Estrelas Da Vida Inteira.png", 
+      Video = "mKR1Vkqxyjo", 
+      Resumo = 
     @"Cinza das horas
     A cinza das horas (1917) é uma obra marcada pelo rigor formal, ou seja, tem versos regulares, além de teor melancólico e temática do amor e da morte, como é possível verificar no trecho do poema “Boda espiritual”, escrito em versos alexandrinos (12 sílabas poéticas):
 
@@ -327,7 +375,19 @@ public class AppDbSeed
 
     Nele a noite floresce o dia amadurece." },
 
-    new Livro { LivroId = 5, FaculdadeId = 1, Nome = "Grande Sertão: Veredas", Descricao = "conta a história de amor entre Riobaldo e Diadorim (ou Reinaldo). O ex-jagunço Riobaldo relata, para um interlocutor não nomeado na obra, fatos de sua juventude em meio a um bando de jagunços.", Publicacao = "1956 ", AutorId = 4, Avaliacao = "4,9", Destaque = true, Foto = "/img/livros/Grande Sertão Veredas.png", Video = "Rfgy_g79ww4", Resumo = 
+    new Livro { 
+      LivroId = 5, 
+      FaculdadeId = 1, 
+      Nome = "Grande Sertão: Veredas", 
+      Descricao = "conta a história de amor entre Riobaldo e Diadorim (ou Reinaldo). O ex-jagunço Riobaldo relata, para um interlocutor não nomeado na obra, fatos de sua juventude em meio a um bando de jagunços.", 
+      Publicacao = "1956 ", 
+      AutorId = 4, 
+      Avaliacao = "4,9",
+      NumeroPaginas= 600,  
+      Destaque = true, 
+      Foto = "/img/livros/Grande Sertão Veredas.png", 
+      Video = "Rfgy_g79ww4", 
+      Resumo = 
     @"O romance Grande sertão: veredas relata a história de Riobaldo. O narrador-personagem conta para um interlocutor não identificado as aventuras e desventuras vividas durante o tempo em que fez parte de um bando de jagunços. Assim, o agora fazendeiro Riobaldo, com sua linguagem peculiar, relembra o seu tempo de juventude.
     Ele participou de uma guerra entre jagunços no sertão mineiro. No começo, o protagonista integrava o bando de Zé Bebelo. Depois, se juntou aos jagunços de Joca Ramiro, quando conheceu (ou reencontrou) Diadorim. Unidos contra Zé Bebelo, estavam os chefes Joca Ramiro, Ricardão e Hermógenes.
     No entanto, quando Zé Bebelo foi capturado, recebeu o apoio de Joca Ramiro. Então, Joca Ramiro foi morto pela traição por Hermógenes e Ricardão. Diante desse fato, Riobaldo e Diadorim, que era filho do chefe assassinado, decidiram se juntar a Zé Bebelo para, assim, conseguirem a vingança contra “os judas”.
@@ -339,7 +399,19 @@ public class AppDbSeed
     Além das interdições morais em torno de sua sexualidade, o narrador precisa conviver com outro conflito, também de caráter universal: a luta entre o bem e o mal. Afinal, Riobaldo acreditava ter feito um pacto com o diabo para fechar o corpo e, assim, se proteger das balas de seus inimigos. O protagonista também revela que conheceu Diadorim quando ainda eram crianças.
     Diadorim, desde criança, se vestia de homem e já se chamava Reinaldo. Aliás, só a Riobaldo era permitido chamar Reinaldo de Diadorim, na intimidade entre os dois. Mas essa história de amor impossível entre os dois amigos acaba em tragédia, pois Diadorim morre em seu embate final contra Hermógenes. Riobaldo então descobre que o nome verdadeiro de Diadorim é Maria Deodorina da Fé Bettancourt Marins." },
 
-    new Livro { LivroId = 6, FaculdadeId = 1, Nome = "Gabriela Cravo e Canela", Descricao = "A obra narra o caso de amor entre o árabe Nacib e a sertaneja Gabriela, como pano de fundo o período áureo do cacau na região de Ilhéus, descrevendo as alterações profundas da vida social da Bahia da década de 1920.", Publicacao = "1958", AutorId = 1, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Gabriela,cravo e canela.png", Video = "mKR1Vkqxyjo", Resumo = 
+    new Livro { 
+      LivroId = 6, 
+      FaculdadeId = 1, 
+      Nome = "Gabriela Cravo e Canela", 
+      Descricao = "A obra narra o caso de amor entre o árabe Nacib e a sertaneja Gabriela, como pano de fundo o período áureo do cacau na região de Ilhéus, descrevendo as alterações profundas da vida social da Bahia da década de 1920.", 
+      Publicacao = "1958", 
+      AutorId = 1, 
+      Avaliacao = "4,8",
+      NumeroPaginas= 464,  
+      Destaque = true, 
+      Foto = "/img/livros/Gabriela,cravo e canela.png", 
+      Video = "mKR1Vkqxyjo", 
+      Resumo = 
     @"O romance Gabriela, Cravo e Canela, de Jorge Amado, é ambientado na cidade de Ilhéus, na Bahia, no início dos anos 1920. A cidade está em plena transformação, graças à riqueza que a cultura do cacau está trazendo para a região.
     A história começa quando Nacib, um árabe dono do bar Vesúvio, está desesperado à procura de uma nova cozinheira. Sua cozinheira anterior, Filomena, havia deixado a cidade para viver com o filho.
     Um dia, Nacib encontra Gabriela, uma sertaneja retirante que chega à cidade em busca de trabalho. Gabriela é uma mulher jovem, bonita e de temperamento forte. Ela logo conquista Nacib, que se apaixona por ela.
@@ -351,7 +423,19 @@ public class AppDbSeed
     A disputa entre Nacib e Mundinho Falcão por Gabriela reflete as transformações que estão ocorrendo na sociedade de Ilhéus. A cidade está se modernizando, e os velhos valores estão sendo questionados.
     No final do romance, Nacib e Gabriela se casam. Eles representam a vitória do amor e da liberdade sobre as forças do tradicionalismo." },
 
-    new Livro { LivroId = 7, FaculdadeId = 1, Nome = "Iracema", Descricao = "O romance conta o amor de um branco, Martim Soares Moreno, pela índia Iracema, a virgem dos lábios de mel. A relação do casal serviria de alegoria para a formação da nação brasileira. A índia Iracema representaria a natureza virgem e a inocência enquanto o colonizador Martim representa a cultura (europeia).", Publicacao = "1865", AutorId = 5, Avaliacao = "4,6", Destaque = true, Foto = "/img/livros/iracema.png", Video = "V1s1a77PnOg", Resumo = 
+    new Livro { 
+      LivroId = 7, 
+      FaculdadeId = 1, 
+      Nome = "Iracema", 
+      Descricao = "O romance conta o amor de um branco, Martim Soares Moreno, pela índia Iracema, a virgem dos lábios de mel. A relação do casal serviria de alegoria para a formação da nação brasileira. A índia Iracema representaria a natureza virgem e a inocência enquanto o colonizador Martim representa a cultura (europeia).",
+      Publicacao = "1865", 
+      AutorId = 5, 
+      Avaliacao = "4,6",
+      NumeroPaginas= 202,  
+      Destaque = true, 
+      Foto = "/img/livros/iracema.png", 
+      Video = "V1s1a77PnOg", 
+      Resumo = 
     @"Iracema é uma obra que traz como protagonista uma mulher indígena com características físicas e psicológicas muito idealizadas.
     A história tem início quando Martim, português responsável por defender o território brasileiro de outros invasores europeus, perde-se na mata, em localidade que hoje corresponde ao litoral do Ceará. Iracema, índia tabajara que então repousava entre as árvores, assusta-se com a chegada do estranho, e dispara uma flecha contra Martim. Ele não reage à agressão por ter sido alvejado por uma mulher, e Iracema entende que feriu um inocente.
     Em pacto de paz, Iracema leva o estrangeiro ferido para sua aldeia e para ter com seu pai, Araquém, o pajé da tribo. Martim é recebido com grande hospitalidade, mas sua chegada não agrada a todos: Irapuã, guerreiro tabajara apaixonado por Iracema, é o primeiro a desagradar-se.
@@ -362,7 +446,19 @@ public class AppDbSeed
     O casal, então, refugia-se em uma praia deserta, onde Martim constrói uma cabana. Iracema passa muito tempo sozinha enquanto o amado fiscaliza as costas, em expedições a mando do governo português. Martim é constantemente tomado pela melancolia e nostalgia de sua terra natal, o que entristece Iracema, que passa a pensar que sua morte seria, para ele, uma libertação.
     Não muito tempo depois, Iracema descobre-se grávida, mas Martim precisa partir para defender, junto a Poti, a tribo pitiguara, que está sob ataque. Iracema acaba tendo o filho sozinha, e batiza a criança de Moacir, o nascido de seu sofrimento. Ferida pelo parto e pela tristeza profunda, o leite de Iracema seca; Martim chega a tempo de Iracema entregar-lhe a criança e falecer logo em seguida" },
 
-    new Livro { LivroId = 8, FaculdadeId = 1, Nome = "Memórias Póstumas de Brás Cubas", Descricao = "Brás Cubas decide narrar sua própria vida após a morte. A narrativa começa com sua agonia e enterro, e retrocede para sua infância, juventude e vida adulta. O livro é uma crítica à sociedade da época, com seus costumes, valores e hipocrisias.", Publicacao = "1880", AutorId = 2, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Memórias Póstumas de Brás Cubas.png", Video = "GyXglxNR5Ss", Resumo = 
+    new Livro { 
+      LivroId = 8, 
+      FaculdadeId = 1, 
+      Nome = "Memórias Póstumas de Brás Cubas", 
+      Descricao = "Brás Cubas decide narrar sua própria vida após a morte. A narrativa começa com sua agonia e enterro, e retrocede para sua infância, juventude e vida adulta. O livro é uma crítica à sociedade da época, com seus costumes, valores e hipocrisias.", 
+      Publicacao = "1880", 
+      AutorId = 2, 
+      Avaliacao = "4,8",
+      NumeroPaginas= 328, 
+      Destaque = true,
+      Foto = "/img/livros/Memórias Póstumas de Brás Cubas.png", 
+      Video = "GyXglxNR5Ss", 
+      Resumo = 
     @"A obra tem início com a declaração da morte de Brás Cubas, cujo narrador e protagonista relata suas memórias após ter sido vítima de pneumonia.
     Pertencente a uma família abastada do século XIX, Brás Cubas narra primeiramente sua morte e enterro onde apareceram onze amigos.
     Por conseguinte, ele relata diversos momentos de sua vida, desde eventos da sua infância, adolescência e fase adulta.
@@ -375,7 +471,19 @@ public class AppDbSeed
     Ainda que desolado, o casal se encontra às escondidas numa casa alugada para esse propósito. Nesse momento podemos notar a presença de Dona Plácida, empregada de Virgília que encobre todos os encontros da adúltera.
     Por fim, Brás Cubas entra para a política e mesmo desenvolvendo um trabalho medíocre, essa posição lhe oferece certo status, num mundo onde a aparência era o mais louvável." },
 
-    new Livro { LivroId = 9, FaculdadeId = 1, Nome = "Sonetos", Descricao = "Os sonetos de Camões abordam uma variedade de temas, com destaque para o amor, a paixão, a saudade, a melancolia, a fé e a reflexão sobre a vida e a morte. Sua poesia é um retrato da alma humana, com suas alegrias, tristezas, esperanças e desilusões.", Publicacao = "1595", AutorId = 6, Avaliacao= "4,7", Destaque = true, Foto = "/img/livros/Sonetos De Camões.png", Video = "Yac_R3PlFeE", Resumo = 
+    new Livro { 
+      LivroId = 9, 
+      FaculdadeId = 1, 
+      Nome = "Sonetos", 
+      Descricao = "Os sonetos de Camões abordam uma variedade de temas, com destaque para o amor, a paixão, a saudade, a melancolia, a fé e a reflexão sobre a vida e a morte. Sua poesia é um retrato da alma humana, com suas alegrias, tristezas, esperanças e desilusões.", 
+      Publicacao = "1595", 
+      AutorId = 6, 
+      Avaliacao= "4,7", 
+      NumeroPaginas= 144, 
+      Destaque = true, 
+      Foto = "/img/livros/Sonetos De Camões.png", 
+      Video = "Yac_R3PlFeE", 
+      Resumo = 
     @"'CXLV - Quando os raios do sol, que ao nascer' - Este soneto expressa a saudade que o poeta sente da sua terra natal, Portugal, enquanto está exilado em África. Ele descreve como a beleza da natureza não consegue amenizar a sua tristeza e saudade.
     'CLXIII - Quem quiser que o mundo conheça bem'- Este soneto é um hino à beleza da poesia, com o poeta afirmando que é através dela que os homens podem compreender e apreciar a verdadeira beleza do mundo.
     'CLXXX - As armas e os barões assinalados' - Este soneto celebra a vitória de Portugal sobre os Mouros em Alcácer-Quibir, e celebra a bravura e coragem dos líderes portugueses que lideraram a batalha.
@@ -384,7 +492,19 @@ public class AppDbSeed
     Outros poemas da coletânea abordam temas como a natureza, a religião e a história. Alguns dos poemas mais importantes incluem Lusíadas, que é considerado uma das mais importantes obras da literatura portuguesa, e As Rimas, que são poemas satíricos que criticam a sociedade da época
     Em resumo, Sonetos é uma coletânea de poemas escrita pelo poeta português Luís de Camões, publicada em 1595. A coletânea contém cerca de 200 sonetos que abrangem uma variedade de temas, incluindo amor, natureza, religião, história e política. Os poemas de amor são talvez os mais conhecidos e celebrados, com Camões usando metáforas e imagens poderosas para descrever seus sentimentos. Além disso, os poemas também abordam outros temas importantes como a natureza, a religião e a história, incluindo Lusíadas que é considerado uma das principais obras da literatura portuguesa." },
 
-    new Livro { LivroId = 10, FaculdadeId = 1, Nome = "Quarto de Despejo", Descricao = "O livro é um diário em que Carolina Maria de Jesus narra seu cotidiano, descrevendo as dificuldades que enfrenta como mãe solteira de três filhos, trabalhando como catadora de papel e enfrentando a falta de recursos para suprir as necessidades básicas da família.", Publicacao = "1960", AutorId = 7, Avaliacao = "4,9", Destaque = true, Foto = "/img/livros/Quarto De Despejo.png", Video = "Cv-7AH2wTQQ", Resumo =
+    new Livro { 
+      LivroId = 10, 
+      FaculdadeId = 1, 
+      Nome = "Quarto de Despejo", 
+      Descricao = "O livro é um diário em que Carolina Maria de Jesus narra seu cotidiano, descrevendo as dificuldades que enfrenta como mãe solteira de três filhos, trabalhando como catadora de papel e enfrentando a falta de recursos para suprir as necessidades básicas da família.", 
+      Publicacao = "1960", 
+      AutorId = 7, 
+      Avaliacao = "4,9", 
+      NumeroPaginas= 176, 
+      Destaque = true, 
+      Foto = "/img/livros/Quarto De Despejo.png", 
+      Video = "Cv-7AH2wTQQ", 
+      Resumo =
     @"Em seu texto, vemos como a autora procura sobreviver como catadora de lixo na metrópole de São Paulo, tentando encontrar naquilo que alguns consideram como sobra o que a mantenha viva.
     Os relatos foram escritos entre 15 de julho de 1955 e 1 de janeiro de 1960. As entradas no diário são marcadas com dia, mês e ano e narram aspectos da rotina de Carolina.
     Muitas passagens sublinham, por exemplo, a dificuldade de ser mãe solteira nesse contexto de extrema pobreza. Lemos num trecho presente no dia 15 de julho de 1955:
@@ -407,7 +527,19 @@ public class AppDbSeed
     Pior do que a fome dela, a fome que mais doía era aquela que assistia nos filhos. E é assim, tentando escapar da fome, da violência, da miséria e da pobreza, que se constrói o relato de Carolina.
     Acima de tudo, Quarto de Despejo é uma história de sofrimento e de resiliência, de como uma mulher lida com todas as dificuldades impostas pela vida e ainda consegue transformar em discurso a situação limite vivida."  },
 
-    new Livro { LivroId = 11, FaculdadeId = 1, Nome = "Poesia Completa", Descricao = "O momento em que o país vivia a Era Vargas é a mais cobrada no ENEM. Isso acontece porque ela reflete o engajamento social e político do poeta, características que costumam ser muito bem aproveitadas", Publicacao = "", AutorId = 8, Avaliacao = "3,8", Destaque = true, Foto = "/img/livros/Poesia Completa Carlos Drummond De Andrade.png", Video = "CWagtQP7hqw", Resumo =
+    new Livro { 
+      LivroId = 11, 
+      FaculdadeId = 1, 
+      Nome = "Poesia Completa", 
+      Descricao = "O momento em que o país vivia a Era Vargas é a mais cobrada no ENEM. Isso acontece porque ela reflete o engajamento social e político do poeta, características que costumam ser muito bem aproveitadas", 
+      Publicacao = "", 
+      AutorId = 8, 
+      Avaliacao = "3,8", 
+      NumeroPaginas= 1728 páginas, 
+      Destaque = true, 
+      Foto = "/img/livros/Poesia Completa Carlos Drummond De Andrade.png", 
+      Video = "CWagtQP7hqw", 
+      Resumo =
     @"No Meio do Caminho
     Um dos poemas mais conhecidos de Drummond, famoso por sua repetição e reflexão sobre a presença de obstáculos na vida.
     Candidato sobre como lidar com as dificuldades e imprevistos.
@@ -438,7 +570,19 @@ public class AppDbSeed
     Poema de Sete Faces: 
     Aborda a complexidade da identidade humana e a dificuldade de se definir. "},
 
-    new Livro { LivroId = 12, FaculdadeId = 1, Nome = "O povo brasileiro", Descricao = "A obra busca responder à pergunta: quem são os brasileiros? mergulhando na história do Brasil, analisando as matrizes culturais, os mecanismos de formação étnica e cultural, os conflitos e as contradições.", Publicacao = "1995", AutorId = 9, Avaliacao = "4,9", Destaque = true, Foto = "/img/livros/O Povo Brasileiro.png", Video = "geSPmerwDmI", Resumo = 
+    new Livro { 
+      LivroId = 12, 
+      FaculdadeId = 1, 
+      Nome = "O povo brasileiro", 
+      Descricao = "A obra busca responder à pergunta: quem são os brasileiros? mergulhando na história do Brasil, analisando as matrizes culturais, os mecanismos de formação étnica e cultural, os conflitos e as contradições.", 
+      Publicacao = "1995", 
+      AutorId = 9,
+      Avaliacao = "4,9", 
+      NumeroPaginas= 368, 
+      Destaque = true, 
+      Foto = "/img/livros/O Povo Brasileiro.png", 
+      Video = "geSPmerwDmI", 
+      Resumo = 
     @"O Povo Brasileiro é um livro de antropologia de Darcy Ribeiro, publicado em 1995. A obra é um estudo sobre a formação do povo brasileiro, abordando os aspectos históricos, sociais e culturais que influenciaram na construção da identidade nacional.
 
     Matrizes culturais do Brasil:
@@ -454,7 +598,19 @@ public class AppDbSeed
     A formação do povo brasileiro foi marcada por desigualdades sociais e raciais.
     O futuro do Brasil depende da construção de uma sociedade mais justa e igualitária." },
 
-    new Livro { LivroId = 13, FaculdadeId = 1, Nome = "Vidas Secas", Descricao = "A história acompanha a saga de Fabiano, Sinhá Vitória e seus dois filhos, além da cachorra Baleia, em busca de melhores condições de vida. A família enfrenta a seca, a fome, a violência e a injustiça social, sendo constantemente humilhada e explorada pelos proprietários de terra.", Publicacao = "1938", AutorId = 10, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Vidas Secas.png", Video = "465n-yZqt6I", Resumo =
+    new Livro { 
+      LivroId = 13, 
+      FaculdadeId = 1, 
+      Nome = "Vidas Secas", 
+      Descricao = "A história acompanha a saga de Fabiano, Sinhá Vitória e seus dois filhos, além da cachorra Baleia, em busca de melhores condições de vida. A família enfrenta a seca, a fome, a violência e a injustiça social, sendo constantemente humilhada e explorada pelos proprietários de terra.", 
+      Publicacao = "1938", 
+      AutorId = 10, 
+      Avaliacao = "4,8", 
+      NumeroPaginas= 176, 
+      Destaque = true,
+      Foto = "/img/livros/Vidas Secas.png", 
+      Video = "465n-yZqt6I", 
+      Resumo =
     @"Vidas Secas é um profundo retrato da sociedade brasileira, sobretudo de seus problemas sociais.
     Dessa forma, Graciliano traça uma crítica social retratando as dificuldades encontradas por uma família pobre de retirantes. Eles têm de conviver constantemente com a miséria e a seca que assola o sertão nordestino.
     Fabiano e Sinhá Vitória é um casal simples que possuem dois filhos: o mais novo e o mais velho. Dos filhos, nenhum nome é mencionado durante toda a estória. Mesmo convivendo constantemente com a miséria, eles são crianças que possuem sonhos. O mais velho é muito curioso, e o mais novo anseia por fazer algo importante, para que todos fiquem orgulhosos dele.
@@ -466,7 +622,19 @@ public class AppDbSeed
     Além disso, o sonho do sofrimento acabar, permanece em todos, na esperança de encontrar melhores oportunidades.
     Note que o último capítulo “Fuga” aponta que a seca vem assolar novamente a região, com o verão que se aproxima. Assim, se inicia uma nova fuga sendo a mesma do início: a fuga da seca.
     "  },
-    new Livro { LivroId = 14, FaculdadeId = 1, Nome = "O Cortiço", Descricao = "O Cortiço é um romance naturalista que retrata a vida de pessoas pobres que viviam em cortiços no Rio de Janeiro no final do século XIX. O livro denuncia a exploração e as péssimas condições de vida dos moradores.", Publicacao = "1890", AutorId = 11, Avaliacao= "4,7", Destaque = true, Foto = "/img/livros/o cortiço.png", Video = "v6rjjpbeNBk", Resumo =
+    new Livro { 
+      LivroId = 14, 
+      FaculdadeId = 1, 
+      Nome = "O Cortiço", 
+      Descricao = "O Cortiço é um romance naturalista que retrata a vida de pessoas pobres que viviam em cortiços no Rio de Janeiro no final do século XIX. O livro denuncia a exploração e as péssimas condições de vida dos moradores.",
+      Publicacao = "1890", 
+      AutorId = 11, 
+      Avaliacao= "4,7",
+      NumeroPaginas= 223,  
+      Destaque = true, 
+      Foto = "/img/livros/o cortiço.png", 
+      Video = "v6rjjpbeNBk", 
+      Resumo =
     @"Dono do Cortiço, João Romão é um português ambicioso que explora seus empregados. Além de proprietário da habitação coletiva, ele é dono de uma pedreira e uma taverna.
     Ainda que não seja o personagem principal da trama, muitas passagens do romance revelam sua ascensão social.
     Ao mesmo tempo, é demostrada a degradação social dos menos favorecidos que vivem no cortiço.
@@ -481,16 +649,42 @@ public class AppDbSeed
     Após se envolver com a sedutora Rita Baiana, sua esposa descobre a relação e começa a beber.
     Enciumado pelo envolvimento anterior que Rita teve com Firmo, Jerônimo resolve assassinar seu rival. Por fim, Jerônimo abandona sua família para ficar com Rita.
     O incêndio no cortiço foi um dos fatores principais para que muitos moradores se transferissem para outro cortiço, o “cabeça-de-gato”. Com isso, o local foi reformado e a avenida recebeu o nome de “Avenida São Romão”.
-    "  },
+    "  };
 
 
 
      // UNICAMP
-    new Livro { LivroId = 15, FaculdadeId = 2, Nome = "Prosas seguidas de odes mínimas", Descricao = "é um livro composto por: Prosas: Vinte textos em prosa poética que abordam temas diversos marcados pela concisão, pela ironia e pelo humor, e Odes Mínimas: Treze poemas curtos, concisos e minimalistas, que exploram os temas das prosas,com uma linguagem depurada e essencial. Os poemas são marcados pela reflexão, pela ironia e pela brevidade.", Publicacao = "1992", AutorId = 12, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Prosas seguidas de odes mínimas.png", Video = "3iX2kdVHvUI", Resumo = @"Em Prosas seguidas de Odes mínimas, José Paulo Paes entrega uma obra que se equilibra entre a prosa e a poesia, explorando a concisão como meio de provocar reflexões profundas. As prosas curtas são carregadas de observações sutis sobre a vida cotidiana, os relacionamentos e a natureza humana, enquanto as odes mínimas são pequenos poemas que se concentram na essência das coisas, evitando qualquer forma de excesso ou ostentação linguística.
+    new Livro { 
+      LivroId = 15, 
+      FaculdadeId = 2, 
+      Nome = "Prosas seguidas de odes mínimas", 
+      Descricao = "é um livro composto por: Prosas: Vinte textos em prosa poética que abordam temas diversos marcados pela concisão, pela ironia e pelo humor, e Odes Mínimas: Treze poemas curtos, concisos e minimalistas, que exploram os temas das prosas,com uma linguagem depurada e essencial. Os poemas são marcados pela reflexão, pela ironia e pela brevidade.", 
+      Publicacao = "1992", 
+      AutorId = 12,
+      Avaliacao = "4,8", 
+      NumeroPaginas= 88, 
+      Destaque = true, 
+      Foto = "/img/livros/Prosas seguidas de odes mínimas.png", 
+      Video = "3iX2kdVHvUI", 
+      Resumo = 
+      @"Em Prosas seguidas de Odes mínimas, José Paulo Paes entrega uma obra que se equilibra entre a prosa e a poesia, explorando a concisão como meio de provocar reflexões profundas. As prosas curtas são carregadas de observações sutis sobre a vida cotidiana, os relacionamentos e a natureza humana, enquanto as odes mínimas são pequenos poemas que se concentram na essência das coisas, evitando qualquer forma de excesso ou ostentação linguística.
     O autor brinca com a linguagem de maneira direta e objetiva, transformando o trivial em matéria de reflexão filosófica. A economia de palavras e a precisão das imagens criam uma obra em que cada frase ou verso é significativo, tornando a leitura uma experiência densa, mesmo em sua brevidade.
     A escolha do autor por uma estética minimalista não diminui o impacto emocional das suas palavras, mas, ao contrário, permite que o leitor se concentre nos significados sutis escondidos nas entrelinhas. A obra é uma meditação sobre a simplicidade e a beleza que se pode encontrar em todos os aspectos da vida, por mais comuns que pareçam à primeira vista." },
    
-    new Livro { LivroId = 16, FaculdadeId = 2, Nome = "Olhos d’água", Descricao = "Olhos d'água é um livro de contos da escritora Conceição Evaristo que aborda a vida de pessoas negras e afro-brasileiras.A metáfora dos olhos d'água simboliza a união estabelecida entre passado, presente e futuro", Publicacao = "2014", AutorId = 13, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Olhos d'água.png", Video= "aj9XnRAyG6Y", Resumo = @"Olhos d’água, Duzu-Querença, Luamanda, Lumbiá, Di Lixão, são alguns dos títulos dos 15 contos que compõem o livro Olhos d'água, de Conceição Evaristo. Neles e nos tantos outros, a autora aborda questões que perpassam a vivência de personagens negros marginalizados e violentados pela sociedade.  
+    new Livro { 
+      LivroId = 16, 
+    FaculdadeId = 2, 
+    Nome = "Olhos d’água", 
+    Descricao = "Olhos d'água é um livro de contos da escritora Conceição Evaristo que aborda a vida de pessoas negras e afro-brasileiras.A metáfora dos olhos d'água simboliza a união estabelecida entre passado, presente e futuro", 
+    Publicacao = "2014", 
+    AutorId = 13, 
+    Avaliacao = "4,8", 
+    NumeroPaginas= 116, 
+    Destaque = true, 
+    Foto = "/img/livros/Olhos d'água.png", 
+    Video= "aj9XnRAyG6Y", 
+    Resumo = 
+    @"Olhos d’água, Duzu-Querença, Luamanda, Lumbiá, Di Lixão, são alguns dos títulos dos 15 contos que compõem o livro Olhos d'água, de Conceição Evaristo. Neles e nos tantos outros, a autora aborda questões que perpassam a vivência de personagens negros marginalizados e violentados pela sociedade.  
     “Havia anos que eu estava fora de minha cidade natal. Saíra de minha casa em busca de melhor condição de vida para mim e para minha família: ela e minhas irmãs tinham ficado para trás. Mas eu nunca esquecera a minha mãe.” (trecho de Olhos d’água).
     Em sua grande maioria as personagens dos contos são mulheres; outra característica encontrada com regularidade é muitas delas serem mães. Entretanto, na obra aparecem protagonistas homens, filhas, avós, que retratam em suas vidas temas sociais, sexuais, emocionais, todos eles atravessados por suas narrativas complexas e bastante densas, marcadas por uma condição racial.
     “Davenga mordeu o lábio, contendo o riso. Olhou o político bem no fundo dos olhos, mandou então que ele tirasse a roupa e foi recolhendo tudo.
@@ -501,7 +695,20 @@ public class AppDbSeed
     A riqueza da obra está justamente na maneira em que a autora se aprofunda na pluralidade de temas e sentimentos que constituem a condição humana. A sexualidade também é abordada e não só de maneira heteronormativa, um ponto bastante sensível e que muitas vezes é apagado em meio às outras problemáticas relacionadas a sujeitos marginalizados.
     A prosa de Conceição Evaristo é guiada por uma linguagem poética, marca da autora, assim como os neologismos, que fazem parte de seu estilo. A esse modo de narrar dos personagens e de contar suas histórias e visões de mundo, a autora dá o nome de “escrevivências”, que marca a realidade, a vivência daquelas pessoas contada a partir da escrita."},
    
-    new Livro { LivroId = 17, FaculdadeId = 2, Nome = "A vida não é útil", Descricao = "é um livro que questiona o sistema capitalista, o consumismo e a destruição ambiental. Composto por cinco textos: Não se come dinheiro, Sonhos para adiar o fim do mundo, A máquina de fazer coisas, O amanhã não está à venda, A vida não é útil.", Publicacao = "2020", AutorId = 14, Avaliacao= "4,8", Destaque = true, Foto = "/img/livros/A vida não é útil.png", Video= "y0m1i-dHtT8", Resumo = @"“Essa dor talvez ajude as pessoas a responder se somos de fato uma humanidade. Nós nos acostumamos com essa ideia, que foi naturalizada, mas ninguém mais presta atenção no verdadeiro sentido do que é ser humano. É como se tivéssemos várias crianças brincando e, por imaginar essa fantasia da infância, continuassem a brincar por tempo indeterminado. Só que viramos adultos, estamos devastando o planeta, cavando um fosso gigantesco de desigualdades entre povos e sociedades. De modo que há uma sub-humanidade que vive numa grande miséria, sem chance de sair dela – e isso também foi naturalizado.”
+    new Livro { 
+      LivroId = 17, 
+      FaculdadeId = 2, 
+      Nome = "A vida não é útil", 
+      Descricao = "é um livro que questiona o sistema capitalista, o consumismo e a destruição ambiental. Composto por cinco textos: Não se come dinheiro, Sonhos para adiar o fim do mundo, A máquina de fazer coisas, O amanhã não está à venda, A vida não é útil.", 
+      Publicacao = "2020", 
+      AutorId = 14, 
+      Avaliacao= "4,8", 
+      NumeroPaginas= 128, 
+      Destaque = true, 
+      Foto = "/img/livros/A vida não é útil.png", 
+      Video= "y0m1i-dHtT8", 
+      Resumo = 
+      @"“Essa dor talvez ajude as pessoas a responder se somos de fato uma humanidade. Nós nos acostumamos com essa ideia, que foi naturalizada, mas ninguém mais presta atenção no verdadeiro sentido do que é ser humano. É como se tivéssemos várias crianças brincando e, por imaginar essa fantasia da infância, continuassem a brincar por tempo indeterminado. Só que viramos adultos, estamos devastando o planeta, cavando um fosso gigantesco de desigualdades entre povos e sociedades. De modo que há uma sub-humanidade que vive numa grande miséria, sem chance de sair dela – e isso também foi naturalizado.”
   	Uma poderosa crítica a nossa concepção de civilização e vida. É assim que descrevemos a obra “A Vida não é Útil”, de Ailton Krenak. Considerado um expoente da literatura indígena, Ailton é membro da comunidade Krenak, localizada no Vale do Rio Doce. A comunidade, que hoje sofre com a contaminação dos rios e os efeitos da atividade predatória brasileira, possui uma cosmovisão completamente diferente da nossa.
     O autor escreveu o livro durante a pandemia e exprime um sentimento comum de uma ala progressista da sociedade, em que a pandemia seria uma boa oportunidade para revermos nossos padrões de vida e repensarmos o nosso modo de viver, uma vez que, para Ailton, não sabemos nem como viver, tema de seu último ensaio do livro.
     A obra é um compilado de ensaios escritos durante o período da pandemia, que colocam em xeque concepções estabelecidas em nossa visão de mundo. No primeiro ensaio, “Não se come dinheiro”, Krenak questiona a nossa concepção de humanidade, dentro da qual criamos uma sub-humanidade, que inclui não apenas populações historicamente marginalizadas, mas também os animais e a natureza. Aliás, a natureza é elemento central em seu livro, ao mostrar que ela é um SER em si, não apenas um acessório para o “progresso”.
@@ -512,7 +719,19 @@ public class AppDbSeed
     O livro é relativamente curto, embora seja denso e, para ser devidamente saboreado, precisa de calma, para não o ler de forma utilitária. Os questionamentos e visões ali presentes podem ser pautas de discussões longas e profundas com o nosso coletivo.
     A Vida Não é Útil é uma obra esplendorosa, que retoma a tradição indígena de transmissão de conhecimento através da oralidade. O livro é composto por textos ensaísticos elaborados a partir de lives e entrevistas cedidas por Ailton e organizadas por Rita Carelli. A editora é a Companhia das Letras." },
    
-    new Livro { LivroId = 18, FaculdadeId = 2, Nome = "Casa Velha", Descricao = "Casa Velha é um romance de Machado de Assis que aborda temas como o poder das normas sociais, a ascensão social e as relações de poder entre as classes sociais", Publicacao = "1886", AutorId = 2, Avaliacao = "4,6", Destaque = true, Foto = "/img/livros/Casa Velha.png", Resumo = @"Ele era um padre e resolvera escrever um livro contando a história do Imperador Pedro I, mas logo desistiu, ficando apenas a escrever poemas. Entretanto, o chamado padre Luís Gonçalves dos Santos havia escrito memórias sobre a época do rei. Então quando viu a falta de qualidade do texto, decidiu escrever ele mesmo a história do imperador e assim mostrar o talento do clero ao redigir.
+    new Livro { 
+      LivroId = 18, 
+      FaculdadeId = 2, 
+      Nome = "Casa Velha", 
+      Descricao = "Casa Velha é um romance de Machado de Assis que aborda temas como o poder das normas sociais, a ascensão social e as relações de poder entre as classes sociais", 
+      Publicacao = "1886", 
+      AutorId = 2, 
+      Avaliacao = "4,6",
+      NumeroPaginas= 64,  
+      Destaque = true, 
+      Foto = "/img/livros/Casa Velha.png", 
+      Resumo = 
+      @"Ele era um padre e resolvera escrever um livro contando a história do Imperador Pedro I, mas logo desistiu, ficando apenas a escrever poemas. Entretanto, o chamado padre Luís Gonçalves dos Santos havia escrito memórias sobre a época do rei. Então quando viu a falta de qualidade do texto, decidiu escrever ele mesmo a história do imperador e assim mostrar o talento do clero ao redigir.
     Foi nessas circunstâncias que deu início à sua freqüência na chamada Casa Velha, após o padre Mascarenhas, pregador da capelinha da casa, insistir muito. Ali vivera um ministro que trabalhara para o Imperador. Agora na casa viviam apenas seu filho, Félix, sua viúva, D. Antônia e os empregados.
     Ele, com a permissão da viúva, logo deu início ao estudo dos papéis e livros que estavam na biblioteca do ex-ministro. Em pouco tempo já se tornara amigo da família. Félix mostrava nutrir uma grande amizade pelo padre e vice-versa. Ele geralmente só voltava à sua casa ao anoitecer e passava ali o dia tomando notas na biblioteca, tendo conversas com Félix e almoçando com a família.
     Sendo amigo da família, D. Antônia veio pedir-lhe que convencesse Félix de ir a Europa, e que o padre acompanhasse o rapaz. Enquanto isso, o rapaz confiava ao padre a vontade de ser deputado. O padre dava apoio à idéia dele e quando o inquiriu sobre a Europa ouviu de Félix que não podia ir.
@@ -527,12 +746,38 @@ public class AppDbSeed
     Alegremente, o padre foi procurar D. Antônia e contou-lhe toda a verdade. E ela também lhe contou toda a verdade. Ela criara a história sobre Félix e Lalau serem irmãos como último pretexto para impedir o casamento, e agora sabia que supusera corretamente, mas estava arrependida e aceitava o casamento do filho.
     Félix se alegrou intensamente com a notícia, mas Lalau não. Esta não aceitou o casamento e disse que seria uma vergonha casar-se com o filho do homem que envergonhara sua família. Assim ela fez sua recusa e não cedeu às insistências do padre, da tia e até mesmo de Félix. Ao final ela se casou com Silvirino e Félix com Sinhazinha. Foram honestos, felizes não se sabe." },
    
-    new Livro { LivroId = 19, FaculdadeId = 2, Nome = "Vida e morte de M.J Gonzaga de Sá", Descricao = "Vida e morte de M.J Gonzaga de Sá é um livro que conta a história de um jornalista negro que vive no Rio de Janeiro no início do século XX, o qual aborda temas como: Desigualdade social, Racismo, Corrupção política, Abandono das populações periféricas, Burocratização do Estado.", Publicacao = "1919", AutorId = 15, Avaliacao = "4,5", Destaque = true, Foto = "/img/livros/Vida e morte de M.J Gonzaga de Sá.png", Video= "8CMzr9D8_xc", Resumo = @"Narrado por Augusto Machado, um funcionário público negro, o livro tece a biografia do personagem Gonzaga de Sá. Por meio dela, transparece o comportamento da alta sociedade do Rio de Janeiro do começo do século XX, além dos diversos problemas sociais que afligiam o próprio Lima Barreto.
+    new Livro { 
+      LivroId = 19, 
+      FaculdadeId = 2,
+      Nome = "Vida e morte de M.J Gonzaga de Sá", 
+      Descricao = "Vida e morte de M.J Gonzaga de Sá é um livro que conta a história de um jornalista negro que vive no Rio de Janeiro no início do século XX, o qual aborda temas como: Desigualdade social, Racismo, Corrupção política, Abandono das populações periféricas, Burocratização do Estado.", 
+      Publicacao = "1919", 
+      AutorId = 15, 
+      Avaliacao = "4,5", 
+      NumeroPaginas= 108, 
+      Destaque = true, 
+      Foto = "/img/livros/Vida e morte de M.J Gonzaga de Sá.png", 
+      Video= "8CMzr9D8_xc", 
+      Resumo = 
+      @"Narrado por Augusto Machado, um funcionário público negro, o livro tece a biografia do personagem Gonzaga de Sá. Por meio dela, transparece o comportamento da alta sociedade do Rio de Janeiro do começo do século XX, além dos diversos problemas sociais que afligiam o próprio Lima Barreto.
     “O Lima Barreto é e sempre foi um autor considerado periférico. Um homem que viveu nos subúrbios do Rio de Janeiro [RJ], que sempre se sentiu vítima de preconceito étnico, sempre se achou desprezado pelos seus colegas e sempre lutou muito contra o privilégio de determinados autores brancos, muitas vezes no julgamento dele, sem tanto talento, sem tanta coisa a dizer. Sendo assim, é compreensível que o principal tema de sua obra seja a denúncia do preconceito racial e a luta por um consequente reconhecimento social”, resume o professor de literatura brasileira do Sistema Anglo de Ensino Maurício Soares Filho.
     Nesse podcast, Soares Filho traz dicas para quem está se preparando para o vestibular e aponta possíveis abordagens que podem ser feitas no exame.
     “O que me parece que o Lima Barreto contribui muito claramente na leitura, na formação de um jovem leitor, num processo de desmontar as origens dos preconceitos. Ao investigarmos e compreendermos os movimentos em torno desse processo, que aqui nesse caso envolvem principalmente uma esperada modernização do Rio de Janeiro nessa passagem do Império para a República. E a abolição da escravatura, quer dizer, olhar para isso numa tentativa de compreender como chegamos até aqui, como chegamos nesse Brasil racista, machista, classista, em que ainda estamos no século XXI”, explica." },
    
-    new Livro { LivroId = 20, FaculdadeId = 2, Nome = "No Seu Pescoço", Descricao = "No seu pescoço é um livro que aborda temas  sobre injustiça social, desigualdade de gênero, sonho, nostalgia, racismo e preconceito contra imigrantes de forma combativa, sem ser abusiva", Publicacao = "2017", AutorId = 16, Avaliacao = "4,2", Destaque = true, Foto = "/img/livros/No seu pescoço.png",  Video= "EOZn3Ns07SE", Resumo = @"Não são muitos os autores que transitam com tanta facilidade do romance para o conto, do conto para o ensaio, do ensaio para os manifestos. Não importa o formato, a nigeriana Chimamanda Ngozi Adichie mostra completo domínio do seu ofício. Uma das melhores escritoras de sua geração, Adichie expõe nossa vulnerabilidade perante o desconhecido nos doze contos que compõem No Seu Pescoço, lançado originalmente em 2009, mas só agora traduzido para o português pela Companhia das Letras.
+    new Livro { 
+      LivroId = 20, 
+      FaculdadeId = 2, 
+      Nome = "No Seu Pescoço", 
+      Descricao = "No seu pescoço é um livro que aborda temas  sobre injustiça social, desigualdade de gênero, sonho, nostalgia, racismo e preconceito contra imigrantes de forma combativa, sem ser abusiva", 
+      Publicacao = "2017", 
+      AutorId = 16, 
+      Avaliacao = "4,2", 
+      NumeroPaginas= 256, 
+      Destaque = true, 
+      Foto = "/img/livros/No seu pescoço.png",  
+      Video= "EOZn3Ns07SE", 
+      Resumo = 
+      @"Não são muitos os autores que transitam com tanta facilidade do romance para o conto, do conto para o ensaio, do ensaio para os manifestos. Não importa o formato, a nigeriana Chimamanda Ngozi Adichie mostra completo domínio do seu ofício. Uma das melhores escritoras de sua geração, Adichie expõe nossa vulnerabilidade perante o desconhecido nos doze contos que compõem No Seu Pescoço, lançado originalmente em 2009, mas só agora traduzido para o português pela Companhia das Letras.
     As histórias contidas nessa coletânea são joias raras. Há ali a mesma potência de escrita que já conhecíamos dos romances da escritora, como Americanah e Hibisco Roxo, mas com mais espaço para experimentação de estilos, pontos de vista, narradores.
     Em No Seu Pescoço, o conto que dá título ao livro, a história é narrada em segunda pessoa, uma inversão estilística que nos coloca diretamente no lugar da personagem, uma recém-chegada aos Estados Unidos que tenta se adaptar aos cheiros, comportamentos e hábitos fora do seu lugar.
     À noite, algo se enroscava no seu pescoço, algo que por muito pouco não lhe sufocava antes de você cair no sono.
@@ -542,8 +787,20 @@ public class AppDbSeed
     Essas substituições vão se acumulando, para desespero da mulher. Mas embora reconheça que tenha caído numa armadilha, Chinaze sabe também que não lhe restam muitos outros caminhos. Ela também vai ter que esperar pelo sonho americano que nem sempre é real.
     Adichie escreve com conhecimento de causa. Ainda bastante jovem, ela emigrou para os Estados Unidos com uma bolsa de estudos e aprendeu muito sobre preconceito e invisibilidade, assunto constante de seus livros. É o retrato desses embates – com o Estado, com a cultura, com o outro e com nós mesmos –  que enfrentamos cotidianamente que dão sabor para sua literatura." },
    
-    new Livro { LivroId = 21, FaculdadeId = 2, Nome = "Morangos mofados", Descricao = "Morangos Mofados é um livro de contos que retratam a angústia, a solidão, a repressão e a busca por liberdade de jovens na década de 1970, durante a ditadura militar no Brasil.", Publicacao = "1982", AutorId = 17, Avaliacao = "4,6", Destaque = true, Foto = "/img/livros/Morangos mofados.png", Video= "AvoP4aOb_fw", Resumo = @"
-    Parte I – O Mofo
+    new Livro { 
+      LivroId = 21, 
+      FaculdadeId = 2, 
+      Nome = "Morangos mofados", 
+      Descricao = "Morangos Mofados é um livro de contos que retratam a angústia, a solidão, a repressão e a busca por liberdade de jovens na década de 1970, durante a ditadura militar no Brasil.", 
+      Publicacao = "1982", 
+      AutorId = 17, 
+      Avaliacao = "4,6", 
+      NumeroPaginas= 192, 
+      Destaque = true, 
+      Foto = "/img/livros/Morangos mofados.png", 
+      Video= "AvoP4aOb_fw", 
+      Resumo = 
+      @"Parte I – O Mofo
     Duas personagens desconhecidas conversam. O diálogo começa com a primeira afirmando que a segunda é sua companheira. Toda a conversa se desenrola com a segunda personagem inquirindo se havia um significado oculto por trás dessa afirmação. A primeira personagem nega durante toda a conversa. A discussão perdura e parece não ter fim, estendendo-se até mesmo depois do final do conto.
     Os sobreviventes (Para ler ao som de Ângela Ro-Ro)
     O segundo conto relata a despedida de um casal em crise. É escrito em fluxo de consciência, misturando os pensamentos dos personagens. Após mais uma tentativa de sexo frustrada, eles recordam toda sua vida a dois, tentando ver onde erraram. Ela chega à conclusão que foi por excesso. Excesso de cultura. Excesso de experiências, ditas edificantes, que gradualmente foram minando o desejo de um pelo outro.
@@ -639,7 +896,20 @@ public class AppDbSeed
     Minueto e Rondó
     Senta-se no parapeito da janela, olhando para a calçada logo abaixo. Pensa já ter morrido, vítima de uma hecatombe nuclear. Afasta a ideia e questiona a própria veracidade do mundo. Sente-se melhor, esperançoso. O gosto ruim na boca havia passado. Talvez o remédio estivesse fazendo efeito. Desiste da ideia de suicídio e passa a fazer planos: resolve plantar morangos." },
    
-    new Livro { LivroId = 22, FaculdadeId = 2, Nome = "Canções Escolhidas", Descricao = "As canções escolhidas de Cartola são Alvorada, As rosas não falam, Cordas de aço, Disfarça e chora, O inverno do meu tempo, O mundo é um moinho, Que é feito de você?, Sala de recepção, Silêncio de um cipreste e Sim", Publicacao = "", AutorId = 18, Avaliacao = null, Destaque = true, Foto = "/img/livros/Canções Escolhida - Cartola.png", Video= "3X6tRqEgqLY", Resumo = @"Alvorada:
+    new Livro { 
+      LivroId = 22, 
+      FaculdadeId = 2, 
+      Nome = "Canções Escolhidas", 
+      Descricao = "As canções escolhidas de Cartola são Alvorada, As rosas não falam, Cordas de aço, Disfarça e chora, O inverno do meu tempo, O mundo é um moinho, Que é feito de você?, Sala de recepção, Silêncio de um cipreste e Sim", 
+      Publicacao = "", 
+      AutorId = 18, 
+      Avaliacao = null,
+      NumeroPaginas= 10, 
+      Destaque = true, 
+      Foto = "/img/livros/Canções Escolhida - Cartola.png", 
+      Video= "3X6tRqEgqLY", 
+      Resumo = 
+      @"Alvorada:
     'A canção descreve a beleza do amanhecer, com seus raios de sol que iluminam a cidade e trazem esperança.
     A letra fala sobre a importância de aproveitar cada novo dia e de ter fé em um futuro melhor.
     É uma canção alegre e inspiradora, que nos convida a celebrar a vida.
@@ -689,26 +959,63 @@ public class AppDbSeed
     A letra nos mostra que devemos ter fé em Deus e acreditar que dias melhores virão.
     É uma canção alegre e inspiradora, que nos enche de esperança." },
    
-    new Livro { LivroId = 23, FaculdadeId = 2, Nome = "Alice no país das maravilhas", Descricao = "é uma história sobre uma menina que sonha que cai numa toca de coelho e acaba num mundo mágico. Lá, ela vive aventuras e se depara com o absurdo, o impossível e questiona tudo o que aprendeu até ali", Publicacao = "1865 ", AutorId = 19, Avaliacao = "4,8", Destaque = true, Foto = "/img/livros/Alice no país das maravilhas.png", Video="Q6DQDyejPF4", Resumo = @"Alice no País das Maravilhas é um livro de fantasia escrito pelo autor britânico Lewis Carroll e publicado em 1865. A história começa com Alice, uma jovem curiosa que segue um coelho branco falante e acaba caindo em um buraco no chão.
+    new Livro { 
+      LivroId = 23, 
+      FaculdadeId = 2, 
+      Nome = "Alice no país das maravilhas", 
+      Descricao = "é uma história sobre uma menina que sonha que cai numa toca de coelho e acaba num mundo mágico. Lá, ela vive aventuras e se depara com o absurdo, o impossível e questiona tudo o que aprendeu até ali", 
+      Publicacao = "1865 ", 
+      AutorId = 19, 
+      Avaliacao = "4,8", 
+      NumeroPaginas= 136, 
+      Destaque = true, 
+      Foto = "/img/livros/Alice no país das maravilhas.png",
+      Video="Q6DQDyejPF4", 
+      Resumo =
+      @"Alice no País das Maravilhas é um livro de fantasia escrito pelo autor britânico Lewis Carroll e publicado em 1865. A história começa com Alice, uma jovem curiosa que segue um coelho branco falante e acaba caindo em um buraco no chão.
     Logo após cair no buraco, Alice encontra uma garrafa contendo um líquido que a faz crescer até um tamanho gigantesco, e em seguida encontra um bolo que a faz diminuir a um tamanho muito pequeno. Nessa nova escala, ela interage com animais e objetos inusitados, como o Gato de Cheshire, um gato sorridente que aparece e desaparece misteriosamente, o Lagarto que ensina a escrever poesia, e o Chapeleiro Maluco, que está sempre preso no tempo do chá das cinco. 
     Alice conhece a Rainha de Copas, uma figura autoritária que governa o país com mão de ferro e tem um péssimo temperamento. Alice é convocada para um jogo de croquet bizarro, onde os equipamentos são flamingos e os jogadores são ouriços. Durante a partida, Alice tenta entender as regras estranhas, enquanto a Rainha de Copas muda as regras ao seu bel-prazer. 
     Em seguida, Alice testemunha um julgamento na corte da Rainha de Copas, onde um sapato é o objeto de disputa. A Rainha de Copas faz acusações sem sentido e exige que o júri declare o réu culpado, independentemente das evidências apresentadas. Alice tenta interceder e argumenta com a Rainha, mas é impedida pelos soldados da Rainha. 
     Enquanto explora esse mundo mágico, Alice enfrenta uma série de desafios e situações absurdas. Ela participa de um jogo de croquet com flamingos e ouriços, encontra um lagarto que ensina a escrever poesia sem sentido, e testemunha um julgamento na corte da Rainha de Copas.
     Ao longo da história, Alice tenta entender as regras e lógicas desse mundo estranho e muitas vezes se vê frustrada por não conseguir compreendê-lo completamente. No final, ela acorda de um sonho e percebe que tudo não passou de uma fantasia.
-    Alice no País das Maravilhas é uma história clássica da literatura infantil e tem sido adaptada para diversas mídias, incluindo filmes, animações e peças teatrais. A obra é conhecida por sua atmosfera surreal, personagens excêntricos e pela capacidade de despertar a imaginação e a curiosidade das crianças." },
+    Alice no País das Maravilhas é uma história clássica da literatura infantil e tem sido adaptada para diversas mídias, incluindo filmes, animações e peças teatrais. A obra é conhecida por sua atmosfera surreal, personagens excêntricos e pela capacidade de despertar a imaginação e a curiosidade das crianças." };
 
 
 
      // FUVEST
-    new Livro { LivroId = 24, FaculdadeId = 3, Nome = "A visão das plantas", Descricao = "A obra conta a história de Celestino, homem cujo passado de brutalidade e violência assombrosas é substituído, no crepúsculo da vida, por um amor delicado e cuidadoso pelas plantas de seu jardim.", Publicacao = "2019", AutorId = 20, Avaliacao = "3,5", Destaque = true, Foto = "/img/livros/A visão das plantas.png", Video = "Ad7fQCYXiIo", Resumo = @"Alice no País das Maravilhas é um livro de fantasia escrito pelo autor britânico Lewis Carroll e publicado em 1865. A história começa com Alice, uma jovem curiosa que segue um coelho branco falante e acaba caindo em um buraco no chão.
-    Logo após cair no buraco, Alice encontra uma garrafa contendo um líquido que a faz crescer até um tamanho gigantesco, e em seguida encontra um bolo que a faz diminuir a um tamanho muito pequeno. Nessa nova escala, ela interage com animais e objetos inusitados, como o Gato de Cheshire, um gato sorridente que aparece e desaparece misteriosamente, o Lagarto que ensina a escrever poesia, e o Chapeleiro Maluco, que está sempre preso no tempo do chá das cinco. 
-    Alice conhece a Rainha de Copas, uma figura autoritária que governa o país com mão de ferro e tem um péssimo temperamento. Alice é convocada para um jogo de croquet bizarro, onde os equipamentos são flamingos e os jogadores são ouriços. Durante a partida, Alice tenta entender as regras estranhas, enquanto a Rainha de Copas muda as regras ao seu bel-prazer. 
-    Em seguida, Alice testemunha um julgamento na corte da Rainha de Copas, onde um sapato é o objeto de disputa. A Rainha de Copas faz acusações sem sentido e exige que o júri declare o réu culpado, independentemente das evidências apresentadas. Alice tenta interceder e argumenta com a Rainha, mas é impedida pelos soldados da Rainha. 
-    Enquanto explora esse mundo mágico, Alice enfrenta uma série de desafios e situações absurdas. Ela participa de um jogo de croquet com flamingos e ouriços, encontra um lagarto que ensina a escrever poesia sem sentido, e testemunha um julgamento na corte da Rainha de Copas.
-    Ao longo da história, Alice tenta entender as regras e lógicas desse mundo estranho e muitas vezes se vê frustrada por não conseguir compreendê-lo completamente. No final, ela acorda de um sonho e percebe que tudo não passou de uma fantasia.
-    Alice no País das Maravilhas é uma história clássica da literatura infantil e tem sido adaptada para diversas mídias, incluindo filmes, animações e peças teatrais. A obra é conhecida por sua atmosfera surreal, personagens excêntricos e pela capacidade de despertar a imaginação e a curiosidade das crianças." },
+    new Livro { 
+      LivroId = 24, 
+      FaculdadeId = 3, 
+      Nome = "A visão das plantas", 
+      Descricao = "A obra conta a história de Celestino, homem cujo passado de brutalidade e violência assombrosas é substituído, no crepúsculo da vida, por um amor delicado e cuidadoso pelas plantas de seu jardim.",
+      Publicacao = "2019",
+      AutorId = 20, 
+      Avaliacao = "3,5", 
+      NumeroPaginas= 88, 
+      Destaque = true, 
+      Foto = "/img/livros/A visão das plantas.png", 
+      Video = "Ad7fQCYXiIo", 
+      Resumo = 
+      @"No coração de uma Lisboa antiga, reside Celestino, um homem de passado sombrio. Ex-capitão de navio negreiro, ele carregou o peso de seus crimes por décadas. Mas, nos anos de outono da vida, encontra redenção em um lugar inesperado: um jardim.
+Ali, entre roseiras e cactos, Celestino se transforma. Suas mãos, antes manchadas de sangue, agora cuidam com ternura de cada folha, de cada flor. O jardim se torna seu refúgio, um oásis de paz em meio à tempestade de sua consciência.
+As plantas, com sua beleza silenciosa, ensinam a Celestino sobre a fragilidade da vida e a força da natureza. Ele aprende a observar, a escutar, a sentir a energia que emana de cada ser vivo. E, assim, encontra a paz que tanto buscava.
+A visão das plantas é um livro sobre redenção, sobre a capacidade de transformação do ser humano. É uma história que nos convida a refletir sobre nossos próprios atos e sobre o poder da natureza para nos curar.
+" },
    
-    new Livro { LivroId = 25, FaculdadeId = 3, Nome = "As meninas", Descricao = "O livro acompanha a jornada de três jovens mulheres universitárias no início da década de 70. Lorena, Ana Clara e Lia são de mundos distantes, vivendo impasses, cada qual com seu próprio drama durante o período turbulento da ditadura.", Publicacao = "1973", AutorId = 21, Avaliacao = "4,2", Destaque = true, Foto = "/img/livros/As meninas.png",  Video = "eSV-EIZxpU4", Resumo = @"Capítulo: Um
+    new Livro { 
+      LivroId = 25, 
+      FaculdadeId = 3, 
+      Nome = "As meninas", 
+      Descricao = "O livro acompanha a jornada de três jovens mulheres universitárias no início da década de 70. Lorena, Ana Clara e Lia são de mundos distantes, vivendo impasses, cada qual com seu próprio drama durante o período turbulento da ditadura.", 
+      Publicacao = "1973", 
+      AutorId = 21, 
+      Avaliacao = "4,2",
+      NumeroPaginas= 304, 
+      Destaque = true, 
+      Foto = "/img/livros/As meninas.png",  
+      Video = "eSV-EIZxpU4", 
+      Resumo = 
+      @"Capítulo: Um
     Lorena está em seu quarto divagando sobre o seu gato, que fugiu. Depois sobre Ana Clara, a quem vai bancar uma cirurgia restauradora da virgindade, pois a amiga estava noiva e possuía um amante traficante de quem gostava. E ainda sobre Marcus Nemesius, seu amor platônico.
     Quando Lia aparece, conversam sobre greve na faculdade, prisão do namorado de Lia (militante), alienação da burguesia e repressão militar (prisão e tortura). 
     Lorena ainda se lembra da morte de Rômulo, seu irmão, vítima de um tiro acidental dado pelo outro irmão, Remo. Por este motivo, Remo fugiu para o exterior e vivia mandando presentes para Lorena, que nunca superou o caso.
@@ -756,7 +1063,20 @@ public class AppDbSeed
     Lia corre aos ver o aceno de Lorena e vê-la massageando o peito de Clara, tentando revivê-la. Lorena encomenda o corpo, reza em latim, veste e pinta Ana Clara como se fosse a uma festa. Depois, elimina todas as pistas que comprometesse-os, então as duas amigas carregam o corpo e o abandonam em uma praça do bairro.
     Voltando para o pensionato, separam-se definitivamente. Lia segue para o exílio junto ao namorado e Lorena de volta para a casa da mãe." },
    
-    new Livro { LivroId = 26, FaculdadeId = 3, Nome = "Balada de amor ao vento", Descricao = "A obra conta a história de amor entre Sarnau e Mwando, na qual faz uma crítica à poligamia e às tradições machistas e patriarcais que afetam a vida das mulheres.", Publicacao = "1990", AutorId = 22, Avaliacao = "4", Destaque = true, Foto = "/img/livros/Balada de amor ao vento.png",  Video = "2RFTqeLOYws", Resumo = @"A base da narrativa apresentada são os personagens Sarnau, Mwando e o rei de Mambone. A narração é feita em primeira pessoa e Sarnau conta-nos a história de sua vida. Ela é a mulher que se apaixona perdidamente por Mwando quando o vê pela primeira vez. ”
+    new Livro {
+      LivroId = 26, 
+      FaculdadeId = 3, 
+      Nome = "Balada de amor ao vento", 
+      Descricao = "A obra conta a história de amor entre Sarnau e Mwando, na qual faz uma crítica à poligamia e às tradições machistas e patriarcais que afetam a vida das mulheres.", 
+      Publicacao = "1990", 
+      AutorId = 22, 
+      Avaliacao = "4", 
+      NumeroPaginas= 176, 
+      Destaque = true, 
+      Foto = "/img/livros/Balada de amor ao vento.png",  
+      Video = "2RFTqeLOYws", 
+      Resumo = 
+      @"A base da narrativa apresentada são os personagens Sarnau, Mwando e o rei de Mambone. A narração é feita em primeira pessoa e Sarnau conta-nos a história de sua vida. Ela é a mulher que se apaixona perdidamente por Mwando quando o vê pela primeira vez. ”
     Eles tentam um relacionamento, mas nem toda a beleza descrita na imagem de quando se conheceram permanece ao longo do tempo. O “coração virgem” de Sarnau estremeceu quando o viu e seus olhos ficaram hipnotizados, mas apesar da tentativa de se relacionarem ela é surpreendida quando Mwando a abandona.
     Diante do afastamento que há com o homem pelo qual ela se via seduzida, Sarnau acaba se casando com o rei de Mambone. No casamento poligâmico ela é a primeira esposa.
     Num reencontro com Mwando, Sarnau acaba engravidando e tendo um filho. A traição pode ser punida com morte e ela se vê absurdamente envolvida com o seu amor do passado. Resolve então fugir com ele, deixando para trás o filho e toda sua vida.
@@ -778,7 +1098,20 @@ public class AppDbSeed
     Portanto, Balada de amor ao vento é um romance que destaca as dificuldades da jovem Sarnau e como ela ultrapassou tais obstáculos para sobreviver, e não só para ser feliz. O sofrimento é constantemente assinalado como símbolo de superação e a história da personagem é marcada por opostos, tais como o sofrimento versus a busca pela felicidade.
     O título do livro, Balada de amor ao vento, reflete o que há na história. É como se todo o amor buscado e tentado por Sarnau fosse levado pelo vento. O passado que ela tem provoca marcas profundas naquilo que ela é no presente. O amor que ela deposita em Mwando pode ser leve como uma brisa ou cortante como uma rajada forte de vento." },
    
-    new Livro { LivroId = 27, FaculdadeId = 3, Nome = "Caminho de pedras", Descricao = "Na Fortaleza dos anos 1930, durante a Era Vargas, Roberto tem a missão de recrutar operários para uma nova célula de esquerda. Uma das pessoas que se interessam é Noemi: mãe de Guri e casada com um homem que não ama mais, ela está em busca de algo que a faça se sentir viva.", Publicacao = "1937", AutorId = 23, Avaliacao = "3,5", Destaque = true, Foto = "/img/livros/Caminho de Pedras.png",  Video = "KF8nspT8Y00", Resumo = @"Há uma idéia matriz neste romance e em torno dessa idéia é que vai gravitar toda a sua ação: a da desigualdade social da mulher.
+    new Livro {
+      LivroId = 27, 
+      FaculdadeId = 3, 
+      Nome = "Caminho de pedras", 
+      Descricao = "Na Fortaleza dos anos 1930, durante a Era Vargas, Roberto tem a missão de recrutar operários para uma nova célula de esquerda. Uma das pessoas que se interessam é Noemi: mãe de Guri e casada com um homem que não ama mais, ela está em busca de algo que a faça se sentir viva.", 
+      Publicacao = "1937", 
+      AutorId = 23, 
+      Avaliacao = "3,5",
+      NumeroPaginas= 176, 
+      Destaque = true, 
+      Foto = "/img/livros/Caminho de Pedras.png", 
+      Video = "KF8nspT8Y00", 
+      Resumo = 
+      @"Há uma idéia matriz neste romance e em torno dessa idéia é que vai gravitar toda a sua ação: a da desigualdade social da mulher.
     João Jacques é o marido de Noemi e ambos tem um filho, o Guri. Jacques não é borracho, nem libertino e nem portanto espanca a mulher. É ótimo pai e um bom marido vivendo em paz com a mulher. Mas a paz matrimonial é mais fecunda em paz do que em amor. Porém o espírito era diferente, o espírito da mulher de João Jacques do espírito dele.
     Com isso, Noemi conhece um homem, o Roberto, que reflete um espírito como o dela, de idéias e gostos que se completam. Simpatizam-se e atrás da simpatia veio o amor entre eles.
     Noemi, no entanto, não detesta o marido e vacila na separação. Ela sente, a mulher de João Jacques que não tem o direito de sacrificar ao egoísmo do seu prazer a alegria e a paz do momento. Portanto Noemi cometia o adultério se envolvendo escondida com Roberto.
@@ -790,7 +1123,20 @@ public class AppDbSeed
     Assim termina o livro, com Noemi pisando em falso em uma pedra solta e subindo a ladeira, conversando com o filho no ventre:
     - Mais devagar, companheiro!" },
    
-    new Livro { LivroId = 28, FaculdadeId = 3, Nome = "Canção para ninar menino grande", Descricao = "A obra questiona o patriarcado e as construções sociais da masculinidade, é um retrato de um homem através dos relacionamentos que ele coleciona com várias mulheres negras.", Publicacao = "2018", AutorId = 24, Avaliacao = "4,2", Destaque = true, Foto = "/img/livros/Canção para Ninar Menino grande.png",  Video = "D2zip80MGhU", Resumo = @"Embora o protagonista seja um homem, ele só ocupa o centro da narrativa por causa das mulheres que as contam. Fio Jasmin, um homem negro, jovem e belíssimo, trabalha como assistente de maquinista e a cada parada que o trem faz ao longo do percurso, desce para explorar a cidade e também para explorar as mulheres daquele local.
+    new Livro {
+      LivroId = 28,
+      FaculdadeId = 3, 
+      Nome = "Canção para ninar menino grande", 
+      Descricao = "A obra questiona o patriarcado e as construções sociais da masculinidade, é um retrato de um homem através dos relacionamentos que ele coleciona com várias mulheres negras.", 
+      Publicacao = "2018", 
+      AutorId = 24, 
+      Avaliacao = "4,2", 
+      NumeroPaginas= 136, 
+      Destaque = true, 
+      Foto = "/img/livros/Canção para Ninar Menino grande.png",  
+      Video = "D2zip80MGhU", 
+      Resumo = 
+      @"Embora o protagonista seja um homem, ele só ocupa o centro da narrativa por causa das mulheres que as contam. Fio Jasmin, um homem negro, jovem e belíssimo, trabalha como assistente de maquinista e a cada parada que o trem faz ao longo do percurso, desce para explorar a cidade e também para explorar as mulheres daquele local.
     É assim quase o livro todo. Mesmo casado e pai de quase uma dezena de filhos com Pérola Maria, Fio Jasmin aproveita as paradas do trem para encantar alguma mulher de cada
     cidade. Isso acontece, por exemplo, com uma enfermeira “solteirona”, uma jovem que nada pelada no rio, uma virgem de família nobre, uma dona de joalheria, entre outras. As histórias foram se acumulando até chegarem à escrevivência de Conceição Evaristo.
     Mas por que esse homem parece viver apenas em busca de procriar e de encantar mulheres? Talvez porque ele foi ensinado que é esse o seu único papel como homem negro.
@@ -799,7 +1145,20 @@ public class AppDbSeed
     E cabe a essas mulheres, solitárias e negras, esperá-lo, acariciá-lo e serem punidas pela rejeição desse homem, mesmo que elas não possuam culpa alguma.
     Tão acostumado a colocar seu corpo como objeto de prazer, Fio Jasmin tem uma surpresa ao encontrar uma mulher lésbica, que o oferece não o gozo, mas uma amizade e um aconchego que ele até então não conhecia." },
    
-    new Livro { LivroId = 29, FaculdadeId = 3, Nome = "Memórias de Martha", Descricao = "A obra narra a história de uma jovem chamada Marta, que viveu no Rio de Janeiro no final do século XIX, é uma autobiografia ficcional que retrata as dificuldades enfrentadas por Marta e sua mãe, viúva.", Publicacao = "1899", AutorId = 25, Avaliacao = "3,5", Destaque = true, Foto = "/img/livros/Memórias de Martha.png",  Video = "4lroyIb6mdM", Resumo = @"Martha e sua mãe, viúva, enfrentam dificuldades financeiras e moram em um cortiço, um ambiente insalubre e degradante. A narrativa detalha as dificuldades da vida na pobreza, como a falta de comida, as condições precárias de moradia e a violência presente no cotidiano. Martha testemunha a luta da mãe para sustentar a família, trabalhando como costureira e enfrentando humilhações.
+    new Livro { 
+      LivroId = 29, 
+      FaculdadeId = 3, 
+      Nome = "Memórias de Martha", 
+      Descricao = "A obra narra a história de uma jovem chamada Marta, que viveu no Rio de Janeiro no final do século XIX, é uma autobiografia ficcional que retrata as dificuldades enfrentadas por Marta e sua mãe, viúva.", 
+      Publicacao = "1899", 
+      AutorId = 25, 
+      Avaliacao = "3,5", 
+      NumeroPaginas= 118, 
+      Destaque = true, 
+      Foto = "/img/livros/Memórias de Martha.png",  
+      Video = "4lroyIb6mdM", 
+      Resumo = 
+      @"Martha e sua mãe, viúva, enfrentam dificuldades financeiras e moram em um cortiço, um ambiente insalubre e degradante. A narrativa detalha as dificuldades da vida na pobreza, como a falta de comida, as condições precárias de moradia e a violência presente no cotidiano. Martha testemunha a luta da mãe para sustentar a família, trabalhando como costureira e enfrentando humilhações.
     Mas apesar das dificuldades, Martha valoriza a educação e busca oportunidades para aprender, ela frequenta a escola pública e demonstra interesse pelos estudos, buscando conhecimento como forma de ascensão social. Na obra, educação é apresentada como uma ferramenta fundamental para a emancipação da mulher e a superação da pobreza.
     Martha sonha em ter uma vida independente e desafia as expectativas da sociedade sobre o papel da mulher, ela busca um trabalho que lhe permita ter autonomia financeira e tomar suas próprias decisões, no entanto questiona os padrões da época, que limitavam as mulheres ao papel de esposa e mãe.:
     Ao longo da história, Martha vivencia diferentes relacionamentos e experiências amorosas, ela se apaixona por homens que representam diferentes classes sociais e ideais de vida.
@@ -810,18 +1169,56 @@ public class AppDbSeed
     O livro aborda as limitações impostas às mulheres na sociedade do século XIX, como a falta de acesso à educação e ao mercado de trabalho.
     A obra retrata a luta pela emancipação feminina e a busca por igualdade de direitos, Martha é uma personagem que desafia os padrões da época e representa a força e a capacidade das mulheres." },
    
-    new Livro { LivroId = 30, FaculdadeId = 3, Nome = "Nebulosas", Descricao = "Seus poemas revelam uma voz lírica única, que aborda temas íntimos, femininos e ligados à natureza, ao mesmo tempo em que expressam uma preocupação social evidente, especialmente em relação à abolição da escravatura, uma questão presente na sociedade brasileira do século XIX.", Publicacao = "2024", AutorId = 26, Avaliacao = "3", Destaque = true, Foto = "/img/livros/Nebulosas.png",  Video = "hyRk4grRmK8", Resumo = @"A obra nos convida a embarcar em uma viagem poética que explora temas como a natureza, o amor, a saudade e a liberdade. Com uma linguagem rica e expressiva, a autora nos transporta para um universo de sentimentos e reflexões.
+    new Livro { LivroId = 30, 
+    FaculdadeId = 3, 
+    Nome = "Nebulosas", 
+    Descricao = "Seus poemas revelam uma voz lírica única, que aborda temas íntimos, femininos e ligados à natureza, ao mesmo tempo em que expressam uma preocupação social evidente, especialmente em relação à abolição da escravatura, uma questão presente na sociedade brasileira do século XIX.", 
+    Publicacao = "2024", 
+    AutorId = 26, 
+    Avaliacao = "3", 
+    NumeroPaginas= 224, 
+    Destaque = true, 
+    Foto = "/img/livros/Nebulosas.png", 
+    Video = "hyRk4grRmK8", 
+    Resumo = 
+    @"A obra nos convida a embarcar em uma viagem poética que explora temas como a natureza, o amor, a saudade e a liberdade. Com uma linguagem rica e expressiva, a autora nos transporta para um universo de sentimentos e reflexões.
     A natureza exuberante do Brasil é um tema central na obra de Narcisa Amália. Seus poemas descrevem paisagens verdejantes, rios sinuosos e o céu estrelado, revelando um profundo amor pela terra natal. A beleza natural se entrelaça com o sentimento de patriotismo, expressando o orgulho de ser brasileira e a esperança de um futuro promissor para o país.
     O amor, em suas diversas formas, é outro tema recorrente em  Nebulosas. Narcisa Amália expressa o amor romântico, o amor materno e o amor fraterno com intensidade e delicadeza. A saudade, sentimento melancólico que permeia muitos poemas, surge como uma lembrança de momentos felizes ou de pessoas queridas que se foram.
     Em seus versos, Narcisa Amália se revela uma mulher à frente de seu tempo, quebrando barreiras e desafiando convenções sociais. A defesa da liberdade, especialmente a abolição da escravidão, é um tema presente em sua obra. Além disso, a autora se destaca como uma voz feminina forte e corajosa, expressando seus sentimentos e ideias em uma sociedade conservadora." },
    
-    new Livro { LivroId = 31, FaculdadeId = 3, Nome = "O cristo cigano", Descricao = "O livro é composto por uma série de poemas que contam a história de uma lenda sobre o assassinato de um cigano e a construção de uma imagem de Cristo.", Publicacao = "1961", AutorId = 27, Avaliacao = "3,7", Destaque = true, Foto = "/img/livros/O cristo cigano.png", Video = "5AmVcO5VqK8", Resumo = @"O livro narra a história de um personagem que é uma representação de um Cristo alternativo, diferente do tradicional apresentado pela religião cristã. Esse Cristo Cigano é uma figura que se distorce das normas e dogmas tradicionais da religião e da sociedade, refletindo mais uma busca individual, a libertação pessoal e a reinterpretação do ser humano como um ente livre, sem amarras impostas pela fé ou pelas estruturas sociais.
+    new Livro { 
+    LivroId = 31, 
+    FaculdadeId = 3, 
+    Nome = "O cristo cigano", 
+    Descricao = "O livro é composto por uma série de poemas que contam a história de uma lenda sobre o assassinato de um cigano e a construção de uma imagem de Cristo.", 
+    Publicacao = "1961", 
+    AutorId = 27, 
+    Avaliacao = "3,7", 
+    NumeroPaginas= 112, 
+    Destaque = true, 
+    Foto = "/img/livros/O cristo cigano.png", 
+    Video = "5AmVcO5VqK8", 
+    Resumo = 
+    @"O livro narra a história de um personagem que é uma representação de um Cristo alternativo, diferente do tradicional apresentado pela religião cristã. Esse Cristo Cigano é uma figura que se distorce das normas e dogmas tradicionais da religião e da sociedade, refletindo mais uma busca individual, a libertação pessoal e a reinterpretação do ser humano como um ente livre, sem amarras impostas pela fé ou pelas estruturas sociais.
     No enredo, a personagem principal busca um caminho de transformação e transcendência. O romance está inserido dentro de uma crítica à sociedade da época e coloca o Cristo Cigano como alguém marginalizado, sendo uma espécie de questionador das normas estabelecidas, como se fosse um messias fora dos padrões conhecidos, um rebelde.
     O termo Cigano é usado aqui não apenas de forma literal, mas como uma metáfora para o estigma e o caráter nômade. Os ciganos, ao longo da história, foram muitas vezes marginalizados e rejeitados pela sociedade convencional. Raul Seixas utiliza essa figura para questionar e desafiar a rigidez das instituições e das crenças que limitam a liberdade do indivíduo. 
     Ao explorar a figura do Cristo, Raul Seixas coloca a divindade em uma posição que vai além da religião cristã convencional. O Cristo cigano é visto como alguém que transita entre o sagrado e o profano, entre a sacralidade do divino e a realidade terrena, conectando a espiritualidade com uma busca genuína de liberdade e identidade.
     A obra é um manifesto contra a opressão, a moralidade rígida e as estruturas autoritárias que dominam a vida humana. O autor sugere, por meio da figura desse Cristo marginalizado, que a verdadeira liberdade espiritual é encontrada fora das normas e convenções tradicionais. "},
    
-    new Livro { LivroId = 32, FaculdadeId = 3, Nome = "Opúsculo Humanitário", Descricao = "A obra traça a evolução das condições femininas e mostram a experiência da autora tanto em leitura, quanto em vivências em suas viagens.", Publicacao = "1853", AutorId = 28, Avaliacao = "3,6", Destaque = true, Foto = "/img/livros/Opúsculo Humanitário.png", Video = "XB0LwvUjIlM", Resumo = @"O livro contém a síntese do pensamento de Nísia Floresta sobre a educação formal e informal de meninas, seu vasto conhecimento de Filosofia e História.
+    new Livro { 
+      LivroId = 32, 
+      FaculdadeId = 3, 
+      Nome = "Opúsculo Humanitário", 
+      Descricao = "A obra traça a evolução das condições femininas e mostram a experiência da autora tanto em leitura, quanto em vivências em suas viagens.", 
+      Publicacao = "1853", 
+      AutorId = 28, 
+      Avaliacao = "3,6", 
+      NumeroPaginas= 216, 
+      Destaque = true, 
+      Foto = "/img/livros/Opúsculo Humanitário.png", 
+      Video = "XB0LwvUjIlM", 
+      Resumo = 
+      @"O livro contém a síntese do pensamento de Nísia Floresta sobre a educação formal e informal de meninas, seu vasto conhecimento de Filosofia e História.
     A autora recupera, neste livro, parte da história da condição feminina em diversas civilizações – da Antiguidade clássica ao seu tempo –relacionando o desenvolvimento intelectual e material do país (ou seu atraso) com o lugar ocupado pelas mulheres naquela sociedade. Ao final, trata do Brasil, da mulher brasileira e da educação para meninas. Aliás, este parece ser o motivo mesmo de toda a reflexão anterior. 
     Nísia Floresta defende a tese de que o progresso de uma sociedade depende da educação que é oferecida à mulher, e que só a educação moral e a religiosa, incutida desde cedo na menina, fariam dela melhor esposa e melhor mãe. … 
     Mas atenção: ao fazer a leitura deste especial momento da vida brasileira, é preciso ter em mente o alcance que deve ter tido, naquela época, a repentina valorização da figura feminina e da sua função biológica exclusiva. Para quem até então ocupava um papel obscuro em consequência de uma estratificação social rígida que privilegiava só o masculino, transformar-se em centro das atenções e receber homenagens, devia realmente significar muita coisa – como naturalmente significou. Essa foi uma etapa obrigatória na história da liberação da mulher que precisava ser cumprida."},
