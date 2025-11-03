@@ -33,7 +33,9 @@
           <div id="livros" class="livro mt-3 p-2">
             @foreach (var livro in Model.Livros)
             {
-              <a href='#'><img src="@livro.Livro.Foto" alt="@livro.Livro.Nome"></a>
+              <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.LivroId">
+                <img src="@livro.Livro.Foto" alt="@livro.Livro.Nome">
+              </a>
             }
           </div>
         </div>

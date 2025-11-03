@@ -60,12 +60,12 @@ public class AppDbSeed
             new Autor { AutorId = 13, Nome = "Conceição Evaristo",Foto = "/img/autores/Conceição Evaristo.png"  },
             new Autor { AutorId = 14, Nome = "Ailton Krenak",Foto = "/img/autores/Ailton Krenak.png"  },
             new Autor { AutorId = 15, Nome = "Lima Barreto",Foto = "/img/autores/Lima Barreto.png"  },
-            new Autor { AutorId = 16, Nome = "Chimamanda Ngozi Adichie",Foto = "/img/autores/Chimamanda Ngozi Adichie.png"  },
+            new Autor { AutorId = 16, Nome = "Chimamanda Ngozi Adichie", Foto = "/img/autores/Chimamanda Ngozi Adichie.png"  },
             new Autor { AutorId = 17, Nome = "Caio Fernando Abreu", Foto = "/img/autores/Caio Fernando Abreu.png"  },
             new Autor { AutorId = 18, Nome = "Cartola", Foto = "/img/autores/Cartola.png"  },
             new Autor { AutorId = 19, Nome = "Lewis Carroll", Foto = "/img/autores/Lewis Carroll.png"  },
             new Autor { AutorId = 20, Nome = "Djamilia Pereira de Almdeida", Foto = "/img/autores/Djamilia Pereira de Almdeida.png" },
-            new Autor { AutorId = 21, Nome = "Lygia Fagundes Telles", Foto = "Lygia Fagundes Telles.png" },
+            new Autor { AutorId = 21, Nome = "Lygia Fagundes Telles", Foto = "/img/autores/Lygia Fagundes Telles.png" },
             new Autor { AutorId = 22, Nome = "Paulina Chiziane", Foto = "/img/autores/Paulina Chiziane.png" },
             new Autor { AutorId = 23, Nome = "Rachel de Queiroz", Foto = "/img/autores/Rachel de Queiroz.png" },
             new Autor { AutorId = 24, Nome = "Conceição Evaristo", Foto = "/img/autores/Conceição Evaristo.png" },
@@ -175,7 +175,7 @@ public class AppDbSeed
       Resumo = 
     @"Cinza das horas
     A cinza das horas (1917) é uma obra marcada pelo rigor formal, ou seja, tem versos regulares, além de teor melancólico e temática do amor e da morte, como é possível verificar no trecho do poema “Boda espiritual”, escrito em versos alexandrinos (12 sílabas poéticas):
-
+  
     Tu não estás comigo em momentos escassos:
     No pensamento meu, amor, tu vives nua
     — Toda nua, pudica e bela, nos meus braços.
@@ -535,7 +535,7 @@ public class AppDbSeed
       Publicacao = "", 
       AutorId = 8, 
       Avaliacao = "3,8", 
-      NumeroPaginas= 1728 páginas, 
+      NumeroPaginas= 1728, 
       Destaque = true, 
       Foto = "/img/livros/Poesia Completa Carlos Drummond De Andrade.png", 
       Video = "CWagtQP7hqw", 
@@ -649,7 +649,7 @@ public class AppDbSeed
     Após se envolver com a sedutora Rita Baiana, sua esposa descobre a relação e começa a beber.
     Enciumado pelo envolvimento anterior que Rita teve com Firmo, Jerônimo resolve assassinar seu rival. Por fim, Jerônimo abandona sua família para ficar com Rita.
     O incêndio no cortiço foi um dos fatores principais para que muitos moradores se transferissem para outro cortiço, o “cabeça-de-gato”. Com isso, o local foi reformado e a avenida recebeu o nome de “Avenida São Romão”.
-    "  };
+    "  },
 
 
 
@@ -978,7 +978,7 @@ public class AppDbSeed
     Em seguida, Alice testemunha um julgamento na corte da Rainha de Copas, onde um sapato é o objeto de disputa. A Rainha de Copas faz acusações sem sentido e exige que o júri declare o réu culpado, independentemente das evidências apresentadas. Alice tenta interceder e argumenta com a Rainha, mas é impedida pelos soldados da Rainha. 
     Enquanto explora esse mundo mágico, Alice enfrenta uma série de desafios e situações absurdas. Ela participa de um jogo de croquet com flamingos e ouriços, encontra um lagarto que ensina a escrever poesia sem sentido, e testemunha um julgamento na corte da Rainha de Copas.
     Ao longo da história, Alice tenta entender as regras e lógicas desse mundo estranho e muitas vezes se vê frustrada por não conseguir compreendê-lo completamente. No final, ela acorda de um sonho e percebe que tudo não passou de uma fantasia.
-    Alice no País das Maravilhas é uma história clássica da literatura infantil e tem sido adaptada para diversas mídias, incluindo filmes, animações e peças teatrais. A obra é conhecida por sua atmosfera surreal, personagens excêntricos e pela capacidade de despertar a imaginação e a curiosidade das crianças." };
+    Alice no País das Maravilhas é uma história clássica da literatura infantil e tem sido adaptada para diversas mídias, incluindo filmes, animações e peças teatrais. A obra é conhecida por sua atmosfera surreal, personagens excêntricos e pela capacidade de despertar a imaginação e a curiosidade das crianças." },
 
 
 

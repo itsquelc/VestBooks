@@ -48,10 +48,16 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Livros()
+    public IActionResult Livro(int id)
     {
-        return View();
+        var livro = _db.Livros
+            .Where(l => l.LivroId == id)
+            .Include(l => l.Autor)
+            .Include(l => l.Faculdade)
+            .SingleOrDefault();
+        return View(livro);
     }
+   
 
     public IActionResult Perguntas(int id)
     {
