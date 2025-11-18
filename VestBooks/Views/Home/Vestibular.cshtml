@@ -9,11 +9,20 @@
 
 <section class="bg-white mt-100">
   <div class="container-fluid px-0">
-    <div class="bg-primary py-4">
+    @if(Model.Id == 3){
+    <div class="bg-pink py-4">
       <div class="container text-center">
         <img src="@Model.Foto" alt="Logo" class="img-fluid" style="max-height: 60px; ">
       </div>
     </div>
+    }; 
+    @if(Model.Id != 3) {
+      <div class="bg-primary py-4">
+      <div class="container text-center">
+        <img src="@Model.Foto" alt="Logo" class="img-fluid" style="max-height: 60px; ">
+      </div>
+    </div>
+    };
     <div class="container mt-5 text-center">
       <div class="row featurette">
         <div class="col-mt-12">
@@ -22,28 +31,56 @@
         </div>
       </div>
     </div>
+    @if (Model.Id != 4)
+    {
+      @if(Model.Id == 3){
+        <div class="pink-container">
+          <div class="container-text">
+              <p class="lead py-4">As questões de Literatura representam cerca de 30% das questões de Português, considerando as duas fases do processo seletivo da Fuvest.</p>
+              <p class="lead py-4">  Em 2026, foi divulgada a nova lista de leitura obrigatória que é composta somente por mulheres autoras de língua portuguesa brasileiras e estrangeiras</p>
+            </div>
+        </div>
+      }
+        <div class="row mt-4">
+          @if (Model.Id == 3)
+          {
+            <div class="text-center bg-info-pink text-white py-2 my-4" style="font-weight: bold;">
+              Livros
+            </div>
+          }
+          @if (Model.Id != 3)
+          {
+            <div class="text-center bg-info text-white py-2 my-4" style="font-weight: bold;">
+              Livros
+            </div>
+          }
 
-    <div class="row mt-4">
-      <div class="text-center bg-info text-white py-2 my-4" style="font-weight: bold;">
-        Livros
-      </div>
 
-      <div class="row">
-        <div class="col">
-          <div id="livros" class="livro mt-3 p-2">
-            @foreach (var livro in Model.Livros)
-            {
-              <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.LivroId">
-                <img src="@livro.Livro.Foto" alt="@livro.Livro.Nome">
-              </a>
-            }
+        <div class="row">
+          <div class="col">
+            <div id="livros" class="livro mt-3 p-2">
+              @foreach (var livro in Model.Livros)
+              {
+                <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.LivroId">
+                  <img src="@livro.Livro.Foto" alt="@livro.Livro.Nome">
+                </a>
+              }
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="text-center bg-info text-white py-2 my-4" style="font-weight: bold;">
-      Autores
-    </div>
+    }
+
+    @if(Model.Id != 3){
+      <div class="text-center bg-info text-white py-2 my-4" style="font-weight: bold;">
+        Autores
+      </div>
+    }
+    @if(Model.Id == 3){
+      <div class="text-center bg-info-pink text-white py-2 my-4" style="font-weight: bold;">
+        Autores
+      </div>
+    }
     <div class="row">
       <div id="autor" class="autor mt-3 p-2 ">
         @foreach (var livro in Model.Livros)
@@ -58,11 +95,18 @@
         }
       </div>
     </div>
+    @if(Model.Id == 3){
+      <div class="text-center bg-info-pink text-white py-2 my-5" style="font-weight: bold;">
+        Vídeo Aula
+      </div>
+    }
 
-    <div class="text-center bg-info text-white py-2 my-5" style="font-weight: bold;">
-      Vídeo Aula
-    </div>
-
+    @if(Model.Id != 3){
+      <div class="text-center bg-info text-white py-2 my-5" style="font-weight: bold;">
+        Vídeo Aula
+      </div>
+    }
+    
     <div class="row justify-content-center mb-5">
       <div class="col-md-8">
         <div class="row">
@@ -87,7 +131,13 @@
           </div>
         </div>
 
-        <h4 class="text-center bg-primary text-white py-2 my-4">COMO É COBRADO?</h4>
+        @if(Model.Id == 3) {
+            <h4 class="text-center bg-pink text-white py-2 my-4">COMO É COBRADO?</h4>
+        }
+
+        @if(Model.Id != 3) {
+          <h4 class="text-center bg-primary text-white py-2 my-4">COMO É COBRADO?</h4>
+        }
 
         <div class="bg-white shadow rounded p-4 mt-3">
           <p class="text-center fw-bold">@Model.Nome</p>
@@ -104,7 +154,12 @@
 
           <div id="feedback" class="mt-3 fw-bold text-center"></div>
           <div class="text-center mt-4">
-            <a asp-action="Perguntas" asp-controller="Home" asp-route-id="@Model.Id" class="btn btn-primary">Clique aqui para mais perguntas</a>
+            @if(Model.Id == 3){
+              <a asp-action="Perguntas" asp-controller="Home" asp-route-id="@Model.Id" class="btn btn-pink">Clique aqui para mais perguntas</a>
+            }
+            @if(Model.Id != 3){
+              <a asp-action="Perguntas" asp-controller="Home" asp-route-id="@Model.Id" class="btn btn-primary">Clique aqui para mais perguntas</a>
+            }
           </div>
         </div>
       </div>
