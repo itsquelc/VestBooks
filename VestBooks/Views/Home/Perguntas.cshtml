@@ -35,7 +35,7 @@
               <p>@Html.Raw(pergunta.Enunciado)</p>
             </div>
 
-            <div class="options">
+            <div id="quiz-options" class="options">
               @for(int i = 0; i < pergunta.PerguntaAlternativas.Count(); i++)
               {
                 <div class="list-group-item" data-option="@letras[i]" data-correct="@pergunta.PerguntaAlternativas[i].Correta">

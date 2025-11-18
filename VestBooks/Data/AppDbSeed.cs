@@ -37,8 +37,10 @@ public class AppDbSeed
               questões do mundo contemporâneo, então livros como “A vida não é útil“ de
               Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão
               ao lado de “Casa Velha“ de Machado de Assis, por exemplo."},
-            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png", Descricao = "" },
-            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png" },
+            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png", Descricao = @"Além do objetivo de se adequar a Base Nacional Comum Curricular (BNCC) e às legislações vigentes, a Fuvest quer tornar seus alunos 
+            mais críticos e atualizados. A nova lista de leitura é justificada pela necessidade de se valorizar o papel 
+            das mulheres na literatura, não apenas como personagens, mas como autoras." },
+            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png", Descricao = "" },
         };
         builder.Entity<Faculdade>().HasData(faculdades);
 
