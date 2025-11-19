@@ -60,7 +60,8 @@
 
     </div>
 </section> *@
-
+@if (Model.FaculdadeId != 3)
+{
 <div class="container-fluid w-100">
     <div class="row">
 
@@ -126,3 +127,73 @@
         <div class="col-1 col-md-2 bg-blue"></div>
     </div>
 </div>
+} 
+@if(Model.FaculdadeId == 3)
+{
+    <div class="container-fluid w-100">
+    <div class="row">
+
+        <!-- Lado esquerdo rosa -->
+        <div class="col-1 col-md-2 bg-pink"></div>
+
+        <!-- Conteúdo central -->
+        <div class="col-10 col-md-8 content mt-3">
+            <h3 class="fw-bold mt-5">@Model.Nome</h3>
+
+            <p class="subtitulolivros" style="color: rgb(136, 68, 80);">DESCRIÇÃO</p>
+            <p><em>@Model.Nome</em> @Model.Descricao </p>
+
+            <div class="row mt-5 mb-3">
+
+                <div class="col-6">
+                    <p class="subtitulolivros" style="color: rgb(136, 68, 80);" >1ª PUBLICAÇÃO:</p>
+                    <p>@Model.Publicacao</p>
+
+                    <p class="subtitulolivros" style="color: rgb(136, 68, 80);" >AUTOR:</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="@Model.Autor.Foto" class="rounded-circle">
+                        <p class="mb-0 ">@Model.Autor.Nome</p>
+                    </div>
+
+                    <p class="subtitulolivros" style="color: rgb(136, 68, 80);">AVALIAÇÃO:</p>
+                    <p>@Model.Avaliacao <i class="bi bi-star-fill" style="font-size: 18px; color: rgb(209, 209, 23);"></i> </p>
+
+                    <p class="subtitulolivros" style="color: rgb(136, 68, 80);" >NÚMERO DE PÁGINAS:</p>
+                    <p>@Model.NumeroPaginas</p>
+                </div>
+
+                <div class="col-6 text-center mb-5">
+                    <img src="@Model.Foto" class="book-cover" alt="Capa do livro">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="text-center bg-info-pink text-white py-2 " style="font-weight: bold;">
+                    Resumo do livro
+                </div>
+                <p class=" py-4">@Model.Resumo </p>
+            </div>
+
+            <div class="text-center bg-info-pink text-white py-2 " style="font-weight: bold;">
+                Videoaula
+            </div>
+            <div class="col mb-3 py-3" >
+                <div class="ratio ratio-16x9" style="display: ;">
+                   <iframe id="mainVideo" src="https://www.youtube.com/embed/@Model.Video"
+                allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="text-center bg-info-pink text-white py-2 " style="font-weight: bold;">
+                PDF do livro:
+            </div>
+            <p class="py-4">         </p>
+        </div>
+
+        <!-- Lado direito azul -->
+        <div class="col-1 col-md-2 bg-pink"></div>
+    </div>
+</div>
+}
+
