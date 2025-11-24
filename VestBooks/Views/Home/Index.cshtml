@@ -79,7 +79,7 @@
   <div class="row">
     <div id="livros" class="rowLivro my-3 p-2">
       @foreach (var faculdade in Model.Faculdades) {
-        <a href='#'><img src="@faculdade.Foto" alt="@faculdade.Nome"></a>
+        <a asp-action="Vestibular" asp-route-id="@faculdade.Id"><img src="@faculdade.Foto" alt="@faculdade.Nome"></a>
       }
     </div>
   </div>
