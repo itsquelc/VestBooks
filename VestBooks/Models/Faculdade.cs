@@ -20,6 +20,8 @@ public class Faculdade
     [StringLength(300)]
     public string Foto { get; set; }
 
+    //public string Cor { get; set; }
+
     public virtual List<FaculdadeLivro> Livros { get; set; }
 
     public virtual List<Pergunta> Perguntas { get; set; }

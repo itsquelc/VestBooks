@@ -14,7 +14,7 @@ public class PerguntaAlternativa
     public int PerguntaAlternativaId { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe a Descricao")]
-    [StringLength(100, ErrorMessage = "A Descricao deve possuir no máximo 100 caracteres")]
+    [StringLength(5000, ErrorMessage = "A Descricao deve possuir no máximo 5000 caracteres")]
     public string Descricao { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe a pergunta")]
