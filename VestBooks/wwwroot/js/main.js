@@ -90,22 +90,31 @@ if (containerAutor != null) {
   scrollIntervalAutores = setInterval(autoScrollAutores, 16); // ~60 FPS
 }
 
-const correctAnswer = 'D';
-
-function checkAnswer(element, chosen) {
+function checkAnswer(element) {
   const options = document.querySelectorAll('.quiz-option');
-  options.forEach(opt => {
-    opt.classList.remove('correct', 'incorrect');
-    opt.style.pointerEvents = 'none';
-  });
 
-  if (chosen === correctAnswer) {
-    element.classList.add('correct');
-  } else {
-    element.classList.add('incorrect');
-    document.querySelector(`.quiz-option:nth-child(${['A', 'B', 'C', 'D'].indexOf(correctAnswer) + 1})`).classList.add('correct');
+  // bloquear cliques após resposta
+  options.forEach(opt => opt.style.pointerEvents = 'none');
+
+  // verifica se a clicada é correta (minúsculo)
+  const isCorrect = element.dataset.correct === "true";
+
+  if (isCorrect) {
+      element.classList.add('correct');
+      return;
   }
+
+  // marca a clicada como errada
+  element.classList.add('incorrect');
+
+  // encontra a alternativa correta
+  const correctOption = Array.from(options)
+      .find(opt => opt.dataset.correct === "true");
+
+  if (correctOption)
+      correctOption.classList.add('correct');
 }
+
 
 function changeVideo(videoId) {
   const iframe = document.getElementById("mainVideo");
