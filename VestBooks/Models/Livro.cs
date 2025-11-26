@@ -41,6 +41,7 @@ public class Livro
 
   //resumo
   [Display(Name = "Resumo", Prompt = "Resumo")]
+  [DataType(DataType.MultilineText)]
   [StringLength(50000, ErrorMessage = "O Resumo deve possuir no máximo 50000 caracteres")]
   public string Resumo { get; set; }
 

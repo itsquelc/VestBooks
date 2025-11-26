@@ -26,7 +26,7 @@
         <div class="container mt-5 text-center">
             <div class="row featurette">
                 <div class="col-12">
-                    <p class="lead">@Html.Raw(Model.Descricao)</p>
+                    <p class="lead quebra">@Html.Raw(Model.Descricao)</p>
                 </div>
             </div>
         </div>
@@ -150,16 +150,15 @@
                         <div class="row">
                             <div class="bg-white shadow rounded p-4 mt-3">
                                 <p class="text-center fw-bold">@Model.Nome</p>
-                                <p>@Html.Raw(Model.Perguntas[pergunta].Enunciado)</p>
+                                <p class="quebra">@Html.Raw(Model.Perguntas[pergunta].Enunciado)</p>
 
                                 <div id="quiz-options" class="mt-4">
                                     @for (int i = 0; i < alternativas; i++)
                                     {
                                         var alt = Model.Perguntas[pergunta].PerguntaAlternativas[i];
-
                                         <div class="quiz-option border rounded-2 p-3 mb-2"
                                             data-correct="@(alt.Correta.ToString().ToLower())" onclick="checkAnswer(this)">
-                                            @letras[i]) @alt.Descricao
+                                            <span class="quebra">@letras[i]) @alt.Descricao</span>
                                         </div>
                                     }
                                 </div>

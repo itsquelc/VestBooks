@@ -596,3 +596,7 @@ a {
 .rounded-2 {
     border-radius: 10px !important;
 }
+
+.quebra {
+    white-space: pre-line;
+}

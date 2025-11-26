@@ -11,36 +11,26 @@ public class AppDbSeed
         List<Faculdade> faculdades = new()
         {
             new Faculdade { Id = 1, Nome = "ENEM", Foto = "/img/faculdades/ENEM.png", Descricao =
-            @"Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras
-            literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de
-            leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar
-            algumas leituras obrigatórias.
-            <br><br>
-            Como o Enem exige dos candidatos uma série de conhecimentos literários (tudo o que aprenderam no Ensino
-            Médio), espera-se do candidato que ele conheça as principais obras de cada escola literária.
-            <br><br>
-            A prova de Linguagens, Códigos e suas Tecnologias do Enem , por exemplo, pede que você conheça a
-            importância do autor/obra para a sociedade e para a cultura em geral.
-            Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio
-            depois." },
+            @"Anualmente, o Exame Nacional do Ensino Médio (Enem) aplica questões com foco em obras literárias brasileiras. Entretanto, o órgão que desenvolve a prova (Inep) não fornece uma lista de leituras, mas é preciso saber quais livros provavelmente estarão presentes no exame e, assim, adotar algumas leituras obrigatórias.
+
+            Como o Enem exige dos candidatos uma série de conhecimentos literários (tudo o que aprenderam no Ensino Médio), espera-se do candidato que ele conheça as principais obras de cada escola literária.
+
+            A prova de Linguagens, Códigos e suas Tecnologias do Enem , por exemplo, pede que você conheça a importância do autor/obra para a sociedade e para a cultura em geral.
+            
+            Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio depois."},
 
 
 
             new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png", Descricao =
-            @"O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas
-              universidades do país, está marcado para 20 de outubro. Além de todas as
-              disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de
-              leitura obrigatória.
-              <br><br>
-              O objetivo da Comvest (Comissão Permanente para os Vestibulares da Unicamp)
-              ao fazer esta lista, é estimular a leitura e o olhar atento dos estudantes para as
-              questões do mundo contemporâneo, então livros como “A vida não é útil“ de
-              Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão
-              ao lado de “Casa Velha“ de Machado de Assis, por exemplo."},
-            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png", Descricao = @"Além do objetivo de se adequar a Base Nacional Comum Curricular (BNCC) e às legislações vigentes, a Fuvest quer tornar seus alunos 
-            mais críticos e atualizados. A nova lista de leitura é justificada pela necessidade de se valorizar o papel 
-            das mulheres na literatura, não apenas como personagens, mas como autoras." },
-            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png", Descricao = "" },
+            @"O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas universidades do país, está marcado para 20 de outubro. Além de todas as disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de leitura obrigatória.
+
+              O objetivo da Comvest (Comissão Permanente para os Vestibulares da Unicamp) ao fazer esta lista, é estimular a leitura e o olhar atento dos estudantes para as questões do mundo contemporâneo, então livros como “A vida não é útil“ de Ailton Krenak e “Niketche – uma História de Poligamia“ de Paulina Chiziane estão ao lado de “Casa Velha“ de Machado de Assis, por exemplo."},
+            
+            new Faculdade { Id = 3, Nome = "USP", Foto = "/img/faculdades/USP.png", Descricao = 
+            @"Além do objetivo de se adequar a Base Nacional Comum Curricular (BNCC) e às legislações vigentes, a Fuvest quer tornar seus alunos mais críticos e atualizados. A nova lista de leitura é justificada pela necessidade de se valorizar o papel das mulheres na literatura, não apenas como personagens, mas como autoras.
+            " },
+            
+            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png", Descricao = "O Exame Nacional do Ensino Médio, é uma avaliação educacional criada pelo Ministério da Educação que serve como forma de ingresso nas instituições de ensino superior. O Enem foi criado, inicialmente, para avaliar o desempenho de estudantes que terminavam o ensino médio." },
         };
         builder.Entity<Faculdade>().HasData(faculdades);
 
@@ -1243,20 +1233,20 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
             @"Quem é pobre, porque se sujou, é um prisioneiro; vaga nas gerais, que nem os rios distantes de
               sua ligação. O cabaré tem o apito do trem, o sofá manchado. Dona Flor é toda cheia de vestidos, de
               coentro, de cheiros.”
-              <br>
+              
               (Amado, J. Dona Flor e seus dois maridos. São Paulo: Companhia das Letras, 1992.)
-              <br><br>
+              
               No trecho citado, o autor representa uma situação desencantada da mulher brasileira dos anos
               1940, tratando com humor a sensualidade e os conflitos sociais que envolvem essa época."},
         
         new Pergunta { PerguntaId = 2, FaculdadeId = 1, Enunciado =
             @"(Livro: Dona Flor e Seus Dois Maridos)
-            <br>
+            
             Sobre a personagem Dona Flor, é correto afirmar que:"},
 
         new Pergunta { PerguntaId = 3, FaculdadeId = 1, Enunciado =
          @"(Dom Casmurro)
-         <br>
+         
          (ESPCEx/2019)
          Retórica dos namorados, dá-me uma comparação exata e poética para dizer o que foram aqueles olhos de Capitu.
          Não me acode imagem capaz de dizer, sem quebra da dignidade do estilo, o que eles foram e me fizeram. 
@@ -1265,9 +1255,8 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
          Para não ser arrastado, agarrei-me às outras partes vizinhas, às orelhas, aos braços, aos cabelos espalhados pelos ombros; 
          mas tão depressa buscava as pupilas, a onda que saía delas vinha crescendo, cava e escura, ameaçando envolver-me, 
          puxar-me e tragar-me.
-         <br>
         (ASSIS. Machado de. Dom Casmurro. São Paulo: Ática,1999. p.55 (fragmento))
-        <br><br>
+        
         Com Dom Casmurro, obra publicada em 1899, depois de Memórias Póstumas de Brás Cubas (1881) e de Quincas Borba (1891),
         Machado de Assis deixa marcas indeléveis de que a Literatura Brasileira vivia um novo período literário, bem diferente
         do Romantismo. Nessas obras, nota-se uma forma diferente de sentir e de ver a realidade, menos idealizada, mais verdadeira
@@ -1276,29 +1265,28 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
 
          new Pergunta { PerguntaId = 4, FaculdadeId = 2, Enunciado =
          @"Morro da Babilônia
-         <br>
-         À noite, do morro    <br>
-        descem vozes que criam o terror    <br>
-        (terror urbano, cinquenta por cento de cinema,     <br>
-        e o resto que veio de Luanda ou se perdeu na língua     <br>
+         
+         À noite, do morro    
+        descem vozes que criam o terror    
+        (terror urbano, cinquenta por cento de cinema,     
+        e o resto que veio de Luanda ou se perdeu na língua     
         Geral).
 
-        Quando houve revolução, os soldados     <br>
-        espalharam no morro,    <br>
-        O quartel pegou fogo, eles não voltaram.    <br>
-        Alguns, chumbados, morreram.    <br>
-        O morro ficou mais encantado.    <br>
+        Quando houve revolução, os soldados     
+        espalharam no morro,    
+        O quartel pegou fogo, eles não voltaram.   
+        Alguns, chumbados, morreram.    
+        O morro ficou mais encantado.   
 
-        Mas as vozes do morro    <br>
-        não são propriamente lúgubres.    <br>
-        Há mesmo um cavaquinho bem afinado     <br>
-        que domina os ruídos de pedra e da folhagem    <br>
-        e desce até nós modesto e recreativo,    <br>
-        como uma gentileza no morro    <br>
+        Mas as vozes do morro   
+        não são propriamente lúgubres.   
+        Há mesmo um cavaquinho bem afinado     
+        que domina os ruídos de pedra e da folhagem   
+        e desce até nós modesto e recreativo,   
+        como uma gentileza no morro   
 
-         <br>
         (Carlos Drummond de Andrade Sentimento do mundo. São Paulo: Companhia das Letras, 2012, p. 19.)
-        <br><br>
+
         No poema “Morro da Babilônia”, de Carlos Drummond de Andrade,"
       },
 
@@ -1306,7 +1294,6 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
          @"Para driblar a censura imposta pela ditadura militar, compositores 
          de música popular brasileira (MPB) valiam-se do que Gilberto Vasconcelos 
          chamou de “linguagem da fresta”, expressão inspirada na canção “Festa imodesta”, de Caetano Veloso.
-         <br>
        (...)
         Numa festa imodesta como esta
         Vamos homenagear
@@ -1324,9 +1311,8 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
         Bemol natural sustenida no ar
         Viva aquele que se presta a esta ocupação
         Salve o compositor popular
-         <br>
        (Gilberto de Vasconcelos, Música popular: de olho na fresta. Rio de Janeiro: Graal, 1977.)
-        <br><br>
+
         É correto afirmar que, na canção, essa “linguagem dafresta” transparece"
       },
 
@@ -1338,7 +1324,6 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
       },
       new Pergunta { PerguntaId = 7, FaculdadeId = 3, Enunciado =
        @"Nun´Álvares Pereira
-         <br>
        Que auréola te cerca?
         É a espada que, volteando, 
         Faz que o ar alto perca
@@ -1353,9 +1338,8 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
         S. Portugal em ser,
         Ergue a luz da tua espada 
         Para a estrada se ver!
-         <br>
         Fernando Pessoa. In: “A Coroa”, Parte I, Mensagem.
-        <br><br>
+
         A primeira parte de Mensagem, organizada como um correlativo poético do Brasão das Armas de Portugal, perfila uma série de figuras míticas e históricas que teriam sido responsáveis pela formação nacional portuguesa. A seleção de Nun´Álvares Pereira para ocupar o lugar da Coroa"
       },
 
@@ -1373,11 +1357,10 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
 
        new Pergunta { PerguntaId = 11, FaculdadeId = 4, Enunciado =
          @"Futurismo.
-         <br>
         O Manifesto Futurista, de autoria do poeta italiano Filippo Tommaso Marinetti (1876-1944), foi publicado em Paris em 1909. Nesse manifesto, Marinetti declara a raiz italiana da nova estética: “queremos libertar esse país (a Itália) de sua fétida gangrena de professores, arqueólogos, cicerones e antiquários”. Falando da Itália para o mundo, o Futurismo coloca-se contra o “passadismo” burguês e o tradicionalismo cultural. A exaltação da máquina e da “beleza da velocidade”, associada ao elogio da técnica e da ciência, torna-se emblemática da nova atitude estética e política.
-         <br>
+
         (https://enciclopedia.itaucultural.org.br. Adaptado.)
-        <br><br>
+
        Verifica-se a influência dessa vanguarda artística nos seguintes versos do poeta português Fernando Pessoa:"
       },
 
@@ -1391,9 +1374,8 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
 
        new Pergunta { PerguntaId = 14, FaculdadeId = 4, Enunciado =
          @"De fato, este romance constitui um dos poucos romances cômicos do romantismo nacional, afastando-se dos traços idealizantes que caracterizam boa parte das obras “sérias” dos autores de então. O modo pelo qual este romance pinta a sociedade, representado-a a partir de um ângulo abertamente cômico e satírico, também era relativamente novo nas letras brasileiras do século XIX.
-         <br>
         (Mamede Mustafa Jarouche. “Galhofa sem melancolia”, 2003. Adaptado.)
-        <br><br>
+
          O comentário refere-se ao romance"
       },
     };

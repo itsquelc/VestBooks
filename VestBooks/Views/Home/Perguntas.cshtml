@@ -22,7 +22,7 @@
       <div class="container mt-5 text-center">
         <div class="row featurette">
           <div class="col-mt-12">
-            <p class="lead">@Html.Raw(Model.Descricao)</p>
+            <p class="lead quebra">@Html.Raw(Model.Descricao)</p>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
                 @Model.Nome
               </div>
               <div class="question-text @ViewBag.bgInfo">
-                <p>@Html.Raw(pergunta.Enunciado)</p>
+                <p class="quebra">@Html.Raw(pergunta.Enunciado)</p>
               </div>
 
               <div class="options">
@@ -53,7 +53,7 @@
                   <div class="quiz-option list-group-item" data-option="@letras[i]"
                     data-correct="@(alt.Correta.ToString().ToLower())" onclick="checkAnswer(this)">
                     <span class="option-letter @ViewBag.bgBlue">@letras[i]</span>
-                    @alt.Descricao
+                    <span class="quebra">@alt.Descricao</span>
                   </div>
                 }
               </div>
