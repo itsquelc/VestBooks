@@ -35,6 +35,43 @@ public class AppDbContext : IdentityDbContext<Usuario>
         builder.Entity<IdentityRole>().ToTable("perfil");
         builder.Entity<IdentityRoleClaim<string>>().ToTable("perfil_regra");
         #endregion
+
+        // Configurar a chave composta para FaculdadeLivro (opcional, dependendo do seu caso)
+        // Configurar a tabela FaculdadeLivro
+        builder.Entity<FaculdadeLivro>(entity =>
+        {
+            // Relação com Faculdade
+            entity.HasOne(fl => fl.Faculdade)
+                  .WithMany(f => f.Livros)
+                  .HasForeignKey(fl => fl.FaculdadeId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            // Relação com Livro
+            entity.HasOne(fl => fl.Livro)
+                  .WithMany(l => l.Faculdades)
+                  .HasForeignKey(fl => fl.LivroId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        // Configurar a tabela Livro
+        builder.Entity<Livro>(entity =>
+        {
+            entity.ToTable("livro");
+
+            entity.HasKey(l => l.LivroId);
+
+            // Relação com Autor
+            entity.HasOne(l => l.Autor)
+                  .WithMany()
+                  .HasForeignKey(l => l.AutorId)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            // Relação com Faculdades (via FaculdadeLivro)
+            entity.HasMany(l => l.Faculdades)
+                  .WithOne(fl => fl.Livro)
+                  .HasForeignKey(fl => fl.LivroId);
+        });
+
     }
 
 }

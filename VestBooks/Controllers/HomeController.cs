@@ -53,7 +53,8 @@ public class HomeController : Controller
         var livro = _db.Livros
             .Where(l => l.LivroId == id)
             .Include(l => l.Autor)
-            .Include(l => l.Faculdade)
+            .Include(l => l.Faculdades)
+            .ThenInclude(fl => fl.Faculdade)
             .SingleOrDefault();
         return View(livro);
     }

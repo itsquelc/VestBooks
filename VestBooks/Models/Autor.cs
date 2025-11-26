@@ -12,7 +12,9 @@ public class Autor
     [StringLength(60, ErrorMessage = "O Nome deve possuir no máximo 60 caracteres")]
     public string Nome { get; set; }
 
-
     [StringLength(300)]
     public string Foto { get; set; }
+
+    [StringLength(5000)]
+    public string Biografia { get; set; }
 }

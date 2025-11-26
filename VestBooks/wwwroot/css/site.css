@@ -43,7 +43,7 @@ a {
 }
 
 .logoinicio img {
-    width: 50%;
+    width: 80%;
     height: auto
 }
 
@@ -55,6 +55,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.logoinicio p {
+    margin-top: 20px;
+    font-size: 36px;
 }
 
 .carousel-caption {
@@ -88,7 +93,7 @@ a {
     border-radius: 100%;
     box-sizing: content-box;
     transition: transform 450ms;
-    max-height: 400px;
+    max-height: 450px;
     object-fit: contain;
     width: 200px;
     padding: 20px;
@@ -98,19 +103,24 @@ a {
 .livro {
     display: flex;
     overflow-y: hidden;
-    overflow-x: scroll;
-    justify-content: center;
+    overflow-x: auto;
+    /* o segredo é começar grudado à esquerda */
+    justify-content: flex-start;
+    /* garante que os itens não encolham para caber na largura */
+    gap: 20px; /* substitui o margin-right nas imagens se quiser */
 }
 
 .livro a {
     cursor: inherit;
+    flex: 0 0 auto; /* cada link mantém seu tamanho, não encolhe */
 }
 
 .livro a img {
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 450px;
     object-fit: fill;
-    margin-right: 20px;
+    /* se usar gap no container, pode tirar o margin-right */
+    margin-right: 0;
     box-sizing: border-box;
     transition: transform 450ms;
     display: block;
@@ -118,6 +128,46 @@ a {
 
 .livro::-webkit-scrollbar {
     display: none;
+}
+
+
+.autor {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    /* o segredo é começar grudado à esquerda */
+    justify-content: flex-start;
+    /* garante que os itens não encolham para caber na largura */
+    gap: 20px; /* substitui o margin-right nas imagens se quiser */
+}
+
+.autor a {
+    cursor: inherit;
+    flex: 0 0 auto; /* cada link mantém seu tamanho, não encolhe */
+}
+
+.autor a img {
+    width: 300px;
+    height: 450px;
+    object-fit: fill;
+    /* se usar gap no container, pode tirar o margin-right */
+    margin-right: 0;
+    box-sizing: border-box;
+    transition: transform 450ms;
+    display: block;
+}
+
+.autor::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* .autor {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: center;
+    gap: 60px;
 }
 
 .autor a {
@@ -136,15 +186,9 @@ a {
 
 .autor::-webkit-scrollbar {
     display: none;
-}
+} */
 
-.autor {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    justify-content: center;
-    gap: 60px;
-}
+
 
 
 
@@ -401,9 +445,9 @@ a {
     max-height: 100px;
 }
 
-.footer .icon img {
-    max-width: 50px;
-    margin: 0 10px;
+.footer .icon  {
+    color: white;
+    font-size:42px;
 }
 
 .bg-blue {
@@ -471,7 +515,6 @@ a {
 .mt-100 {
     margin-top: 100px !important;
 }
-
 
 .rounded-circle {
     margin: 9;
@@ -548,4 +591,8 @@ a {
       margin-top: 20px;
       padding: 15px;
     }
+}
+
+.rounded-2 {
+    border-radius: 10px !important;
 }

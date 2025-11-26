@@ -14,13 +14,11 @@ public class Faculdade
     public string Nome { get; set; }
 
     [Display(Name = "Descrição", Prompt = "Descrição da faculdade")]
-    [StringLength(1000, ErrorMessage = "A descrição deve possuir no máximo 1000 caracteres")]
+    [StringLength(3000, ErrorMessage = "A descrição deve possuir no máximo 3000 caracteres")]
     public string Descricao { get; set; }
 
     [StringLength(300)]
     public string Foto { get; set; }
-
-    //public string Cor { get; set; }
 
     public virtual List<FaculdadeLivro> Livros { get; set; }
 

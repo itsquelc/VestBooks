@@ -1,0 +1,137 @@
+@model Livro
+@{
+    ViewData["Title"] = "Detalhes do Livro";
+    ViewData["Menu"] = "Livros";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>@ViewData["Title"]</h1>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+        <a asp-action="Edit" asp-route-id="@Model.LivroId" class="btn btn-warning">Editar</a>
+        <a asp-action="Delete" asp-route-id="@Model.LivroId" class="btn btn-danger">Excluir</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model.Foto))
+        {
+            <img src="@Model.Foto" class="img-fluid rounded shadow" alt="@Model.Nome">
+        }
+        else
+        {
+            <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 400px;">
+                <i class="fas fa-book fa-5x text-muted"></i>
+            </div>
+        }
+        
+        @if (!string.IsNullOrEmpty(Model.Pdf))
+        {
+            <div class="mt-3 text-center">
+                <a href="@Model.Pdf" target="_blank" class="btn btn-outline-danger">
+                    <i class="fas fa-file-pdf"></i> Visualizar PDF
+                </a>
+            </div>
+        }
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Nome</h3>
+                <hr>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td class="fw-bold" style="width: 120px;">ID:</td>
+                                <td>@Model.LivroId</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Nome:</td>
+                                <td>@Model.Nome</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Autor:</td>
+                                <td>@Model.Autor?.Nome</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td class="fw-bold" style="width: 140px;">Publicação:</td>
+                                <td>@Model.Publicacao</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Avaliação:</td>
+                                <td>@Model.Avaliacao</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Páginas:</td>
+                                <td>@Model.NumeroPaginas</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Destaque:</td>
+                                <td>
+                                    @if (Model.Destaque)
+                                    {
+                                        <span class="badge bg-success">Sim</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Não</span>
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                @if (Model.Faculdades?.Any() == true)
+                {
+                    <div class="mt-3">
+                        <h5>Faculdades:</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            @foreach (var faculdadeLivro in Model.Faculdades)
+                            {
+                                <span class="badge bg-primary fs-6">@faculdadeLivro.Faculdade.Nome</span>
+                            }
+                        </div>
+                    </div>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Descricao))
+                {
+                    <div class="mt-3">
+                        <h5>Descrição:</h5>
+                        <p class="card-text">@Model.Descricao</p>
+                    </div>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Resumo))
+                {
+                    <div class="mt-3">
+                        <h5>Resumo:</h5>
+                        <p class="card-text">@Model.Resumo</p>
+                    </div>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Video))
+                {
+                    <div class="mt-3">
+                        <h5>Vídeo:</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="@Model.Video" readonly>
+                            <a href="https://www.youtube.com/watch?v=@Model.Video" target="_blank" class="btn btn-outline-danger">
+                                <i class="fab fa-youtube"></i> Assistir
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

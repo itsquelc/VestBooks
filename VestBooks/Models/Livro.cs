@@ -9,12 +9,6 @@ public class Livro
   [Key]
   public int LivroId { get; set; }
 
-  //faculdade
-  [Required(ErrorMessage = "Por favor, informe a Faculdade")]
-  public int FaculdadeId { get; set; }
-  [ForeignKey(nameof(FaculdadeId))]
-  public Faculdade Faculdade { get; set; }
-
   //autor 
   [Required(ErrorMessage = "Por favor, informe o Autor")]
   public int AutorId { get; set; }
@@ -58,4 +52,9 @@ public class Livro
   [StringLength(300)]
   [Display(Name = "Vídeo")]
   public string Video { get; set; }
+
+  [StringLength(300)]
+  public string Pdf { get; set; }
+
+  public virtual List<FaculdadeLivro> Faculdades { get; set; }
 }
