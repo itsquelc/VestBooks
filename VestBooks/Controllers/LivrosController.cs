@@ -379,7 +379,7 @@ public class LivrosController : Controller
         }
 
         // Retornar caminho relativo para salvar no banco
-        return $"/{pasta}/{fileName}";
+        return $"/{pasta}/{subpasta}/{fileName}";
     }
 
     private void DeletarArquivo(string arquivoPath)
