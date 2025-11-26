@@ -2,8 +2,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VestBooks.Models;
-[Table("autor")]
 
+[Table("autor")]
 public class Autor
 {
     [Key]
