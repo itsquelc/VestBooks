@@ -19,8 +19,6 @@ public class AppDbSeed
             
             Por isso, é fundamental conhecer as principais obras, autores e como eles influenciaram tudo o que veio depois."},
 
-
-
             new Faculdade { Id = 2, Nome = "UNICAMP", Foto = "/img/faculdades/UNICAMP.png", Descricao =
             @"O vestibular para ingressar na Unicamp, uma das maiores e mais conceituadas universidades do país, está marcado para 20 de outubro. Além de todas as disciplinas cobradas no Ensino Médio, o edital estipula uma lista de 8 livros de leitura obrigatória.
 
@@ -30,7 +28,9 @@ public class AppDbSeed
             @"Além do objetivo de se adequar a Base Nacional Comum Curricular (BNCC) e às legislações vigentes, a Fuvest quer tornar seus alunos mais críticos e atualizados. A nova lista de leitura é justificada pela necessidade de se valorizar o papel das mulheres na literatura, não apenas como personagens, mas como autoras.
             " },
             
-            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png", Descricao = " " },
+            new Faculdade { Id = 4, Nome = "UNESP", Foto = "/img/faculdades/UNESP.png", Descricao = 
+            @"Universidade Estadual Paulista 'Júlio de Mesquita Filho' (Unesp) é uma universidade pública brasileira, com atuação no ensino, na pesquisa e na extensão de serviços à comunidade. A instituição é uma das quatro universidades mantidas pelo governo do estado de São Paulo, ao lado da Universidade de São Paulo (USP), Universidade Estadual de Campinas (Unicamp) e da Universidade Virtual do Estado de São Paulo (Univesp). Em 2024, a Unesp foi eleita a quinta melhor universidade da América Latina pela revista Times Higher Education
+            A Unesp distingue-se das outras universidades estaduais por ter unidades em 24 municípios do estado — 22 campi no interior, um câmpus na cidade de São Paulo e um câmpus em São Vicente, o primeiro de uma universidade pública no litoral paulista.[1] Este modelo de universidade multicampi é inspirado na estrutura da Universidade da Califórnia, nos Estados Unidos, que é composta por 23 campi, criados entre os anos de 1857 e 2002." },
         };
         builder.Entity<Faculdade>().HasData(faculdades);
 

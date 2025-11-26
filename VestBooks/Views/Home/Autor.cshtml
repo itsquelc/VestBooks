@@ -1,0 +1,65 @@
+@model Autor
+@{
+    ViewData["Title"] = Model.Nome;
+    ViewData["bgInfo"] = "bg-info";
+    ViewData["bgBlue"] = "bg-blue";
+}
+
+<div class="container-fluid w-100">
+    <div class="row">
+        <!-- Lado esquerdo -->
+        <div class="col-1 col-md-2 @ViewBag.bgBlue"></div>
+
+        <!-- Conteúdo central -->
+        <div class="col-10 col-md-8 content mt-5">
+            <h3 class="text-center @ViewBag.bgBlue text-white px-2 py-4 my-4 fw-bold">
+                @Model.Nome
+            </h3>
+
+            <div class="row mt-5 mb-3">
+                <div class="col-4 mx-auto">
+                    <img src="@Model.Foto" class="w-100 rounded-5" >
+                </div>
+            </div>
+
+            @if (Model.Biografia != null)
+            {
+            <div class="row">
+                <div class="col">
+                    <h4 class="text-center @ViewBag.bgInfo text-white py-2 my-4 mb-0 fw-bold">
+                        Biografia
+                    </h4>
+                    <p class="fs-5 py-4 quebra">@Model.Biografia </p>
+                </div>
+            </div>
+            }
+            
+            @if (Model.Livros.Count > 0)
+            {
+                <!-- LIVROS (faixa full-width) -->
+                <h4 class="text-center @ViewBag.bgInfo text-white py-2 my-5 fw-bold">
+                    Livros
+                </h4>
+
+                <!-- LIVROS (conteúdo dentro de container pra não dar overflow) -->
+                <div class="container mb-5">
+                    <div class="row px-0">
+                        <div class="col">
+                            <div id="livros" class="livro mt-1 p-2 ps-4">
+                                @foreach (var livro in Model.Livros)
+                                {
+                                    <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.LivroId">
+                                        <img src="@livro.Foto" alt="@livro.Nome">
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Lado direito -->
+        <div class="col-1 col-md-2 @ViewBag.bgBlue"></div>
+    </div>
+</div>

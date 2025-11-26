@@ -70,17 +70,34 @@ a {
 }
 
 .rowLivro {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.rowLivro-inner {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    gap: 20px;
+    padding: 0 20px; /* Padding apenas no container interno */
     justify-content: center;
+    min-width: min-content;
 }
 
-.rowLivro a {
-    cursor: inherit;
+.livro-item {
+    flex: 0 0 auto;
 }
 
-.rowimg:hover {
+.livro-item img {
+    border-radius: 20px;
+    transition: transform 450ms;
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    display: block;
+    border: #0dcaf0 3px solid;
+    padding: 15px;
+}
+
+.livro-item img:hover {
     transform: scale(1.10);
 }
 
@@ -88,15 +105,10 @@ a {
     display: none;
 }
 
-.rowLivro a img {
-    margin-right: 50px;
-    border-radius: 100%;
-    box-sizing: content-box;
-    transition: transform 450ms;
-    max-height: 450px;
-    object-fit: contain;
-    width: 200px;
-    padding: 20px;
+/* Hide scrollbar for IE, Edge and Firefox */
+.rowLivro {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -120,7 +132,6 @@ a {
     height: 450px;
     object-fit: fill;
     /* se usar gap no container, pode tirar o margin-right */
-    margin-right: 0;
     box-sizing: border-box;
     transition: transform 450ms;
     display: block;

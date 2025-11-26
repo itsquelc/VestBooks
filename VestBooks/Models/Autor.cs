@@ -17,4 +17,8 @@ public class Autor
 
     [StringLength(5000)]
     public string Biografia { get; set; }
+
+    public string Sexo { get; set; }
+
+    public virtual ICollection<Livro> Livros { get; set; }
 }

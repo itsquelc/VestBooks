@@ -57,8 +57,7 @@ public class HomeController : Controller
             .ThenInclude(fl => fl.Faculdade)
             .SingleOrDefault();
         return View(livro);
-    }
-   
+    }   
 
     public IActionResult Perguntas(int id)
     {
@@ -71,6 +70,15 @@ public class HomeController : Controller
             .ThenInclude(p => p.PerguntaAlternativas)
             .SingleOrDefault();
         return View(vestibular);
+    }
+
+    public IActionResult Autor(int id)
+    {
+        var autor = _db.Autores
+            .Where(a => a.AutorId == id)
+            .Include(a => a.Livros)
+            .FirstOrDefault();
+        return View(autor);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

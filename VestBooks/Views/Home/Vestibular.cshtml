@@ -17,7 +17,7 @@
         <!-- FAIXA SUPERIOR -->
         <div class="@ViewBag.bgBlue py-4">
             <div class="d-flex justify-content-center align-items-center container text-center">
-                <img src="@Model.Foto" alt="Logo" class="img-fluid" style="max-height: 70px;">
+
                 <span class="text-white ms-4 display-4 fw-bold">@Model.Nome</span>
             </div>
         </div>
@@ -25,7 +25,10 @@
         <!-- DESCRIÇÃO -->
         <div class="container mt-5 text-center">
             <div class="row featurette">
-                <div class="col-12">
+                <div class="col-md-4 d-flex align-items-center">
+                    <img src="@Model.Foto" alt="Logo" class="img-fluid w-100">
+                </div>
+                <div class="col-md-8">
                     <p class="lead quebra">@Html.Raw(Model.Descricao)</p>
                 </div>
             </div>
@@ -33,7 +36,7 @@
 
         @if (Model.Id == 3)
         {
-            <div class="pink-container" style="height: unset !important;">
+            <div class="pink-container mt-5" style="height: unset !important;">
                 <div class="container my-5 text-white">
                     <p class="lead pt-4 pb-3">
                         As questões de Literatura representam cerca de 30% das questões de Português,
@@ -83,7 +86,7 @@
                             @foreach (var autor in autores)
                             {
                                 <div class="text-center d-inline-block">
-                                    <a href="#">
+                                    <a asp-action="Autor" asp-controller="Home" asp-route-id="@autor.AutorId">
                                         <img src="@autor.Foto" alt="@autor.Nome" />
                                     </a>
                                     <div class="mt-1 fw-bold">@autor.Nome</div>
@@ -94,40 +97,43 @@
                 </div>
             </div>
 
-            <!-- VÍDEO AULA (faixa full-width) -->
-            <h4 class="text-center @ViewBag.bgInfo text-white py-2 my-5 fw-bold">
-                Vídeo Aula
-            </h4>
+            @if (Model.Livros[0].Livro.Video != null)
+            {
+                <!-- VÍDEO AULA (faixa full-width) -->
+                <h4 class="text-center @ViewBag.bgInfo text-white py-2 my-5 fw-bold">
+                    Vídeo Aula
+                </h4>
 
-            <!-- VÍDEO AULA (conteúdo em container) -->
-            <div class="container">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-md-9">
-                        <div class="row">
-                            <!-- Vídeo principal -->
-                            <div class="col-md-9 mb-3">
-                                <div class="ratio ratio-16x9">
-                                    <iframe id="mainVideo" src="https://www.youtube.com/embed/@Model.Livros[0].Livro.Video"
-                                        allowfullscreen></iframe>
+                <!-- VÍDEO AULA (conteúdo em container) -->
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-9">
+                            <div class="row">
+                                <!-- Vídeo principal -->
+                                <div class="col-md-9 mb-3">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe id="mainVideo" src="https://www.youtube.com/embed/@Model.Livros[0].Livro.Video"
+                                            allowfullscreen></iframe>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- Lista de vídeos -->
-                            <div class="col-md-3 d-flex align-items-center">
-                                <div class="video-list w-100">
-                                    @foreach (var livro in Model.Livros)
-                                    {
-                                        <div class="video-thumbnail" onclick="changeVideo('@livro.Livro.Video')">
-                                            <img src="https://img.youtube.com/vi/@livro.Livro.Video/0.jpg"
-                                                alt="Vídeo do livro @livro.Livro.Nome">
-                                        </div>
-                                    }
+                                <!-- Lista de vídeos -->
+                                <div class="col-md-3 d-flex align-items-center">
+                                    <div class="video-list w-100">
+                                        @foreach (var livro in Model.Livros)
+                                        {
+                                            <div class="video-thumbnail" onclick="changeVideo('@livro.Livro.Video')">
+                                                <img src="https://img.youtube.com/vi/@livro.Livro.Video/0.jpg"
+                                                    alt="Vídeo do livro @livro.Livro.Nome">
+                                            </div>
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         }
         else
         {
@@ -176,7 +182,9 @@
                     </div>
                 </div>
             </div>
-        } else {
+        }
+        else
+        {
             <h4 class="text-center @ViewBag.bgInfo text-white py-5 my-5 fw-bold">
                 NOVOS TESTES ESTARÃO DISPONÍVEIS EM BREVE
             </h4>

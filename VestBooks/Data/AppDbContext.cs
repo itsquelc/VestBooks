@@ -62,7 +62,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
 
             // Relação com Autor
             entity.HasOne(l => l.Autor)
-                  .WithMany()
+                  .WithMany(a => a.Livros)
                   .HasForeignKey(l => l.AutorId)
                   .OnDelete(DeleteBehavior.Restrict);
 

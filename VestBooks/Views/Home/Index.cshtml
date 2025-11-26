@@ -3,7 +3,8 @@
   ViewData["Title"] = "Home";
 }
 
-<div id="carousel" class="carousel carousel-fade slide bg-dark" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+<div id="carousel" class="carousel carousel-fade slide bg-dark" data-bs-ride="carousel" data-bs-interval="4000"
+  data-bs-pause="false">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
       aria-label="Slide 1"></button>
@@ -51,7 +52,7 @@
 
 <div id="sobre" style="height: 100px;"></div>
 
-<div class="container py-5 bg-white" >
+<div class="container py-5 bg-white">
   <div class="row featurette">
     <div class="col-md-9">
       <h2 class="featurette-heading fw-normal lh-1">Quem somos</h2>
@@ -64,7 +65,7 @@
       </p>
     </div>
     <div class="col-md-2">
-      <img src="img/Amigas.png" class="img-fluid" >
+      <img src="img/Amigas.png" class="img-fluid">
     </div>
   </div>
 </div>
@@ -76,11 +77,18 @@
     </div>
   </div>
 
-  <div class="row">
-    <div id="livros" class="rowLivro my-3 p-2">
-      @foreach (var faculdade in Model.Faculdades) {
-        <a asp-action="Vestibular" asp-route-id="@faculdade.Id"><img src="@faculdade.Foto" alt="@faculdade.Nome"></a>
-      }
+  <div class="row px-0">
+    <div class="col">
+      <div id="livros" class="rowLivro my-3">
+        <div class="rowLivro-inner">
+          @foreach (var faculdade in Model.Faculdades)
+          {
+            <a asp-action="Vestibular" asp-route-id="@faculdade.Id" class="livro-item">
+              <img src="@faculdade.Foto" alt="@faculdade.Nome">
+            </a>
+          }
+        </div>
+      </div>
     </div>
   </div>
 </div>

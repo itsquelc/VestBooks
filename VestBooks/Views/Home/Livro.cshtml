@@ -49,20 +49,22 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <h4 class="text-center @ViewBag.bgInfo text-white py-2 my-4 fw-bold">
-                        Vídeo Aula
-                    </h4>
-                    <div class="col mb-3">
-                        <div class="ratio ratio-16x9" style="display: ;">
-                            <iframe id="mainVideo" src="https://www.youtube.com/embed/@Model.Video"
-                                allowfullscreen></iframe>
+            @if (Model.Video != null)
+            {
+                <div class="row">
+                    <div class="col">
+                        <h4 class="text-center @ViewBag.bgInfo text-white py-2 my-4 fw-bold">
+                            Vídeo Aula
+                        </h4>
+                        <div class="col mb-3">
+                            <div class="ratio ratio-16x9" style="display: ;">
+                                <iframe id="mainVideo" src="https://www.youtube.com/embed/@Model.Video"
+                                    allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            }
 
             @if (Model.Pdf != null)
             {

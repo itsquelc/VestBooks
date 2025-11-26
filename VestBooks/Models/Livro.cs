@@ -13,7 +13,7 @@ public class Livro
   [Required(ErrorMessage = "Por favor, informe o Autor")]
   public int AutorId { get; set; }
   [ForeignKey(nameof(AutorId))]
-  public Autor Autor { get; set; }
+  public virtual Autor Autor { get; set; }
 
   // nome do livro
   [Required(ErrorMessage = "Por favor, informe o Nome ")]
