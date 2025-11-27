@@ -20,19 +20,42 @@
             <div class="row mt-5 mb-3">
                 <div class="col-7">
                     <p class="subtitulolivros fs-4">AUTOR(A):</p>
-                    <div class="d-flex align-items-center mb-3">
+                    <a asp-action="Autor" asp-controller="Home" asp-route-id="@Model.AutorId"
+                        class="d-flex align-items-center mb-3">
                         <img src="@Model.Autor.Foto" class="rounded-circle">
+
                         <p class="ms-3 mb-0 fs-4">@Model.Autor.Nome</p>
-                    </div>
+                    </a>
 
                     <p class="subtitulolivros fs-5 mt-5">1ª PUBLICAÇÃO: @Model.Publicacao</p>
 
-                    <p class="subtitulolivros fs-5">AVALIAÇÃO:
-                        @Model.Avaliacao <i class="bi bi-star-fill"
-                            style="font-size: 20px; color: rgb(209, 209, 23);"></i> </p>
+                    <p class="subtitulolivros fs-5">
+                        AVALIAÇÃO: @Model.Avaliacao <i class="bi bi-star-fill"
+                            style="font-size: 20px; color: rgb(209, 209, 23);"></i>
+                    </p>
 
-                    <p class="subtitulolivros fs-5">NÚMERO DE PÁGINAS:
-                        @Model.NumeroPaginas</p>
+                    <p class="subtitulolivros fs-5">
+                        NÚMERO DE PÁGINAS: @Model.NumeroPaginas
+                    </p>
+
+                    <p class="subtitulolivros mt-2">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <button id="favorito-btn"
+                                class="btn btn-outline-danger btn-sm favorito-btn rounded-2 fs-5 py-2 px-5 fw-bold d-flex align-items-center"
+                                data-livro-id="@Model.LivroId">
+                                <i class="bi bi-heart fs-2 me-2"></i>
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-outline-info btn-sm rounded-2 fs-5 py-2 px-5 fw-bold">
+                                <a asp-controller="Account" asp-action="Login" class="d-flex align-items-center">
+                                    <i class="bi bi-heart fs-2 me-2"></i>
+                                </a>
+                            </button>
+                        }
+                    </p>
                 </div>
 
                 <div class="col-5 text-center mb-5">
@@ -84,3 +107,194 @@
         <div class="col-1 col-md-2 @ViewBag.bgBlue"></div>
     </div>
 </div>
+
+
+@section Scripts {
+    <script>
+        // Sistema de favoritos para página de detalhes
+        document.addEventListener('DOMContentLoaded', function () {
+            const favoritoBtn = document.getElementById('favorito-btn');
+
+            if (favoritoBtn) {
+                const livroId = favoritoBtn.getAttribute('data-livro-id');
+
+                // Verificar status inicial do favorito
+                verificarStatusFavorito(livroId, favoritoBtn);
+
+                // Adicionar evento de clique
+                favoritoBtn.addEventListener('click', function () {
+                    alternarFavorito(livroId, favoritoBtn);
+                });
+            }
+        });
+
+        // Função para verificar se o livro já está favoritado
+        function verificarStatusFavorito(livroId, botao) {
+            fetch('@Url.Action("VerificarFavorito", "Favoritos")?livroId=' + livroId)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro na resposta do servidor');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    atualizarBotaoFavorito(botao, data.isFavorito);
+                })
+                .catch(error => {
+                    console.error('Erro ao verificar favorito:', error);
+                    mostrarNotificacao('Erro ao verificar status do favorito', 'error');
+                });
+        }
+
+        // Função para adicionar/remover favorito
+        function alternarFavorito(livroId, botao) {
+            const isFavoritado = botao.classList.contains('btn-danger');
+
+            const url = isFavoritado
+                ? '@Url.Action("RemoverFavorito", "Favoritos")'
+                : '@Url.Action("AdicionarFavorito", "Favoritos")';
+
+            // Mostrar loading no botão
+            const textoOriginal = botao.innerHTML;
+            botao.innerHTML = '<i class="bi bi-arrow-repeat fs-2 me-2"></i>';
+            botao.disabled = true;
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                },
+                body: `livroId=${livroId}`
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro na resposta do servidor');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        atualizarBotaoFavorito(botao, !isFavoritado);
+                        mostrarNotificacao(data.message, 'success');
+                    } else {
+                        mostrarNotificacao(data.message, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    mostrarNotificacao('Erro ao atualizar favoritos', 'error');
+                })
+                .finally(() => {
+                    // Restaurar estado do botão
+                    botao.disabled = false;
+                    // O texto será atualizado pela função atualizarBotaoFavorito
+                });
+        }
+
+        // Função para atualizar a aparência do botão
+        function atualizarBotaoFavorito(botao, isFavoritado) {
+            const icone = botao.querySelector('i');
+            const texto = botao.querySelector('span') || document.createElement('span');
+
+            if (!botao.querySelector('span')) {
+                texto.className = 'ms-1';
+                botao.appendChild(texto);
+            }
+
+            if (isFavoritado) {
+                // Estado: Favoritado
+                botao.classList.remove('btn-outline-danger');
+                botao.classList.add('btn-danger', 'text-white');
+                icone.className = 'bi bi-heart-fill fs-2 me-2';
+                texto.textContent = 'Favoritado';
+                botao.title = 'Remover dos favoritos';
+            } else {
+                // Estado: Não favoritado
+                botao.classList.remove('btn-danger', 'text-white');
+                botao.classList.add('btn-outline-danger');
+                icone.className = 'bi bi-heart fs-2 me-2';
+                texto.textContent = 'Favoritar';
+                botao.title = 'Adicionar aos favoritos';
+            }
+        }
+
+        // Função para mostrar notificações
+        function mostrarNotificacao(mensagem, tipo) {
+            // Remover notificações anteriores
+            const notificacoesAntigas = document.querySelectorAll('.custom-notification');
+            notificacoesAntigas.forEach(notif => notif.remove());
+
+            // Criar nova notificação
+            const notificacao = document.createElement('div');
+            notificacao.className = `custom-notification alert alert-${tipo === 'success' ? 'success' : 'danger'} alert-dismissible fade show`;
+            notificacao.style.cssText = `
+                                position: fixed;
+                                top: 20px;
+                                right: 20px;
+                                z-index: 9999;
+                                min-width: 300px;
+                                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                                border-radius: 8px;
+                            `;
+
+            notificacao.innerHTML = `
+                                <div class="d-flex align-items-center">
+                                    <i class="bi ${tipo === 'success' ? 'bi-check-circle-fill' : 'bi-exclamation-triangle-fill'} me-2"></i>
+                                    <span>${mensagem}</span>
+                                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+                                </div>
+                            `;
+
+            document.body.appendChild(notificacao);
+
+            // Auto-remover após 4 segundos
+            setTimeout(() => {
+                if (notificacao.parentNode) {
+                    notificacao.remove();
+                }
+            }, 4000);
+        }
+
+        // Adicionar estilos CSS para a notificação
+        const estilo = document.createElement('style');
+        estilo.textContent = `
+                            .custom-notification {
+                                animation: slideInRight 0.3s ease-out;
+                            }
+            
+                            @@keyframes slideInRight {
+                                from {
+                                    transform: translateX(100%);
+                                    opacity: 0;
+                                }
+                                to {
+                                    transform: translateX(0);
+                                    opacity: 1;
+                                }
+                            }
+            
+                            .btn-favorito-loading {
+                                position: relative;
+                                overflow: hidden;
+                            }
+            
+                            .btn-favorito-loading::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -100%;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+                                animation: loading 1.5s infinite;
+                            }
+            
+                            @@keyframes loading {
+                                0% { left: -100%; }
+                                100% { left: 100%; }
+                            }
+                        `;
+        document.head.appendChild(estilo);
+    </script>
+}

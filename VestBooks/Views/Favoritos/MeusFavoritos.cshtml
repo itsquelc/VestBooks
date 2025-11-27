@@ -1,0 +1,201 @@
+@model List<Favorito>
+@{
+    ViewData["Title"] = "Meus Livros Favoritos";
+    ViewData["bgInfo"] = "bg-info";
+    ViewData["bgBlue"] = "bg-blue";
+
+}
+
+<div class="container-fluid w-100">
+    <div class="row">
+        <!-- Lado esquerdo -->
+        <div class="col-1 col-md-2 @ViewBag.bgBlue"></div>
+
+
+        <!-- Conteúdo central -->
+        <div class="col-10 col-md-8 content mt-5">
+
+            <h3 class="text-center @ViewBag.bgBlue text-white px-2 py-4 my-4 fw-bold">
+                @ViewData["Title"]
+            </h3>
+
+            @* <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1>@ViewData["Title"]</h1>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Voltar para Livros
+                </a>
+            </div> *@
+
+            @if (TempData["Erro"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> @TempData["Erro"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            @if (Model.Any())
+            {
+                <div class="row">
+                    @foreach (var favorito in Model)
+                    {
+                        var livro = favorito.Livro;
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 livro-card">
+                                @if (!string.IsNullOrEmpty(livro.Foto))
+                                {
+                                    <img src="@livro.Foto" class="card-img-top" alt="@livro.Nome"
+                                        style="height: 300px; object-fit: cover;">
+                                }
+                                else
+                                {
+                                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center"
+                                        style="height: 300px;">
+                                        <i class="fas fa-book fa-4x text-muted"></i>
+                                    </div>
+                                }
+
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">@livro.Nome</h5>
+                                    <p class="card-text">
+                                        <strong>Autor:</strong> @livro.Autor?.Nome<br>
+                                        <strong>Publicação:</strong> @livro.Publicacao<br>
+                                        <strong>Páginas:</strong> @livro.NumeroPaginas
+                                    </p>
+
+                                    @if (livro.Faculdades?.Any() == true)
+                                    {
+                                        <div class="mb-2">
+                                            <strong>Faculdades:</strong>
+                                            <div class="d-flex flex-wrap gap-1 mt-1">
+                                                @foreach (var faculdadeLivro in livro.Faculdades.Take(2))
+                                                {
+                                                    <span class="badge bg-primary">@faculdadeLivro.Faculdade.Nome</span>
+                                                }
+                                                @if (livro.Faculdades.Count > 2)
+                                                {
+                                                    <span class="badge bg-secondary">+@(livro.Faculdades.Count - 2)</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    }
+
+                                    <div class="mt-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted">
+                                                Favoritado em: @favorito.DataFavoritado.ToString("dd/MM/yyyy")
+                                            </small>
+                                            <button class="btn btn-outline-danger btn-sm remover-favorito"
+                                                data-livro-id="@livro.LivroId" title="Remover dos favoritos">
+                                                <i class="bi bi-heartbreak"></i>
+                                            </button>
+                                        </div>
+                                        <a asp-action="Livro" asp-controller="Home" asp-route-id="@livro.LivroId"
+                                            class="btn btn-primary btn-sm mt-2 w-100">
+                                            <i class="bi bi-eye"></i> Ver Detalhes
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="mt-4 text-center">
+                    <p class="text-muted">Você tem @Model.Count livro(s) favoritado(s)</p>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="fas fa-heart fa-4x text-muted mb-3"></i>
+                    <h3>Nenhum livro favoritado</h3>
+                    <p class="text-muted">Você ainda não adicionou nenhum livro aos seus favoritos.</p>
+                    <a asp-action="Index" asp-controller="Home" class="btn btn-primary">
+                        <i class="fas fa-book"></i> Explorar Livros
+                    </a>
+                </div>
+            }
+        </div>
+        <!-- Lado direito -->
+        <div class="col-1 col-md-2 @ViewBag.bgBlue"></div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        // Remover livro dos favoritos
+        document.querySelectorAll('.remover-favorito').forEach(button => {
+            button.addEventListener('click', function () {
+                const livroId = this.getAttribute('data-livro-id');
+                const card = this.closest('.livro-card');
+
+                if (confirm('Tem certeza que deseja remover este livro dos favoritos?')) {
+                    fetch('@Url.Action("RemoverFavorito", "Favoritos")', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                        },
+                        body: `livroId=${livroId}`
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Remover o card da lista
+                                card.remove();
+
+                                // Mostrar mensagem de sucesso
+                                showAlert('Livro removido dos favoritos!', 'success');
+
+                                // Atualizar contador se existir
+                                updateFavoritosCount();
+                            } else {
+                                showAlert(data.message, 'error');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erro:', error);
+                            showAlert('Erro ao remover dos favoritos.', 'error');
+                        });
+                }
+            });
+        });
+
+        function showAlert(message, type) {
+            const alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
+            const alertHtml = `
+                                    <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
+                                        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i> ${message}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                    </div>
+                                `;
+            document.querySelector('.container').insertAdjacentHTML('afterbegin', alertHtml);
+        }
+
+        function updateFavoritosCount() {
+            const cards = document.querySelectorAll('.livro-card');
+            const counter = document.querySelector('p.text-muted');
+            if (counter) {
+                counter.textContent = `Você tem ${cards.length} livro(s) favoritado(s)`;
+            }
+
+            // Se não há mais livros, mostrar mensagem de lista vazia
+            if (cards.length === 0) {
+                const emptyHtml = `
+                                        <div class="text-center py-5">
+                                            <i class="fas fa-heart fa-4x text-muted mb-3"></i>
+                                            <h3>Nenhum livro favoritado</h3>
+                                            <p class="text-muted">Você ainda não adicionou nenhum livro aos seus favoritos.</p>
+                                            <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+                                                <i class="fas fa-book"></i> Explorar Livros
+                                            </a>
+                                        </div>
+                                    `;
+                document.querySelector('.row').innerHTML = emptyHtml;
+            }
+        }
+    </script>
+}

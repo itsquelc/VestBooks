@@ -2243,19 +2243,19 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
         List<IdentityRole> roles = new()
         {
             new IdentityRole() {
-            Id = "1",
+            Id = "0b44ca04-f6b0-4a8f-a953-1f2330d30894",
             Name = "Administrador",
             NormalizedName = "ADMINISTRADOR"
             },
             new IdentityRole() {
             Id = "2",
-            Name = "Funcionário",
-            NormalizedName = "FUNCIONÁRIO"
+            Name = "Moderador",
+            NormalizedName = "MODERADOR"
             },
             new IdentityRole() {
             Id = "3",
-            Name = "Cliente",
-            NormalizedName = "CLIENTE"
+            Name = "Usuário",
+            NormalizedName = "USUÁRIO"
             },
         };
 
@@ -2267,7 +2267,7 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
         #region Populate Usuário
         var usuario = new Usuario()
         {
-            Id = "1",
+            Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
             Email = "admin@vestbooks.com",
             NormalizedEmail = "ADMIN@VESTBOOKS.COM",
             UserName = "Admin",
@@ -2287,9 +2287,9 @@ A visão das plantas é um livro sobre redenção, sobre a capacidade de transfo
         #region Populate UserRole - Usuário com Perfil
         List<IdentityUserRole<string>> userRoles = new()
         {
-            new IdentityUserRole<string>() { UserId = usuario.Id, RoleId = "1" },
-            new IdentityUserRole<string>() { UserId = usuario.Id, RoleId = "2" },
-            new IdentityUserRole<string>() { UserId = usuario.Id, RoleId = "3" }
+            new IdentityUserRole<string>() { UserId = usuario.Id, RoleId = roles[0].Id },
+            new IdentityUserRole<string>() { UserId = usuario.Id, RoleId = roles[1].Id },
+            new IdentityUserRole<string>() { UserId = usuario.Id, RoleId = roles[2].Id }
         };
         builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
         #endregion

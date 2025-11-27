@@ -172,35 +172,6 @@ a {
 }
 
 
-/* .autor {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    justify-content: center;
-    gap: 60px;
-}
-
-.autor a {
-    cursor: inherit;
-}
-
-.autor a img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: transform 450ms;
-    display: block;
-}
-
-.autor::-webkit-scrollbar {
-    display: none;
-} */
-
-
-
-
 
 .blue-circle {
     position: absolute;
@@ -209,7 +180,7 @@ a {
     background-color: #aee0f7;
     border-radius: 50%;
     top: 50%;
-    left: 40%;
+    left: 30%;
     transform: translate(-50%, -50%);
     z-index: 0;
 }
@@ -217,7 +188,7 @@ a {
 .book-img {
     position: absolute;
     top: 45%;
-    left: 40%;
+    left: 35%;
     transform: translate(-50%, -50%);
     width: 900px;
     z-index: 1;
@@ -226,7 +197,6 @@ a {
 .login-wrapper {
     position: relative;
     z-index: 2;
-    left: 7%;
 }
 
 .quiz-option:hover {

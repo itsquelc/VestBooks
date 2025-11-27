@@ -22,6 +22,11 @@ else
                 class="object-fit-cover rounded-5">
         </button>
         <ul class="dropdown-menu" style="position:absolute!important; margin-left: -200px!important; width:250px">
+            <li>
+                <a class="dropdown-item" asp-action="MeusFavoritos" asp-controller="Favoritos">
+                    <i class="bi bi-person-bounding-box"></i>&nbsp;&nbsp;Meus Favoritos
+                </a>
+            </li>
             @if (User.IsInRole("Administrador") || User.IsInRole("Funcionário"))
             {
                 <li>

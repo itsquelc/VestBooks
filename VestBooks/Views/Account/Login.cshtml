@@ -2,23 +2,24 @@
 @{
     Layout = null;
 }
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entrar</title>
+    <title>VestBooks - Entrar</title>
+    <link rel="shortcut icon" href="~/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+
+<body class="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100">
 
     <div class="blue-circle"></div>
-
     <img src="~/img/LIVROsemfundo.png" alt="Livro" class="book-img" />
-
     <div class="login-wrapper container">
-        <div class="row w-100 justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-lg-6">
                 <a class="navbar-brand py-2 d-block text-center" asp-action="Index" asp-controller="Home">
                     <img src="~/img/logo horizontal.png" alt="Logo" width="350">
@@ -29,16 +30,19 @@
                     </div>
                     <div class="card-body">
                         <form method="post" asp-action="Login">
+                            <div asp-validation-summary="ModelOnly" hidden></div>
                             <input type="hidden" asp-for="UrlRetorno" />
                             <div class="form-floating mb-3">
                                 <input class="form-control border border-primary border-2" asp-for="Email" />
                                 <label asp-for="Email"></label>
+                                <span asp-validation-for="Email" class="text-danger mt-1"></span>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control border border-primary border-2" asp-for="Senha"/>
+                                <input class="form-control border border-primary border-2" asp-for="Senha" />
                                 <label for="senha">Senha</label>
+                                <span asp-validation-for="Senha" class="text-danger mb-1"></span>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check my-3">
                                 <input class="form-check-input" type="checkbox" id="lembrar" name="lembrar" />
                                 <label class="form-check-label" for="lembrar">Lembrar-me</label>
                             </div>
@@ -49,14 +53,33 @@
                         </form>
                     </div>
                     <div class="card-footer text-center py-3">
-                        <div class="small">Novo por aqui? <a asp-action="Registro" asp-controller="Account">Crie sua conta!</a></div>
+                        <div class="small">Novo por aqui? <a asp-action="Registro" asp-controller="Account">Crie sua
+                                conta!</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/main.js"></script>
+    <partial name="_ValidationScriptsPartial"></partial>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+
+        let mensagemErro = '';
+        $(".validation-summary-errors ul li").each(function () {
+            mensagemErro += $(this).text() + '<br/>';
+        });
+        if (mensagemErro != '') {
+            swal.fire(
+                'Acesso Negado',
+                mensagemErro,
+                'error'
+            );
+        }
+    </script>
 </body>
+
 </html>

@@ -106,7 +106,7 @@ namespace VestBooks.Controllers;
         {
             var usuario = Activator.CreateInstance<Usuario>();
             usuario.Nome = registro.Nome;
-            usuario.DataNascimento = registro.DataNascimento;
+            //usuario.DataNascimento = registro.DataNascimento;
             usuario.UserName = registro.Email;
             usuario.NormalizedUserName = registro.Email.ToUpper();
             usuario.Email = registro.Email;
@@ -118,7 +118,7 @@ namespace VestBooks.Controllers;
             {
                 _logger.LogInformation($"Novo usuário registrado com o email {registro.Email}.");
 
-                await _userManager.AddToRoleAsync(usuario, "Cliente");
+                await _userManager.AddToRoleAsync(usuario, "Usuário");
 
                 if (registro.Foto != null)
                 {

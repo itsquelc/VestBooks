@@ -19,5 +19,7 @@ namespace VestBooks.Models;
         public DateTime? DataNascimento { get; set; }
 
         public string Foto { get; set; }
+
+        public virtual List<Favorito> Favoritos { get; set; }
         
     }

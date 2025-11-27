@@ -58,4 +58,6 @@ public class Livro
   public string Pdf { get; set; }
 
   public virtual List<FaculdadeLivro> Faculdades { get; set; }
+
+  public virtual List<Favorito> Favoritos { get; set; }
 }

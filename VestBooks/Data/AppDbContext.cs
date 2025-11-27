@@ -6,7 +6,7 @@ using VestBooks.Models;
 
 namespace VestBooks.Data;
 
-public class AppDbContext : IdentityDbContext<Usuario>
+public class AppDbContext : IdentityDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -19,6 +19,8 @@ public class AppDbContext : IdentityDbContext<Usuario>
     public DbSet<Autor> Autores { get; set; }
     public DbSet<Livro> Livros { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Favorito> Favoritos { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -72,6 +74,22 @@ public class AppDbContext : IdentityDbContext<Usuario>
                   .HasForeignKey(fl => fl.LivroId);
         });
 
+
+        // Configurar chave composta para Favoritos
+        builder.Entity<Favorito>()
+            .HasKey(f => new { f.UsuarioId, f.LivroId });
+
+        builder.Entity<Favorito>()
+            .HasOne(f => f.Usuario)
+            .WithMany(u => u.Favoritos)
+            .HasForeignKey(f => f.UsuarioId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Entity<Favorito>()
+            .HasOne(f => f.Livro)
+            .WithMany(l => l.Favoritos)
+            .HasForeignKey(f => f.LivroId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 
 }

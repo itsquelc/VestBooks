@@ -58,7 +58,7 @@
                     </li>
                     @foreach (var vestibular in vestibulares) {
                         <li class="nav-item">
-                            <a class="nav-link" asp-action="Vestibular" asp-route-id="@vestibular.Id">
+                            <a class="nav-link" asp-controller="Home" asp-action="Vestibular" asp-route-id="@vestibular.Id">
                                 <img src="@vestibular.Foto" width="50" class="ms-5 me-2">
                                 <strong>@vestibular.Nome.ToUpper()</strong>
                             </a>
