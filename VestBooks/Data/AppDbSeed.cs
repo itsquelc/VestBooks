@@ -47,173 +47,128 @@ public class AppDbSeed
             É considerado um dos maiores escritores brasileiros de todos os tempos e uma referência mundial da literatura moderna. Sua obra mais conhecida, “Grande Sertão: Veredas”, revolucionou a linguagem literária brasileira com invenções linguísticas, regionalismos e profundidade filosófica.
 
 
-            Infância e formação
-
+             Infância e Formação
             Filho de comerciante, cresceu ouvindo histórias de viajantes e sertanejos, algo que influenciou toda sua escrita.
             Desde criança lia muito e demonstrava inteligência acima da média — aos 6 anos aprendeu sozinho francês e, mais tarde, dominaria mais de 10 idiomas.
             Formou-se em Medicina em 1930, pela Universidade de Minas Gerais, e trabalhou como médico no interior mineiro, convivendo diretamente com o sertão e seus personagens reais. Essa vivência marcou profundamente sua literatura.
 
 
-            Carreira diplomática
-
+             Carreira Diplomática
             Em 1934, prestou concurso e entrou para o Itamaraty, iniciando carreira como diplomata. Serviu em países como:
-            Alemanha;
-            França;
-            Colômbia.
+            -Alemanha;
+            -França;
+            -Colômbia.
 
 
             Durante a Segunda Guerra Mundial, esteve na Alemanha nazista e ajudou judeus perseguidos — mais tarde seria reconhecido como alguém que salvou vidas, embora não oficialmente como “Justo entre as Nações”.
             Em 1967, foi eleito para a Academia Brasileira de Letras (ABL), mas faleceu três dias após tomar posse.
 
 
-            A obra literária
-
+             A Obra Literária
             Guimarães Rosa inaugurou uma nova forma de escrever no Brasil, misturando:
             neologismos (palavras inventadas)
 
-            regionalismos do sertão;
-            elementos filosóficos e metafísicos;
-            poesia na prosa;
-            profundo conhecimento da alma humana.
+            -regionalismos do sertão;
+            -elementos filosóficos e metafísicos;
+            -poesia na prosa;
+            -profundo conhecimento da alma humana.
 
 
-            Temas centrais
+             Temas Centrais
+            -Guimarães Rosa explorou:
+            -o sertão brasileiro;
+            -dilemas humanos universais;
+            -a luta entre bem e mal;
+            -amor e coragem;
+            -identidade, destino e transcendência;
+            -o poder da linguagem.
 
-            Guimarães Rosa explorou:
-            o sertão brasileiro;
-            dilemas humanos universais;
-            a luta entre bem e mal;
-            amor e coragem;
-            identidade, destino e transcendência;
-            o poder da linguagem.
 
-
-            Últimos anos e morte
+             Últimos Anos e Morte
             Em novembro de 1967, tomou posse na Academia Brasileira de Letras, realizando um sonho antigo.
             Três dias depois, morreu de infarto, aos 59 anos. Sua morte precoce deixou a literatura brasileira em luto, sem que ele tivesse concluído outros projetos e manuscritos.
 
-            Legado
+             Legado
             Guimarães Rosa é lembrado como:
-            um dos maiores escritores da língua portuguesa
-
-            inovador radical da linguagem
-
-            mestre na representação do sertão
-
-            autor universal, comparado a James Joyce, Kafka e Faulkner
+            -um dos maiores escritores da língua portuguesa
+            -inovador radical da linguagem
+            -mestre na representação do sertão
+            -autor universal, comparado a James Joyce, Kafka e Faulkner
 
             Suas obras continuam sendo estudadas e celebradas mundialmente por sua profundidade, complexidade e beleza.
             " },
 
             new Autor { AutorId = 5, Nome = "José de Alencar", Foto = "/img/autores/José de Alencar.png", Biografia =
-            @"Biografia de José de Alencar
-            José Martiniano de Alencar, conhecido como José de Alencar, nasceu em 1º de maio de 1829, em Mecejana (hoje bairro de Fortaleza), Ceará, e morreu em 12 de dezembro de 1877, no Rio de Janeiro.
+            @" José Martiniano de Alencar, conhecido como José de Alencar, nasceu em 1º de maio de 1829, em Mecejana (hoje bairro de Fortaleza), Ceará, e morreu em 12 de dezembro de 1877, no Rio de Janeiro.
             É considerado o maior romancista do Romantismo brasileiro, pai do romance indianista e um dos escritores mais influentes do século XIX.
 
-            Infância e formação
+             Infância e Formação
             Filho de uma família politicamente influente, José de Alencar mudou-se ainda jovem para o Rio de Janeiro.
             Estudou em colégios tradicionais e ingressou na Faculdade de Direito de São Paulo, onde participou de grupos literários e escreveu para jornais estudantis.
             Formou-se em 1850 e trabalhou como advogado, mas desde cedo demonstrou forte vocação para a literatura.
 
-            Carreira jornalística e literária
+             Carreira Jornalística e Literária
             Alencar começou a carreira escrevendo crônicas, críticas e folhetins para jornais importantes do Rio de Janeiro.
             Em pouco tempo chamou atenção pelo seu estilo nacionalista, elegante e voltado para a construção de uma identidade brasileira na literatura.
+           
             Ele buscou retratar:
-            a natureza
+            -a natureza
+            -os costumes do país
+            -a formação do povo brasileiro
+            -o romantismo idealizado dos indígenas
+            -dramas urbanos do século XIX
 
 
-            os costumes do país
-
-
-            a formação do povo brasileiro
-
-
-            o romantismo idealizado dos indígenas
-
-
-            dramas urbanos do século XIX
-
-
-            As fases da obra de Alencar
+             As fases da obra de Alencar
             José de Alencar produziu uma obra vasta e diversificada, dividida em três grandes grupos:
+
             1. Romances Indianistas
             Nessas obras, o indígena aparece como herói nacional e símbolo da identidade brasileira.
-            O Guarani (1857) – sua obra mais famosa
-
-            Iracema (1865) – a “virgem dos lábios de mel”, símbolo do Ceará
-
-            Ubirajara (1874)
+            -O Guarani (1857) – sua obra mais famosa
+            -Iracema (1865) – a “virgem dos lábios de mel”, símbolo do Ceará
+            -Ubirajara (1874)
 
             2. Romances Urbanos
             Mostram a sociedade carioca do século XIX e os conflitos sociais e amorosos da época.
-            Lucíola (1862)
-
-
-            Diva(1864)
-
-
-            Senhora (1875) – seu romance urbano mais célebre
-
+            -Lucíola (1862)
+            -Diva(1864)
+            -Senhora (1875) – seu romance urbano mais célebre
 
             3. Romances Regionalistas
             Retratam a vida no interior do Brasil e seus costumes.
-            O Gaúcho (1870)
-
-
-            O Tronco do Ipê (1871)
-
-
-            O Sertanejo (1875)
-
+            -O Gaúcho (1870)
+            -O Tronco do Ipê (1871)
+            -O Sertanejo (1875)
 
             Além disso, escreveu peças de teatro e discursos políticos.
 
-            Carreira política
+             Carreira política
             José de Alencar também teve trajetória importante na política. Foi:
-            Deputado geral
-
-
-            Ministro da Justiça (1868)
-
+            -Deputado geral
+            -Ministro da Justiça (1868)
 
             Era defensor do conservadorismo da época e crítico feroz do imperador Dom Pedro II, o que gerou atritos que impediram sua nomeação ao Senado vitalício.
 
-            Estilo literário
+             Estilo literário
             Alencar marcou o Romantismo brasileiro com características como:
-            forte nacionalismo
-
-
-            linguagem poética e descritiva
-
-
-            idealização do indígena
-
-
-            defesa da identidade cultural brasileira
-
-
-            crítica social nos romances urbanos
-
+            -forte nacionalismo
+            -linguagem poética e descritiva
+            -idealização do indígena
+            -defesa da identidade cultural brasileira
+            -crítica social nos romances urbanos
 
             É considerado um dos escritores que mais contribuíram para construir a literatura brasileira como algo distinto da literatura portuguesa.
 
-            Últimos anos e morte
+             Últimos Anos e Morte
             Nos anos finais, sofreu com problemas de saúde, especialmente tuberculose.
             Faleceu em 12 de dezembro de 1877, aos 48 anos, deixando uma obra vasta e fundamental.
 
-            Legado
+             Legado
             José de Alencar é lembrado como:
-            pai do romance nacional
-
-
-            criador do mito literário de Iracema
-
-
-            um dos maiores nomes do Romantismo
-
-
-            pioneiro da literatura verdadeiramente brasileira
-
+            -pai do romance nacional
+            -criador do mito literário de Iracema
+            -um dos maiores nomes do Romantismo
+            -pioneiro da literatura verdadeiramente brasileira
 
             Sua obra continua amplamente estudada nas escolas e universidades e permanece como parte central da tradição literária do país.
             " },
@@ -228,20 +183,14 @@ public class AppDbSeed
             Na juventude, mudou-se para São Paulo em busca de trabalho e melhores condições de vida. Após dificuldades, passou a viver na Favela do Canindé, às margens do Rio Tietê.
             A vida na favela e o início da escrita
             Para sustentar seus três filhos, Carolina trabalhava como catadora de papel. No pouco tempo livre que tinha, escrevia em cadernos achados no lixo, registrando:
-            sua vida na favela
-
-
-            a fome e a miséria
-
-
-            o descaso do governo
-
-
-            suas reflexões sobre dignidade, humanidade e esperança
-
-
+            -sua vida na favela
+            -a fome e a miséria
+            -o descaso do governo
+            
+            Suas Reflexões Sobre Dignidade, Humanidade e Esperança
             Seus textos misturavam relato, poesia e crítica social.
-            Descoberta e fama literária
+
+             0Descoberta e fama literária
             Em 1958, o jornalista Audálio Dantas conheceu Carolina ao vê-la escrevendo durante um conflito na favela. Impressionado com sua força literária, começou a divulgar seus textos.
             Em 1960, foi lançado o livro “Quarto de Despejo: Diário de uma Favelada”, que se tornou um enorme sucesso. A obra foi traduzida para mais de 14 idiomas e publicada em mais de 40 países.
             Por que o livro é tão importante?
