@@ -69,9 +69,15 @@
                         <span>Autores</span>
                     </a>
                 </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Perguntas" class='nav-link @activeMenu("Perguntas")'>
+                        <i class="bi bi-question-circle me-2"></i>
+                        <span>Perguntas</span>
+                    </a>
+                </li>
                 <li><hr class="my-2"></li>
                 <li>
-                    <a href="#" class="nav-link">
+                    <a asp-action="Index" asp-controller="Usuarios" class='nav-link @activeMenu("Usuários")'>
                         <i class="bi bi-person-circle me-2"></i>
                         <span>Usuários</span>
                     </a>

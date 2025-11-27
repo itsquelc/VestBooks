@@ -18,14 +18,19 @@ builder.Services.AddDbContext<AppDbContext>(
 );
 
 // configuração do serviço de identidade de usuarios
-builder.Services.AddIdentity<Usuario, IdentityRole>(
-    Options => Options.SignIn.RequireConfirmedEmail = false
+builder.Services.AddIdentity<Usuario, IdentityRole>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false;
+    options.SignIn.RequireConfirmedEmail = false;
+    options.User.RequireUniqueEmail = true;
+}
 ).AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope()) {
+using (var scope = app.Services.CreateScope())
+{
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     await dbContext.Database.EnsureCreatedAsync();
 }

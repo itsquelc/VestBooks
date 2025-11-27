@@ -77,7 +77,6 @@ a {
 .rowLivro-inner {
     display: flex;
     gap: 20px;
-    padding: 0 20px; /* Padding apenas no container interno */
     justify-content: center;
     min-width: min-content;
 }

@@ -1,0 +1,220 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Editar Usuário";
+    ViewData["Menu"] = "Usuários";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>@ViewData["Title"]</h1>
+    <a asp-action="Index" class="btn btn-outline-secondary">
+        <i class="fas fa-arrow-left"></i> Voltar para Lista
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Edite os dados do usuário</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" method="post" enctype="multipart/form-data" id="editForm">
+                    <input type="hidden" asp-for="Id" />
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Nome" class="form-label"></label>
+                                <input asp-for="Nome" class="form-control" placeholder="Digite o nome completo" />
+                                <span asp-validation-for="Nome" class="text-danger small"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="DataNascimento" class="form-label"></label>
+                                <input asp-for="DataNascimento" type="date" class="form-control" />
+                                <span asp-validation-for="DataNascimento" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label"></label>
+                                <input asp-for="Email" class="form-control" placeholder="Digite o email" />
+                                <span asp-validation-for="Email" class="text-danger small"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="PhoneNumber" class="form-label">Telefone</label>
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="(00) 00000-0000" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Foto do Usuário</label>
+                        <input type="file" name="foto" class="form-control" accept="image/*" id="fotoInput" />
+                        <div class="form-text">Deixe em branco para manter a foto atual.</div>
+                    </div>
+
+                    <!-- Preview da imagem atual -->
+                    @if (!string.IsNullOrEmpty(Model.Foto))
+                    {
+                        <div class="mb-3">
+                            <label class="form-label">Foto Atual:</label>
+                            <div class="border rounded p-3 text-center">
+                                <img src="@Model.Foto" class="img-fluid rounded" style="max-height: 200px;" alt="Foto atual"
+                                    id="fotoAtual" />
+                                <div class="mt-2">
+                                    <small class="text-muted">Esta é a foto atual do usuário</small>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- Preview da nova imagem -->
+                    <div class="mb-3" id="imagePreviewContainer" style="display: none;">
+                        <label class="form-label">Pré-visualização da Nova Imagem:</label>
+                        <div class="border rounded p-3 text-center">
+                            <img id="imagePreview" class="img-fluid rounded" style="max-height: 200px;" />
+                            <div class="mt-2">
+                                <button type="button" class="btn btn-sm btn-outline-danger" onclick="clearImage()">
+                                    <i class="fas fa-times"></i> Remover Nova Imagem
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Perfis do Usuário</label>
+                        <div class="border rounded p-3">
+                            @if (ViewBag.Roles != null)
+                            {
+                                foreach (var role in ViewBag.Roles)
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedRoles" value="@role.Name"
+                                            id="role_@role.Name" @(ViewBag.UserRoles != null &&
+                                                                                                     ((List<string>)ViewBag.UserRoles).Contains(role.Name) ? "checked" : "")>
+                                        <label class="form-check-label" for="role_@role.Name">
+                                            @role.Name
+                                        </label>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p class="text-muted">Nenhum perfil disponível</p>
+                            }
+                        </div>
+                        <div class="form-text">Selecione os perfis que este usuário terá no sistema.</div>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-warning me-md-2">
+                                <i class="fas fa-save"></i> Atualizar Usuário
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancelar
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Preview da imagem selecionada
+        document.getElementById('fotoInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            const previewContainer = document.getElementById('imagePreviewContainer');
+            const preview = document.getElementById('imagePreview');
+
+            if (file) {
+                // Validar tamanho do arquivo (5MB)
+                const fileSize = file.size / 1024 / 1024;
+                if (fileSize > 5) {
+                    alert('O arquivo é muito grande. Tamanho máximo permitido: 5MB');
+                    e.target.value = '';
+                    previewContainer.style.display = 'none';
+                    return;
+                }
+
+                // Validar tipo do arquivo
+                const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
+                if (!validTypes.includes(file.type)) {
+                    alert('Tipo de arquivo não suportado. Use apenas imagens JPG, PNG ou GIF.');
+                    e.target.value = '';
+                    previewContainer.style.display = 'none';
+                    return;
+                }
+
+                // Mostrar preview e esconder foto atual
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    previewContainer.style.display = 'block';
+
+                    // Esconder foto atual quando nova imagem for selecionada
+                    const fotoAtual = document.getElementById('fotoAtual');
+                    if (fotoAtual) {
+                        fotoAtual.parentElement.style.display = 'none';
+                    }
+                }
+                reader.readAsDataURL(file);
+            } else {
+                previewContainer.style.display = 'none';
+
+                // Mostrar foto atual novamente se existir
+                const fotoAtual = document.getElementById('fotoAtual');
+                if (fotoAtual) {
+                    fotoAtual.parentElement.style.display = 'block';
+                }
+            }
+        });
+
+        // Limpar imagem selecionada
+        function clearImage() {
+            document.getElementById('fotoInput').value = '';
+            document.getElementById('imagePreviewContainer').style.display = 'none';
+
+            // Mostrar foto atual novamente se existir
+            const fotoAtual = document.getElementById('fotoAtual');
+            if (fotoAtual) {
+                fotoAtual.parentElement.style.display = 'block';
+            }
+        }
+
+        // Validação do formulário antes do envio
+        document.getElementById('editForm').addEventListener('submit', function (e) {
+            const nome = document.getElementById('Nome').value.trim();
+            const email = document.getElementById('Email').value.trim();
+
+            if (!nome) {
+                e.preventDefault();
+                alert('Por favor, preencha o nome do usuário.');
+                return;
+            }
+
+            if (!email) {
+                e.preventDefault();
+                alert('Por favor, preencha o email do usuário.');
+                return;
+            }
+        });
+    </script>
+}

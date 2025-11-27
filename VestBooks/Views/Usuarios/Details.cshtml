@@ -1,0 +1,105 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Detalhes do Usuário";
+    ViewData["Menu"] = "Usuários";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>@ViewData["Title"]</h1>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+        <a asp-action="ResetPassword" asp-route-id="@Model.Id" class="btn btn-info">Resetar Senha</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Excluir</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @if (!string.IsNullOrEmpty(Model.Foto))
+        {
+            <img src="@Model.Foto" class="img-fluid rounded shadow" alt="@Model.Nome">
+        }
+        else
+        {
+            <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 300px;">
+                <i class="fas fa-user fa-5x text-muted"></i>
+            </div>
+        }
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">@Model.Nome</h3>
+                <hr>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td class="fw-bold" style="width: 140px;">ID:</td>
+                                <td>@Model.Id</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Nome:</td>
+                                <td>@Model.Nome</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Email:</td>
+                                <td>@Model.Email</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Telefone:</td>
+                                <td>@(string.IsNullOrEmpty(Model.PhoneNumber) ? "Não informado" : Model.PhoneNumber)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td class="fw-bold" style="width: 160px;">Data Nasc.:</td>
+                                <td>
+                                    @if (Model.DataNascimento.HasValue)
+                                    {
+                                        @Model.DataNascimento.Value.ToString("dd/MM/yyyy")
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">Não informada</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Email Confirmado:</td>
+                                <td>
+                                    @if (Model.EmailConfirmed)
+                                    {
+                                        <span class="badge bg-success">Sim</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning">Não</span>
+                                    }
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                @if (ViewBag.UserRoles != null && ((IEnumerable<string>)ViewBag.UserRoles).Any())
+                {
+                    <div class="mt-3">
+                        <h5>Permissões:</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            @foreach (var role in ViewBag.UserRoles)
+                            {
+                                <span class="badge bg-primary fs-6">@role</span>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
