@@ -847,7 +847,7 @@ public class AppDbSeed
       Flor, Vadinho e Teodoro, passam a ter um matrimônio juntos ao mesmo tempo, Vadinho sempre pelado, invisível para todos, menos para Flor que se sente confusa, porém Vadinho diz que não tem porque são colegas casados perante ao juiz e ao padre.
     	Flor até faz uma encomenda de um trabalho para enviar Vadinho de novo ao além, durante esse tempo Vadinho vai manipulando os jogos de mesa, ajudando amigos. Dona Flor acaba aceitando Vadinho e passam a viver em harmonia os três.	
       Vadinho consegue o milagre de expulsar sua sogra quando ela aparece de mala para morar com eles, ele começa a desaparecer e Flor percebe que era por culpa do feitiço que foi encomendado. Há um confronto entre diversos orixás contra Exu que
-      defende Vadinho, porém quando Exu começa a perder, o amor e a inteligência de Vadinho vencem a batalha.Com isso Dona Flor e seus dois maridos andam felizes nas ruas de Salvador." };
+      defende Vadinho, porém quando Exu começa a perder, o amor e a inteligência de Vadinho vencem a batalha.Com isso Dona Flor e seus dois maridos andam felizes nas ruas de Salvador." },
 
     new Livro { 
       LivroId = 2, 
@@ -872,7 +872,7 @@ public class AppDbSeed
     Eles são grandes amigos do casal Escobar e Sancha, que têm uma filha, cujo nome também é Capitolina, em homenagem à esposa de Bentinho. Para diferenciar uma da outra, a menina é chamada, carinhosamente, de Capituzinha. Quando, finalmente, Capitu fica grávida e nasce o filho de Bentinho, eles retribuem a homenagem e batizam o menino com o nome de Ezequiel.
     Agora parece que Bentinho e Capitu vão ser felizes para sempre, mas, então, Escobar morre afogado. Durante o velório do amigo, o sofrimento de Capitu faz com que Bentinho, pela primeira vez, desconfie que a esposa tinha um caso com seu amigo Escobar. A partir daí, a vida do casal se torna um inferno, pois a desconfiança de Bentinho acaba com qualquer chance de felicidade.
     O ciumento Bentinho logo começa a perceber que seu filho Ezequiel se parece bastante com o falecido Escobar. Então, adquire a certeza de que o menino não é seu filho, mas do defunto. E seu desespero é tão grande que, em uma ocasião, ele está prestes a se matar com um café envenenado, quando o filho entra em seu gabinete:
-    No entanto, o narrador acaba desistindo do suicídio e do assassinato. Por fim, decide falar abertamente com a esposa. Diante das acusações, ela nega. Entretanto, não há mais como salvar aquele casamento. Assim, Bentinho resolve mandar Capitu e Ezequiel para a Europa, de forma a manter as aparências." };
+    No entanto, o narrador acaba desistindo do suicídio e do assassinato. Por fim, decide falar abertamente com a esposa. Diante das acusações, ela nega. Entretanto, não há mais como salvar aquele casamento. Assim, Bentinho resolve mandar Capitu e Ezequiel para a Europa, de forma a manter as aparências." },
 
     new Livro { 
       LivroId = 3, 
@@ -894,7 +894,7 @@ public class AppDbSeed
     A rotina do grupo era andar pela cidade pedindo dinheiro ou roubando algo para comerem. Visto que furtavam cotidianamente, eles aterrorizaram grande parte da população. Assim, eram procurados pela polícia, mas pela idade não podiam ser presos.
     Quando capturados, seriam enviados para o reformatório, um local fechado para menores infratores. No entanto, eles preferiam viver nas ruas e serem livres.
     Dora e Pedro foram pegos quando roubavam uma mansão e foram enviados para o reformatório. Dora fica doente e acaba morrendo.
-    Num dos momentos da trama, a cidade de Salvador foi assolada pela varíola. Um dos membros do grupo não sobreviveu: Almiro. Por fim, alguns são capturados, outros mortos. Na última parte do livro, o autor apresenta o destino de cada um deles."  };
+    Num dos momentos da trama, a cidade de Salvador foi assolada pela varíola. Um dos membros do grupo não sobreviveu: Almiro. Por fim, alguns são capturados, outros mortos. Na última parte do livro, o autor apresenta o destino de cada um deles."  },
 
     new Livro { 
       LivroId = 4, 
@@ -1109,7 +1109,7 @@ public class AppDbSeed
     No calor ela se ilumina lentamente
     Profundamente como um broto e como um fruto
 
-    Nele a noite floresce o dia amadurece." };
+    Nele a noite floresce o dia amadurece." },
 
     new Livro { 
       LivroId = 5, 
@@ -1133,8 +1133,8 @@ public class AppDbSeed
     O desejo que Riobaldo sente por Diadorim permanece apenas no campo platônico, pois é impossível de se realizar em um meio violento e machista como o dos jagunços. Aliás, Diadorim só é respeitado porque todos acreditam que ela é um homem. Para fugir do desejo que sente, Riobaldo ocupa sua mente com Nhorinhá e Otacília.
     Assim, quando Riobaldo se relaciona sexualmente com a prostituta Nhorinhá, Diadorim sente ciúmes, mas não pode ainda revelar seu segredo. Isso, no entanto, não elimina o forte desejo que Riobaldo sente pelo amigo. Nem Otacília, com quem o jagunço pretendia se casar, tem o poder de desfazer o amor entre os dois amigos.
     Além das interdições morais em torno de sua sexualidade, o narrador precisa conviver com outro conflito, também de caráter universal: a luta entre o bem e o mal. Afinal, Riobaldo acreditava ter feito um pacto com o diabo para fechar o corpo e, assim, se proteger das balas de seus inimigos. O protagonista também revela que conheceu Diadorim quando ainda eram crianças.
-    Diadorim, desde criança, se vestia de homem e já se chamava Reinaldo. Aliás, só a Riobaldo era permitido chamar Reinaldo de Diadorim, na intimidade entre os dois. Mas essa história de amor impossível entre os dois amigos acaba em tragédia, pois Diadorim morre em seu embate final contra Hermógenes. Riobaldo então descobre que o nome verdadeiro de Diadorim é Maria Deodorina da Fé Bettancourt Marins." };
-*
+    Diadorim, desde criança, se vestia de homem e já se chamava Reinaldo. Aliás, só a Riobaldo era permitido chamar Reinaldo de Diadorim, na intimidade entre os dois. Mas essa história de amor impossível entre os dois amigos acaba em tragédia, pois Diadorim morre em seu embate final contra Hermógenes. Riobaldo então descobre que o nome verdadeiro de Diadorim é Maria Deodorina da Fé Bettancourt Marins." },
+
     new Livro { 
       LivroId = 6, 
       Nome = "Gabriela Cravo e Canela", 
@@ -1157,8 +1157,8 @@ public class AppDbSeed
     Nacib, que é um homem progressista, se aproxima dos modernistas. Ele também se torna amigo de Mundinho Falcão, um exportador de cacau que representa o novo poder econômico da cidade.
     Mundinho Falcão se apaixona por Gabriela, e tenta conquistá-la. Gabriela, porém, permanece fiel a Nacib.
     A disputa entre Nacib e Mundinho Falcão por Gabriela reflete as transformações que estão ocorrendo na sociedade de Ilhéus. A cidade está se modernizando, e os velhos valores estão sendo questionados.
-    No final do romance, Nacib e Gabriela se casam. Eles representam a vitória do amor e da liberdade sobre as forças do tradicionalismo." };
-*
+    No final do romance, Nacib e Gabriela se casam. Eles representam a vitória do amor e da liberdade sobre as forças do tradicionalismo." },
+
     new Livro { 
       LivroId = 7, 
       Nome = "Iracema", 
