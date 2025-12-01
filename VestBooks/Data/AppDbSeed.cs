@@ -42,61 +42,245 @@ public class AppDbSeed
         List<Autor> autores = new()
         {
             new Autor { AutorId = 1, Nome = "Jorge Amado", Foto = "/img/autores/Jorge Amado.png", Biografia =
-            @""  },
-            new Autor { AutorId = 2, Nome = "Machado de Assis", Foto = "/img/autores/Machado de Assis.png"},
-            new Autor { AutorId = 3, Nome = "Manuel Bandeira", Foto = "/img/autores/Manuel Bandeira.png" },
+            @"Jorge Leal Amado de Faria, conhecido como Jorge Amado, nasceu em 10 de agosto de 1912, na antiga fazenda Auricídia, em Itabuna, mas cresceu em Ilhéus, na Bahia. Faleceu em 6 de agosto de 2001, em Salvador.
+            É um dos escritores brasileiros mais lidos no mundo, com obras traduzidas para mais de 50 idiomas. Seu estilo combina realismo, crítica social, humor, sensualidade, cultura popular e fortes elementos da Bahia, especialmente do candomblé e da miscigenação brasileira.
+
+            Infância e juventude:
+            Jorge Amado cresceu em meio às plantações de cacau do sul da Bahia. Essa região — marcada por coronéis, disputas de terra, tradições populares e injustiças sociais — se tornaria cenário de muitos de seus romances.
+            Começou a escrever ainda adolescente e, aos 19 anos, publicou seu primeiro livro.
+            Cursou Direito no Rio de Janeiro, embora nunca tenha exercido a profissão.
+
+            Carreira literária:
+            Jorge Amado foi um dos escritores mais importantes da fase social do Modernismo (década de 1930).
+            Sua obra é marcada por:
+           
+            - defesa dos pobres, trabalhadores e marginalizados
+
+            - crítica à injustiça social
+
+            - personagens carismáticos e populares
+
+            - forte presença da cultura baiana
+
+            - erotismo leve e humor
+
+            Atuação política:
+            Jorge Amado teve intensa atividade política, ele foi membro do Partido Comunista Brasileiro (PCB), deputado federal (1945–1947), Defendeu leis em prol da liberdade religiosa, resultando na legalização dos cultos afro-brasileiros, criou o primeiro projeto de proteção aos direitos autorais e com a perseguição política após 1947, viveu exilado na França e na Tchecoslováquia.
+
+            Vida pessoal e candomblé:
+            Foi casado com a escritora Zélia Gattai, com quem viveu por 56 anos.
+            Era também adepto e defensor das religiões afro-brasileiras e filho de santo no candomblé da Casa do Gantois.
+            Esse universo espiritual está fortemente presente em sua obra.
+
+            Reconhecimento e prêmios:
+            Foi membro da Academia Brasileira de Letras (ABL), ocupando a cadeira 23.
+            É o escritor brasileiro contemporâneo mais adaptado para cinema e televisão.
+            Recebeu dezenas de prêmios no Brasil e no exterior e tornou-se um símbolo da cultura baiana.
+
+            Morte e legado:
+            Faleceu em Salvador, em 2001, aos 88 anos.
+            Seu legado permanece vivo por meio de sua obra, que retrata
+            - a alma do povo baiano
+
+            - as desigualdades brasileiras
+
+            - a força da cultura popular
+
+            - personagens inesquecíveis como Gabriela, Pedro Bala, Vadinho, Dona Flor e Tieta
+
+
+            É considerado um dos maiores romancistas do Brasil e um dos mais conhecidos internacionalmente.
+            "  },
+
+            new Autor { AutorId = 2, Nome = "Machado de Assis", Foto = "/img/autores/Machado de Assis.png", Biografia = @"
+            Joaquim Maria Machado de Assis nasceu em 21 de junho de 1839, no Rio de Janeiro, e morreu em 29 de setembro de 1908 na mesma cidade.
+            É amplamente considerado o maior escritor brasileiro de todos os tempos e um dos maiores da literatura mundial.
+            Foi romancista, contista, cronista, poeta, dramaturgo e crítico literário.
+            Fundou e presidiu a Academia Brasileira de Letras (ABL).
+
+            Origem e infância:
+            Machado nasceu no Morro do Livramento, em uma família pobre.
+            Seu pai era pintor de paredes e sua mãe, lavadeira; Ficou órfão cedo e teve pouca educação formal.
+            A convivência com professores, padres e intelectuais que conheceu ainda jovem o levou à leitura e ao aprendizado autodidata.
+            Era gago, epilético e introvertido — condições que influenciaram sua sensibilidade literária.
+
+            Juventude e início da carreira:
+            Começou a trabalhar cedo como,
+            - aprendiz de tipógrafo
+
+            - funcionário da Imprensa Nacional
+
+            - revisor de textos
+
+            A convivência com jornais e escritores foi essencial para sua formação.
+            
+            Iniciou a carreira literária com, 
+            - poemas
+
+            - crônicas
+
+            - peças de teatro
+
+            - contos
+
+            E logo passou a colaborar com revistas e jornais.
+
+            Carreira literária:
+            A obra de Machado é dividida em duas fases
+
+            1) Fase romântica (antes de 1880)
+            Marca: influência do romantismo, histórias mais sentimentais e convencionais.
+            2) Fase realista (a partir de 1881)
+            É sua fase mais importante e original.
+            Começa com Memórias Póstumas de Brás Cubas (1881), marco do Realismo brasileiro.
+            
+            Nessa fase, explora profundamente:
+            - a psicologia humana
+
+            - a ironia
+
+            - o pessimismo filosófico
+
+            - a crítica à sociedade
+
+            - o olhar sobre o egoísmo e a hipocrisia social
+
+            Estilo literário:
+            Machado criou um estilo único, marcante por,
+            - ironia fina e mordaz
+
+            - narradores pouco confiáveis
+
+            - diálogo direto com o leitor
+
+            - crítica social aprofundada
+
+            - psicologia dos personagens
+
+            - pessimismo filosófico (“humanitismo”, “bentinho ciumento”, etc.)
+
+            - narrativas inventivas e modernas, antecipando técnicas do século XX
+
+            Vida pessoal:
+            Em 1869, casou-se com Carolina Augusta Xavier de Novais, que foi sua grande parceira intelectual.
+            O casal não teve filhos.
+            A morte de Carolina, em 1880, foi um dos golpes mais duros da vida de Machado.
+            Apesar de ser negro ou pardo (segundo a maior parte dos estudiosos), viveu em uma sociedade extremamente racista, mas conquistou posição central na elite literária de seu tempo.
+
+            Academia Brasileira de Letras:
+            Machado fundou a ABL em 1897 e foi seu primeiro presidente.
+            Permaneceu no cargo até sua morte, tornando-se símbolo máximo da instituição.
+
+            Últimos anos e morte:
+            Nos últimos anos, mesmo com problemas de saúde, continuou escrevendo.
+            Morreu em 29 de setembro de 1908, aos 69 anos.
+
+            Legado:
+            Machado de Assis é considerado o maior escritor brasileiro de todos os tempos, um dos maiores da literatura universal, pioneiro do Realismo psicológico, referência mundial em contos e romances
+
+            Sua obra permanece atual, estudada em universidades do mundo inteiro, e figura nos principais vestibulares.
+            "},
+
+            new Autor { AutorId = 3, Nome = "Manuel Bandeira", Foto = "/img/autores/Manuel Bandeira.png", Biografia = @"
+            Manuel Carneiro de Sousa Bandeira Filho nasceu em 19 de abril de 1886, em Recife (PE), e morreu em 13 de outubro de 1968, no Rio de Janeiro (RJ).
+            É um dos maiores poetas brasileiros, integrante fundamental do Modernismo, especialmente da chamada Geração de 1930. Sua poesia é marcada pela simplicidade aparente, pela emoção profunda e pela reflexão sobre a vida, a morte e o cotidiano.
+
+            Infância e formação:
+            Filho de um engenheiro e de uma dona de casa, cresceu em um ambiente culturalmente rico. Em 1890, a família mudou-se para o Rio de Janeiro, onde Bandeira passou a maior parte de sua vida.
+            Fez o curso secundário no Colégio Pedro II e iniciou estudos de arquitetura na Escola Nacional de Belas Artes.
+            Porém, em 1904, aos 18 anos, foi diagnosticado com tuberculose, doença que interrompeu seus planos e marcaria profundamente sua obra.
+
+            A tuberculose e sua influência literária:
+            A doença o obrigou a longos períodos de isolamento e repouso, inclusive temporadas em Campos do Jordão e na Suíça.
+            A consciência da fragilidade da vida, a proximidade constante com a morte e o sentimento de não pertencimento aparecem fortemente em seus poemas.
+            Essa condição acaba gerando um dos elementos mais famosos de sua trajetória: a ideia de poeta do sofrimento e da transcendência.
+
+            Carreira literária:
+            Manuel Bandeira publicou seu primeiro livro, A Cinza das Horas (1917), ainda com forte influência simbolista e parnasiana.
+            Sua verdadeira mudança estilística acontece com a chegada do Modernismo, especialmente após a Semana de Arte Moderna de 1922, da qual não participou presencialmente, mas teve poemas lidos e aclamados.
+            A partir daí, sua poesia ganha
+            - linguagem simples e coloquial
+
+            - humor e ironia suave
+
+            - imagens do cotidiano
+
+            - temas existenciais
+
+            - musicalidade leve
+
+            - liberdade formal
+
+            Vida profissional:
+            Além de poeta foi professor universitário, crítico literário, tradutor de Shakespeare, Molière e outros, membro da Academia Brasileira de Letras, eleito em 1940, trabalhou no Serviço do Patrimônio Histórico e Artístico Nacional (SPHAN)
+
+            Últimos anos e morte:
+            Mesmo com a saúde frágil por toda a vida, viveu até os 82 anos.
+            Morreu no Rio de Janeiro, em 1968.
+
+            Legado
+            Manuel Bandeira é considerado um dos maiores poetas do Modernismo brasileiro, mestre da poesia simples, musical e profunda, autor de alta sensibilidade estética e emocional, influência decisiva para gerações posteriores, presença constante em vestibulares e currículos escolares
+
+            Sua poesia concilia dor, humor e leveza como poucos na literatura brasileira.
+            " },
 
             new Autor { AutorId = 4, Nome = "João Guimarães Rosa", Foto = "/img/autores/João Guimarães Rosa.png", Biografia =
             @"João Guimarães Rosa nasceu em 27 de junho de 1908, em Cordisburgo, Minas Gerais, e morreu em 19 de novembro de 1967, no Rio de Janeiro.
             É considerado um dos maiores escritores brasileiros de todos os tempos e uma referência mundial da literatura moderna. Sua obra mais conhecida, “Grande Sertão: Veredas”, revolucionou a linguagem literária brasileira com invenções linguísticas, regionalismos e profundidade filosófica.
 
-
-             Infância e Formação
+             Infância e Formação:
             Filho de comerciante, cresceu ouvindo histórias de viajantes e sertanejos, algo que influenciou toda sua escrita.
             Desde criança lia muito e demonstrava inteligência acima da média — aos 6 anos aprendeu sozinho francês e, mais tarde, dominaria mais de 10 idiomas.
             Formou-se em Medicina em 1930, pela Universidade de Minas Gerais, e trabalhou como médico no interior mineiro, convivendo diretamente com o sertão e seus personagens reais. Essa vivência marcou profundamente sua literatura.
 
 
-             Carreira Diplomática
-            Em 1934, prestou concurso e entrou para o Itamaraty, iniciando carreira como diplomata. Serviu em países como:
+             Carreira Diplomática:
+            Em 1934, prestou concurso e entrou para o Itamaraty, iniciando carreira como diplomata. Serviu em países como,
             -Alemanha;
             -França;
             -Colômbia.
 
-
             Durante a Segunda Guerra Mundial, esteve na Alemanha nazista e ajudou judeus perseguidos — mais tarde seria reconhecido como alguém que salvou vidas, embora não oficialmente como “Justo entre as Nações”.
             Em 1967, foi eleito para a Academia Brasileira de Letras (ABL), mas faleceu três dias após tomar posse.
 
-
-             A Obra Literária
-            Guimarães Rosa inaugurou uma nova forma de escrever no Brasil, misturando:
-            neologismos (palavras inventadas)
+             A Obra Literária:
+            Guimarães Rosa inaugurou uma nova forma de escrever no Brasil, misturando,
+            - neologismos (palavras inventadas);
 
             -regionalismos do sertão;
+
             -elementos filosóficos e metafísicos;
+
             -poesia na prosa;
+
             -profundo conhecimento da alma humana.
 
 
-             Temas Centrais
-            -Guimarães Rosa explorou:
+             Temas Centrais:
             -o sertão brasileiro;
+
             -dilemas humanos universais;
+
             -a luta entre bem e mal;
+
             -amor e coragem;
+
             -identidade, destino e transcendência;
+
             -o poder da linguagem.
 
 
-             Últimos Anos e Morte
+             Últimos Anos e Morte:
             Em novembro de 1967, tomou posse na Academia Brasileira de Letras, realizando um sonho antigo.
             Três dias depois, morreu de infarto, aos 59 anos. Sua morte precoce deixou a literatura brasileira em luto, sem que ele tivesse concluído outros projetos e manuscritos.
 
-             Legado
-            Guimarães Rosa é lembrado como:
+             Legado:
             -um dos maiores escritores da língua portuguesa
+
             -inovador radical da linguagem
+
             -mestre na representação do sertão
+
             -autor universal, comparado a James Joyce, Kafka e Faulkner
 
             Suas obras continuam sendo estudadas e celebradas mundialmente por sua profundidade, complexidade e beleza.
@@ -106,25 +290,29 @@ public class AppDbSeed
             @" José Martiniano de Alencar, conhecido como José de Alencar, nasceu em 1º de maio de 1829, em Mecejana (hoje bairro de Fortaleza), Ceará, e morreu em 12 de dezembro de 1877, no Rio de Janeiro.
             É considerado o maior romancista do Romantismo brasileiro, pai do romance indianista e um dos escritores mais influentes do século XIX.
 
-             Infância e Formação
+             Infância e Formação:
             Filho de uma família politicamente influente, José de Alencar mudou-se ainda jovem para o Rio de Janeiro.
             Estudou em colégios tradicionais e ingressou na Faculdade de Direito de São Paulo, onde participou de grupos literários e escreveu para jornais estudantis.
             Formou-se em 1850 e trabalhou como advogado, mas desde cedo demonstrou forte vocação para a literatura.
 
-             Carreira Jornalística e Literária
+             Carreira Jornalística e Literária:
             Alencar começou a carreira escrevendo crônicas, críticas e folhetins para jornais importantes do Rio de Janeiro.
             Em pouco tempo chamou atenção pelo seu estilo nacionalista, elegante e voltado para a construção de uma identidade brasileira na literatura.
            
             Ele buscou retratar:
             -a natureza
+
             -os costumes do país
+
             -a formação do povo brasileiro
+
             -o romantismo idealizado dos indígenas
+
             -dramas urbanos do século XIX
 
 
-             As fases da obra de Alencar
-            José de Alencar produziu uma obra vasta e diversificada, dividida em três grandes grupos:
+             As fases da obra de Alencar:
+            José de Alencar produziu uma obra vasta e diversificada, dividida em três grandes grupos
 
             1. Romances Indianistas
             Nessas obras, o indígena aparece como herói nacional e símbolo da identidade brasileira.
@@ -146,43 +334,134 @@ public class AppDbSeed
 
             Além disso, escreveu peças de teatro e discursos políticos.
 
-             Carreira política
-            José de Alencar também teve trajetória importante na política. Foi:
+             Carreira política:
+            José de Alencar também teve trajetória importante na política. Foi,
             -Deputado geral
             -Ministro da Justiça (1868)
 
             Era defensor do conservadorismo da época e crítico feroz do imperador Dom Pedro II, o que gerou atritos que impediram sua nomeação ao Senado vitalício.
 
-             Estilo literário
-            Alencar marcou o Romantismo brasileiro com características como:
+             Estilo literário:
+            Alencar marcou o Romantismo brasileiro com características como,
             -forte nacionalismo
+
             -linguagem poética e descritiva
+
             -idealização do indígena
+
             -defesa da identidade cultural brasileira
+
             -crítica social nos romances urbanos
 
             É considerado um dos escritores que mais contribuíram para construir a literatura brasileira como algo distinto da literatura portuguesa.
 
-             Últimos Anos e Morte
+             Últimos Anos e Morte:
             Nos anos finais, sofreu com problemas de saúde, especialmente tuberculose.
             Faleceu em 12 de dezembro de 1877, aos 48 anos, deixando uma obra vasta e fundamental.
 
              Legado
-            José de Alencar é lembrado como:
             -pai do romance nacional
+
             -criador do mito literário de Iracema
+
             -um dos maiores nomes do Romantismo
+
             -pioneiro da literatura verdadeiramente brasileira
 
             Sua obra continua amplamente estudada nas escolas e universidades e permanece como parte central da tradição literária do país.
             " },
 
-            new Autor { AutorId = 6, Nome = "Luis de Camões", Foto = "/img/autores/Luis de Camões.png" },
+            new Autor { AutorId = 6, Nome = "Luis de Camões", Foto = "/img/autores/Luis de Camões.png", Biografia = @"
+            Luís Vaz de Camões nasceu provavelmente em 1524, em Lisboa (embora algumas fontes mencionem Coimbra), e morreu em 10 de junho de 1580, também em Lisboa.
+            É considerado o maior poeta da língua portuguesa e um dos maiores da literatura mundial.
+            Sua obra-prima, “Os Lusíadas”, é o grande épico nacional de Portugal e celebra as navegações portuguesas, especialmente a viagem de Vasco da Gama à Índia.
+
+            Infância e formação:
+            Pouco se sabe com precisão sobre sua infância.
+            Camões nasceu em uma família nobre, embora não muito rica.
+            Estudou letras, latim, história e filosofia, provavelmente no Mosteiro de Santa Cruz de Coimbra, o que explica sua vasta cultura clássica.
+            
+            Ainda jovem começou a escrever poesia lírica, influenciado por,
+            - Petrarca
+
+            - Dante
+
+            - os clássicos greco-romanos
+
+            Juventude e vida militar:
+            Camões teve uma vida agitada. Foi soldado do rei e participou de diversas campanhas militares.
+            Serviu no norte da África e, em uma batalha em Ceuta, perdeu o olho direito, o que lhe rendeu o apelido de “o Cisne de um só olho”.
+            Sua vida turbulenta incluiu: duelos, brigas, dificuldades financeiras, prisão por ferir um funcionário da corte e mesmo com esses conflitos, nunca deixou de escrever.
+
+            Viagem ao Oriente:
+            Em 1553, Camões embarcou para a Índia como militar.
+            Viajou por Goa, Macau e Moçambique.
+
+            E viveu por 17 anos no Oriente, passando por naufrágios, doenças e pobreza.
+            
+            Segundo relatos, durante um naufrágio próximo ao Camboja, Camões teria salvo o manuscrito de “Os Lusíadas” nadando com o livro acima da água.
+
+            “Os Lusíadas”
+            Publicado em 1572, é o grande poema épico da língua portuguesa, composto por 10 cantos em oitavas rimadas.
+            A obra exalta:
+            - as Grandes Navegações
+
+            - o heroísmo português
+
+            - a história de Portugal
+
+            - mitologia greco-romana
+
+            - críticas sociais e políticas disfarçadas
+
+            Tem como eixo central a viagem de Vasco da Gama à Índia (1498).
+            O poema combina história, ficção, mito e filosofia, e garantiu a Camões um lugar permanente na literatura mundial.
+
+            Poesia lírica:
+            Além do épico, Camões escreveu um vasto conjunto de poemas líricos, entre eles,
+            - sonetos
+
+            - canções
+
+            - odas
+
+            - redondilhas
+
+            Seus sonetos são considerados algumas das obras-primas da lírica ocidental, abordando temas com,
+            - amor idealizado
+
+            - saudade
+
+            - sofrimento
+
+            - tempo e morte
+
+            - desilusão com o mundo
+
+            Últimos anos:
+            Ao voltar a Portugal, Camões encontrou o país empobrecido e mergulhado em crise.
+            Recebeu uma pequena pensão do rei, insuficiente para viver bem.
+            Passou seus últimos anos em dificuldades financeiras e saúde frágil.
+            Morreu em 10 de junho de 1580, ano em que Portugal perdeu sua independência para a Espanha — fato que ele lamentou antes de morrer:
+            “Morro com a Pátria.”
+
+            Legado:
+            - o maior poeta da língua portuguesa
+
+            - símbolo da literatura lusófona
+
+            - referência mundial em poesia épica e lírica
+
+            - autor estudado em todo o mundo
+
+            Em sua homenagem, o dia de sua morte, 10 de junho, é o Dia de Portugal, de Camões e das Comunidades Portuguesas.
+            " },
 
             new Autor { AutorId = 7, Nome = "Carolina Maria de Jesus", Foto = "/img/autores/Carolina Maria de Jesus.png", Biografia = 
             @" Carolina Maria de Jesus (nascida em 14 de março de 1914, em Sacramento, Minas Gerais, e falecida em 13 de fevereiro de 1977, em São Paulo) foi escritora, poeta, compositora e uma das vozes mais importantes da literatura brasileira, especialmente por denunciar a pobreza, o racismo e as desigualdades sociais a partir de sua própria experiência.
             É considerada hoje uma das maiores autoras do país, reconhecida nacional e internacionalmente.
-            Infância e juventude
+           
+            Infância e juventude:
             Carolina nasceu em uma família muito pobre e teve pouquíssima escolaridade formal, estudando apenas até o segundo ano do ensino fundamental. Ainda assim, aprendeu a ler e escrever com enorme interesse, desenvolvendo desde cedo paixão por palavras e cadernos.
             Na juventude, mudou-se para São Paulo em busca de trabalho e melhores condições de vida. Após dificuldades, passou a viver na Favela do Canindé, às margens do Rio Tietê.
             A vida na favela e o início da escrita
@@ -191,57 +470,59 @@ public class AppDbSeed
             -a fome e a miséria
             -o descaso do governo
             
-            Suas Reflexões Sobre Dignidade, Humanidade e Esperança
+            Suas Reflexões Sobre Dignidade, Humanidade e Esperança:
             Seus textos misturavam relato, poesia e crítica social.
 
-             0Descoberta e fama literária
+            Descoberta e fama literária:
             Em 1958, o jornalista Audálio Dantas conheceu Carolina ao vê-la escrevendo durante um conflito na favela. Impressionado com sua força literária, começou a divulgar seus textos.
             Em 1960, foi lançado o livro “Quarto de Despejo: Diário de uma Favelada”, que se tornou um enorme sucesso. A obra foi traduzida para mais de 14 idiomas e publicada em mais de 40 países.
+            
             Por que o livro é tão importante?
             Porque é um relato real, duro e humano do cotidiano da pobreza, escrito por quem a viveu. Carolina rompeu barreiras e deu visibilidade a vidas que eram ignoradas pela sociedade..
-            Últimos anos
+           
+            Últimos anos:
             Apesar do sucesso inicial, Carolina enfrentou dificuldades econômicas e preconceito racial e social ao longo de toda a vida. Passou seus últimos anos no interior de São Paulo, em Parelheiros, escrevendo e criando galinhas e porcos.
             Faleceu em 1977, aos 62 anos.
-            Legado
+            
+            Legado:
             Carolina Maria de Jesus é hoje reconhecida como uma das maiores escritoras brasileiras, pioneira na literatura marginal e periférica, símbolo de resistência, força e voz das comunidades pobres e referência para gerações de escritores negros
             Seus escritos continuam impactantes, atuais e essenciais para entender o Brasil.
             " },
 
             new Autor { AutorId = 8, Nome = "Carlos drummond de Andrade", Foto = "/img/autores/Carlos drummond de Andrade.png", Biografia = 
-            @"Biografia de Carlos Drummond de Andrade
-            Carlos Drummond de Andrade (nascido em 31 de outubro de 1902, em Itabira, Minas Gerais, e falecido em 17 de agosto de 1987, no Rio de Janeiro) é considerado um dos maiores poetas da língua portuguesa e um dos principais nomes da literatura brasileira do século XX. Seu estilo único, irônico, humano e profundamente reflexivo marcou de forma definitiva a poesia moderna no Brasil.
-            Infância e juventude
+            @"Carlos Drummond de Andrade (nascido em 31 de outubro de 1902, em Itabira, Minas Gerais, e falecido em 17 de agosto de 1987, no Rio de Janeiro) é considerado um dos maiores poetas da língua portuguesa e um dos principais nomes da literatura brasileira do século XX. Seu estilo único, irônico, humano e profundamente reflexivo marcou de forma definitiva a poesia moderna no Brasil.
+            
+            Infância e juventude:
             Drummond nasceu em uma tradicional família mineira. Em Itabira, viveu a infância e adolescência que mais tarde inspirariam muitos de seus poemas, especialmente os que tratam de memória, raízes e identidade.
             Estudou em colégios internos e depois fez o curso de Farmácia, embora nunca tenha exercido a profissão.
             Ainda jovem, tornou-se colaborador de jornais e revistas literárias.
-            Carreira literária
+            
+            Carreira literária:
             Drummond fez parte da segunda geração modernista, ao lado de nomes como Mário Quintana e Cecília Meireles. Sua obra dialoga com o cotidiano, os conflitos humanos, a crítica social e os dilemas existenciais.
             Seu primeiro livro, “Alguma Poesia” (1930), já trazia dois de seus poemas mais famosos:
-            “No meio do caminho”
-
-            “Poema de Sete Faces”
+            “No meio do caminho” e “Poema de Sete Faces”
 
             Ao longo da carreira, publicou mais de 50 obras, entre poesia, contos, crônicas e literatura infantil.
-            Temas recorrentes
-            Drummond explorou com maestria:
-            o individual e o coletivo
+            Temas recorrentes:
+            - o individual e o coletivo
 
-            solidão e afetos
+            - solidão e afetos
 
-            memória e identidade
+            - memória e identidade
 
-            vida urbana
+            - vida urbana
 
-            conflitos sociais
+            - conflitos sociais
 
-            passagem do tempo
+            - passagem do tempo
 
-            amor e desilusões
+            - amor e desilusões
 
-            o absurdo e o mistério da existência
+            - o absurdo e o mistério da existência
 
             Seu verso é ao mesmo tempo simples e sofisticado, capaz de transformar o cotidiano em poesia.
-            Atuação profissional
+            
+            Atuação profissional:
             Além de poeta, Drummond atuou por décadas como funcionário público, chegando a ser chefe de gabinete do então ministro da Educação, Gustavo Capanema, durante o governo Vargas.
             Trabalhou também como cronista e jornalista em jornais importantes, como o Correio da Manhã, O Jornal e Jornal do Brasil, onde suas crônicas se tornaram extremamente populares.
             Vida pessoal
@@ -253,303 +534,266 @@ public class AppDbSeed
             "  },
 
             new Autor { AutorId = 9, Nome = "Darcy Ribeiro", Foto = "/img/autores/Darcy Ribeiro.png", Biografia =
-            @"Biografia de Darcy Ribeiro
+            @"
             Darcy Ribeiro (nascido em 26 de outubro de 1922, em Montes Claros, Minas Gerais, e falecido em 17 de fevereiro de 1997, em Brasília) foi um dos mais importantes antropólogos, educadores, escritores e políticos brasileiros. Sua atuação intelectual e pública marcou profundamente os debates sobre educação, cultura, povos indígenas e construção da identidade nacional no Brasil.
             É considerado um dos maiores pensadores brasileiros do século XX.
 
-            Infância e formação
+            Infância e formação:
             Darcy cresceu em Minas Gerais e mudou-se jovem para Belo Horizonte, onde iniciou seus estudos superiores.
             Ingressou na Faculdade de Medicina, mas logo abandonou o curso para seguir sua verdadeira vocação: estudar antropologia.
             Na década de 1940, se aproximou de pesquisadores como Claude Lévi-Strauss e iniciou seus trabalhos etnográficos com povos indígenas brasileiros.
 
-            Carreira como antropólogo e a defesa dos povos indígenas
-            Darcy dedicou grande parte da vida ao estudo e proteção dos povos originários. Foi responsável por pesquisas marcantes sobre etnias como:
-            Kadiwéu
-
-            Urubu-Kaapor
-
-            Xavante
-
-            Tenetehara
+            Carreira como antropólogo e a defesa dos povos indígenas:
+            Darcy dedicou grande parte da vida ao estudo e proteção dos povos originários. Foi responsável por pesquisas marcantes sobre etnias como, Kadiwéu, Urubu-Kaapor, Xavante e Tenetehara
 
             Em 1957, tornou-se o primeiro diretor do Museu do Índio e coordenou o antigo Serviço de Proteção ao Índio (SPI), que mais tarde daria origem à FUNAI.
             Defendeu incansavelmente a autonomia, a cultura e os direitos dos povos indígenas.
-            Entre seus livros mais importantes nessa área estão:
-            Os Índios e a Civilização(1970)
-
-            A Política Indigenista Brasileira (1982)
-
-            Atuação na educação
+           
+            Atuação na educação:
             Darcy foi um dos maiores educadores do Brasil.
             Em 1962, convidado por Anísio Teixeira, participou da formulação de projetos educacionais inovadores.
-            Foi:
-            Ministro da Educação no governo João Goulart
-
-            criador da Universidade de Brasília (UnB), da qual foi vice-reitor e depois reitor
-
-            responsável por importantes planos de ampliação e democratização do ensino
+            Foi Ministro da Educação no governo João Goulart, criador da Universidade de Brasília (UnB), da qual foi vice-reitor e depois reitor, responsável por importantes planos de ampliação e democratização do ensino
 
             Em seus últimos anos, idealizou no Rio de Janeiro os CIEPs (Centros Integrados de Educação Pública), em parceria com Leonel Brizola — escolas integrais pioneiras no país.
 
-            Exílio político
+            Exílio político:
             Com o golpe militar de 1964, Darcy foi cassado e exilado.
             Viveu por mais de 10 anos no Chile, Uruguai e Venezuela.
             Nesse período escreveu algumas de suas obras mais importantes, incluindo estudos sobre o Brasil e a formação do povo latino-americano.
 
-            Carreira política
-            Após a anistia, retornou ao Brasil e continuou atuando na vida pública. Foi:
-            vice-governador do Rio de Janeiro (1983–1987)
+            Carreira política:
+            Após a anistia, retornou ao Brasil e continuou atuando na vida pública. Foi,
+            - vice-governador do Rio de Janeiro (1983–1987)
 
-            senador pelo PDT (1991–1997)
+            - senador pelo PDT (1991–1997)
 
             No Senado, desempenhou papel ativo em debates sobre educação, povos indígenas e políticas sociais.
 
-            Últimos anos e morte
+            Últimos anos e morte:
             Darcy Ribeiro morreu em Brasília em 1997, aos 74 anos, vítima de câncer.
             Pouco antes de falecer, disse a famosa frase:
             “Eu não gostaria de ser lembrado como alguém que fez tudo o que pôde.
             Quero ser lembrado como alguém que fez tudo o que não pôde, mas fez mesmo assim.”
 
-            Legado
-            Darcy Ribeiro é lembrado como:
-            um dos maiores intelectuais brasileiros
+            Legado:
+            - um dos maiores intelectuais brasileiros
 
-            referência em antropologia, educação e políticas públicas
+            - referência em antropologia, educação e políticas públicas
 
-            defensor incansável dos povos indígenas
+            - defensor incansável dos povos indígenas
 
-            pensador fundamental para compreender o Brasil
+            - pensador fundamental para compreender o Brasil
 
             Sua obra segue atual, inspirando debates sobre identidade, democracia, desigualdade e futuro do país.
             "  },
 
             new Autor { AutorId = 10, Nome = "Graciliano Ramos",Foto = "/img/autores/Graciliano Ramos.png", Biografia =
-            @"Biografia de Graciliano Ramos
+            @"
             Graciliano Ramos nasceu em 27 de outubro de 1892, na cidade de Quebrangulo, em Alagoas, e faleceu em 20 de março de 1953, no Rio de Janeiro. É considerado um dos maiores escritores do Modernismo brasileiro, especialmente da segunda fase (1930), marcada por obras sociais, realistas e de forte crítica às desigualdades do país.
             Seu estilo seco, direto e preciso é uma das marcas mais fortes da literatura brasileira.
 
-            Infância e formação
+            Infância e formação:
             Graciliano passou parte da infância em Buíque (PE) e depois em Viçosa (AL).
             Foi um menino introspectivo, leitor voraz e atento aos detalhes do cotidiano – traços que mais tarde definiriam sua escrita.
             Não teve formação universitária; foi autodidata, aprendendo por conta própria através de livros.
 
-            Carreira como jornalista e funcionário público
-            Ainda jovem, Graciliano trabalhou como:
-            revisor de jornal
+            Carreira como jornalista e funcionário público:
+            Ainda jovem, Graciliano trabalhou como,
+            - revisor de jornal
 
-            redator
+            - redator
 
-            professor
+            - professor
 
-            jornalista
+            - jornalista
 
             Em 1928, assumiu o cargo de prefeito de Palmeira dos Índios, onde ganhou fama por administrar a cidade com organização e rigor. Seus relatórios administrativos, escritos com precisão literária, chamaram a atenção do cenário intelectual brasileiro.
             Mais tarde, mudou-se para Maceió, onde se tornou diretor da Imprensa Oficial do estado.
 
-            Prisão e influência na sua obra
+            Prisão e influência na sua obra:
             Em 1936, durante o governo de Getúlio Vargas, Graciliano foi preso sob suspeita de envolvimento com movimentos comunistas — embora não houvesse provas concretas.
             Ficou quase um ano encarcerado em diversas prisões, experiência traumática que relatou no livro:
             “Memórias do Cárcere” (póstumo, 1953)
 
             Essa obra é uma das mais importantes denúncias políticas da literatura brasileira.
 
-            A obra literária
-            Graciliano Ramos é autor de romances, contos, crônicas e memórias. Suas obras evidenciam:
-            crítica social
+            Suas obras evidenciam:
+            - crítica social
 
-            psicologia profunda dos personagens
+            - psicologia profunda dos personagens
 
-            realismo duro e preciso
+            - realismo duro e preciso
 
-            atenção às injustiças do Nordeste brasileiro
+            - atenção às injustiças do Nordeste brasileiro
 
-            Últimos anos
+            Últimos anos:
             Nos anos finais, Graciliano filiou-se ao Partido Comunista Brasileiro (PCB) e passou a atuar politicamente, viajando inclusive à União Soviética.
             Faleceu no Rio de Janeiro, em 1953, vítima de câncer no pulmão.
 
-            Legado
-            Graciliano Ramos é lembrado como:
-            um dos maiores prosadores da literatura brasileira
+            Legado:
+            - um dos maiores prosadores da literatura brasileira
 
-            mestre do estilo conciso e direto
+            - mestre do estilo conciso e direto
 
-            autor de algumas das obras mais importantes do modernismo de 1930
+            - autor de algumas das obras mais importantes do modernismo de 1930
 
-            crítico profundo das injustiças sociais
+            - crítico profundo das injustiças sociais
 
             Seus livros continuam sendo estudados nas escolas e universidades e inspiram debates sobre o Brasil, a pobreza, o poder e o sofrimento humano.
             "  },
 
             new Autor { AutorId = 11, Nome = "Aluísio Azevedo", Foto = "/img/autores/Aluísio Azevedo.png", Biografia =
-            @"Biografia de Aluísio Azevedo
+            @"
               Aluísio Tancredo Gonçalves de Azevedo (nascido em 14 de abril de 1857, em São Luís, Maranhão, e falecido em 21 de janeiro de 1913, em Buenos Aires, Argentina) foi um importante escritor, jornalista, caricaturista e diplomata brasileiro, reconhecido principalmente como o maior representante do Naturalismo no Brasil.
               Juventude e formação
               Filho de um vice-cônsul português e de uma maranhense, cresceu em um ambiente familiar marcado por influências políticas e culturais. Ainda jovem, demonstrou talento artístico e mudou-se para o Rio de Janeiro, onde estudou na Academia Imperial de Belas-Artes. Ali desenvolveu-se como pintor e caricaturista, colaborando com jornais satíricos.
               Ingresso na literatura
               A carreira literária começou em 1879 com o romance “Uma Lágrima de Mulher”, ainda de forte influência romântica. No entanto, logo Azevedo aderiu ao Naturalismo, movimento literário influenciado pelo cientificismo, pelo determinismo e pela observação social crítica.
-              Obras principais
-              As obras de Aluísio Azevedo retratam:
-              desigualdades sociais
+              
+              As obras retratam:
+              - desigualdades sociais
 
+              - preconceito racial
 
-              preconceito racial
+              - condições de vida dos trabalhadores pobres
 
-              condições de vida dos trabalhadores pobres
+              - hipocrisia das elites
 
-              hipocrisia das elites
+              - influência do meio e da hereditariedade
+              
+              - Jornalismo e carreira diplomática
 
-              influência do meio e da hereditariedade
-              Jornalismo e carreira diplomática
               Além de escritor, Azevedo atuou como jornalista e como caricaturista, colaborando com diversos periódicos. Em 1895, passou a integrar o serviço diplomático brasileiro e serviu em países como Espanha, Inglaterra, Japão e Argentina.
               Sua dedicação à diplomacia acabou afastando-o gradualmente da produção literária. Viveu seus últimos anos em Buenos Aires, onde faleceu em 1913.
-              Legado
-              Aluísio Azevedo é lembrado como:
-              pioneiro do Naturalismo no Brasil
+              
+              Legado:
+              - pioneiro do Naturalismo no Brasil
 
-              um dos escritores mais importantes do fim do século XIX
+              - um dos escritores mais importantes do fim do século XIX
 
-              crítico agudo da sociedade brasileira
+              - crítico agudo da sociedade brasileira
 
-              autor de obras que até hoje são estudadas em escolas, vestibulares e universidades"  },
+              - autor de obras que até hoje são estudadas em escolas, vestibulares e universidades"  },
 
             new Autor { AutorId = 12, Nome = "José Paulo Paes",Foto = "/img/autores/Jose Paulo Paes.png", Biografia =
-            @"Biografia de José Paulo Paes
+            @"
               José Paulo Paes nasceu em 22 de julho de 1926, em Taquaritinga (SP), e faleceu em 9 de outubro de 1998, em São Paulo.
               Foi poeta, tradutor, ensaísta e crítico literário, considerado um dos mais importantes nomes da poesia brasileira do século XX, especialmente pela sua escrita concisa, irônica, inteligente e profundamente crítica.
 
-              Infância e formação
+              Infância e formação:
               Cresceu no interior de São Paulo e mudou-se para Curitiba ainda jovem.
               Formou-se em Química Industrial pela Universidade Federal do Paraná — profissão que exerceu por muitos anos.
               Apesar de não ter formação acadêmica em Letras, tornou-se uma das vozes literárias mais respeitadas de sua geração.
               Desde cedo, escrevia poemas curtos, humorísticos e reflexivos.
 
-              Início da carreira literária
+              Início da carreira literária:
               Publicou seu primeiro livro, “O Aluno” (1947), aos 21 anos.
-              Seu estilo chamou atenção por reunir:
-              humor e ironia
+              Seu estilo chamou atenção por reunir,
+              - humor e ironia
 
+              - linguagem direta
 
-              linguagem direta
+              - crítica social e cultural
 
+              - reflexões filosóficas
 
-              crítica social e cultural
-
-
-              reflexões filosóficas
-
-
-              jogos de palavras e epigramas (poemas breves e satíricos)
-
+              - jogos de palavras e epigramas (poemas breves e satíricos)
 
               Foi identificado com a chamada “geração de 45”, que buscava rigor formal e concisão depois da fase mais livre do modernismo.
 
-              Características da poesia
-              A poesia de José Paulo Paes é marcada por:
-              brevidade
+              A poesia é marcada por:
+              - brevidade
 
+              - humor crítico
 
-              humor crítico
+              - experimentação linguística
 
+              - olhar filosófico sobre o cotidiano
 
-              experimentação linguística
-
-
-              olhar filosófico sobre o cotidiano
-
-
-              reflexões sobre a condição humana
-
+              - reflexões sobre a condição humana
 
               Transformava situações simples em profundas reflexões, sempre com leveza e inteligência.
 
-              Reconhecimento
+              Reconhecimento:
               Recebeu diversos prêmios literários e tornou-se membro da Academia Brasileira de Letras (cadeira nº 26), embora tenha falecido antes da posse oficial.
               Foi amplamente respeitado por escritores, críticos e leitores por sua inteligência, humor refinado e contribuição à poesia moderna.
 
-              Morte e legado
+              Morte e legado:
               José Paulo Paes morreu em 1998, aos 72 anos.
               Deixou uma obra essencial para compreender a poesia brasileira contemporânea, especialmente o poema curto, irônico e filosófico.
               Seu legado permanece vivo nas escolas, universidades e entre leitores que apreciam a união entre simplicidade, humor e profundidade"  },
 
             new Autor { AutorId = 13, Nome = "Conceição Evaristo",Foto = "/img/autores/Conceição Evaristo.png", Biografia =
-            @"Biografia de Conceição Evaristo
+            @"
             Maria da Conceição Evaristo de Brito (nascida em 29 de novembro de 1946, em Belo Horizonte, Minas Gerais) é uma das mais importantes escritoras, professoras, pesquisadoras e vozes da literatura afro-brasileira. Sua obra é marcada pela denúncia das desigualdades sociais, pelo combate ao racismo e pela valorização das vivências de mulheres negras.
             Conceição é referência na chamada escrevivência, um conceito que ela criou para expressar a escrita que nasce da vida — das memórias, dores, lutas e resistências da população negra.
 
-            Infância e juventude
+            Infância e juventude:
             Conceição cresceu em uma família pobre no bairro do Pindura Saia, em Belo Horizonte.
             Filha de empregada doméstica, trabalhou como babá e cozinheira desde muito jovem para ajudar nas despesas de casa.
             Apesar das dificuldades, sempre demonstrou grande amor pela leitura e escreveu desde a infância.
 
-            Mudança para o Rio de Janeiro e formação
+            Mudança para o Rio de Janeiro e formação:
             Na década de 1970, mudou-se para o Rio de Janeiro, onde ingressou no magistério. Aos 25 anos, concluiu o curso normal e passou a trabalhar como professora.
             Com grande esforço, ingressou na Universidade Federal do Rio de Janeiro (UFRJ), graduando-se em Letras.
             Depois, fez mestrado em Literatura Brasileira na PUC-Rio, e doutorado em Literatura Comparada na Universidade Federal Fluminense (UFF).
 
-            Carreira literária e escrevivência
+            Carreira literária e escrevivência:
             A estreia literária ocorreu em 1990, na Série Cadernos Negros, fundamental para autores negros no Brasil.
-            A partir daí, Conceição se consolidou como uma das maiores escritoras brasileiras contemporâneas, com textos que abordam:
-            racismo estrutural
+            A partir daí, Conceição se consolidou como uma das maiores escritoras brasileiras contemporâneas, com textos que abordam,
+            - racismo estrutural
 
-            violência contra a mulher
+            - violência contra a mulher
 
-            desigualdades sociais
+            - desigualdades sociais
 
-            ancestralidade africana
+            - ancestralidade africana
 
-            resistência e identidade negra
+            - resistência e identidade negra
 
-            memória e cotidiano periférico
+            - memória e cotidiano periférico
 
-            Reconhecimento e impacto
-            Conceição Evaristo é considerada:
-            uma das maiores autoras negras da literatura brasileira
-
-            símbolo de resistência e representatividade
-
-            referência em estudos de literatura afro-brasileira
-
-            grande difusora do conceito de escrevivência
+            Conceição Evaristo é considerada uma das maiores autoras negras da literatura brasileira, símbolo de resistência e representatividade, referência em estudos de literatura afro-brasileira, grande difusora do conceito de escrevivência
 
             Em 2018, foi indicada pela sociedade civil para ocupar uma cadeira na Academia Brasileira de Letras (ABL), movimento histórico que gerou grande mobilização nacional.
             Seus livros são estudados em escolas, vestibulares, universidades e pesquisas acadêmicas, influenciando novas gerações de escritores negros.
 
-            Vida atual
+            Vida atual:
             Conceição segue escrevendo, participando de feiras literárias no Brasil e no exterior, dando palestras e debatendo temas como:
-            direitos humanos
+            - direitos humanos
 
-            literatura
+            - literatura
 
-            educação
+            - educação
 
-            racismo
+            - racismo
 
-            lugar das mulheres negras na sociedade
+            - lugar das mulheres negras na sociedade
 
             Vive no Rio de Janeiro e permanece como uma das vozes mais potentes e atuantes da literatura contemporânea.
             "  },
 
             new Autor { AutorId = 14, Nome = "Ailton Krenak",Foto = "/img/autores/Ailton Krenak.png", Biografia =
-            @"Biografia de Ailton Krenak
+            @"
               Ailton Alves Lacerda Krenak (nascido em 1953, em Resplendor, Minas Gerais) é um dos mais importantes líderes indígenas do Brasil, além de escritor, filósofo, ambientalista e referência mundial nas discussões sobre meio ambiente, direitos indígenas e novos modos de existência.
               Pertencente ao povo indígena Krenak, Ailton cresceu às margens do Rio Doce — rio que considera sagrado e cuja destruição pelo desastre da barragem da Samarco/Vale/BHP em 2015 tornou-se um marco em sua luta socioambiental.
               Atuação política e defesa dos povos indígenas
               Nos anos 1980, tornou-se uma figura central na mobilização pelos direitos indígenas. Durante a Assembleia Constituinte de 1987–1988, emocionou o país ao pintar o rosto de preto em protesto contra tentativas de retirar direitos indígenas no texto constitucional. Sua atuação foi decisiva para garantir os direitos originários na Constituição de 1988.
               Fundou e participou de diversas organizações de defesa indígena e ambiental, como a União dos Povos Indígenas.
-              Pensamento e produção intelectual
-              Krenak se tornou um dos maiores pensadores contemporâneos do Brasil. Sua obra aborda temas como:
-              crise ambiental global
+              
+              Pensamento e produção intelectual:
+              Krenak se tornou um dos maiores pensadores contemporâneos do Brasil. Sua obra aborda temas como,
+              - crise ambiental global
 
-              crítica ao modelo de desenvolvimento ocidental
+              - crítica ao modelo de desenvolvimento ocidental
 
-              importância da ancestralidade
+              - importância da ancestralidade
 
-              visão indígena de mundo
+              - visão indígena de mundo
 
+              - relação harmônica entre ser humano e natureza
 
-              relação harmônica entre ser humano e natureza
-
-              Reconhecimento nacional e internacional
+              Reconhecimento nacional e internacional:
               Krenak é membro da Academia Brasileira de Letras (cadeira 5, eleito em 2023), tornando-se um dos poucos indígenas a ocupar tal posição na instituição. Ele também recebeu diversos prêmios por sua atuação ambiental e cultural.
               Viaja pelo Brasil e pelo mundo dando palestras, cursos, conferências e participa ativamente de movimentos socioambientais e debates sobre o futuro do planeta.
               Legado
@@ -558,137 +802,222 @@ public class AppDbSeed
               Ele permanece como um líder visionário, inspirando debates sobre sustentabilidade, respeito aos povos originários e novos modos de existir no mundo.
               " },
 
-            new Autor { AutorId = 15, Nome = "Lima Barreto",Foto = "/img/autores/Lima Barreto.png"  },
+            new Autor { AutorId = 15, Nome = "Lima Barreto",Foto = "/img/autores/Lima Barreto.png", Biografia = @"
+            Afonso Henriques de Lima Barreto, conhecido como Lima Barreto, nasceu em 13 de maio de 1881, no Rio de Janeiro, e morreu em 1º de novembro de 1922, na mesma cidade.
+            É um dos mais importantes escritores brasileiros do início do século XX, marcado pelo estilo crítico, direto, antielitista e profundamente humano.
+            Sua obra denuncia o racismo, a desigualdade social, a hipocrisia das elites e a burocracia estatal, tornando-se cada vez mais valorizada na atualidade.
+
+            Infância e formação:
+            Lima Barreto nasceu em uma família humilde. Seu pai era tipógrafo e sua mãe, professora — ela faleceu quando ele tinha 7 anos.
+            Estudou em boas escolas graças ao apoio do padrinho, Visconde de Ouro Preto.
+            Ingressou na Escola Politécnica, para cursar Engenharia, mas abandonou o curso para sustentar a família quando o pai adoeceu mentalmente.
+            Desde cedo publicou crônicas, artigos e contos em jornais cariocas.
+
+            Carreira literária:
+            Lima Barreto trabalhou como escriturário na Secretaria da Guerra, função burocrática que detestava, mas que lhe garantia sustento e o inspirou a criticar a máquina pública em seus textos.
+            Foi um escritor marginalizado pela elite literária de sua época, especialmente pela Academia Brasileira de Letras, que rejeitou suas tentativas de ingresso por preconceito racial e social.
+            Apesar disso, continuou produzindo intensamente.
+
+            Temas centrais:
+            - racismo e injustiça social
+
+            - desigualdade urbana
+
+            - corrupção e burocracia
+
+            - crítica às elites e ao academicismo
+
+            - loucura, alcoolismo e exclusão
+
+            - vida nas periferias do Rio
+
+            Sua escrita é simples, direta, irônica e profundamente empática.
+
+            Problemas pessoais e alcoolismo:
+            Lima Barreto enfrentou episódios de depressão, pobreza e alcoolismo.
+            Foi internado duas vezes no hospício, experiências que apareceriam em seus textos, como em:
+            “O Cemitério dos Vivos” – obra autobiográfica, publicada postumamente.
+
+            Últimos anos e morte:
+            Viveu seus últimos anos em dificuldades financeiras e sem reconhecimento oficial.
+            Morreu aos 41 anos, vítima de problemas cardíacos agravados pelo alcoolismo.
+
+            Legado:
+            Hoje, Lima Barreto é reconhecido como um dos maiores escritores brasileiros, precursor da literatura social, crítico genial do racismo estrutural e referência obrigatória da literatura moderna
+
+
+            Sua obra ganhou grande destaque a partir dos anos 2000, sendo amplamente reeditada, adaptada e estudada, mostrando sua atualidade e importância histórica.
+            "  },
 
             new Autor { AutorId = 16, Nome = "Chimamanda Ngozi Adichie", Foto = "/img/autores/Chimamanda Ngozi Adichie.png", Biografia =
-            @"Biografia de Chimamanda Ngozi Adichie
+            @"
             Chimamanda Ngozi Adichie (nascida em 15 de setembro de 1977, em Enugu, Nigéria) é uma das escritoras contemporâneas mais importantes do mundo. Romancista, ensaísta e palestrante, é reconhecida internacionalmente por obras que abordam temas como identidade, feminismo, imigração, política, racismo e a experiência africana no mundo globalizado.
             Cresceu na cidade de Nsukka, em uma família ligada ao ambiente acadêmico — seu pai era professor universitário e sua mãe, administradora na Universidade da Nigéria.
 
-            Formação e trajetória
+            Formação e trajetória:
             Aos 19 anos, mudou-se para os Estados Unidos para estudar Comunicação e Ciência Política na Drexel University e, posteriormente, na Eastern Connecticut State University.
             Completou mestrado em Escrita Criativa pela Johns Hopkins University e outro em Estudos Africanos pela Yale University.
             Desde cedo, Chimamanda mostrou interesse pela escrita, influenciada por autoras como Chinua Achebe e Toni Morrison.
 
-            Carreira literária
+            Carreira literária:
             Chimamanda tornou-se uma voz fundamental na literatura contemporânea, com livros traduzidos em dezenas de idiomas.
             Atuação como feminista e palestrante
             Chimamanda ganhou reconhecimento mundial com sua palestra “We Should All Be Feminists” (Sejamos Todos Feministas), uma das mais assistidas do TED.
             Ela defende um feminismo inclusivo, acessível e cotidiano, e critica estereótipos sobre mulheres e sobre a África.
             Sua fala sobre “o perigo da história única” — a ideia de reduzir culturas a narrativas únicas e simplificadas — também se tornou referência mundial.
 
-            Temas recorrentes na obra
-            identidade cultural
+            Temas recorrentes na obra:
+            - identidade cultural
 
-            feminismo
+            - feminismo
 
-            racismo
+            - racismo
 
-            diáspora africana
+            - diáspora africana
 
-            política e sociedade nigeriana
+            - política e sociedade nigeriana
 
-            imigração
+            - imigração
 
-            relações familiares
+            - relações familiares
 
-            perspectivas múltiplas sobre o continente africano
+            - perspectivas múltiplas sobre o continente africano
 
             Sua escrita é marcada por sensibilidade, humor, crítica social e forte habilidade narrativa.
 
-            Reconhecimento e impacto
-            Chimamanda é considerada:
-            uma das vozes mais influentes da literatura do século XXI
-
-            grande referência do feminismo moderno
-
-            porta-voz global da intelectualidade africana
-
-            autora estudada em escolas e universidades ao redor do mundo
+            Chimamanda é considerada uma das vozes mais influentes da literatura do século XXI, grande referência do feminismo moderno, porta-voz global da intelectualidade africana, autora estudada em escolas e universidades ao redor do mundo
 
             Suas obras aparecem constantemente em listas internacionais de melhores livros e influenciam leitores jovens e adultos.
 
-            Vida pessoal
+            Vida pessoal:
             Chimamanda alterna sua vida entre a Nigéria e os Estados Unidos.
             É casada e tem um filho. Continua escrevendo, palestrando e participando de debates sobre igualdade, política, cultura e literatura.
             "  },
 
             new Autor { AutorId = 17, Nome = "Caio Fernando Abreu", Foto = "/img/autores/Caio Fernando Abreu.png", Biografia =
-            @"Biografia de Caio Fernando Abreu
+            @"
               Caio Fernando Loureiro de Abreu (nascido em 12 de setembro de 1948, em Santiago, Rio Grande do Sul, e falecido em 25 de fevereiro de 1996, em Porto Alegre) foi um dos mais importantes escritores, dramaturgos e jornalistas brasileiros do século XX. Tornou-se conhecido por sua escrita sensível, intensa e profundamente humana, marcada por temas como amor, solidão, sexualidade, amizade, medo, e as angústias da vida contemporânea.
-              Infância e juventude
+              
+              Infância e juventude:
               Criado em família de classe média, Caio demonstrou cedo sua inclinação para a literatura. Ainda jovem, mudou-se para Porto Alegre, onde se envolveu ativamente com o meio cultural e literário. Após passar por tentativas frustradas de cursos universitários, mergulhou definitivamente no jornalismo e na escrita.
-              Atuação jornalística e cultural
+              
+              Atuação jornalística e cultural:
               Caio trabalhou em grandes veículos de imprensa, como Revista Veja, Zero Hora e O Estado de S. Paulo. Também viveu períodos no exterior — em Londres, Paris e na Espanha — onde ampliou sua visão sobre política, cultura e comportamento.
               Durante os anos da ditadura militar, parte de seus textos expressou a tensão política e o sentimento de liberdade cerceada.
-              Vida pessoal e temas recorrentes
+              
+              Vida pessoal e temas recorrentes:
               Caio viveu de forma intensa e assumiu publicamente sua homossexualidade, algo incomum na época. Sua sensibilidade e franqueza transformaram seu texto em um espaço de acolhimento para jovens que se sentiam deslocados ou incompreendidos.
               Sua obra aborda:
-              amor e desamor
+              - amor e desamor
 
-              solidão
+              - solidão
 
-              busca por identidade
+              - busca por identidade
 
-              sexualidade
+              - sexualidade
 
-              afetos e fragilidades humanas
+              - afetos e fragilidades humanas
 
-              espiritualidade
+              - espiritualidade
 
-              crises políticas e sociais
+              - crises políticas e sociais
 
-              Doença e últimos anos
+              Doença e últimos anos:
               Nos anos 1990, Caio foi diagnosticado com HIV. Diferente de muitos artistas da época, falou sobre a doença abertamente em cartas e crônicas — gesto corajoso num tempo marcado por preconceito.
               Passou seus últimos anos em Porto Alegre, escrevendo e recebendo amigos. Morreu em 1996, aos 47 anos.
-              Legado
-              Caio Fernando Abreu é considerado:
-              um dos maiores contistas da literatura brasileira
-
-              referência LGBTQIA+
-
-              símbolo da sensibilidade e da escrita emocional
-
-              autor que dialoga profundamente com jovens e adultos até hoje
+    
+              Caio Fernando Abreu é considerado um dos maiores contistas da literatura brasileira, referência LGBTQIA+, símbolo da sensibilidade e da escrita emocional, autor que dialoga profundamente com jovens e adultos até hoje
 
               Seus textos continuam extremamente populares nas redes sociais, escolas e clubes de leitura, por sua capacidade única de nomear sentimentos difíceis e tocar o íntimo das pessoas.
               "  },
 
             new Autor { AutorId = 18, Nome = "Cartola", Foto = "/img/autores/Cartola.png", Biografia =
-            @"Biografia de Carolina Maria de Jesus
+            @"
             Carolina Maria de Jesus (nascida em 14 de março de 1914, em Sacramento, Minas Gerais, e falecida em 13 de fevereiro de 1977, em São Paulo) foi escritora, poeta, compositora e uma das vozes mais importantes da literatura brasileira, especialmente por denunciar a pobreza, o racismo e as desigualdades sociais a partir de sua própria experiência.
             É considerada hoje uma das maiores autoras do país, reconhecida nacional e internacionalmente.
-            Infância e juventude
+           
+            Infância e juventude:
             Carolina nasceu em uma família muito pobre e teve pouquíssima escolaridade formal, estudando apenas até o segundo ano do ensino fundamental. Ainda assim, aprendeu a ler e escrever com enorme interesse, desenvolvendo desde cedo paixão por palavras e cadernos.
             Na juventude, mudou-se para São Paulo em busca de trabalho e melhores condições de vida. Após dificuldades, passou a viver na Favela do Canindé, às margens do Rio Tietê.
-            A vida na favela e o início da escrita
-            Para sustentar seus três filhos, Carolina trabalhava como catadora de papel. No pouco tempo livre que tinha, escrevia em cadernos achados no lixo, registrando:
-            sua vida na favela
-
-            a fome e a miséria
-
-            o descaso do governo
-
-            suas reflexões sobre dignidade, humanidade e esperança
+           
+            A vida na favela e o início da escrita:
+            Para sustentar seus três filhos, Carolina trabalhava como catadora de papel. No pouco tempo livre que tinha, escrevia em cadernos achados no lixo, registrando sua vida na favela, a fome e a miséria, o descaso do governo, suas reflexões sobre dignidade, humanidade e esperança
 
             Seus textos misturavam relato, poesia e crítica social.
-            Descoberta e fama literária
+            
+            Descoberta e fama literária:
             Em 1958, o jornalista Audálio Dantas conheceu Carolina ao vê-la escrevendo durante um conflito na favela. Impressionado com sua força literária, começou a divulgar seus textos.
             Em 1960, foi lançado o livro “Quarto de Despejo: Diário de uma Favelada”, que se tornou um enorme sucesso. A obra foi traduzida para mais de 14 idiomas e publicada em mais de 40 países.
+            
             Por que o livro é tão importante?
-            Porque é um relato real, duro e humano do cotidiano da pobreza, escrito por quem a viveu. Carolina rompeu barreiras e deu visibilidade a vidas que eram ignoradas pela sociedade..
-            Últimos anos
+            é um relato real, duro e humano do cotidiano da pobreza, escrito por quem a viveu. Carolina rompeu barreiras e deu visibilidade a vidas que eram ignoradas pela sociedade..
+           
+            Últimos anos:
             Apesar do sucesso inicial, Carolina enfrentou dificuldades econômicas e preconceito racial e social ao longo de toda a vida. Passou seus últimos anos no interior de São Paulo, em Parelheiros, escrevendo e criando galinhas e porcos.
             Faleceu em 1977, aos 62 anos.
-            Legado
+            
+            Legado:
             Carolina Maria de Jesus é hoje reconhecida como uma das maiores escritoras brasileiras, pioneira na literatura marginal e periférica, símbolo de resistência, força e voz das comunidades pobres e referência para gerações de escritores negros
             Seus escritos continuam impactantes, atuais e essenciais para entender o Brasil.
             "  },
 
-            new Autor { AutorId = 19, Nome = "Lewis Carroll", Foto = "/img/autores/Lewis Carroll.png"  },
+            new Autor { AutorId = 19, Nome = "Lewis Carroll", Foto = "/img/autores/Lewis Carroll.png", Biografia = @"
+            Lewis Carroll era o pseudônimo de Charles Lutwidge Dodgson, escritor, matemático, lógico, fotógrafo e professor inglês.
+            Ele nasceu em 27 de janeiro de 1832, em Daresbury, Cheshire (Inglaterra), e faleceu em 14 de janeiro de 1898, em Guildford.
+            É mundialmente conhecido como o autor de “Alice no País das Maravilhas” e “Através do Espelho”, obras que revolucionaram a literatura infantojuvenil.
+
+            Infância e formação:
+            Carroll veio de uma família numerosa e religiosa. Desde cedo mostrou talento para a matemática, habilidade com palavras, gosto por contar histórias e interesse por teatro e jogos lógicos
+
+            Estudou no Christ Church, da Universidade de Oxford, onde se destacou academicamente.
+
+            Carreira como matemático e professor:
+            Carroll foi professor de Matemática em Oxford por muitos anos.
+            Publicou livros acadêmicos
+
+            Seu raciocínio lógico influenciou diretamente sua literatura, cheia de paradoxos, jogos de linguagem e situações absurdas.
+
+            A criação de Alice:
+            A ideia para “Alice no País das Maravilhas” surgiu em 1862, durante um passeio de barco com as irmãs Liddell — especialmente Alice Liddell, para quem Carroll improvisou a história.
+            A narrativa fez tanto sucesso que ele a escreveu e publicou em 1865.
+            Principais características de “Alice”
+            - humor nonsense
+
+            - lógica invertida
+
+            - personagens excêntricos
+
+            - jogos de palavras
+
+            - crítica sutil à sociedade vitoriana
+
+            Fotografia:
+            Lewis Carroll também foi um dos fotógrafos amadores mais importantes da Inglaterra vitoriana.
+            Fotografou artistas, escritores, colegas de Oxford, cenas cotidianas, crianças e famílias conhecidas
+
+            A fotografia era, para ele, uma forma de arte e estudo da expressão humana.
+
+            Vida pessoal e personalidade:
+            Carroll era tímido, reservado e profundamente ligado à lógica.
+            Tinha tendência a gaguejar, o que o deixava desconfortável em situações sociais.
+            Apesar disso, era querido pelos alunos e conhecido por sua gentileza e imaginação extraordinária.
+
+            Morte:
+            Lewis Carroll morreu de pneumonia em 14 de janeiro de 1898, aos 65 anos.
+            
+            Carroll é lembrado como:
+            - um dos maiores autores de fantasia
+
+            - pioneiro do nonsense literário
+
+            - criador de personagens icônicos: Alice, Chapeleiro Maluco, Rainha de Copas
+
+            - influenciador de autores, artistas e cineastas do mundo inteiro
+
+            Seu estilo inovador, que mistura lógica, humor e imaginação, permanece atual e encantador até hoje."  },
 
             new Autor { AutorId = 20, Nome = "Djamilia Pereira de Almdeida", Foto = "/img/autores/Djamilia Pereira de Almdeida.png", Biografia =
-            @"Biografia de Djaimilia Pereira de Almeida
+            @"
             Djaimilia Pereira de Almeida (nascida em 1982, em Luanda, Angola) é uma escritora, ensaísta e intelectual contemporânea, de grande importância na literatura de língua portuguesa. 
             Quando tinha cerca de três anos, mudou-se com a família para Portugal, onde cresceu, nos arredores de Lisboa.
 
@@ -697,20 +1026,18 @@ public class AppDbSeed
             Em 2012, obteve doutorado em Teoria da Literatura pela Universidade de Lisboa. 
             Atualmente, Djaimilia é também professora da New York University (NYU).
 
-            Temas e voz literária
             A escrita de Djaimilia se destaca por:
-            abordar a questão racial e a negritude a partir de uma perspectiva pessoal e crítica;
+            - abordar a questão racial e a negritude a partir de uma perspectiva pessoal e crítica;
 
-            explorar a migração e o deslocamento — particularmente a experiência de africanos em Portugal.
+            - explorar a migração e o deslocamento — particularmente a experiência de africanos em Portugal.
 
-            refletir sobre identidade, memória, pertencimento e legado colonial;
+            - refletir sobre identidade, memória, pertencimento e legado colonial;
 
-            utilizar uma prosa híbrida: muitas vezes seus livros combinam elementos de romance, ensaio, autobiografia e crônica.
+            - utilizar uma prosa híbrida: muitas vezes seus livros combinam elementos de romance, ensaio, autobiografia e crônica.
 
             Ela representa uma das vozes mais vivas da literatura contemporânea de língua portuguesa — plural, crítica e de forte impacto social e cultural.
 
-            Reconhecimento e prêmios
-            Djaimilia já recebeu diversos prêmios e distinções:
+            Reconhecimento e prêmios:
             Vencedora do Prémio Oceanos pelo livro Luanda, Lisboa, Paraíso.
 
             Recebeu o Grande Prémio de Romance e Novela APE/DGLAB 2024.
@@ -721,94 +1048,495 @@ public class AppDbSeed
 
             Além disso, sua obra está traduzida para várias línguas e é estudada internacionalmente. 
 
-            Importância e legado
-            Djaimilia Pereira de Almeida é hoje reconhecida como:
-            uma das principais escritoras da nova geração de autores lusófonos;
+           Djaimilia Pereira de Almeida é hoje reconhecida como:
+           - uma das principais escritoras da nova geração de autores lusófonos;
 
-            uma voz importante que dá visibilidade às experiências de afrodescendentes, imigrantes e mulheres negras — temas ainda pouco representados na literatura tradicional;
+           - uma voz importante que dá visibilidade às experiências de afrodescendentes, imigrantes e mulheres negras — temas ainda pouco representados na literatura tradicional;
 
-            uma autora que ajuda a renovar a literatura de língua portuguesa, com uma prosa contemporânea, plural e híbrida;
+           - uma autora que ajuda a renovar a literatura de língua portuguesa, com uma prosa contemporânea, plural e híbrida;
 
-            uma intelectual que, além de escrever ficção, participa de debates sobre identidade, racismo, memória e pós-colonialismo — contribuindo para reflexões culturais profundas.
+           - uma intelectual que, além de escrever ficção, participa de debates sobre identidade, racismo, memória e pós-colonialismo — contribuindo para reflexões culturais profundas.
             " },
 
-            new Autor { AutorId = 21, Nome = "Lygia Fagundes Telles", Foto = "/img/autores/Lygia Fagundes Telles.png" },
-            new Autor { AutorId = 22, Nome = "Paulina Chiziane", Foto = "/img/autores/Paulina Chiziane.png" },
-            new Autor { AutorId = 23, Nome = "Rachel de Queiroz", Foto = "/img/autores/Rachel de Queiroz.png" },
-            new Autor { AutorId = 24, Nome = "Conceição Evaristo", Foto = "/img/autores/Conceição Evaristo.png" },
+            new Autor { AutorId = 21, Nome = "Lygia Fagundes Telles", Foto = "/img/autores/Lygia Fagundes Telles.png", Biografia = @"
+            Lygia Fagundes Telles nasceu em 19 de abril de 1923, em São Paulo, e morreu em 3 de abril de 2022, também em São Paulo.
+            É considerada uma das maiores escritoras brasileiras do século XX, integrante da chamada terceira geração modernista. Sua obra é marcada pela profundidade psicológica, pelo foco na intimidade humana, e por temas como memória, desejo, culpa e identidade.
+            Foi membro da Academia Brasileira de Letras (ABL) e vencedora de vários prêmios nacionais e internacionais.
+
+            Infância e formação:
+            Lygia cresceu entre São Paulo e o interior devido ao trabalho do pai, que era promotor público.
+            Desde muito jovem demonstrou interesse pela escrita.
+            
+            Formou-se em:
+            - Direito na famosa Faculdade de Direito do Largo de São Francisco (USP)
+
+            - Educação Física (curso que chegou a cursar antes do Direito)
+
+            Durante a juventude conviveu com importantes nomes da literatura brasileira, como Mário de Andrade e Oswald de Andrade.
+
+            Início da carreira literária:
+            Publicou seu primeiro livro aos 15 anos, Porão e Sobrado (1938).
+            Seu reconhecimento, porém, cresceu nas décadas de 1940 e 1950, quando começou a publicar contos e romances que exploravam,
+            - conflitos íntimos
+
+            - dramas existenciais
+
+            - relações humanas complexas
+
+            As principais marcas do estilo de são:
+            - narrativa introspectiva e psicológica
+
+            - foco na subjetividade, especialmente feminina
+
+            - fusão entre realidade e ficção
+
+            - atmosfera intimista
+
+            - linguagem poética e refinada
+
+            É muito associada ao conto, gênero em que se destacou de forma excepcional.
+
+            Atuação cultural e política:
+            Além da literatura, Lygia participou ativamente da defesa dos direitos humanos e da liberdade artística durante o regime militar.
+            Foi funcionária do Serviço Público e atuou na Cinemateca Brasileira, aproximando-se do cinema e de cineastas.
+            Em 1985, tornou-se membro da Academia Brasileira de Letras.
+
+            Prêmios:
+            - Prêmio Jabuti (várias vezes)
+            - Prêmio Camões (2005), o mais importante da língua portuguesa
+            - Prêmio da Associação Paulista de Críticos de Arte
+
+            Últimos anos:
+            Mesmo com a idade avançada, Lygia continuou participando de eventos, entrevistas e publicações.
+            Faleceu em 3 de abril de 2022, aos 98 anos, deixando um legado gigantesco para a literatura brasileira.
+
+            Lygia Fagundes Telles é considerada a Grande Dama da Literatura Brasileira, uma das maiores contistas do país, referência na escrita feminina, intimista e psicológica, autora fundamental para vestibulares, universidades e estudos literários
+
+            Sua obra permanece viva por sua profundidade, sensibilidade e força narrativa.
+            " },
+            new Autor { AutorId = 22, Nome = "Paulina Chiziane", Foto = "/img/autores/Paulina Chiziane.png", Biografia= @"
+            Paulina Chiziane nasceu em 4 de junho de 1955, em Manjacaze, província de Gaza, Moçambique.
+            É considerada uma das maiores escritoras moçambicanas, a primeira mulher a publicar um romance no país e a primeira autora africana de língua portuguesa a receber o Prêmio Camões (2021), o mais importante da literatura lusófona.
+            Sua obra denuncia desigualdades, violências de gênero, colonialismo, guerra civil e conflitos culturais, sempre com forte presença da tradição oral africana.
+
+            Infância e formação:
+            Cresceu em uma família chope (etnia tradicional do sul de Moçambique) e, ainda criança, mudou-se para Lourenço Marques (hoje Maputo).
+            Criada em ambiente rural e urbano, vivenciou desde cedo:
+            - tradições locais
+
+            - opressões coloniais
+
+            - desigualdade social e racial
+
+            - submissão feminina na sociedade patriarcal
+
+            - Estudou no ensino missionário e aprendeu português como segunda língua.
+
+            Juventude e contexto político:
+            Viveu a adolescência durante o período colonial português.
+            Com a independência de Moçambique, em 1975, trabalhou com organizações sociais e, mais tarde, na Cruz Vermelha, atuando com famílias atingidas pela guerra civil moçambicana (1977–1992).
+            Essas experiências influenciaram profundamente sua escrita, marcada por testemunho, crítica e humanismo.
+
+            Carreira literária:
+            Paulina começou escrevendo contos e depois se dedicou ao romance, tornando-se pioneira na literatura de Moçambique escrita por mulheres.
+            Seus livros unem,
+            - crítica social
+
+            - espiritualidade africana
+
+            - tradições orais
+
+            - protagonismo feminino
+
+            - denúncia da violência de gênero
+
+            - reflexão sobre identidade, cultura e pós-colonialismo
+
+            Temas centrais de sua escrita:
+            - condição feminina em Moçambique
+
+            - tensões entre tradição e modernidade
+
+            - colonialismo e pós-colonialismo
+
+            - guerra civil
+
+            - poligamia
+
+            - poder, feitiçaria e espiritualidade
+
+            - violência doméstica
+
+            - identidades africanas
+
+            Seu estilo mescla o português com ritmos, metáforas e estruturas da oralidade africana, criando uma narrativa poética, forte e simbólica.
+
+            Em 2021, Paulina Chiziane tornou-se:
+            - a primeira mulher africana a ganhar o Prêmio Camões
+            - reconhecimento máximo da literatura de língua portuguesa
+            O júri destacou a força política, social e estética de sua obra.
+
+            Últimos anos:
+            Paulina continua ativa, participando de eventos literários, debates sobre direitos das mulheres e projetos culturais. É hoje uma das vozes mais importantes da literatura africana contemporânea.
+
+            Paulina Chiziane é pioneira da literatura feminina moçambicana, referência do feminismo africano, voz poderosa contra a violência de gênero, autora de obra original e profundamente moçambicana, leitura essencial para entender África, identidade e resistência
+
+            Sua escrita ocupa lugar central na literatura lusófona e mundial.
+            " },
+            new Autor { AutorId = 23, Nome = "Rachel de Queiroz", Foto = "/img/autores/Rachel de Queiroz.png", Biografia = @"
+            Rachel de Queiroz nasceu em 17 de novembro de 1910, em Fortaleza (CE), e morreu em 4 de novembro de 2003, no Rio de Janeiro (RJ).
+            Foi romancista, cronista, dramaturga, tradutora e jornalista — considerada uma das maiores escritoras do Brasil e a primeira mulher a ingressar na Academia Brasileira de Letras (ABL).
+
+            Infância e formação:
+            Cresceu entre Fortaleza e o sertão do Ceará, especialmente em Quixadá, ambiente que marcaria profundamente sua literatura.
+            Aos 15 anos, publicou seu primeiro texto em jornal.
+            Era uma leitora precoce e se interessava por política, questões sociais e pela vida do sertão nordestino.
+
+            Início da carreira literária:
+            Aos 19 anos, publicou O Quinze (1930), seu romance de estreia, que a tornou nacionalmente conhecida.
+            A obra narra a grande seca de 1915 no Ceará e seus impactos na vida de retirantes e sertanejos — clássico do Romance de 30, movimento marcado pelo realismo social e pela denúncia das desigualdades no Nordeste.
+           
+            Temas centrais:
+            - a vida no sertão
+
+            - seca e retirantes
+
+            - desigualdades sociais
+
+            - papel da mulher
+
+            - tradição e modernidade
+
+            - liberdade e escolha
+
+            - conflitos familiares
+
+            Seu estilo é marcado por:
+            - clareza
+
+            - linguagem enxuta
+
+            - força emocional
+
+            - observação humana profunda
+
+            Vida política e jornalística:
+            Rachel teve forte atuação na imprensa, Escreveu para O Povo, Diário da Manhã, O Cruzeiro e O Estado de S. Paulo, defendeu pautas sociais e posicionamentos políticos diversos ao longo da vida, Foi presa brevemente na época do Estado Novo por suas posições políticas, Atuou em debates públicos sobre cultura e sociedade, Além disso, traduziu obras de autores como Tolstói e Shakespeare.
+
+            Academia Brasileira de Letras:
+            Em 1977, Rachel tornou-se a primeira mulher eleita para a ABL, ocupando a cadeira 5.
+            Sua entrada abriu caminho para diversas escritoras brasileiras.
+
+            Prêmios e reconhecimentos:
+            - Prêmio Camões (1993) – maior prêmio da literatura de língua portuguesa
+            - Prêmio Saci
+            - Prêmio Machado de Assis (ABL) pelo conjunto da obra
+            - Título de Doutora Honoris Causa por várias universidades
+
+            Últimos anos e morte:
+            Rachel passou os últimos anos entre o Rio de Janeiro e o sítio “Não Me Deixes”, em Quixadá, Ceará.
+            Morreu em 4 de novembro de 2003, aos 92 anos.
+
+            Rachel de Queiroz é pioneira feminina na literatura brasileira, voz essencial do regionalismo nordestino, referência do Romance de 30, autora de obras presentes em vestibulares e estudos literários, uma das maiores escritoras da língua portuguesa
+
+            Sua escrita combina realismo, sensibilidade e crítica social de forma única.
+            " },
+            new Autor { AutorId = 24, Nome = "Conceição Evaristo", Foto = "/img/autores/Conceição Evaristo.png", Biografia = @"
+            Maria da Conceição Evaristo de Brito (nascida em 29 de novembro de 1946, em Belo Horizonte, Minas Gerais) é uma das mais importantes escritoras, professoras, pesquisadoras e vozes da literatura afro-brasileira. Sua obra é marcada pela denúncia das desigualdades sociais, pelo combate ao racismo e pela valorização das vivências de mulheres negras.
+            Conceição é referência na chamada escrevivência, um conceito que ela criou para expressar a escrita que nasce da vida — das memórias, dores, lutas e resistências da população negra.
+
+            Infância e juventude:
+            Conceição cresceu em uma família pobre no bairro do Pindura Saia, em Belo Horizonte.
+            Filha de empregada doméstica, trabalhou como babá e cozinheira desde muito jovem para ajudar nas despesas de casa.
+            Apesar das dificuldades, sempre demonstrou grande amor pela leitura e escreveu desde a infância.
+
+            Mudança para o Rio de Janeiro e formação:
+            Na década de 1970, mudou-se para o Rio de Janeiro, onde ingressou no magistério. Aos 25 anos, concluiu o curso normal e passou a trabalhar como professora.
+            Com grande esforço, ingressou na Universidade Federal do Rio de Janeiro (UFRJ), graduando-se em Letras.
+            Depois, fez mestrado em Literatura Brasileira na PUC-Rio, e doutorado em Literatura Comparada na Universidade Federal Fluminense (UFF).
+
+            Carreira literária e escrevivência:
+            A estreia literária ocorreu em 1990, na Série Cadernos Negros, fundamental para autores negros no Brasil.
+            A partir daí, Conceição se consolidou como uma das maiores escritoras brasileiras contemporâneas, com textos que abordam,
+            - racismo estrutural
+
+            - violência contra a mulher
+
+            - desigualdades sociais
+
+            - ancestralidade africana
+
+            - resistência e identidade negra
+
+            - memória e cotidiano periférico
+
+            Conceição Evaristo é considerada uma das maiores autoras negras da literatura brasileira, símbolo de resistência e representatividade, referência em estudos de literatura afro-brasileira, grande difusora do conceito de escrevivência
+
+            Em 2018, foi indicada pela sociedade civil para ocupar uma cadeira na Academia Brasileira de Letras (ABL), movimento histórico que gerou grande mobilização nacional.
+            Seus livros são estudados em escolas, vestibulares, universidades e pesquisas acadêmicas, influenciando novas gerações de escritores negros.
+
+            Vida atual:
+            Conceição segue escrevendo, participando de feiras literárias no Brasil e no exterior, dando palestras e debatendo temas como:
+            - direitos humanos
+
+            - literatura
+
+            - educação
+
+            - racismo
+
+            - lugar das mulheres negras na sociedade
+
+            Vive no Rio de Janeiro e permanece como uma das vozes mais potentes e atuantes da literatura contemporânea.
+            " },
 
             new Autor { AutorId = 25, Nome = "Julia Lopes de Almeida", Foto = "/img/autores/Julia Lopes de Almeida.png", Biografia = 
             @"Júlia Valentina da Silveira Lopes de Almeida, conhecida como JúliaLopes de Almeida, nasceu em 24 de setembro de 1862, no Rio de Janeiro, e morreu em 30 de maio de 1934, na mesma cidade.
             Foi romancista, cronista, contista, dramaturga e jornalista, considerada uma das mais importantes escritoras brasileiras do final do século XIX e início do XX. É reconhecida como pioneira na literatura feminina e uma das fundadoras da moderna literatura urbana no Brasil.
 
-            Infância e formação
+            Infância e formação:
             Júlia era filha de um médico e cresceu em um ambiente culto, onde desde cedo foi estimulada a estudar e ler.
             Recebeu educação formal acima da média das mulheres da época e começou a escrever ainda jovem.
             Com 20 anos, casou-se com o poeta e jornalista Filinto de Almeida, com quem teve filhos e também parceria intelectual.
 
-            Carreira literária
+            Carreira literária:
             Júlia publicou em jornais e revistas importantes, como O Paiz e Gazeta de Notícias, ganhando destaque por sua escrita elegante, crítica e sensível.
             Também escreveu para o público infantil e produziu peças de teatro.
             Sua obra aborda temas como:
-            papel da mulher na sociedade
+            - papel da mulher na sociedade
 
+            - vida urbana e conflitos familiares
 
-            vida urbana e conflitos familiares
+            - moralidade, educação e modernização
 
-
-            moralidade, educação e modernização
-
-
-            questões sociais e psicológicas
-
+            - questões sociais e psicológicas
 
             Foi uma das primeiras escritoras brasileiras a viver profissionalmente de literatura.
 
-            Pioneirismo e ativismo
             Júlia foi figura central no debate sobre:
-            direitos das mulheres
+            - direitos das mulheres
 
+            - educação feminina
 
-            educação feminina
+            - igualdade intelectual
 
-
-            igualdade intelectual
-
-
-            papel da mulher na literatura
-
+            - papel da mulher na literatura
 
             Ela influenciou outras autoras, como Lúcia Miguel Pereira, Rachel de Queiroz e Cecília Meireles.
 
-            A polêmica da Academia Brasileira de Letras
+            A polêmica da Academia Brasileira de Letras:
             Júlia Lopes de Almeida foi uma das idealizadoras da fundação da ABL, ao lado de seu marido e de diversos escritores.
             No entanto, não foi aceita como membro por ser mulher.
             Em seu lugar, foi incluído o marido, Filinto de Almeida.
             Hoje, Júlia é reconhecida como uma “acadêmica sem cadeira”, símbolo da exclusão feminina na literatura brasileira.
 
-            Últimos anos e morte
+            Últimos anos e morte:
             Em seus últimos anos, continuou escrevendo e participando ativamente da vida cultural carioca.
             Faleceu em 1934, aos 71 anos.
 
-            Legado
             Júlia Lopes de Almeida é lembrada como:
-            uma das primeiras grandes romancistas brasileiras
+            - uma das primeiras grandes romancistas brasileiras
 
-            pioneira na representação feminina na literatura
+            - pioneira na representação feminina na literatura
 
+            - voz crítica da sociedade patriarcal do século XIX
 
-            voz crítica da sociedade patriarcal do século XIX
-
-
-            referência na história da literatura e do feminismo no Brasil
-
+            - referência na história da literatura e do feminismo no Brasil
 
             Seu reconhecimento cresceu muito no século XXI, com reedições de suas obras e estudos que recuperam sua importância.
             " },
 
-            new Autor { AutorId = 26, Nome = "Narcisa Amália", Foto = "/img/autores/Narcisa Amália.png" },
-            new Autor { AutorId = 27, Nome = "Sophia de Mello Breyner Andresen", Foto = "/img/autores/Sophia de Mello Breyner Andresen.png" },
-            new Autor { AutorId = 28, Nome = "Nísia Floresta", Foto = "/img/autores/Nísia Floresta.png" },
+            new Autor { AutorId = 26, Nome = "Narcisa Amália", Foto = "/img/autores/Narcisa Amália.png", Biografia = @"
+            Narcisa Amália de Campos nasceu em 3 de abril de 1852, em São João da Barra (RJ), e morreu em 24 de julho de 1924, em Rio Claro (RJ).
+            Foi poeta, jornalista, professora e ativista — considerada a primeira mulher a exercer profissionalmente o jornalismo no Brasil e uma das vozes femininas mais importantes do século XIX.
+            Sua obra combina poesia romântica com críticas sociais, defesa da liberdade, abolicionismo e reivindicação dos direitos das mulheres.
+
+            Infância e formação:
+            Filha de um músico e de uma professora, Narcisa cresceu em um ambiente alfabetizado e culturalmente rico, algo incomum para mulheres do período.
+            Desde cedo demonstrou talento para a escrita, e sua mãe teve papel essencial na sua formação intelectual.
+            Aos 12 anos já escrevia poemas.
+
+            Carreira literária:
+            Narcisa Amália começou a publicar seus textos em jornais do Rio de Janeiro e de outras províncias.
+            Aos 18 anos lançou o livro:
+            Nebulosas (1872)
+            - sua obra mais famosa
+            - reúne poemas de forte carga romântica e social
+            - recebeu elogios de escritores consagrados da época, como Machado de Assis, que destacou sua sensibilidade e energia poética.
+
+            Narcisa se destacou como a primeira mulher jornalista profissional do Brasil, atuando em:
+            - redações de jornais
+
+            - periódicos abolicionistas
+
+            - revistas literárias
+
+            Escrevia sobre:
+            - direitos das mulheres
+
+            - abolição da escravidão
+
+            - política
+
+            - literatura
+
+            - desigualdade social
+
+            Foi colaboradora de jornais importantes como:
+            - O Fluminense
+
+            - A República
+
+            - O País
+
+            - Revista da Semana
+
+            Também fundou e dirigiu periódicos voltados à educação e à emancipação feminina.
+
+            Pioneirismo e ativismo:
+            Narcisa Amália foi uma das primeiras mulheres brasileiras a defender igualdade de direitos entre homens e mulheres, participar ativamente do movimento abolicionista, ocupar espaços públicos e intelectuais dominados por homens, usar a imprensa como ferramenta política e educativa, Sua postura firme e progressista causou admiração e resistência em sua época.
+
+            Sua poesia mistura:
+            - romantismo tardio
+
+            - subjetividade feminina
+
+            - nacionalismo
+
+            - crítica social
+
+            - defesa da liberdade
+
+            - exaltação da força feminina
+
+            É considerada precursora da literatura de resistência feminina no Brasil.
+
+            Vida pessoal e obstáculos
+            Narcisa enfrentou dificuldades financeiras, preconceito por ser mulher em ambiente jornalístico, períodos de isolamento social após o casamento e separações, esquecimento após a morte. Mesmo assim, continuou escrevendo e defendendo suas ideias.
+
+            Últimos anos e morte:
+            Nos últimos anos viveu com poucos recursos e pouca visibilidade pública.
+            Faleceu em 1924, em Rio Claro (RJ), deixando um legado injustamente apagado por décadas.
+
+            Hoje, Narcisa Amália é reconhecida como:
+            - a primeira mulher jornalista do Brasil
+
+            - uma das pioneiras da literatura feminina
+
+            - importante voz abolicionista e feminista
+
+            - autora de obra poética marcante e engajada
+
+            - figura essencial nos estudos sobre história das mulheres na literatura
+
+            Seu livro Nebulosas é reeditado e estudado por universidades, resgatando seu valor literário e histórico.
+            " },
+            new Autor { AutorId = 27, Nome = "Sophia de Mello Breyner Andresen", Foto = "/img/autores/Sophia de Mello Breyner Andresen.png", Biografia = @"
+            Sophia de Mello Breyner Andresen nasceu em 6 de novembro de 1919, no Porto, Portugal, e morreu em 2 de julho de 2004, em Lisboa.
+            É considerada uma das maiores poetisas da literatura portuguesa e uma das vozes mais importantes do século XX.
+            Sua escrita une beleza formal, humanismo, ética, natureza, mar, mitologia e compromisso político.
+            Foi também autora de contos, textos infantis e tradutora.
+
+            Infância e formação:
+            Nasceu em uma família aristocrática do Porto, com forte influência cultural.
+            Passou a infância entre o mar da Foz do Douro, jardins e casas antigas, contato com mitologia, arte e literatura clássica
+
+            Essas experiências foram fundamentais em sua obra, marcada pelo mar, luz, paisagem e harmonia.
+            Estudou Letras na Universidade de Lisboa, onde fortaleceu sua formação humanista.
+
+            Início da carreira literária:
+            Começou a escrever ainda jovem.
+            
+            Suas primeiras obras revelam:
+            - forte presença da natureza
+
+            - musicalidade
+
+            - imaginação mítica
+
+            - busca pela beleza e pela ética
+
+            Nos anos 1940 publicou seus primeiros livros de poesia, conquistando reconhecimento imediato.
+            
+            Temas centrais:
+            - O mar (símbolo de liberdade, origem e infinito)
+
+            - Natureza e beleza
+
+            - Mitologia grega (deuses, destino, harmonia)
+
+            - Justiça e ética humana
+
+            - Liberdade política
+
+            - Busca pela verdade e pelo bem
+
+            - Memória, infância e espiritualidade
+
+            - Sua poesia é clara, luminosa, musical e rigorosa.
+
+            Compromisso político:
+            Sophia participou ativamente da resistência ao regime ditatorial de Salazar, integrando movimentos democráticos.
+            Após a Revolução dos Cravos, em 1974, foi eleita deputada à Assembleia Constituinte, ajudando a escrever a nova Constituição Portuguesa (1976).
+            Sua defesa dos direitos humanos e da liberdade está presente em muitos poemas.
+
+            Prêmios:
+            Foi a primeira mulher a receber o Prêmio Camões (1999), o maior reconhecimento da literatura em língua portuguesa.
+            Também recebeu Grande Prêmio de Poesia da Sociedade Portuguesa de Escritores, Prêmio Max Jacob (França) e Medalha de Mérito Cultural (Portugal)
+
+            Últimos anos e morte:
+            Continuou escrevendo até o fim da vida.
+            Faleceu em 2 de julho de 2004, em Lisboa, aos 84 anos.
+            Em 2014, seus restos mortais foram trasladados para o Panteão Nacional, onde estão figuras ilustres da cultura portuguesa — uma honra raríssima.
+
+            Sophia é considerada uma das maiores poetisas portuguesas de todos os tempos, referência de ética, liberdade e beleza poética, autora essencial para a literatura lusófona responsável por renovar a poesia portuguesa do século XX,  leitura obrigatória em escolas e universidades
+
+            Sua obra permanece viva por sua força, verdade e simplicidade luminosa.
+
+            " },
+
+            new Autor { AutorId = 28, Nome = "Nísia Floresta", Foto = "/img/autores/Nísia Floresta.png", Biografia = @"
+            Dionísia Gonçalves Pinto, conhecida como Nísia Floresta Brasileira Augusta, nasceu em 12 de outubro de 1810, em Papari (hoje Nísia Floresta), no Rio Grande do Norte, e morreu em 24 de abril de 1885, em Rouen, na França.
+            É considerada a primeira feminista do Brasil, além de educadora, escritora, tradutora e ativista dos direitos das mulheres, dos indígenas e dos escravizados.
+
+            Infância e formação:
+            Filha de um líder político liberal, cresceu em um ambiente que valorizava estudos e debates.
+            Casou-se muito jovem, mas separou-se em pouco tempo — o que era extremamente raro e ousado para uma mulher do século XIX.
+            
+            Depois passou a adotar o pseudônimo “Nísia Floresta Brasileira Augusta”:
+            Nísia = forma abreviada de Dionísia
+            Floresta = referência à sua cidade natal
+            Brasileira Augusta = homenagem à pensadora feminista inglesa Mary Wollstonecraft
+
+            Carreira como educadora:
+            Em 1838, fundou no Rio de Janeiro o Colégio Augusto, uma das primeiras escolas brasileiras dedicadas à educação feminina moderna, oferecendo disciplinas que iam além das “artes domésticas”, como ciências, línguas, história, filosofia, literatura
+
+            Defendia que mulheres tinham capacidade intelectual igual à dos homens, algo revolucionário na época.
+
+            Atuação feminista e social:
+            • Defesa dos direitos das mulheres
+            Publicou livros e artigos defendendo educação, liberdade e direitos civis para as mulheres.
+            • Luta abolicionista
+            Criticava a escravidão como prática desumana e incompatível com o progresso moral.
+            • Defesa dos povos indígenas
+            Escreveu sobre a violência, o apagamento cultural e o abandono do Estado.
+            Suas ideias eram extremamente avançadas para o Brasil do século XIX.
+
+            Viagens e vida na Europa:
+            Nísia viveu muitos anos na Itália, França, Alemanha e Inglaterra.
+
+            Teve contato com filósofos, cientistas, escritores e movimentos intelectuais europeus.
+            Frequentava círculos culturais e publicou em jornais europeus, defendendo o Brasil no exterior.
+
+            Últimos anos e morte:
+            Em 1870, fixou residência naa França, onde continuou escrevendo e estudando até sua morte.
+            Faleceu em 24 de abril de 1885, em Rouen.
+            Seu corpo foi transladado para o Brasil em 1954.
+
+            Nísia Floresta é hoje reconhecida como a primeira feminista brasileira, pioneira na defesa da educação das mulheres, voz ativa contra a escravidão, defensora dos povos indígenas, figura fundamental da literatura, educação e sociologia brasileiras
+
+            Sua cidade natal recebeu seu nome em homenagem à sua importância.
+            " },
 
 
         };
@@ -1189,7 +1917,7 @@ Diadorim, desde criança, se vestia de homem e já se chamava Reinaldo. Aliás, 
       Destaque = true, 
       Foto = "/img/livros/Gabriela,cravo e canela.png", 
       Video = "mKR1Vkqxyjo", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/gabriela-cravo-e-canela.pdf",
       Resumo = 
     @"O romance Gabriela, Cravo e Canela, de Jorge Amado, é ambientado na cidade de Ilhéus, na Bahia, no início dos anos 1920. A cidade está em plena transformação, graças à riqueza que a cultura do cacau está trazendo para a região.
 
@@ -1372,7 +2100,7 @@ Acima de tudo, Quarto de Despejo é uma história de sofrimento e de resiliênci
       Destaque = true, 
       Foto = "/img/livros/Poesia Completa Carlos Drummond De Andrade.png", 
       Video = "CWagtQP7hqw", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/poesia completa.pdf",
       Resumo =
     @"No Meio do Caminho
     Um dos poemas mais conhecidos de Drummond, famoso por sua repetição e reflexão sobre a presença de obstáculos na vida.
@@ -1432,7 +2160,7 @@ Acima de tudo, Quarto de Despejo é uma história de sofrimento e de resiliênci
       Destaque = true, 
       Foto = "/img/livros/O Povo Brasileiro.png", 
       Video = "geSPmerwDmI", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/O Povo Brasileiro.pdf",
       Resumo = 
     @"O Povo Brasileiro é um livro de antropologia de Darcy Ribeiro, publicado em 1995. A obra é um estudo sobre a formação do povo brasileiro, abordando os aspectos históricos, sociais e culturais que influenciaram na construção da identidade nacional.
 
@@ -1637,7 +2365,7 @@ Acima de tudo, Quarto de Despejo é uma história de sofrimento e de resiliênci
       Destaque = true, 
       Foto = "/img/livros/No seu pescoço.png",  
       Video= "EOZn3Ns07SE", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/no seu pescoço.pdf",
       Resumo = 
       @"Não são muitos os autores que transitam com tanta facilidade do romance para o conto, do conto para o ensaio, do ensaio para os manifestos. Não importa o formato, a nigeriana Chimamanda Ngozi Adichie mostra completo domínio do seu ofício. Uma das melhores escritoras de sua geração, Adichie expõe nossa vulnerabilidade perante o desconhecido nos doze contos que compõem No Seu Pescoço, lançado originalmente em 2009, mas só agora traduzido para o português pela Companhia das Letras.
       As histórias contidas nessa coletânea são joias raras. Há ali a mesma potência de escrita que já conhecíamos dos romances da escritora, como Americanah e Hibisco Roxo, mas com mais espaço para experimentação de estilos, pontos de vista, narradores.
@@ -1662,7 +2390,7 @@ Acima de tudo, Quarto de Despejo é uma história de sofrimento e de resiliênci
       Destaque = true, 
       Foto = "/img/livros/Morangos mofados.png", 
       Video= "AvoP4aOb_fw", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/morangos mofados.pdf",
       Resumo = 
       @"Parte I – O Mofo
       Duas personagens desconhecidas conversam. O diálogo começa com a primeira afirmando que a segunda é sua companheira. Toda a conversa se desenrola com a segunda personagem inquirindo se havia um significado oculto por trás dessa afirmação. A primeira personagem nega durante toda a conversa. A discussão perdura e parece não ter fim, estendendo-se até mesmo depois do final do conto.
@@ -1835,7 +2563,7 @@ Acima de tudo, Quarto de Despejo é uma história de sofrimento e de resiliênci
       Destaque = true, 
       Foto = "/img/livros/Alice no país das maravilhas.png",
       Video="Q6DQDyejPF4", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/alice.pdf",
       Resumo =
       @"Alice no País das Maravilhas é um livro de fantasia escrito pelo autor britânico Lewis Carroll e publicado em 1865. A história começa com Alice, uma jovem curiosa que segue um coelho branco falante e acaba caindo em um buraco no chão.
 Logo após cair no buraco, Alice encontra uma garrafa contendo um líquido que a faz crescer até um tamanho gigantesco, e em seguida encontra um bolo que a faz diminuir a um tamanho muito pequeno. Nessa nova escala, ela interage com animais e objetos inusitados, como o Gato de Cheshire, um gato sorridente que aparece e desaparece misteriosamente, o Lagarto que ensina a escrever poesia, e o Chapeleiro Maluco, que está sempre preso no tempo do chá das cinco. 
@@ -1860,7 +2588,7 @@ Alice no País das Maravilhas é uma história clássica da literatura infantil 
       Destaque = true, 
       Foto = "/img/livros/A visão das plantas.png", 
       Video = "Ad7fQCYXiIo", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/A visão das plantas.pdf",
       Resumo = 
       @"No coração de uma Lisboa antiga, reside Celestino, um homem de passado sombrio. Ex-capitão de navio negreiro, ele carregou o peso de seus crimes por décadas. Mas, nos anos de outono da vida, encontra redenção em um lugar inesperado: um jardim.
 Ali, entre roseiras e cactos, Celestino se transforma. Suas mãos, antes manchadas de sangue, agora cuidam com ternura de cada folha, de cada flor. O jardim se torna seu refúgio, um oásis de paz em meio à tempestade de sua consciência.
@@ -1941,7 +2669,7 @@ Voltando para o pensionato, separam-se definitivamente. Lia segue para o exílio
       Destaque = true, 
       Foto = "/img/livros/Balada de amor ao vento.png",  
       Video = "2RFTqeLOYws", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/Balada de Amor ao Vento.pdf",
       Resumo = 
       @"A base da narrativa apresentada são os personagens Sarnau, Mwando e o rei de Mambone. A narração é feita em primeira pessoa e Sarnau conta-nos a história de sua vida. Ela é a mulher que se apaixona perdidamente por Mwando quando o vê pela primeira vez. ”
 Eles tentam um relacionamento, mas nem toda a beleza descrita na imagem de quando se conheceram permanece ao longo do tempo. O “coração virgem” de Sarnau estremeceu quando o viu e seus olhos ficaram hipnotizados, mas apesar da tentativa de se relacionarem ela é surpreendida quando Mwando a abandona.
@@ -1977,7 +2705,7 @@ O título do livro, Balada de amor ao vento, reflete o que há na história. É 
       Destaque = true, 
       Foto = "/img/livros/Caminho de Pedras.png", 
       Video = "KF8nspT8Y00", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/caminhos de pedra.pdf",
       Resumo = 
       @"Há uma idéia matriz neste romance e em torno dessa idéia é que vai gravitar toda a sua ação: a da desigualdade social da mulher.
       João Jacques é o marido de Noemi e ambos tem um filho, o Guri. Jacques não é borracho, nem libertino e nem portanto espanca a mulher. É ótimo pai e um bom marido vivendo em paz com a mulher. Mas a paz matrimonial é mais fecunda em paz do que em amor. Porém o espírito era diferente, o espírito da mulher de João Jacques do espírito dele.
@@ -2004,7 +2732,7 @@ O título do livro, Balada de amor ao vento, reflete o que há na história. É 
       Destaque = true, 
       Foto = "/img/livros/Canção para Ninar Menino grande.png",  
       Video = "D2zip80MGhU", 
-      Pdf = "/pdf/livros/livro.pdf",
+      Pdf = "/pdf/livros/cançao para ninar menino grande.pdf",
       Resumo = 
       @"Embora o protagonista seja um homem, ele só ocupa o centro da narrativa por causa das mulheres que as contam. Fio Jasmin, um homem negro, jovem e belíssimo, trabalha como assistente de maquinista e a cada parada que o trem faz ao longo do percurso, desce para explorar a cidade e também para explorar as mulheres daquele local.
       É assim quase o livro todo. Mesmo casado e pai de quase uma dezena de filhos com Pérola Maria, Fio Jasmin aproveita as paradas do trem para encantar alguma mulher de cada
@@ -2104,8 +2832,8 @@ A autora recupera, neste livro, parte da história da condição feminina em div
 Nísia Floresta defende a tese de que o progresso de uma sociedade depende da educação que é oferecida à mulher, e que só a educação moral e a religiosa, incutida desde cedo na menina, fariam dela melhor esposa e melhor mãe. … 
 Mas atenção: ao fazer a leitura deste especial momento da vida brasileira, é preciso ter em mente o alcance que deve ter tido, naquela época, a repentina valorização da figura feminina e da sua função biológica exclusiva. Para quem até então ocupava um papel obscuro em consequência de uma estratificação social rígida que privilegiava só o masculino, transformar-se em centro das atenções e receber homenagens, devia realmente significar muita coisa – como naturalmente significou. Essa foi uma etapa obrigatória na história da liberação da mulher que precisava ser cumprida.
 "}};
+
         builder.Entity<Livro>().HasData(livros);
-    
 
 
         List<FaculdadeLivro> faculdadeLivros = new()
